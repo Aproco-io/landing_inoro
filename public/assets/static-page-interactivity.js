@@ -1,12 +1,11 @@
 /**
  * Interactivity for static captured HTML (GitHub Pages):
  * - Smooth scroll to sections from nav/buttons
- * - Nav bar hide on scroll down, show on scroll up
  * - FAQ accordion
  * - Mobile menu toggle
+ * (Nav bar stays fixed at top – no hide-on-scroll)
  */
 (function () {
-  var NAV = document.querySelector('nav.fixed, nav[class*="fixed"]');
   var scrollMap = [
     { keys: ['how it works', 'see how it works'], id: 'how-it-works' },
     { keys: ['features'], id: 'features' },
