@@ -1,21 +1,47 @@
 # Kontekst Projektu: InOro Landing Page
-Jesteś inteligentnym asystentem (Agentem) pomagającym zarządzać stroną typu Landing Page. Twój użytkownik może być osobą biznesową, więc komunikuj się jasno, bez nadmiernego żargonu technicznego. Strona jest zbudowana przy użyciu frameworka Astro.
 
-# Główne zasady i instrukcje (Skills)
-1. GŁÓWNY PLIK:
-Wszelkie teksty, struktura HTML i skrypty znajdują się w jednym pliku: `src/pages/index.astro`. To tam dokonujesz wszystkich edycji (zmiany tekstów, podmiany linków, aktualizacja cennika). Zawsze zachowuj tag `<style is:global>` oraz tag `<script is:inline>` na samym dole pliku.
+Asystent AI pomaga w zarządzaniu stroną landingową. Strona działa w dwóch trybach: **GitHub Pages** (statyczny HTML) i **domena inoro.ai** (React SPA). Komunikuj się jasno, bez nadmiernego żargonu.
 
-2. URUCHAMIANIE LOKALNE:
-Jeśli użytkownik napisze np. "Uruchom projekt", "Odpal stronę", "Pokaż podgląd", otwórz terminal i wpisz komendę:
-`npm run dev`
-Po jej uruchomieniu poinformuj użytkownika, że strona działa i podaj mu link do kliknięcia: http://localhost:4321
+---
 
-3. PUBLIKACJA I ZAPISYWANIE (DEPLOYS):
-Projekt jest podłączony pod automatyczny hosting (Vercel/Cloudflare). Jeśli użytkownik poprosi o "Zapisanie zmian", "Wrzucenie zmian na serwer", "Publikację" lub "Wysyłkę na Githuba", wykonaj w terminalu sekwencję komend Git:
-- `git add .`
-- `git commit -m "Automatyczna aktualizacja treści przez AI"`
-- `git push origin main`
-Po wykonaniu tych komend poinformuj użytkownika: "Zmiany zostały wysłane. Nowa wersja strony będzie widoczna w internecie pod waszym publicznym linkiem za około 1-2 minuty."
+## Skill projektu
 
-4. ROZWIĄZYWANIE PROBLEMÓW:
-Jeśli terminal wyrzuci błąd, że brakuje modułów, przed odpaleniem czegokolwiek uruchom `npm install`.
+**Używaj skill `landing-inoro`** przy pracy nad tym projektem. Skill zawiera:
+- Architekturę (static vs React, GitHub vs domain)
+- Miejsca edycji poszczególnych elementów
+- Workflow build, capture i deploy
+
+---
+
+## Główne zasady
+
+### Gdzie wprowadzać zmiany?
+
+| Co zmieniasz | Gdzie |
+|--------------|-------|
+| Treść strony (tekst, sekcje) na GitHub | `src/data/captured-body.html` |
+| Style globalne, pasek nav, pricing | `src/pages/index.astro` |
+| Scroll, FAQ, menu mobilne | `public/assets/static-page-interactivity.js` |
+| Obrazy, loga | `public/assets/logos/` |
+
+### Komendy
+
+- **Uruchom lokalnie:** `npm run dev`
+- **Build (lokalny):** `npm run build`
+- **Zaktualizuj HTML z Reacta:** `npm run capture`
+- **Deploy:** `git push origin main` (GitHub Actions buduje automatycznie)
+
+### Publikacja
+
+1. `git add .`
+2. `git commit -m "Opis zmian"`
+3. `git push origin main`
+
+Strona zaktualizuje się w ciągu 1–2 minut.
+
+---
+
+## Pełna dokumentacja
+
+- **Dla developera:** `docs/DEVELOPER-GUIDE.md`
+- **Skill AI:** `.cursor/skills/landing-inoro/SKILL.md`
