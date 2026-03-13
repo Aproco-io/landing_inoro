@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "capture": "node scripts/capture-react-html.mjs",
     "astro": "astro"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
   },
   "dependencies": {
     "astro": "^6.0.2"
