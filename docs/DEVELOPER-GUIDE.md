@@ -7,26 +7,18 @@ Dokumentacja dla osoby pracującej nad stroną z pomocą Claude/Cursor. Projekt:
 ## 1. Co to za projekt?
 
 - Strona landingowa InOro.ai (AI do analizy rozmów w call center).
-- Astro + React SPA + statyczny HTML.
-- Dwa hosty: **GitHub Pages** (`*.github.io/landing_inoro/`) i **domena inoro.ai** (React).
+- Statyczny HTML (`captured-body.html`) – jedno źródło treści, bez Reacta.
 
 ---
 
 ## 2. Jak działa architektura?
 
-| Środowisko | URL | Zawartość |
-|------------|-----|-----------|
-| **GitHub Pages** | aproco-io.github.io/landing_inoro/ | Statyczny HTML (captured z Reacta) |
-| **inoro.ai** | https://inoro.ai | React SPA |
-
-Tryb deployu ustawiasz w `.github/pages-mode.txt`:
-- `github` → build dla GitHub Pages
-- `domain` → build dla inoro.ai
+Strona na **inoro.ai** (base `/`). Statyczny HTML z `captured-body.html`. Brak przełączania trybów.
 
 ---
 
 ## 3. Struktura plików
-
+    
 ```
 landing-inoro/
 ├── src/
@@ -45,7 +37,6 @@ landing-inoro/
 │   └── process-captured-html.js   # Poprawki ścieżek w HTML
 ├── .github/
 │   ├── workflows/deploy-pages.yml
-│   └── pages-mode.txt             # github | domain
 └── docs/
     ├── DEVELOPER-GUIDE.md         # Ten plik
     └── cursorrules.md
@@ -55,7 +46,7 @@ landing-inoro/
 
 ## 4. Gdzie wprowadzać zmiany?
 
-### Zmiany treści na stronie (GitHub Pages)
+### Zmiany treści na stronie (GitHub + inoro.ai)
 → **`src/data/captured-body.html`**
 
 Bezpośrednia edycja HTML. Szukaj sekcji po `id` (np. `#hero`, `#pricing`, `#demo`).
@@ -81,46 +72,29 @@ Używaj nazw bez spacji (np. `telbridge-logo.png`).
 
 ---
 
-## 5. Jak zaktualizować HTML z Reacta (re-capture)?
-
-Jeśli zmieniasz layout lub treść w React SPA i chcesz to przenieść na GitHub Pages:
-
-```bash
-npm run capture
-```
-
-Skrypt:
-1. Buduje stronę z `base=/`
-2. Uruchamia preview
-3. Używa Playwright do przechwycenia HTML z `#root`
-4. Zapisuje wynik do `src/data/captured-body.html`
-
-**Uwaga:** Wymaga `playwright` i skonfigurowanego źródła Reacta (np. manus). Szczegóły: `src/data/CAPTURE-INSTRUCTIONS.md`.
-
----
-
-## 6. Lokalne uruchomienie
+## 5. Lokalne uruchomienie
 
 ```bash
 npm install
 npm run dev
 ```
 
-Domyślnie: React SPA na http://localhost:4323/ (port może się różnić).
-
-Test statycznej wersji:
-```bash
-PUBLIC_BASE_PATH=/landing_inoro/ npm run build
-npm run preview
-```
+Strona na http://localhost:4323/ (port może się różnić).
 
 ---
 
-## 7. Deploy (publikacja)
+## 6. Re-capture HTML (opcjonalnie)
+
+Edytuj bezpośrednio `src/data/captured-body.html` – to normalny workflow.
+
+Jeśli masz projekt React (np. Manus) i chcesz zsynchronizować wygląd: `npm run capture`. Wymaga Playwright.
+
+---
+
+## 7. Deploy
 
 1. Wypchnij zmiany na main: `git push origin main`
-2. GitHub Actions zbuduje stronę według `pages-mode.txt`
-3. Wynik trafi na GitHub Pages (lub inoro.ai, zależnie od trybu)
+2. GitHub Actions zbuduje stronę i wdroży na GitHub Pages (inoro.ai)
 
 Deploy zwykle trwa 1–2 minuty po zakończeniu workflowu.
 

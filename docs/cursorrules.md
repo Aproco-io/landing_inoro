@@ -1,15 +1,12 @@
 # Kontekst Projektu: InOro Landing Page
 
-Asystent AI pomaga w zarządzaniu stroną landingową. Strona działa w dwóch trybach: **GitHub Pages** (statyczny HTML) i **domena inoro.ai** (React SPA). Komunikuj się jasno, bez nadmiernego żargonu.
+Asystent AI pomaga w zarządzaniu stroną landingową. Strona używa statycznego HTML wszędzie (GitHub Pages i inoro.ai). Jedno źródło: `captured-body.html`.
 
 ---
 
 ## Skill projektu
 
-**Używaj skill `landing-inoro`** przy pracy nad tym projektem. Skill zawiera:
-- Architekturę (static vs React, GitHub vs domain)
-- Miejsca edycji poszczególnych elementów
-- Workflow build, capture i deploy
+**Używaj skill `landing-inoro`** przy pracy nad tym projektem. Skill zawiera: architekturę, miejsca edycji, workflow build i deploy
 
 ---
 
@@ -19,7 +16,7 @@ Asystent AI pomaga w zarządzaniu stroną landingową. Strona działa w dwóch t
 
 | Co zmieniasz | Gdzie |
 |--------------|-------|
-| Treść strony (tekst, sekcje) na GitHub | `src/data/captured-body.html` |
+| Treść strony | `src/data/captured-body.html` |
 | Style globalne, pasek nav, pricing | `src/pages/index.astro` |
 | Scroll, FAQ, menu mobilne | `public/assets/static-page-interactivity.js` |
 | Obrazy, loga | `public/assets/logos/` |
@@ -28,7 +25,6 @@ Asystent AI pomaga w zarządzaniu stroną landingową. Strona działa w dwóch t
 
 - **Uruchom lokalnie:** `npm run dev`
 - **Build (lokalny):** `npm run build`
-- **Zaktualizuj HTML z Reacta:** `npm run capture`
 - **Deploy:** `git push origin main` (GitHub Actions buduje automatycznie)
 
 ### Publikacja

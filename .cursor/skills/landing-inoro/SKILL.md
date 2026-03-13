@@ -1,67 +1,47 @@
 ---
 name: landing-inoro
-description: Work on InOro landing page (Astro). Explains static vs React modes, GitHub Pages vs domain deploy, captured HTML, and where to make changes. Use when editing the landing, fixing nav/styling, updating content, or deploying.
+description: Work on InOro landing page (Astro). Single static HTML source (captured-body.html). Use when editing content, fixing nav/styling, or deploying.
 ---
 
 # InOro Landing Page – Developer Skill
 
 ## Architecture
 
-Projekt ma **dwa tryby działania** zależne od `base`:
+**Jedno źródło treści** – wszędzie statyczny HTML z `captured-body.html` (bez Reacta).
 
-| Tryb | base | Gdzie | Co się wyświetla |
-|------|------|-------|------------------|
-| **GitHub Pages** | `/landing_inoro/` | github.io/landing_inoro/ | Statyczny HTML (`captured-body.html`) + skrypty |
-| **Domain** | `/` | inoro.ai | React SPA |
-
-`.github/pages-mode.txt` steruje deployem:
-- `github` → build dla GitHub Pages (statyczna wersja)
-- `domain` → build dla inoro.ai (React)
+Deploy na inoro.ai (base `/`). Zawartość: `StaticBody` + `captured-body.html`. Brak pages-mode – jeden tryb.
 
 ## Kluczowe pliki
 
 | Plik | Kiedy edytować |
 |------|-----------------|
-| `src/pages/index.astro` | Layout, meta, style globalne, logika React/StaticBody |
-| `src/components/StaticBody.astro` | Warunek użycia captured HTML, fallback, skrypty |
-| `src/data/captured-body.html` | Treść statycznej strony (GitHub Pages) |
+| `src/pages/index.astro` | Layout, meta, style globalne |
+| `src/components/StaticBody.astro` | Wyświetlanie captured HTML, skrypty |
+| `src/data/captured-body.html` | Treść strony – jedno źródło |
 | `public/assets/static-page-interactivity.js` | Scroll do sekcji, FAQ, menu mobilne, style nav |
 | `scripts/capture-react-html.mjs` | Skrypt do przechwycenia HTML z Reacta |
 | `scripts/process-captured-html.js` | Przetwarzanie przechwyconego HTML |
 
 ## Gdzie wprowadzać zmiany
 
-### Treść widoczna na GitHub Pages (statyczna wersja)
-→ `src/data/captured-body.html` – bezpośrednia edycja HTML  
-albo → `npm run capture` (jeśli masz dostęp do Reacta i chcesz zaktualizować z jego wyglądu)
+### Treść strony
+→ `src/data/captured-body.html` – edytuj bezpośrednio
 
-### Style nawigacji / paska na górze
-→ `src/pages/index.astro` – sekcja `<style is:global>` z `nav.fixed`  
-→ `public/assets/static-page-interactivity.js` – logika (np. ukrywanie przy scrollu – obecnie wyłączona)
+### Style nawigacji
+→ `src/pages/index.astro` – `<style is:global>` z `nav.fixed`  
+→ `public/assets/static-page-interactivity.js` – logika scroll/FAQ/menu
 
-### Cennik, pricing
-→ `src/pages/index.astro` – klasy `.pricing-custom` w stylach  
-→ `src/data/captured-body.html` – jeśli sekcja pricing jest w captured HTML
+### Cennik
+→ `src/pages/index.astro` – `.pricing-custom`; treść w `captured-body.html`
 
 ### Logi, obrazy
 → `public/assets/logos/` – pliki PNG/SVG  
 Uwaga: w nazwach plików unikaj spacji (np. `telbridge-logo.png` zamiast `telbridge logo.png`).
 
-## Workflow: przechwycenie HTML z Reacta
-
-Gdy zmieniasz layout/treść w React SPA i chcesz to odzwierciedlić na GitHub Pages:
-
-```bash
-npm run capture
-```
-
-Skrypt buduje stronę, uruchamia preview, używa Playwright do przechwycenia HTML z `#root`, zapisuje do `src/data/captured-body.html`. Zastosuj `scripts/process-captured-html.js` jeśli trzeba poprawić ścieżki assetów.
-
 ## Build i deploy
 
-- **Lokalnie**: `npm run dev` – domyślnie React (base `/`)
-- **Lokalny build dla GitHub**: `PUBLIC_BASE_PATH=/landing_inoro/ npm run build`
-- **Deploy**: GitHub Actions (push na main) – workflow czyta `pages-mode.txt` i buduje odpowiednią wersję
+- **Lokalnie**: `npm run dev` – statyczna wersja (base `/`)
+- **Deploy**: GitHub Actions (push na main) – wdrożenie na inoro.ai
 
 ## Typowe zadania
 
