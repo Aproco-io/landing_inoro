@@ -6,7 +6,7 @@
  * - Mobile menu toggle
  */
 (function () {
-  var NAV = document.querySelector('nav.fixed');
+  var NAV = document.querySelector('nav.fixed, nav[class*="fixed"]');
   var scrollMap = [
     { keys: ['how it works', 'see how it works'], id: 'how-it-works' },
     { keys: ['features'], id: 'features' },
@@ -43,18 +43,22 @@
   });
 
   if (NAV) {
-    var lastY = 0;
+    var style = document.createElement('style');
+    style.textContent = 'nav.nav-hide-on-scroll { transform: translateY(-100%) !important; }';
+    document.head.appendChild(style);
+    var lastY = window.scrollY || 0;
     var ticking = false;
     function updateNav() {
       var y = window.scrollY || window.pageYOffset;
-      if (y > lastY && y > 80) {
-        NAV.style.transform = 'translateY(-100%)';
+      if (y > lastY && y > 60) {
+        NAV.classList.add('nav-hide-on-scroll');
       } else {
-        NAV.style.transform = 'translateY(0)';
+        NAV.classList.remove('nav-hide-on-scroll');
       }
       lastY = y;
       ticking = false;
     }
+    updateNav(); /* init from current scroll */
     window.addEventListener('scroll', function () {
       if (!ticking) {
         requestAnimationFrame(updateNav);
