@@ -42,30 +42,7 @@
     }
   });
 
-  if (NAV) {
-    var style = document.createElement('style');
-    style.textContent = 'nav.nav-hide-on-scroll { transform: translateY(-100%) !important; }';
-    document.head.appendChild(style);
-    var lastY = window.scrollY || 0;
-    var ticking = false;
-    function updateNav() {
-      var y = window.scrollY || window.pageYOffset;
-      if (y > lastY && y > 60) {
-        NAV.classList.add('nav-hide-on-scroll');
-      } else {
-        NAV.classList.remove('nav-hide-on-scroll');
-      }
-      lastY = y;
-      ticking = false;
-    }
-    updateNav(); /* init from current scroll */
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(updateNav);
-        ticking = true;
-      }
-    }, { passive: true });
-  }
+  /* Nav bar stays visible (fixed at top) – no hide-on-scroll on static GitHub Pages */
 
   document.querySelectorAll('#faq button').forEach(function (btn) {
     var content = btn.nextElementSibling;
