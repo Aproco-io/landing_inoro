@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    var base = /\/landing_inoro\b/.test(location.pathname) ? '/landing_inoro/' : '/';
+    location.replace(location.origin + base);
+  </script>
+  <meta http-equiv="refresh" content="0; url=/">
+</head>
+<body>
+  <p>Redirecting to <a href="/">InOro</a>...</p>
+</body>
+</html>

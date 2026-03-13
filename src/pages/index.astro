@@ -1,7 +1,14 @@
+---
+const base = import.meta.env.BASE_URL || '/';
+const site = (import.meta.env.SITE || '').replace(/\/$/, '');
+const isGithub = base !== '/' && base.length > 1;
+const assetBase = isGithub ? site + base : '';
+---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    {isGithub && <base href={assetBase} />}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>InOro.ai | AI-Powered Conversation Intelligence for Contact Centers</title>
     <meta
@@ -143,6 +150,11 @@
   </head>
   <body>
     <div id="root"></div>
+    {isGithub && (
+      <script is:inline define:vars={{ base }}>
+        (function(){var b=base||'/landing_inoro/';var p=history.pushState;var r=history.replaceState;function fix(u){if(!u||u==='/')return b;if(typeof u==='string'&&u.startsWith('/')&&!u.startsWith(b))return b+(u.slice(1)||'');return u;}history.pushState=function(){arguments[2]=fix(arguments[2]);return p.apply(this,arguments);};history.replaceState=function(){arguments[2]=fix(arguments[2]);return r.apply(this,arguments);};document.addEventListener('click',function(e){var a=e.target&&(e.target.closest('a[href="/"]')||e.target.closest('a[href=""]'));if(a){e.preventDefault();location.href=b;}},true);})();
+      </script>
+    )}
     <script type="module" src="assets/index-CvwG9B6w.js"></script>
     <script>
       (function mountCustomPricing() {
