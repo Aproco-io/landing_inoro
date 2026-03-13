@@ -21,6 +21,7 @@ process.stdin.on('data', chunk => { html += chunk; });
 process.stdin.on('end', () => {
   html = html.replace(/src="\/assets\//g, 'src="assets/');
   html = html.replace(/href="\/assets\//g, 'href="assets/');
+  html = html.replace(/telbridge logo\.png/g, 'telbridge-logo.png');
   html = html.replace(/<form([^>]*class="[^"]*space-y-6[^"]*"[^>]*)>/gi, (m) => {
     if (/action=/.test(m) && /method=/i.test(m)) return m;
     let extra = '';

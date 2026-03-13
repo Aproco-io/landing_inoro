@@ -31,6 +31,7 @@ function processHtml(html) {
   return html
     .replace(/src="\/assets\//g, 'src="assets/')
     .replace(/href="\/assets\//g, 'href="assets/')
+    .replace(/telbridge logo\.png/g, 'telbridge-logo.png')
     .replace(/srcset="[^"]*"/g, 'srcset=""')
     .replace(/<form([^>]*class="[^"]*space-y-6[^"]*"[^>]*)>/gi, (m) => {
       if (/action=/.test(m) && /method=/i.test(m)) return m;

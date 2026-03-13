@@ -30,12 +30,12 @@ jobs:
             BASE_PATH="/${{ github.event.repository.name }}"
             echo "PUBLIC_SITE_URL=$SITE_URL" >> $GITHUB_ENV
             echo "PUBLIC_BASE_PATH=$BASE_PATH" >> $GITHUB_ENV
-            echo "PUBLIC_FULL_BASE_URL=${SITE_URL}${BASE_PATH}" >> $GITHUB_ENV
+            echo "PUBLIC_FULL_BASE_URL=${SITE_URL}${BASE_PATH}/" >> $GITHUB_ENV
             rm -f public/CNAME
           else
             echo "PUBLIC_SITE_URL=https://inoro.ai" >> $GITHUB_ENV
             echo "PUBLIC_BASE_PATH=/" >> $GITHUB_ENV
-            echo "PUBLIC_FULL_BASE_URL=https://inoro.ai" >> $GITHUB_ENV
+            echo "PUBLIC_FULL_BASE_URL=https://inoro.ai/" >> $GITHUB_ENV
             echo "inoro.ai" > public/CNAME
           fi
 
