@@ -8,8 +8,12 @@
  * Usage: node scripts/process-captured-html.js < input.html
  *    or: cat captured.html | node scripts/process-captured-html.js
  */
-const fs = require('fs');
-const path = require('path');
+import { writeFileSync } from 'fs';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+import { FORMSPREE_ID } from '../formspree.config.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 let html = '';
 if (process.stdin.isTTY) {
@@ -25,11 +29,11 @@ process.stdin.on('end', () => {
   html = html.replace(/<form([^>]*class="[^"]*space-y-6[^"]*"[^>]*)>/gi, (m) => {
     if (/action=/.test(m) && /method=/i.test(m)) return m;
     let extra = '';
-    if (!/action=/.test(m)) extra += ' action="https://formspree.io/f/xpwnqjvz"';
+    if (!/action=/.test(m)) extra += ` action="https://formspree.io/f/${FORMSPREE_ID}"`;
     if (!/method=/i.test(m)) extra += ' method="POST"';
     return m.slice(0, -1) + extra + '>';
   });
-  const out = path.join(__dirname, '../src/data/captured-body.html');
-  fs.writeFileSync(out, html);
+  const out = join(__dirname, '../src/data/captured-body.html');
+  writeFileSync(out, html);
   console.log('Written to', out);
 });

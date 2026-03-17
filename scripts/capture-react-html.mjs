@@ -6,6 +6,7 @@
  * Usage: npm run capture
  */
 import { spawn } from 'child_process';
+import { FORMSPREE_ID } from '../formspree.config.js';
 import { createInterface } from 'readline';
 import { writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
@@ -36,7 +37,7 @@ function processHtml(html) {
     .replace(/<form([^>]*class="[^"]*space-y-6[^"]*"[^>]*)>/gi, (m) => {
       if (/action=/.test(m) && /method=/i.test(m)) return m;
       let extra = '';
-      if (!/action=/.test(m)) extra += ' action="https://formspree.io/f/xpwnqjvz"';
+      if (!/action=/.test(m)) extra += ` action="https://formspree.io/f/${FORMSPREE_ID}"`;
       if (!/method=/i.test(m)) extra += ' method="POST"';
       return m.slice(0, -1) + extra + '>';
     });

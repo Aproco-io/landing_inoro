@@ -13,7 +13,7 @@ The full React-rendered HTML was sent in a previous message in the parent conver
 2. **Pipe to process script** - The script at scripts/process-captured-html.js reads from stdin and writes to src/data/captured-body.html. It will:
    - Replace src="/assets/ with src="assets/
    - Replace href="/assets/ with href="assets/
-   - Add action="https://formspree.io/f/xpwnqjvz" and method="POST" to the form with class="space-y-6" if missing
+   - Add action and method to the form (uses FORMSPREE_ID from formspree.config.js) if missing
 
 3. **Run** (paste your HTML into a file first, e.g. captured-raw.html):
    cat captured-raw.html | node scripts/process-captured-html.js
