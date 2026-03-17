@@ -24,7 +24,7 @@
       btn.className = "static-tab active";
       var txt = (btn.textContent || "").toLowerCase();
       if (txt.includes("bpo")) setImage("bpo");
-      else if (txt.includes("bfsi")) setImage("bfsi");
+      else if (txt.includes("bfsi") || txt.includes("fintech")) setImage("bfsi");
       else if (txt.includes("retail")) setImage("retail");
     });
   });
