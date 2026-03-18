@@ -6,9 +6,9 @@
   const img = visual.querySelector("img");
   if (!img) return;
   const map = {
-    bpo: "assets/segment-bpo.png",
-    bfsi: "assets/segment-bfsi.png",
-    retail: "assets/segment-retail.png",
+    bpo: "assets/segment-retail.png",
+    bfsi: "assets/hero-dashboard-custom.png",
+    retail: "assets/segment-bpo.png",
   };
   const setImage = function(key) {
     img.src = map[key] || map.bpo;

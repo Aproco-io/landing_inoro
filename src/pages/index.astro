@@ -140,15 +140,15 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
       .segment-shot-wrap {
         border-radius: 0.75rem;
         overflow: hidden;
-        border: 1px solid #dbe4f0;
-        background: #eef2f7;
+        aspect-ratio: 1024 / 850;
       }
 
       .segment-shot {
         display: block;
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
       }
 
       /* Nav bar – white bg + shadow (static GitHub Pages, captured HTML ma bg-transparent) */
