@@ -10,7 +10,7 @@
     { keys: ['how it works', 'see how it works'], id: 'how-it-works' },
     { keys: ['features'], id: 'features' },
     { keys: ['pricing'], id: 'pricing' },
-    { keys: ['clients'], id: 'traction' },
+    { keys: ['clients'], id: 'clients' },
     { keys: ['demo', 'book a demo', 'book a free demo', 'get a quote'], id: 'demo' },
     { keys: ['faq'], id: 'faq' },
   ];
