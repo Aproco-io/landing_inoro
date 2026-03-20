@@ -168,18 +168,18 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
         background-color: #2a4565 !important;
       }
 
-      /* Loga firm – jedna linia, równy rozmiar wszystkich (w tym Tarczyńskiego) */
+      /* Loga firm – wyśrodkowane, zawijają się bez suwaka – hero + traction */
+      #hero .client-logos-grid,
       #traction .client-logos-grid {
         display: flex !important;
-        flex-wrap: nowrap !important;
+        flex-wrap: wrap !important;
         flex-direction: row !important;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
+        overflow: visible;
       }
+      #hero .client-logos-grid > div,
       #traction .client-logos-grid > div {
         flex: 0 0 auto !important;
         width: 150px !important;
@@ -190,6 +190,7 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
         align-items: center !important;
         justify-content: center !important;
       }
+      #hero .client-logos-grid img,
       #traction .client-logos-grid img {
         width: 100% !important;
         height: 100% !important;
@@ -201,6 +202,7 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
         object-position: center !important;
         opacity: 0.92 !important;
       }
+      #hero .client-logos-grid img:hover,
       #traction .client-logos-grid img:hover {
         opacity: 1 !important;
       }
