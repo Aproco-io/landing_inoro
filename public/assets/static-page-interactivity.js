@@ -44,10 +44,15 @@
 
   /* Nav bar stays visible (fixed at top) – no hide-on-scroll on static GitHub Pages */
 
-  document.querySelectorAll('#faq button').forEach(function (btn) {
-    var content = btn.nextElementSibling;
-    if (!content || !content.classList) return;
-    btn.addEventListener('click', function () {
+  /* FAQ accordion – event delegation so it works when DOM is ready */
+  function initFaq() {
+    var faq = document.getElementById('faq');
+    if (!faq) return;
+    faq.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn || !faq.contains(btn)) return;
+      var content = btn.nextElementSibling;
+      if (!content || !content.classList) return;
       var wasHidden = content.classList.contains('hidden');
       document.querySelectorAll('#faq button + div').forEach(function (d) {
         d.classList.add('hidden');
@@ -61,7 +66,12 @@
         if (svg) svg.style.transform = 'rotate(180deg)';
       }
     });
-  });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaq);
+  } else {
+    initFaq();
+  }
 
   var menuBtn = document.querySelector('nav button[aria-label="Toggle menu"]');
   if (menuBtn) {
