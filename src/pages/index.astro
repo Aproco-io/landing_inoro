@@ -168,16 +168,24 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
         background-color: #2a4565 !important;
       }
 
-      /* Loga firm – wyśrodkowane, zawijają się bez suwaka – hero + traction */
+      /* Trusted by – pełna szerokość, wyśrodkowany blok */
+      #hero .hero-trusted-by {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      /* Loga firm – jedna linia, wyśrodkowane, pełny rozmiar – hero + traction */
       #hero .client-logos-grid,
       #traction .client-logos-grid {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-wrap: nowrap !important;
         flex-direction: row !important;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        overflow: visible;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
       }
       #hero .client-logos-grid > div,
       #traction .client-logos-grid > div {
