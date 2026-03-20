@@ -7,6 +7,7 @@
  */
 (function () {
   var scrollMap = [
+    { keys: ['inoro', 'inoro.ai'], id: 'hero' },
     { keys: ['how it works', 'see how it works'], id: 'how-it-works' },
     { keys: ['features'], id: 'features' },
     { keys: ['pricing'], id: 'pricing' },
@@ -16,8 +17,21 @@
   ];
 
   function scrollToId(id) {
+    if (id === '#hero' || id === '' || id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     var el = document.querySelector(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function getClickText(el) {
+    var txt = (el.textContent || '').toLowerCase().trim();
+    if (!txt && el.querySelector) {
+      var img = el.querySelector('img[alt]');
+      if (img) txt = (img.getAttribute('alt') || '').toLowerCase().trim();
+    }
+    return txt;
   }
 
   document.addEventListener('click', function (e) {
@@ -27,10 +41,10 @@
     var href = t.getAttribute('href');
     if (href && href.charAt(0) === '#') {
       e.preventDefault();
-      scrollToId(href);
+      scrollToId(href === '#' ? 'top' : href);
       return;
     }
-    var txt = (t.textContent || '').toLowerCase().trim();
+    var txt = getClickText(t);
     for (var i = 0; i < scrollMap.length; i++) {
       for (var j = 0; j < scrollMap[i].keys.length; j++) {
         if (txt.indexOf(scrollMap[i].keys[j]) !== -1) {

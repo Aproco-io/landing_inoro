@@ -11,7 +11,7 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '';
 const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : p);
 const segmentScriptSrc = asset('assets/segment-tabs-static.js');
 const fallbackScriptSrc = asset('assets/segment-tabs-fallback.js');
-const interactivityScriptSrc = asset('assets/static-page-interactivity.js');
+const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=3';
 ---
 
 {useCaptured ? (
