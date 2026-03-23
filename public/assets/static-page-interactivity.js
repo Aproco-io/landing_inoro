@@ -37,6 +37,7 @@
   document.addEventListener('click', function (e) {
     var t = e.target.closest('button, a');
     if (!t) return;
+    if (t.closest('#faq')) return;
     if (t.type === 'submit' && t.closest('form')) return;
     var href = t.getAttribute('href');
     if (href && href.charAt(0) === '#') {
