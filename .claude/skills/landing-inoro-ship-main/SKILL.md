@@ -19,7 +19,9 @@ description: >-
 - Remote: typically `origin` → `https://github.com/Aproco-io/landing_inoro.git`.
 - **Node:** `>=22.12` per `package.json`.
 
-## Git workflow (recommended)
+## Git workflow (required for this repo)
+
+Use a **local clone** and the **git CLI** (or IDE git). Do **not** ship changes by calling GitHub’s file API with base64 bodies — that risks mangling files (e.g. whole `StaticBody.astro` turned into one base64 line).
 
 1. `git status` — review files.
 2. If behind `origin/main`: either **stash**, `git pull --rebase origin main`, **pop**; or **commit first**, then `git pull --rebase origin main`, resolve conflicts, continue.

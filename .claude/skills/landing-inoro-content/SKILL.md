@@ -7,6 +7,12 @@ description: >-
 
 # InOro landing — content and structure
 
+## Claude: Cowork vs Code (important)
+
+- **Prefer Claude Code** (or any agent with a **local clone** of `https://github.com/Aproco-io/landing_inoro.git`): edit files as **plain text** in the working tree, then `git commit` and `git push`. This matches these skills and avoids corruption.
+- **Claude Cowork** is fine **if** the session has the repo open as real files on disk and uses **git**, not the GitHub “update file” / base64 flow.
+- **Do not** use GitHub REST/Contents API, “create or update file”, or **base64-encoded full file uploads** for `*.astro`, `*.html`, or `*.js` in this project. That pattern has **replaced entire `StaticBody.astro` with a single base64 string** and broke the site.
+
 ## Stack
 
 - **Astro** builds to `dist/`; production deploy is **GitHub Pages** (workflow on push to `main`).
@@ -40,6 +46,7 @@ npm run build # must succeed before shipping
 
 ## Do not
 
+- Replace repo files via **GitHub integration** (upload/base64/API) instead of normal **git** on a local clone.
 - Encode or paste **base64** into `.astro`, `.ts`, or `.js` source files (must remain human-readable source; base64 breaks the component).
 - Break asset paths: prefer `assets/...` as in captured HTML so `BASE_URL` on GitHub Pages stays correct.
 - Run `npm run build:pl` unless the user wants to **overwrite** `captured-body.pl.html` from English; hand-edited Polish will be lost.
