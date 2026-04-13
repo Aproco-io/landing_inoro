@@ -40,6 +40,7 @@ npm run build # must succeed before shipping
 
 ## Do not
 
+- Encode or paste **base64** into `.astro`, `.ts`, or `.js` source files (must remain human-readable source; base64 breaks the component).
 - Break asset paths: prefer `assets/...` as in captured HTML so `BASE_URL` on GitHub Pages stays correct.
 - Run `npm run build:pl` unless the user wants to **overwrite** `captured-body.pl.html` from English; hand-edited Polish will be lost.
 

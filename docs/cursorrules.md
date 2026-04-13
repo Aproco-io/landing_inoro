@@ -1,6 +1,6 @@
 # Kontekst Projektu: InOro Landing Page
 
-Asystent AI pomaga w zarządzaniu stroną landingową. Strona używa statycznego HTML wszędzie (GitHub Pages i inoro.ai). Jedno źródło: `captured-body.html`.
+Asystent AI pomaga w zarządzaniu stroną landingową. Strona używa statycznego HTML wszędzie (GitHub Pages i inoro.ai). Treść: `captured-body.html` (EN) oraz `captured-body.pl.html` (PL), wstrzykiwane w `StaticBody.astro`.
 
 ---
 
@@ -16,7 +16,7 @@ Asystent AI pomaga w zarządzaniu stroną landingową. Strona używa statycznego
 
 | Co zmieniasz | Gdzie |
 |--------------|-------|
-| Treść strony | `src/data/captured-body.html` |
+| Treść strony | `src/data/captured-body.html` (EN), `captured-body.pl.html` (PL) |
 | Style globalne, pasek nav, pricing | `src/pages/index.astro` |
 | Scroll, FAQ, menu mobilne | `public/assets/static-page-interactivity.js` |
 | Obrazy, loga | `public/assets/logos/` |
