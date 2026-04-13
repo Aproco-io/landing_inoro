@@ -235,6 +235,19 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
       /* Hero waveform – ukryta */
       .hero-waveform { display: none !important; }
 
+      /* Przełącznik języka PL/EN */
+      .inoro-lang-btn[aria-current="true"] {
+        font-weight: 600;
+        color: #259bf7;
+      }
+      .inoro-lang-btn[aria-current="false"] {
+        font-weight: 500;
+        color: rgb(100 116 139);
+      }
+      .dark .inoro-lang-btn[aria-current="false"] {
+        color: rgb(148 163 184);
+      }
+
     </style>
   </head>
   <body>

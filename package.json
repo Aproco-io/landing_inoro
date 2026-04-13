@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "capture": "node scripts/capture-react-html.mjs",
+    "build:pl": "node scripts/build-captured-body-pl.mjs",
     "astro": "astro"
   },
   "devDependencies": {
