@@ -1,15 +1,15 @@
 ---
 name: landing-inoro
-description: Work on InOro landing page (Astro). Single static HTML source (captured-body.html). Use when editing content, fixing nav/styling, or deploying.
+description: Work on InOro landing page (Astro). Static HTML sources captured-body.html (EN) and captured-body.pl.html (PL). Use when editing content, fixing nav/styling, i18n, or deploying.
 ---
 
 # InOro Landing Page – Developer Skill
 
 ## Architecture
 
-**Jedno źródło treści** – wszędzie statyczny HTML z `captured-body.html` (bez Reacta).
+**Statyczny HTML** – `StaticBody` wstrzykuje `captured-body.html` (EN) i `captured-body.pl.html` (PL); przełącznik `inoro-lang` w `static-page-interactivity.js` (bez Reacta w treści).
 
-Deploy na inoro.ai (base `/`). Zawartość: `StaticBody` + `captured-body.html`. Brak pages-mode – jeden tryb.
+Deploy na inoro.ai (base `/`). Push na **main** uruchamia GitHub Actions (`.github/workflows/deploy-pages.yml`).
 
 ## Kluczowe pliki
 
@@ -17,22 +17,24 @@ Deploy na inoro.ai (base `/`). Zawartość: `StaticBody` + `captured-body.html`.
 |------|-----------------|
 | `src/pages/index.astro` | Layout, meta, style globalne |
 | `src/components/StaticBody.astro` | Wyświetlanie captured HTML, skrypty |
-| `src/data/captured-body.html` | Treść strony – jedno źródło |
-| `public/assets/static-page-interactivity.js` | Scroll do sekcji, FAQ, menu mobilne, style nav |
+| `src/data/captured-body.html` | Treść strony (EN) |
+| `src/data/captured-body.pl.html` | Treść strony (PL) |
+| `public/assets/static-page-interactivity.js` | Scroll do sekcji, FAQ, menu mobilne, style nav, język |
+| `scripts/build-captured-body-pl.mjs` | Regeneracja PL z EN (nadpisuje pl PL) |
 | `scripts/capture-react-html.mjs` | Skrypt do przechwycenia HTML z Reacta |
 | `scripts/process-captured-html.js` | Przetwarzanie przechwyconego HTML |
 
 ## Gdzie wprowadzać zmiany
 
 ### Treść strony
-→ `src/data/captured-body.html` – edytuj bezpośrednio
+→ `src/data/captured-body.html` (EN) lub `captured-body.pl.html` (PL). Nie uruchamiaj `npm run build:pl`, jeśli PL jest ręcznie dopracowany — skrypt nadpisze plik.
 
 ### Style nawigacji
 → `src/pages/index.astro` – `<style is:global>` z `nav.fixed`  
 → `public/assets/static-page-interactivity.js` – logika scroll/FAQ/menu
 
 ### Cennik
-→ `src/pages/index.astro` – `.pricing-custom`; treść w `captured-body.html`
+→ `src/pages/index.astro` – `.pricing-custom`; treść w plikach captured-body (EN/PL)
 
 ### Logi, obrazy
 → `public/assets/logos/` – pliki PNG/SVG  
@@ -46,7 +48,7 @@ Uwaga: w nazwach plików unikaj spacji (np. `telbridge-logo.png` zamiast `telbri
 ## Typowe zadania
 
 **Zmiana tekstu na stronie (GitHub)**  
-→ Edytuj `src/data/captured-body.html`.
+→ Edytuj `src/data/captured-body.html` (EN) lub `captured-body.pl.html` (PL).
 
 **Pasek nawigacji – biały, z cieniem**  
 → Już w `index.astro` w stylach `nav.fixed`. Nie usuwać.
@@ -65,3 +67,4 @@ Uwaga: w nazwach plików unikaj spacji (np. `telbridge-logo.png` zamiast `telbri
 - Pełna dokumentacja: `docs/DEVELOPER-GUIDE.md`
 - Instrukcje capture: `src/data/CAPTURE-INSTRUCTIONS.md`
 - Reguły AI: `docs/cursorrules.md`
+- Claude Cowork (projekt): `.claude/skills/landing-inoro-content`, `.claude/skills/landing-inoro-ship-main`
