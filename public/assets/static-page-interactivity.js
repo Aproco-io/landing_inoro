@@ -63,6 +63,11 @@
       var s = localStorage.getItem(STORAGE_KEY);
       if (s === 'en' || s === 'pl') return s;
     } catch (e) {}
+    /* No stored preference — auto-detect from browser language */
+    try {
+      var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (browserLang.indexOf('pl') === 0) return 'pl';
+    } catch (e) {}
     return 'en';
   }
 

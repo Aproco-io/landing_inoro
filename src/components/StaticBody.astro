@@ -17,6 +17,7 @@ const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : p);
 const segmentScriptSrc = asset('assets/segment-tabs-static.js');
 const fallbackScriptSrc = asset('assets/segment-tabs-fallback.js');
 const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=8';
+const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
 ---
 
 {useCaptured ? (
@@ -26,8 +27,12 @@ const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?
     <script is:inline>
       (function () {
         try {
-          var lang = localStorage.getItem('inoro-lang') || 'en';
-          if (lang !== 'en' && lang !== 'pl') lang = 'en';
+          var lang = localStorage.getItem('inoro-lang');
+          if (lang !== 'en' && lang !== 'pl') {
+            /* No stored preference — auto-detect from browser language */
+            var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            lang = (browserLang.indexOf('pl') === 0) ? 'pl' : 'en';
+          }
           var en = document.getElementById('lang-en');
           var pl = document.getElementById('lang-pl');
           if (en && pl) {
@@ -44,6 +49,7 @@ const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?
     </script>
     <script is:inline src={interactivityScriptSrc} />
     <script is:inline src={segmentScriptSrc} />
+    <script is:inline src={cookieConsentScriptSrc} />
   </>
 ) : (
 <>
