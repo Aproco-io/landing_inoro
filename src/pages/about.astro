@@ -1,0 +1,53 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import BlufSection from '../components/sections/BlufSection.astro';
+import RichBodySection from '../components/sections/RichBodySection.astro';
+import CtaBandSection from '../components/sections/CtaBandSection.astro';
+import LogoBarSection from '../components/sections/LogoBarSection.astro';
+---
+<PageLayout
+  lang="en"
+  title="About InOro — Built by Contact Center Practitioners | InOro"
+  description="InOro is a conversation intelligence platform built by contact center practitioners at Aproco. EU-native, per-minute pricing, on-premise option."
+  currentPath="/about/"
+>
+  <HeroSection
+    badge="About"
+    heading="Built by contact center practitioners"
+    subheading="InOro is a conversation intelligence platform made in Europe, priced for real usage, and shipped with the operators who use it in mind."
+    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+  />
+
+  <BlufSection
+    term="InOro"
+    body="is the conversation intelligence platform of <strong>Aproco</strong>. We help contact centers, BPOs and regulated operations analyze 100% of their calls — with per-minute pricing, EU or on-premise deployment, and a modern LLM stack. The team behind it has spent years building software for and inside contact centers."
+  />
+
+  <LogoBarSection lang="en" />
+
+  <RichBodySection body={`
+    <h2>Who we build for</h2>
+    <p>Contact center operators, QA leaders, compliance officers and BPO founders. If your job depends on understanding what actually happens in customer calls — not what a 2% sample shows — we build for you.</p>
+    <h2>What we won't do</h2>
+    <ul>
+      <li>Force a per-agent license on a business that runs on volume.</li>
+      <li>Lock your voice data on US cloud when your regulator says EU.</li>
+      <li>Make analytics an "Enterprise-only" tier — every feature ships in the same per-minute price.</li>
+      <li>Sell a suite you don't need. InOro is analytics-only, on top of the stack you already run.</li>
+    </ul>
+    <h2>Where we run</h2>
+    <p>Hosted in the EU by default. Full on-premise deployment for teams that need audio, transcripts and results inside their own infrastructure. GDPR by design, ISO 27001-aligned practices, no training on customer data without consent.</p>
+    <h2>The people</h2>
+    <p>InOro is authored and maintained by <strong>Adam Sipowicz</strong>, Co-founder, and the team at Aproco. Content on our resources hub is written by people who have run the operations we help — not marketing.</p>
+    <h2>Get in touch</h2>
+    <p>The fastest way to see if InOro fits: <a href="/demo/">book a 30-minute demo</a> on your own calls. Or reach us at <a href="mailto:contact@aproco.io">contact@aproco.io</a>.</p>
+  `} />
+
+  <CtaBandSection
+    heading="See InOro on your own calls"
+    body="30-minute demo. 30-day pilot • no credit card."
+    primaryCta={{ label: "Book a demo", href: "/demo/" }}
+    secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+  />
+</PageLayout>

@@ -1,0 +1,246 @@
+<style is:global>
+  /* Brand token overrides — apply new tokens to captured HTML which
+     otherwise uses --primary from its bundled CSS (:root{--primary:#259bf7}).
+     Since this block loads AFTER the bundle, cascade wins. */
+  :root {
+    --primary: #1AA7E0;
+    --primary-foreground: #E8F5FC;
+    --sidebar-primary: #1AA7E0;
+    --sidebar-primary-foreground: #E8F5FC;
+    --chart-1: #1AA7E0;
+    --chart-2: #0E8AC1;
+    --ring: #1AA7E0;
+    --sidebar-ring: #1AA7E0;
+    --brand-primary: #1AA7E0;
+    --brand-primary-dark: #0E8AC1;
+    --brand-pastel: #E8F5FC;
+  }
+  html, body { font-family: Inter, system-ui, sans-serif; }
+  .lang-root h1,
+  .lang-root h2,
+  .lang-root h3,
+  .lang-root h4 {
+    font-family: Play, Inter, sans-serif;
+  }
+
+  /* Custom pricing block replacing slider section */
+  .pricing-custom {
+    background: #020b1f;
+    color: #e2e8f0;
+  }
+  .pricing-custom .wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .pricing-custom .kicker {
+    color: #1AA7E0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .pricing-custom h2 {
+    margin: 0.5rem 0 0;
+    font-family: Play, Inter, sans-serif;
+    line-height: 1.05;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    color: #f8fafc;
+  }
+  .pricing-custom .subtitle {
+    margin-top: 1rem;
+    max-width: 40rem;
+    color: #94a3b8;
+    font-size: 1.15rem;
+  }
+  .pricing-custom .panel {
+    margin-top: 2.25rem;
+    border-radius: 1.05rem;
+    border: 1px solid #1e3a66;
+    background: #0b1f3d;
+    padding: 1.35rem;
+  }
+  .pricing-custom .grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 1rem;
+  }
+  .pricing-custom .card {
+    background: #0a162d;
+    border: 1px solid #1b3258;
+    border-radius: 0.9rem;
+    padding: 1.1rem;
+  }
+  .pricing-custom .start {
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+  .pricing-custom .price {
+    margin: 0.2rem 0 0.25rem;
+    font-family: Play, Inter, sans-serif;
+    font-size: clamp(2.3rem, 5vw, 3.6rem);
+    color: #1AA7E0;
+    font-weight: 700;
+  }
+  .pricing-custom .muted {
+    color: #64748b;
+  }
+  .pricing-custom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pricing-custom li {
+    margin: 0.6rem 0;
+    color: #cbd5e1;
+  }
+  .pricing-custom li::before {
+    content: "✓";
+    margin-right: 0.55rem;
+    color: #1AA7E0;
+    font-weight: 700;
+  }
+  .pricing-custom .quote {
+    margin-top: 0.9rem;
+    display: inline-block;
+    width: 100%;
+    background: #1AA7E0;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.82rem 1rem;
+    border-radius: 0.7rem;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .pricing-custom .bottom {
+    margin-top: 1rem;
+    border-radius: 0.9rem;
+    border: 1px solid #1b3258;
+    background: #0a162d;
+    color: #94a3b8;
+    padding: 0.9rem 1rem;
+  }
+  @media (max-width: 980px) {
+    .pricing-custom .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .segment-shot-wrap {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    aspect-ratio: 1024 / 850;
+  }
+
+  .segment-shot {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  /* Nav bar – white bg + shadow (static GitHub Pages, captured HTML ma bg-transparent) */
+  nav.fixed {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  .dark nav.fixed {
+    background: rgba(15, 23, 42, 0.95) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Tło traction/footer – ten sam chłodny navy co pricing (#0b1f3d, #1e3a66), jaśniejsze dla log */
+  #traction,
+  footer {
+    background-color: #2a4565 !important;
+  }
+
+  /* Trusted by – pełna szerokość, wyśrodkowany blok */
+  #hero .hero-trusted-by {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  /* Loga firm – jedna linia na desktop, zawijanie na mobilce – hero + traction */
+  #hero .client-logos-grid,
+  #traction .client-logos-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (max-width: 767px) {
+    #hero .client-logos-grid,
+    #traction .client-logos-grid {
+      flex-wrap: wrap !important;
+      overflow: visible;
+      gap: 1.5rem;
+    }
+    #hero .client-logos-grid > div,
+    #traction .client-logos-grid > div {
+      width: 120px !important;
+      min-width: 120px !important;
+    }
+  }
+  #hero .client-logos-grid > div,
+  #traction .client-logos-grid > div {
+    flex: 0 0 auto !important;
+    width: 150px !important;
+    height: 52px !important;
+    min-width: 150px !important;
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  #hero .client-logos-grid img,
+  #traction .client-logos-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    opacity: 0.92 !important;
+  }
+  #hero .client-logos-grid img:hover,
+  #traction .client-logos-grid img:hover {
+    opacity: 1 !important;
+  }
+  /* Footer – zapobieganie rozjeżdżaniu */
+  footer .container { max-width: 1280px; overflow-x: hidden; }
+  footer .grid { min-width: 0; }
+
+  /* Hero waveform – ukryta */
+  .hero-waveform { display: none !important; }
+
+  /* Przełącznik języka PL/EN */
+  .inoro-lang-btn[aria-current="true"] {
+    font-weight: 600;
+    color: #1AA7E0;
+  }
+  .inoro-lang-btn[aria-current="false"] {
+    font-weight: 500;
+    color: rgb(100 116 139);
+  }
+  .dark .inoro-lang-btn[aria-current="false"] {
+    color: rgb(148 163 184);
+  }
+
+  /* Ukryj oryginalny nav z captured-body — nowa nawigacja renderowana z Astro */
+  .lang-root > nav.fixed,
+  .lang-root nav.fixed:first-of-type {
+    display: none !important;
+  }
+  /* Adjust hero top spacing since old fixed nav is gone */
+  .lang-root #hero { padding-top: 1rem; }
+</style>

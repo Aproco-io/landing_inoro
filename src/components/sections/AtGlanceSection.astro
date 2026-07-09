@@ -1,0 +1,53 @@
+---
+interface Props { heading?: string; kicker?: string; bullets: string[] }
+const { heading, kicker, bullets } = Astro.props;
+---
+<section class="s-glance">
+  <div class="inoro-container">
+    {(kicker || heading) && (
+      <div class="s-glance__head">
+        {kicker && <span class="s-glance__kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+    )}
+    <ul>
+      {bullets.map((b) => <li set:html={b} />)}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .s-glance { padding: 4rem 0; background: #f8fafc; }
+  .s-glance__head { max-width: 780px; margin: 0 auto 1.75rem; text-align: center; }
+  .s-glance__kicker {
+    display: inline-block; color: #1AA7E0;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .s-glance h2 {
+    font-family: Play, Inter, sans-serif;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0; color: #0f172a;
+  }
+  ul {
+    max-width: 900px; margin: 0 auto;
+    list-style: none; padding: 0;
+    display: grid; gap: 0.85rem;
+  }
+  li {
+    padding: 1rem 1.15rem 1rem 3rem;
+    background: #fff; border: 1px solid #e2e8f0;
+    border-radius: 0.7rem;
+    color: #334155; font-size: 1rem; line-height: 1.55;
+    position: relative;
+  }
+  li::before {
+    content: "";
+    position: absolute; left: 1rem; top: 1.15rem;
+    width: 20px; height: 20px;
+    border-radius: 50%; background: #1AA7E0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'><path fill-rule='evenodd' d='M16.7 5.3a1 1 0 010 1.4l-8 8a1 1 0 01-1.4 0l-4-4a1 1 0 111.4-1.4L8 12.6l7.3-7.3a1 1 0 011.4 0z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat; background-position: center; background-size: 12px 12px;
+  }
+  li :global(strong) { color: #0f172a; font-weight: 600; }
+</style>

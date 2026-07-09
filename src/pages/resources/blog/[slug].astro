@@ -1,0 +1,161 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../../layouts/PageLayout.astro';
+import MarkdownBody from '../../../components/MarkdownBody.astro';
+import CtaSection from '../../../components/CtaSection.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('blog', (p) => p.data.lang === 'en' && !p.data.draft);
+  return items.map((entry) => ({
+    params: { slug: entry.data.slug.replace(/^\/resources\/blog\//, '').replace(/\/$/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(data.date);
+---
+<PageLayout
+  lang="en"
+  title={data.seo?.metaTitle ?? data.title}
+  description={data.seo?.metaDescription ?? data.description}
+  currentPath={data.slug}
+>
+  <article class="blog-post">
+    <header class="blog-post__head">
+      <div class="inoro-container">
+        <nav class="blog-post__crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="sep">/</span>
+          <a href="/resources/blog/">Resources</a>
+          <span class="sep">/</span>
+          <span>{data.title}</span>
+        </nav>
+        {data.category && <span class="blog-post__cat">{data.category}</span>}
+        <h1>{data.title}</h1>
+        <p class="blog-post__lead">{data.excerpt ?? data.description}</p>
+        <div class="blog-post__meta">
+          <span>{data.author}</span>
+          <span class="dot">·</span>
+          <time datetime={data.date.toISOString()}>{formattedDate}</time>
+          {data.readTime && (
+            <>
+              <span class="dot">·</span>
+              <span>{data.readTime} min read</span>
+            </>
+          )}
+        </div>
+      </div>
+    </header>
+
+    {data.cover && (
+      <div class="blog-post__cover">
+        <div class="inoro-container">
+          <img src={data.cover} alt={data.coverAlt ?? data.title} loading="eager" />
+        </div>
+      </div>
+    )}
+
+    <MarkdownBody>
+      <Content />
+    </MarkdownBody>
+
+    {data.tags.length > 0 && (
+      <div class="blog-post__tags">
+        <div class="inoro-container">
+          {data.tags.map((t) => <span class="tag">#{t}</span>)}
+        </div>
+      </div>
+    )}
+  </article>
+
+  <CtaSection
+    heading="See InOro in action"
+    subheading="30-minute demo tailored to your contact center."
+    buttonLabel="Book a demo"
+    buttonHref="/#demo"
+  />
+</PageLayout>
+
+<style>
+  .blog-post__head {
+    padding: 3.5rem 0 2.5rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .blog-post__head > .inoro-container { max-width: 780px; }
+  .blog-post__crumbs {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .blog-post__crumbs a { color: #64748b; text-decoration: none; }
+  .blog-post__crumbs a:hover { color: #1AA7E0; }
+  .blog-post__crumbs .sep { color: #cbd5e1; }
+  .blog-post__cat {
+    display: inline-block;
+    background: rgba(26, 167, 224, 0.12);
+    color: #1AA7E0;
+    padding: 0.3rem 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.9rem;
+  }
+  .blog-post h1 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    color: #0f172a;
+  }
+  .blog-post__lead {
+    font-size: 1.2rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 1.75rem;
+  }
+  .blog-post__meta {
+    display: flex;
+    gap: 0.55rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .blog-post__meta .dot { opacity: 0.55; }
+  .blog-post__cover {
+    padding: 2rem 0 0;
+    background: #ffffff;
+  }
+  .blog-post__cover > .inoro-container { max-width: 900px; }
+  .blog-post__cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    box-shadow: 0 25px 55px -30px rgba(15, 23, 42, 0.3);
+  }
+  .blog-post__tags {
+    padding: 0 0 3rem;
+    background: #ffffff;
+  }
+  .blog-post__tags > .inoro-container { max-width: 780px; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .tag {
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.65rem;
+    border-radius: 0.35rem;
+  }
+</style>

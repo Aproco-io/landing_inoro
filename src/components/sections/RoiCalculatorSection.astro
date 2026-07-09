@@ -1,0 +1,130 @@
+---
+interface Props {
+  heading?: string;
+  perMinutePrice: number;
+  currency?: string;
+}
+const { heading, perMinutePrice, currency = '€' } = Astro.props;
+---
+<section class="s-roi">
+  <div class="inoro-container">
+    <div class="s-roi__panel">
+      <h2>{heading ?? 'Cost estimate'}</h2>
+      <div class="s-roi__row">
+        <label>
+          Agents
+          <input type="number" id="roi-agents" value="50" min="1" step="1" />
+        </label>
+        <label>
+          Minutes / agent / month
+          <input type="number" id="roi-minutes" value="1000" min="1" step="100" />
+        </label>
+      </div>
+      <div class="s-roi__result">
+        <div>
+          <span class="s-roi__label">InOro (per-minute)</span>
+          <span class="s-roi__value" id="roi-inoro" data-currency={currency} data-rate={perMinutePrice}>{currency}2,500</span>
+        </div>
+        <div>
+          <span class="s-roi__label">Typical per-seat competitor</span>
+          <span class="s-roi__value muted" id="roi-competitor">{currency}5,000 – {currency}12,500</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function fmt(n: number, cur: string) {
+    return `${cur}${Math.round(n).toLocaleString('en-US')}`;
+  }
+  const agentsEl = document.getElementById('roi-agents') as HTMLInputElement | null;
+  const minEl = document.getElementById('roi-minutes') as HTMLInputElement | null;
+  const inoroEl = document.getElementById('roi-inoro');
+  const competitorEl = document.getElementById('roi-competitor');
+  if (agentsEl && minEl && inoroEl && competitorEl) {
+    const rate = parseFloat(inoroEl.getAttribute('data-rate') || '0.05');
+    const currency = inoroEl.getAttribute('data-currency') || '€';
+    const perSeatLow = 100;
+    const perSeatHigh = 250;
+    const recalc = () => {
+      const agents = parseInt(agentsEl.value || '0', 10);
+      const mins = parseInt(minEl.value || '0', 10);
+      const inoro = agents * mins * rate;
+      const compLow = agents * perSeatLow;
+      const compHigh = agents * perSeatHigh;
+      inoroEl.textContent = fmt(inoro, currency);
+      competitorEl.textContent = `${fmt(compLow, currency)} – ${fmt(compHigh, currency)}`;
+    };
+    agentsEl.addEventListener('input', recalc);
+    minEl.addEventListener('input', recalc);
+    recalc();
+  }
+</script>
+
+<style>
+  .s-roi { padding: 4rem 0; background: #fff; }
+  .s-roi__panel {
+    max-width: 780px; margin: 0 auto;
+    background: #E8F5FC;
+    border: 1px solid rgba(26, 167, 224, 0.25);
+    border-radius: 1rem;
+    padding: 2.25rem 2.25rem;
+  }
+  .s-roi__panel h2 {
+    font-family: Play, Inter, sans-serif;
+    text-align: center;
+    margin: 0 0 1.5rem;
+    color: #0f172a;
+    font-size: 1.35rem;
+  }
+  .s-roi__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) { .s-roi__row { grid-template-columns: 1fr; } }
+  .s-roi__row label {
+    display: flex; flex-direction: column;
+    gap: 0.35rem;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .s-roi__row input {
+    padding: 0.75rem 0.85rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    font-size: 1rem;
+    color: #0f172a;
+    font-family: inherit;
+  }
+  .s-roi__row input:focus { outline: 2px solid #1AA7E0; outline-offset: -1px; border-color: transparent; }
+  .s-roi__result {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) { .s-roi__result { grid-template-columns: 1fr; } }
+  .s-roi__result > div {
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid #e2e8f0;
+  }
+  .s-roi__label {
+    display: block;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  .s-roi__value {
+    font-family: Play, Inter, sans-serif;
+    color: #0E8AC1;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .s-roi__value.muted { color: #94a3b8; font-size: 1.15rem; }
+</style>

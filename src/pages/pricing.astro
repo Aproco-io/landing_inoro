@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import SectionRenderer from '../components/sections/SectionRenderer.astro';
+import PageHero from '../components/PageHero.astro';
+import CtaSection from '../components/CtaSection.astro';
+import MarkdownBody from '../components/MarkdownBody.astro';
+
+const items = await getCollection('pricing', (e) => e.data.lang === 'en');
+const entry = items[0];
+const { data } = entry;
+const { Content } = await render(entry);
+const useSections = Array.isArray(data.sections) && data.sections.length > 0;
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Pricing' }];
+---
+<PageLayout
+  lang="en"
+  title={data.seo?.metaTitle ?? data.title}
+  description={data.seo?.metaDescription ?? data.description}
+  currentPath="/pricing/"
+>
+  {useSections ? (
+    <SectionRenderer sections={data.sections!} lang="en" breadcrumbs={breadcrumbs} />
+  ) : (
+    <>
+      {data.hero && (
+        <PageHero
+          kicker={data.hero.kicker}
+          heading={data.hero.heading}
+          subheading={data.hero.subheading}
+          breadcrumbs={breadcrumbs}
+        />
+      )}
+      <MarkdownBody><Content /></MarkdownBody>
+      {data.cta && (
+        <CtaSection
+          heading={data.cta.heading}
+          subheading={data.cta.subheading}
+          buttonLabel={data.cta.buttonLabel}
+          buttonHref={data.cta.buttonHref}
+        />
+      )}
+    </>
+  )}
+</PageLayout>

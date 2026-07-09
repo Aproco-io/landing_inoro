@@ -1,0 +1,197 @@
+---
+interface Props {
+  lang: 'pl' | 'en';
+}
+const { lang } = Astro.props;
+
+const t = lang === 'pl'
+  ? {
+      tagline: 'Inteligentna analiza rozmów dla nowoczesnych call center.',
+      product: 'Produkt',
+      solutions: 'Rozwiązania',
+      resources: 'Wiedza',
+      company: 'Firma',
+      contact: 'Kontakt',
+      privacy: 'Polityka prywatności',
+      terms: 'Regulamin',
+      rights: 'Wszelkie prawa zastrzeżone.',
+      productLinks: [
+        { label: 'Analiza rozmów', href: '/analiza-rozmow/' },
+        { label: 'Analiza mowy', href: '/analiza-mowy/' },
+        { label: 'Kontrola jakości', href: '/kontrola-jakosci-obslugi/' },
+        { label: 'Transkrypcja', href: '/transkrypcja-rozmow/' },
+        { label: 'Czat AI', href: '/czat-ai/' },
+      ],
+      solutionLinks: [
+        { label: 'BPO', href: '/rozwiazania/bpo/' },
+        { label: 'Banki i compliance', href: '/rozwiazania/compliance/' },
+        { label: 'E-commerce i retail', href: '/rozwiazania/e-commerce/' },
+        { label: 'Sprzedaż', href: '/rozwiazania/sprzedaz/' },
+      ],
+      resourceLinks: [
+        { label: 'Wskaźniki KPI', href: '/wiedza/wskazniki-call-center/' },
+        { label: 'RODO', href: '/wiedza/rodo-nagrywanie-rozmow/' },
+        { label: 'AI w call center', href: '/wiedza/ai-w-call-center/' },
+        { label: 'Słownik', href: '/wiedza/slownik/' },
+      ],
+    }
+  : {
+      tagline: 'AI-powered conversation intelligence for modern contact centers.',
+      product: 'Product',
+      solutions: 'Solutions',
+      resources: 'Resources',
+      company: 'Company',
+      contact: 'Contact',
+      privacy: 'Privacy Policy',
+      terms: 'Terms',
+      rights: 'All rights reserved.',
+      productLinks: [
+        { label: 'Conversation Intelligence', href: '/conversation-intelligence/' },
+        { label: 'Speech Analytics', href: '/speech-analytics/' },
+        { label: 'Quality Assurance', href: '/call-center-quality-assurance/' },
+        { label: 'Call Transcription', href: '/call-transcription/' },
+        { label: 'AI Chat', href: '/ai-chat/' },
+      ],
+      solutionLinks: [
+        { label: 'BPO', href: '/solutions/bpo/' },
+        { label: 'Compliance', href: '/solutions/compliance/' },
+        { label: 'Retail', href: '/solutions/retail/' },
+        { label: 'Sales', href: '/solutions/sales/' },
+      ],
+      resourceLinks: [
+        { label: 'Call Center KPIs', href: '/resources/call-center-kpis/' },
+        { label: 'Dashboards', href: '/resources/call-center-dashboard/' },
+        { label: 'AI Analytics', href: '/resources/ai-call-center-analytics/' },
+        { label: 'Glossary', href: '/resources/glossary/' },
+      ],
+    };
+---
+<footer class="inoro-footer">
+  <div class="inoro-footer__inner">
+    <div class="inoro-footer__brand">
+      <img src="/assets/logos/InOro_Logo.svg" alt="InOro.ai" />
+      <p>{t.tagline}</p>
+      <p class="inoro-footer__contact">
+        <a href="mailto:contact@aproco.io">contact@aproco.io</a>
+      </p>
+    </div>
+    <div class="inoro-footer__cols">
+      <div>
+        <h4>{t.product}</h4>
+        <ul>
+          {t.productLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h4>{t.solutions}</h4>
+        <ul>
+          {t.solutionLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <h4>{t.resources}</h4>
+        <ul>
+          {t.resourceLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="inoro-footer__bottom">
+    <span>© {new Date().getFullYear()} InOro.ai by Aproco. {t.rights}</span>
+    <a href="/Polityka-Prywatnosci.pdf">{t.privacy}</a>
+  </div>
+</footer>
+
+<style>
+  .inoro-footer {
+    background: #0b1f3d;
+    color: #cbd5e1;
+    padding: 3.5rem 1.25rem 1.75rem;
+    font-family: Inter, sans-serif;
+  }
+  .inoro-footer__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
+  .inoro-footer__brand img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .inoro-footer__brand p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    max-width: 300px;
+    line-height: 1.6;
+  }
+  .inoro-footer__contact a {
+    color: #1AA7E0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .inoro-footer__cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .inoro-footer__cols h4 {
+    color: #f8fafc;
+    font-family: Play, Inter, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .inoro-footer__cols ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .inoro-footer__cols a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.15s ease;
+  }
+  .inoro-footer__cols a:hover {
+    color: #1AA7E0;
+  }
+  .inoro-footer__bottom {
+    max-width: 1280px;
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.85rem;
+  }
+  .inoro-footer__bottom a {
+    color: #94a3b8;
+    text-decoration: none;
+  }
+  .inoro-footer__bottom a:hover { color: #1AA7E0; }
+  @media (max-width: 900px) {
+    .inoro-footer__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .inoro-footer__cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .inoro-footer__bottom {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+</style>

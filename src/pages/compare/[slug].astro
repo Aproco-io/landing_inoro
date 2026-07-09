@@ -1,0 +1,62 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import FeatureGrid from '../../components/FeatureGrid.astro';
+import BulletList from '../../components/BulletList.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import MarkdownBody from '../../components/MarkdownBody.astro';
+import SectionRenderer from '../../components/sections/SectionRenderer.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('compare', (e) => e.data.variant === 'vs');
+  return items.map((entry) => ({
+    params: { slug: entry.data.slug.replace(/^\/compare\//, '').replace(/\/$/, '') },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Compare' }, { label: data.title }];
+const useSections = Array.isArray(data.sections) && data.sections.length > 0;
+---
+<PageLayout
+  lang={data.lang}
+  title={data.seo?.metaTitle ?? data.title}
+  description={data.seo?.metaDescription ?? data.description}
+  currentPath={data.slug}
+>
+  {useSections ? (
+    <SectionRenderer sections={data.sections!} lang={data.lang} breadcrumbs={breadcrumbs} />
+  ) : (
+    <>
+      {data.hero && (
+        <PageHero
+          kicker={`InOro vs ${data.competitor}`}
+          heading={data.hero.heading}
+          subheading={data.hero.subheading}
+          primaryCta={data.hero.primaryCta}
+          breadcrumbs={breadcrumbs}
+        />
+      )}
+      {data.bullets.length > 0 && (
+        <BulletList kicker="Key differences" heading="Where InOro wins" items={data.bullets} />
+      )}
+      {data.features.length > 0 && (
+        <FeatureGrid kicker="Side by side" heading="Feature comparison" features={data.features} />
+      )}
+      <MarkdownBody><Content /></MarkdownBody>
+      {data.cta && (
+        <CtaSection
+          heading={data.cta.heading}
+          subheading={data.cta.subheading}
+          buttonLabel={data.cta.buttonLabel}
+          buttonHref={data.cta.buttonHref}
+        />
+      )}
+    </>
+  )}
+</PageLayout>

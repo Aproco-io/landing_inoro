@@ -1,0 +1,89 @@
+---
+interface Props {
+  heading?: string;
+  kicker?: string;
+  cards: {
+    icon?: string;
+    title: string;
+    body: string;
+    linkText?: string;
+    linkHref?: string;
+  }[];
+}
+const { heading, kicker, cards } = Astro.props;
+---
+<section class="s-capability">
+  <div class="inoro-container">
+    {(kicker || heading) && (
+      <div class="s-capability__head">
+        {kicker && <span class="s-capability__kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+    )}
+    <div class="s-capability__grid">
+      {cards.map((c) => (
+        <article class="s-capability__card">
+          <div class="s-capability__icon" aria-hidden="true">{c.icon ?? '◆'}</div>
+          <h3>{c.title}</h3>
+          <p set:html={c.body} />
+          {c.linkHref && c.linkText && (
+            <a class="s-capability__link" href={c.linkHref}>{c.linkText} →</a>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-capability { padding: 4rem 0; background: #fff; }
+  .s-capability__head { text-align: center; max-width: 700px; margin: 0 auto 2.5rem; }
+  .s-capability__kicker {
+    display: inline-block; color: #1AA7E0;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .s-capability__head h2 {
+    font-family: Play, Inter, sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.4rem);
+    margin: 0; color: #0f172a;
+  }
+  .s-capability__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .s-capability__card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.9rem;
+    padding: 1.75rem;
+    display: flex; flex-direction: column; gap: 0.65rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .s-capability__card:hover {
+    border-color: rgba(26, 167, 224, 0.35);
+    box-shadow: 0 10px 25px -12px rgba(15, 23, 42, 0.12);
+    transform: translateY(-2px);
+  }
+  .s-capability__icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 0.55rem;
+    background: rgba(26, 167, 224, 0.12);
+    color: #1AA7E0;
+    font-size: 1.25rem;
+    margin-bottom: 0.35rem;
+  }
+  .s-capability__card h3 {
+    font-family: Play, Inter, sans-serif;
+    margin: 0; font-size: 1.15rem; color: #0f172a;
+  }
+  .s-capability__card p { margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.6; }
+  .s-capability__link {
+    margin-top: auto; padding-top: 0.5rem;
+    color: #1AA7E0; font-weight: 500; font-size: 0.9rem;
+    text-decoration: none;
+  }
+  .s-capability__link:hover { color: #0E8AC1; text-decoration: underline; }
+</style>

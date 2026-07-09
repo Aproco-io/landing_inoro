@@ -1,0 +1,71 @@
+---
+interface Props {
+  heading?: string;
+  exchanges: { user: string; ai: string }[];
+}
+const { heading, exchanges } = Astro.props;
+---
+<section class="s-aichat">
+  <div class="inoro-container">
+    {heading && <h2>{heading}</h2>}
+    <div class="s-aichat__panel">
+      {exchanges.map((ex) => (
+        <>
+          <div class="s-aichat__row s-aichat__row--user">
+            <div class="s-aichat__msg s-aichat__msg--user">{ex.user}</div>
+          </div>
+          <div class="s-aichat__row s-aichat__row--ai">
+            <div class="s-aichat__msg s-aichat__msg--ai" set:html={ex.ai} />
+          </div>
+        </>
+      ))}
+    </div>
+    <p class="s-aichat__note">Illustrative example with demo data.</p>
+  </div>
+</section>
+
+<style>
+  .s-aichat { padding: 4rem 0; background: #f8fafc; }
+  .s-aichat h2 {
+    font-family: Play, Inter, sans-serif;
+    text-align: center;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0 0 2rem; color: #0f172a;
+  }
+  .s-aichat__panel {
+    max-width: 700px; margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.85rem;
+  }
+  .s-aichat__row { display: flex; }
+  .s-aichat__row--user { justify-content: flex-end; }
+  .s-aichat__row--ai { justify-content: flex-start; }
+  .s-aichat__msg {
+    padding: 0.85rem 1.15rem;
+    border-radius: 0.85rem;
+    max-width: 85%;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .s-aichat__msg--user {
+    background: #1AA7E0;
+    color: #fff;
+    border-bottom-right-radius: 0.25rem;
+  }
+  .s-aichat__msg--ai {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-bottom-left-radius: 0.25rem;
+  }
+  .s-aichat__msg--ai :global(strong) { color: #0E8AC1; }
+  .s-aichat__note {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin: 1rem 0 0;
+    font-style: italic;
+  }
+</style>

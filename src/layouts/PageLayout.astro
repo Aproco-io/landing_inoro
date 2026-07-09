@@ -1,0 +1,95 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { alternatesFor, SITE_URL } from '../data/i18n.ts';
+
+interface Props {
+  lang: 'pl' | 'en';
+  title: string;
+  description: string;
+  currentPath?: string;
+}
+
+const { lang, title, description, currentPath } = Astro.props;
+const htmlLang = lang;
+
+const alternates = currentPath
+  ? alternatesFor(currentPath, lang)
+  : { en: '/', pl: '/pl/' };
+const canonicalUrl = `${SITE_URL}${currentPath ?? '/'}`;
+const enUrl = `${SITE_URL}${alternates.en}`;
+const plUrl = `${SITE_URL}${alternates.pl}`;
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="pl" href={plUrl} />
+    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/`} />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6396RL0EK"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M6396RL0EK');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      :root {
+        --primary: #1AA7E0;
+        --primary-dark: #0E8AC1;
+        --pastel: #E8F5FC;
+        --accent: #10b981;
+        --success: #22C55E;
+        --warning: #F59E0B;
+        --danger: #EF4444;
+        --bg: #f8fafc;
+        --fg: #0f172a;
+        --muted-fg: #64748b;
+        --border: #e2e8f0;
+        --card: #ffffff;
+      }
+      *,
+      *::before,
+      *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      h1, h2, h3, h4 { font-family: Play, Inter, sans-serif; letter-spacing: -0.01em; }
+      a { color: var(--primary); }
+      img { max-width: 100%; height: auto; }
+      .inoro-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <Nav lang={lang} currentPath={currentPath} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

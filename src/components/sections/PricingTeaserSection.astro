@@ -1,0 +1,44 @@
+---
+interface Props { body: string; linkText: string; linkHref: string }
+const { body, linkText, linkHref } = Astro.props;
+---
+<section class="s-pricingteaser">
+  <div class="inoro-container">
+    <div class="s-pricingteaser__panel">
+      <p set:html={body} />
+      <a class="s-pricingteaser__link" href={linkHref}>{linkText} →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-pricingteaser { padding: 3rem 0; background: #fff; }
+  .s-pricingteaser__panel {
+    max-width: 900px; margin: 0 auto;
+    background: #E8F5FC;
+    border: 1px solid rgba(26, 167, 224, 0.3);
+    border-radius: 0.9rem;
+    padding: 1.75rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; flex-wrap: wrap;
+  }
+  .s-pricingteaser__panel p {
+    margin: 0; color: #0f172a; font-size: 1.05rem; line-height: 1.6;
+    max-width: 640px;
+  }
+  .s-pricingteaser__panel :global(strong) {
+    font-family: Play, Inter, sans-serif;
+    color: #0E8AC1;
+  }
+  .s-pricingteaser__link {
+    background: #1AA7E0;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.35rem;
+    border-radius: 0.55rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+  }
+  .s-pricingteaser__link:hover { background: #0E8AC1; }
+</style>

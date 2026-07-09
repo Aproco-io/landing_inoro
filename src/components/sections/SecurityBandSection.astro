@@ -1,0 +1,68 @@
+---
+interface Props {
+  heading?: string;
+  tiles: { title: string; body: string }[];
+  footer?: string;
+}
+const { heading, tiles, footer } = Astro.props;
+---
+<section class="s-security">
+  <div class="inoro-container">
+    {heading && <h2>{heading}</h2>}
+    <div class="s-security__grid">
+      {tiles.map((t) => (
+        <div class="s-security__tile">
+          <div class="s-security__icon">🛡️</div>
+          <h3>{t.title}</h3>
+          <p set:html={t.body} />
+        </div>
+      ))}
+    </div>
+    {footer && <p class="s-security__footer" set:html={footer} />}
+  </div>
+</section>
+
+<style>
+  .s-security { padding: 4rem 0; background: #fff; }
+  .s-security h2 {
+    font-family: Play, Inter, sans-serif;
+    text-align: center;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0 0 2rem; color: #0f172a;
+  }
+  .s-security__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+  }
+  .s-security__tile {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.85rem;
+    padding: 1.5rem;
+  }
+  .s-security__icon {
+    width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #E8F5FC;
+    border-radius: 0.5rem;
+    color: #1AA7E0;
+    margin-bottom: 0.85rem;
+    font-size: 1.15rem;
+  }
+  .s-security__tile h3 {
+    font-family: Play, Inter, sans-serif;
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+    color: #0f172a;
+  }
+  .s-security__tile p { margin: 0; color: #475569; font-size: 0.9rem; line-height: 1.55; }
+  .s-security__footer {
+    text-align: center;
+    color: #64748b;
+    max-width: 720px;
+    margin: 1.75rem auto 0;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+</style>

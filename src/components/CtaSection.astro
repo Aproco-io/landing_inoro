@@ -1,0 +1,58 @@
+---
+interface Props {
+  heading: string;
+  subheading?: string;
+  buttonLabel: string;
+  buttonHref: string;
+}
+const { heading, subheading, buttonLabel, buttonHref } = Astro.props;
+---
+<section class="cta-section">
+  <div class="inoro-container">
+    <div class="cta-section__panel">
+      <div>
+        <h2>{heading}</h2>
+        {subheading && <p>{subheading}</p>}
+      </div>
+      <a class="cta-section__button" href={buttonHref}>{buttonLabel}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section { padding: 4rem 0; background: #ffffff; }
+  .cta-section__panel {
+    background: linear-gradient(135deg, #0b1f3d, #1e3a66);
+    color: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cta-section__panel h2 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    color: #ffffff;
+  }
+  .cta-section__panel p {
+    margin: 0;
+    color: #cbd5e1;
+    max-width: 520px;
+  }
+  .cta-section__button {
+    background: #1AA7E0;
+    color: #ffffff;
+    padding: 0.85rem 1.75rem;
+    border-radius: 0.65rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+  }
+  .cta-section__button:hover {
+    background: #0E8AC1;
+  }
+</style>

@@ -1,19 +1,43 @@
 ---
 /** Static HTML body for GitHub Pages (base path /landing_inoro/).
- *  Used when React SPA would show 404 due to path mismatch. */
+ *  Used when React SPA would show 404 due to path mismatch.
+ *  Since language now lives in the URL (/ = EN, /pl/ = PL), we render
+ *  only one captured HTML variant per page. */
 import { FORMSPREE_ID } from '../../formspree.config.js';
 import capturedEn from '../data/captured-body.html?raw';
 import capturedPl from '../data/captured-body.pl.html?raw';
+
+interface Props { lang?: 'pl' | 'en' }
+const { lang = 'en' } = Astro.props;
+
 const formspreeReplace = (html) =>
   html.replace(/formspree\.io\/f\/[a-z0-9]+/gi, `formspree.io/f/${FORMSPREE_ID}`);
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '';
+const isGithubSubpath = base.length > 0;
+
+/**
+ * Captured HTML uses relative paths like `assets/foo.png` and
+ * `Polityka-Prywatnosci.pdf`. On GitHub Pages we rely on the `<base>` tag
+ * in index.astro to resolve those. On Vercel / production root deploy
+ * there's no `<base>`, so the browser resolves them against the current
+ * page URL — which breaks for any non-root page like `/pl/`.
+ * Prepend a leading `/` so they always resolve from site root.
+ */
+const rootRelativize = (html) =>
+  isGithubSubpath
+    ? html
+    : html
+        .replace(/(src|href)="assets\//g, '$1="/assets/')
+        .replace(/(src|href)="Polityka-Prywatnosci\.pdf"/g, '$1="/Polityka-Prywatnosci.pdf"');
+
 const useCaptured =
   !capturedEn.includes('Placeholder') &&
   capturedEn.includes('min-h-screen') &&
   capturedPl.includes('min-h-screen');
-const htmlEn = useCaptured ? formspreeReplace(capturedEn) : '';
-const htmlPl = useCaptured ? formspreeReplace(capturedPl) : '';
-const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '';
-const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : p);
+const source = lang === 'pl' ? capturedPl : capturedEn;
+const html = useCaptured ? rootRelativize(formspreeReplace(source)) : '';
+const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : `/${p}`);
 const segmentScriptSrc = asset('assets/segment-tabs-static.js');
 const fallbackScriptSrc = asset('assets/segment-tabs-fallback.js');
 const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=8';
@@ -22,31 +46,7 @@ const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
 
 {useCaptured ? (
   <>
-    <div id="lang-en" class="lang-root" set:html={htmlEn} />
-    <div id="lang-pl" class="lang-root" hidden set:html={htmlPl} />
-    <script is:inline>
-      (function () {
-        try {
-          var lang = localStorage.getItem('inoro-lang');
-          if (lang !== 'en' && lang !== 'pl') {
-            /* No stored preference — auto-detect from browser language */
-            var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            lang = (browserLang.indexOf('pl') === 0) ? 'pl' : 'en';
-          }
-          var en = document.getElementById('lang-en');
-          var pl = document.getElementById('lang-pl');
-          if (en && pl) {
-            if (lang === 'en') {
-              en.hidden = false;
-              pl.hidden = true;
-            } else {
-              en.hidden = true;
-              pl.hidden = false;
-            }
-          }
-        } catch (e) {}
-      })();
-    </script>
+    <div id={`lang-${lang}`} class="lang-root" set:html={html} />
     <script is:inline src={interactivityScriptSrc} />
     <script is:inline src={segmentScriptSrc} />
     <script is:inline src={cookieConsentScriptSrc} />
@@ -59,7 +59,7 @@ const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
   .static-nav a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; }
   .static-nav a:hover { color: #fff; }
   .static-nav .logo { font-size: 1.25rem; font-weight: 700; color: #fff; }
-  .static-nav .cta { background: #259bf7; color: #fff !important; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; }
+  .static-nav .cta { background: #1AA7E0; color: #fff !important; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; }
   .static-nav .links { display: flex; gap: 1.5rem; align-items: center; }
   .static-section { padding: 4rem 1.5rem; }
   @media (min-width: 768px) { .static-section { padding: 6rem 1.5rem; } }
@@ -69,7 +69,7 @@ const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
   .static-container-narrow { max-width: 56rem; margin: 0 auto; }
   .static-container-wide { max-width: 64rem; margin: 0 auto; }
   .static-text-center { text-align: center; }
-  .static-kicker { color: #259bf7; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .static-kicker { color: #1AA7E0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
   .static-h1 { font-size: 2.25rem; line-height: 1.2; font-weight: 700; margin-bottom: 1.5rem; }
   @media (min-width: 768px) { .static-h1 { font-size: 3.75rem; } }
   .static-h2 { font-size: 1.875rem; font-weight: 700; margin-bottom: 1.5rem; }
@@ -80,7 +80,7 @@ const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
   .static-hero { padding-top: 6rem; padding-bottom: 4rem; display: flex; flex-direction: column; gap: 3rem; align-items: center; }
   @media (min-width: 768px) { .static-hero { flex-direction: row; padding-top: 8rem; padding-bottom: 6rem; } }
   .static-hero > * { flex: 1; }
-  .static-btn { display: inline-block; background: #259bf7; color: #fff; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 700; text-decoration: none; }
+  .static-btn { display: inline-block; background: #1AA7E0; color: #fff; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 700; text-decoration: none; }
   .static-grid-3 { display: grid; gap: 2rem; }
   @media (min-width: 768px) { .static-grid-3 { grid-template-columns: repeat(3, 1fr); } }
   .static-grid-2-3 { display: grid; gap: 1.5rem; }
@@ -93,17 +93,17 @@ const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
   .static-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
   .static-tab { padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; border: none; background: #334155; color: #94a3b8; }
   .static-tab:hover { background: #475569; }
-  .static-tab.active { background: #259bf7; color: #fff; }
+  .static-tab.active { background: #1AA7E0; color: #fff; }
   .static-traction-grid { display: grid; gap: 2rem; }
   @media (min-width: 768px) { .static-traction-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1024px) { .static-traction-grid { grid-template-columns: repeat(4, 1fr); } }
-  .static-stat { font-size: 1.875rem; font-weight: 700; color: #259bf7; }
+  .static-stat { font-size: 1.875rem; font-weight: 700; color: #1AA7E0; }
   .static-footer { padding: 3rem 1.5rem; background: #020617; color: #94a3b8; border-top: 1px solid #1e293b; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; }
   @media (min-width: 768px) { .static-footer { flex-direction: row; justify-content: space-between; } }
   .static-footer a { color: #94a3b8; text-decoration: none; }
   .static-footer a:hover { color: #fff; }
   .static-form input, .static-form textarea { width: 100%; padding: 0.75rem 1rem; border-radius: 0.5rem; background: #1e293b; border: 1px solid #475569; color: #fff; margin-bottom: 1rem; }
-  .static-form button { width: 100%; background: #259bf7; color: #fff; padding: 1rem; border-radius: 0.5rem; font-weight: 700; border: none; cursor: pointer; }
+  .static-form button { width: 100%; background: #1AA7E0; color: #fff; padding: 1rem; border-radius: 0.5rem; font-weight: 700; border: none; cursor: pointer; }
   .static-details { padding: 1rem; border-radius: 0.5rem; background: rgba(30, 41, 59, 0.5); margin-bottom: 0.5rem; }
   .static-details summary { font-weight: 600; cursor: pointer; }
   .static-segment-img { border-radius: 0.75rem; overflow: hidden; border: 1px solid #cbd5e1; width: 100%; }

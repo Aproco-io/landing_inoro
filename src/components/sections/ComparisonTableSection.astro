@@ -1,0 +1,101 @@
+---
+interface Props {
+  heading?: string;
+  kicker?: string;
+  columns: string[];
+  rows: { label: string; values: string[] }[];
+}
+const { heading, kicker, columns, rows } = Astro.props;
+---
+<section class="s-compare">
+  <div class="inoro-container">
+    {(kicker || heading) && (
+      <div class="s-compare__head">
+        {kicker && <span class="s-compare__kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+    )}
+    <div class="s-compare__wrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            {columns.map((col, i) => (
+              <th class={i === columns.length - 1 ? 'is-highlight' : ''}>{col}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              <th scope="row">{r.label}</th>
+              {r.values.map((v, i) => (
+                <td class={i === r.values.length - 1 ? 'is-highlight' : ''} set:html={v} />
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-compare { padding: 4rem 0; background: #fff; }
+  .s-compare__head { max-width: 780px; margin: 0 auto 2rem; text-align: center; }
+  .s-compare__kicker {
+    display: inline-block; color: #1AA7E0;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .s-compare h2 {
+    font-family: Play, Inter, sans-serif;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0; color: #0f172a;
+  }
+  .s-compare__wrap {
+    max-width: 1000px; margin: 0 auto;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.85rem;
+    background: #fff;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    background: #f8fafc;
+    color: #64748b;
+    font-family: Play, Inter, sans-serif;
+    font-weight: 600;
+    padding: 1rem 1.1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  thead th.is-highlight {
+    color: #0E8AC1;
+    background: #E8F5FC;
+  }
+  tbody th {
+    padding: 1rem 1.1rem;
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: left;
+    background: #fff;
+    width: 30%;
+  }
+  tbody td {
+    padding: 1rem 1.1rem;
+    color: #475569;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: top;
+  }
+  tbody td.is-highlight {
+    color: #0f172a;
+    background: rgba(26, 167, 224, 0.04);
+    font-weight: 500;
+  }
+  tbody tr:last-child th, tbody tr:last-child td { border-bottom: none; }
+</style>

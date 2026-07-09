@@ -1,0 +1,61 @@
+---
+interface Props {
+  heading: string;
+  body?: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+}
+const { heading, body, primaryCta, secondaryCta } = Astro.props;
+---
+<section class="s-ctaband">
+  <div class="inoro-container">
+    <div class="s-ctaband__panel">
+      <div class="s-ctaband__col">
+        <h2>{heading}</h2>
+        {body && <p set:html={body} />}
+      </div>
+      <div class="s-ctaband__actions">
+        <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label}</a>
+        {secondaryCta && <a class="btn btn--ghost-light" href={secondaryCta.href}>{secondaryCta.label}</a>}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-ctaband { padding: 4rem 0; background: #fff; }
+  .s-ctaband__panel {
+    background: linear-gradient(135deg, #0b1f3d, #0E8AC1);
+    color: #f8fafc;
+    padding: 2.5rem 2.75rem;
+    border-radius: 1.15rem;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 2rem; flex-wrap: wrap;
+    box-shadow: 0 30px 60px -30px rgba(11, 31, 61, 0.4);
+  }
+  .s-ctaband__col { max-width: 620px; }
+  .s-ctaband__col h2 {
+    font-family: Play, Inter, sans-serif;
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #fff;
+    line-height: 1.2;
+  }
+  .s-ctaband__col p { margin: 0; color: #cbd5e1; font-size: 1rem; }
+  .s-ctaband__actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center;
+    padding: 0.85rem 1.6rem;
+    border-radius: 0.55rem;
+    text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+  }
+  .btn--primary { background: #1AA7E0; color: #fff; }
+  .btn--primary:hover { background: #0E8AC1; }
+  .btn--ghost-light {
+    background: transparent; color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .btn--ghost-light:hover { border-color: #fff; background: rgba(255, 255, 255, 0.05); }
+</style>
