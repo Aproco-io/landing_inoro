@@ -30,7 +30,6 @@ export const MENU_PL: MenuItem[] = [
   { label: 'Cennik', href: '/pl/cennik/' },
   {
     label: 'Wiedza',
-    href: '/pl/wiedza/blog/',
     children: [
       { label: 'Wskaźniki (KPI) jakości obsługi', href: '/pl/wiedza/wskazniki-call-center/' },
       { label: 'Dashboardy i raporty', href: '/pl/wiedza/dashboard-call-center/' },
@@ -40,6 +39,7 @@ export const MENU_PL: MenuItem[] = [
       { label: 'Słownik', href: '/pl/wiedza/slownik/' },
     ],
   },
+  { label: 'Blog', href: '/pl/wiedza/blog/' },
 ];
 
 export const MENU_EN: MenuItem[] = [
@@ -67,7 +67,6 @@ export const MENU_EN: MenuItem[] = [
   { label: 'Pricing', href: '/pricing/' },
   {
     label: 'Resources',
-    href: '/resources/blog/',
     children: [
       { label: 'Call Center KPIs & Metrics', href: '/resources/call-center-kpis/' },
       { label: 'Dashboards & Reporting', href: '/resources/call-center-dashboard/' },
@@ -77,6 +76,7 @@ export const MENU_EN: MenuItem[] = [
       { label: 'Glossary', href: '/resources/glossary/' },
     ],
   },
+  { label: 'Blog', href: '/resources/blog/' },
   // Compare/Alternatives dropdown hidden until legal review completes
   // Files remain in src/content/compare/ but routes are removed.
 ];

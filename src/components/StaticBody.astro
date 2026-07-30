@@ -40,7 +40,7 @@ const html = useCaptured ? rootRelativize(formspreeReplace(source)) : '';
 const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : `/${p}`);
 const segmentScriptSrc = asset('assets/segment-tabs-static.js');
 const fallbackScriptSrc = asset('assets/segment-tabs-fallback.js');
-const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=8';
+const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=9';
 const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=1';
 ---
 
