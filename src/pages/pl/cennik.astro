@@ -1,33 +1,23 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import SectionRenderer from '../../components/sections/SectionRenderer.astro';
 import PageHero from '../../components/PageHero.astro';
-import FeatureGrid from '../../components/FeatureGrid.astro';
-import BulletList from '../../components/BulletList.astro';
 import CtaSection from '../../components/CtaSection.astro';
 import MarkdownBody from '../../components/MarkdownBody.astro';
-import SectionRenderer from '../../components/sections/SectionRenderer.astro';
 
-export async function getStaticPaths() {
-  const items = await getCollection('resources', (e) => e.data.lang === 'pl');
-  return items.map((entry) => ({
-    params: { slug: entry.data.slug.replace(/^\/wiedza\//, '').replace(/\/$/, '') },
-    props: { entry },
-  }));
-}
-
-const { entry } = Astro.props;
+const items = await getCollection('pricing', (e) => e.data.lang === 'pl');
+const entry = items[0];
 const { data } = entry;
 const { Content } = await render(entry);
-
-const breadcrumbs = [{ label: 'Strona główna', href: '/' }, { label: 'Wiedza' }, { label: data.title }];
 const useSections = Array.isArray(data.sections) && data.sections.length > 0;
+const breadcrumbs = [{ label: 'Strona główna', href: '/pl/' }, { label: 'Cennik' }];
 ---
 <PageLayout
   lang="pl"
   title={data.seo?.metaTitle ?? data.title}
   description={data.seo?.metaDescription ?? data.description}
-  currentPath={data.slug}
+  currentPath="/pl/cennik/"
 >
   {useSections ? (
     <SectionRenderer sections={data.sections!} lang="pl" breadcrumbs={breadcrumbs} />
@@ -38,17 +28,10 @@ const useSections = Array.isArray(data.sections) && data.sections.length > 0;
           kicker={data.hero.kicker}
           heading={data.hero.heading}
           subheading={data.hero.subheading}
-          primaryCta={data.hero.primaryCta}
           breadcrumbs={breadcrumbs}
         />
       )}
-      {data.bullets.length > 0 && (
-        <BulletList kicker="Najważniejsze" heading="W skrócie" items={data.bullets} />
-      )}
       <MarkdownBody><Content /></MarkdownBody>
-      {data.features.length > 0 && (
-        <FeatureGrid kicker="Zobacz też" heading="Powiązane treści" features={data.features} />
-      )}
       {data.cta && (
         <CtaSection
           heading={data.cta.heading}

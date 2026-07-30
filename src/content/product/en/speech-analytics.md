@@ -102,11 +102,11 @@ sections:
   - type: results-band
     heading: "What full coverage finds"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
         sub: "in production"
-      - value: "1,700+"
-        label: "Agents at a single client"
+      - value: "1,000+"
+        label: "Agents in total"
       - value: "6+"
         label: "Active customers"
     caseNote: "Full-coverage speech analytics finds what samples can't: at one client, the current promo was mentioned in only <strong>60% of calls</strong> — where it was, <strong>92%</strong> ended in an order. Another client cut abandoned calls by <strong>20%</strong> after transcripts showed the verification step ran longer than required. <em>(Anonymized production deployments.)</em>"
@@ -183,7 +183,7 @@ sections:
         href: "/integrations/"
 
   - type: cta-band
-    heading: "Hear what your calls have been telling you"
+    heading: "Hear what 98% of your calls have been telling you"
     body: "30-minute demo on your calls. 30-day free pilot • no credit card."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }

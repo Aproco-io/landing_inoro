@@ -2,7 +2,7 @@
 title: "Analiza rozmów AI — 100% połączeń pod kontrolą"
 description: "InOro transkrybuje, ocenia i analizuje każdą rozmowę Twojego call center — jakość, compliance i sygnały sprzedażowe w jednym panelu, ok. 60 s po rozmowie. Od 0,20 zł/min."
 lang: "pl"
-slug: "/analiza-rozmow/"
+slug: "/pl/analiza-rozmow/"
 translationKey: "conversation-intelligence"
 order: 10
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Analiza rozmów AI, która słyszy 100% Twoich połączeń"
     subheading: "InOro transkrybuje, ocenia i analizuje każdą rozmowę z klientem — jakość obsługi, ryzyka compliance i sygnały sprzedażowe w jednym panelu, ok. 60 sekund po zakończeniu połączenia. Nie próbka 2%."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
     imageSrc: "/assets/hero-dashboard-custom.png"
     imageAlt: "Panel InOro z pełnym pokryciem rozmów i ocenami QA"
 
@@ -43,7 +43,7 @@ sections:
         title: "Ocena QA wg Twojej karty"
         body: "Twój arkusz oceny przeniesiony 1:1, kryteria edytujesz drag & drop. Każda rozmowa oceniana tak samo, każdego dnia."
         linkText: "Kontrola jakości obsługi"
-        linkHref: "/kontrola-jakosci-obslugi/"
+        linkHref: "/pl/kontrola-jakosci-obslugi/"
       - icon: "🗂️"
         title: "Tematy i przyczyny źródłowe"
         body: "Automatyczny rozkład, o co dzwonią klienci, z wolumenem i priorytetem. Naprawiasz przyczynę, nie objaw."
@@ -54,17 +54,17 @@ sections:
         title: "Wykrywanie naruszeń"
         body: "Brak weryfikacji tożsamości, brak klauzuli RODO, naruszenia SLA, flagi AML — widoczne tego samego dnia, nie przy audycie."
         linkText: "Compliance"
-        linkHref: "/rozwiazania/compliance/"
+        linkHref: "/pl/rozwiazania/compliance/"
       - icon: "💰"
         title: "Sygnały sprzedażowe"
         body: "Okazje cross-sell i up-sell, ryzyko rezygnacji i to, co Twoi najlepsi handlowcy robią inaczej."
         linkText: "Dla sprzedaży"
-        linkHref: "/rozwiazania/sprzedaz/"
+        linkHref: "/pl/rozwiazania/sprzedaz/"
       - icon: "💬"
         title: "Czat AI — zapytaj swoje rozmowy"
         body: "Pytasz o 100% historii rozmów po polsku lub angielsku i dostajesz odpowiedź z rozmowami na dowód."
         linkText: "Czat AI"
-        linkHref: "/czat-ai/"
+        linkHref: "/pl/czat-ai/"
 
   - type: at-a-glance
     kicker: "W skrócie"
@@ -114,12 +114,12 @@ sections:
   - type: results-band
     heading: "Sprawdzone na skalę produkcyjną"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
         sub: "na produkcji"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
-        sub: "skala między zespołami"
+      - value: "1 000+"
+        label: "Agentów łącznie"
+        sub: "wdrożenia produkcyjne"
       - value: "6+"
         label: "Aktywnych klientów"
         sub: "BPO, finanse, retail"
@@ -129,7 +129,7 @@ sections:
     heading: "Działa z Twoim stackiem — bez wymiany systemu"
     names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
     linkText: "Wszystkie integracje"
-    linkHref: "/integracje/"
+    linkHref: "/pl/integracje/"
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -147,7 +147,7 @@ sections:
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko, bez minimów."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -155,7 +155,7 @@ sections:
       - q: "Czym jest analiza rozmów (conversation intelligence)?"
         a: "To analiza treści rozmów z klientami przez AI: transkrypcja, ocena jakości, wykrywanie tematów, sentymentu i naruszeń — u InOro dla 100% połączeń zamiast ręcznej próbki."
       - q: "Czym różni się od analizy mowy (speech analytics)?"
-        a: 'Analiza mowy to warstwa zamieniająca audio na dane; analiza rozmów wykorzystuje te dane do odpowiedzi na pytania biznesowe — o jakość, zgodność i sprzedaż. InOro zawiera obie. <a href="/analiza-mowy/">Analiza mowy</a>'
+        a: 'Analiza mowy to warstwa zamieniająca audio na dane; analiza rozmów wykorzystuje te dane do odpowiedzi na pytania biznesowe — o jakość, zgodność i sprzedaż. InOro zawiera obie. <a href="/pl/analiza-mowy/">Analiza mowy</a>'
       - q: "Czy to coś jak Gong?"
         a: "Gong celuje w spotkania sprzedażowe B2B. InOro jest zbudowane dla call center: karty QA, compliance, cena za minutę, hosting w UE i white-label dla BPO."
       - q: "Czy konsultanci muszą coś zmieniać?"
@@ -172,33 +172,33 @@ sections:
     cards:
       - title: "Czym jest analiza rozmów — pełny przewodnik"
         body: "Kategoria wyjaśniona: analiza rozmów vs analiza mowy, checklist dla kupującego."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "CSAT, FCR, QA score, sentyment — co mierzyć i jak InOro to wypełnia."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "AI w call center"
         body: "Gdzie AI daje realny ROI w call center, a gdzie nie."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
     heading: "Zobacz swoje rozmowy oczami AI"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

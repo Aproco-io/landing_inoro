@@ -1,13 +1,13 @@
 ---
 title: "White-Label Conversation Analytics for BPOs"
-description: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents."
+description: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,000+ agents in production."
 lang: "en"
 slug: "/solutions/bpo/"
 translationKey: "solutions-bpo"
 order: 10
 seo:
   metaTitle: "White-Label Conversation Analytics for BPOs | InOro"
-  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents."
+  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,000+ agents in production."
 sections:
   - type: hero
     badge: "White-label"
@@ -76,9 +76,9 @@ sections:
   - type: results-band
     heading: "Proven at BPO scale"
     stats:
-      - value: "1,700+"
-        label: "Agents at a single client"
-      - value: "1B+"
+      - value: "1,000+"
+        label: "Agents in total"
+      - value: "10M+"
         label: "Minutes analyzed"
         sub: "in production"
       - value: "~10 → 1–2"

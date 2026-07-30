@@ -2,7 +2,7 @@
 title: "Analityka call center ze 100% rozmów"
 description: "Dashboardy, KPI i raporty budowane z treści każdej rozmowy — nie tylko z metryk telefonii. Eksport do Power BI, hosting w UE, od 0,20 zł/min."
 lang: "pl"
-slug: "/analityka-call-center/"
+slug: "/pl/analityka-call-center/"
 translationKey: "contact-center-analytics"
 order: 30
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Analityka call center, która mierzy rozmowy, nie tylko połączenia"
     subheading: "Telefonia mówi Ci, ile połączeń i jak szybko. InOro mówi, co się w nich wydarzyło — oceny jakości, tematy zgłoszeń, naruszenia i sygnały sprzedażowe ze 100% rozmów, w jednym panelu."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
     term: "Analityka call center"
@@ -31,7 +31,7 @@ sections:
       - title: "Każda rozmowa staje się danymi"
         body: "Ocena QA, kategoria tematu, sentyment, flagi naruszeń, sygnały sprzedażowe — dla 100% rozmów, post-call."
       - title: "Dashboardy, raporty, BI"
-        body: 'Dzienny widok managera „na 30 sekund”, trendy per zespół i kampania, eksport do Power BI/Tableau albo pytania zwykłym językiem przez <a href="/czat-ai/">czat AI</a>.'
+        body: 'Dzienny widok managera „na 30 sekund”, trendy per zespół i kampania, eksport do Power BI/Tableau albo pytania zwykłym językiem przez <a href="/pl/czat-ai/">czat AI</a>.'
 
   - type: capability-grid
     kicker: "Na dashboardzie"
@@ -50,7 +50,7 @@ sections:
         title: "Porównania konsultantów i zespołów"
         body: "Rankingi, historia, nowi vs doświadczeni, postęp w czasie."
         linkText: "Coaching konsultantów"
-        linkHref: "/wiedza/wskazniki-call-center/"
+        linkHref: "/pl/wiedza/wskazniki-call-center/"
       - icon: "🔍"
         title: "Filtry i widoki"
         body: "Po kampanii, kliencie, konsultancie, grupie, temacie. Zbudowane pod operacje wieloprojektowe."
@@ -102,10 +102,10 @@ sections:
   - type: results-band
     heading: "Sprawdzone na produkcji"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
+      - value: "1 000+"
+        label: "Agentów łącznie"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "<strong>Case anonimizowany:</strong> analiza tematów pokazała, że proces weryfikacji trwał dłużej, niż wymagały procedury — skrócenie go do części obligatoryjnych dało <strong>−20% porzuconych połączeń</strong>."
@@ -114,7 +114,7 @@ sections:
     heading: "Podłącz się do swojego stacku"
     names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
     linkText: "Wszystkie integracje"
-    linkHref: "/integracje/"
+    linkHref: "/pl/integracje/"
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -131,7 +131,7 @@ sections:
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — wszystkie dashboardy, raporty i eksporty w cenie."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -154,33 +154,33 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "CSAT, FCR, QA score — co mierzyć."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Dashboardy i raporty call center"
         body: "Szablony i best-practice."
-        href: "/wiedza/dashboard-call-center/"
+        href: "/pl/wiedza/dashboard-call-center/"
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
     heading: "Zobacz dashboard z tego tygodnia zbudowany z Twoich rozmów"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

@@ -2,7 +2,7 @@
 title: "Słownik analizy rozmów i contact center"
 description: "Słownik A–Z pojęć z contact center i analizy rozmów. Definicje w języku naturalnym, jedno zdanie na hasło, z odsyłaczem do strony head-nouna."
 lang: "pl"
-slug: "/wiedza/slownik/"
+slug: "/pl/wiedza/slownik/"
 translationKey: "resources-glossary"
 order: 90
 seo:

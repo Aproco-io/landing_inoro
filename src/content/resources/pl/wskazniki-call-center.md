@@ -2,7 +2,7 @@
 title: "Wskaźniki (KPI) jakości obsługi call center — kompletny przewodnik"
 description: "Trzy rodziny KPI: telefonia, ankiety, treść rozmów. Definicje, benchmarki i jak zbudować zestaw KPI, który mierzy jakość, a nie tylko przepustowość."
 lang: "pl"
-slug: "/wiedza/wskazniki-call-center/"
+slug: "/pl/wiedza/wskazniki-call-center/"
 translationKey: "resources-kpis"
 order: 20
 seo:
@@ -59,17 +59,17 @@ sections:
     cards:
       - title: "Dashboardy i raporty call center"
         body: "Szablony i best-practice."
-        href: "/wiedza/dashboard-call-center/"
+        href: "/pl/wiedza/dashboard-call-center/"
       - title: "AI w call center"
         body: "Gdzie AI wnosi ROI ponad KPI."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Mierz KPI z treści na 100% rozmów →"
         body: "Analityka contact center InOro."
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
 
   - type: cta-band
     heading: "Mierz KPI z treści 100% rozmów"
     body: "Zobacz metryki z treści na własnych nagraniach."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

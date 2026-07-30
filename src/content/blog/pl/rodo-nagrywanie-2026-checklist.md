@@ -2,7 +2,7 @@
 title: "RODO 2026 — checklista nagrywania rozmów dla call center"
 description: "Aktualne wymogi RODO dla nagrywania rozmów z klientami. Podstawa prawna, retencja, klauzule informacyjne, prawo do usunięcia. Checklist do audytu."
 lang: "pl"
-slug: "/wiedza/blog/rodo-nagrywanie-2026-checklist/"
+slug: "/pl/wiedza/blog/rodo-nagrywanie-2026-checklist/"
 date: 2026-06-10
 author: "Zespół InOro"
 category: "RODO"
@@ -78,4 +78,4 @@ Jeśli w audycie wyszło Ci więcej niż jedno "trzeba by uporządkować", warto
 
 ---
 
-*Zobacz jak InOro pomaga w compliance nagrywania rozmów. [Umów demo](/#demo).*
+*Zobacz jak InOro pomaga w compliance nagrywania rozmów. [Umów demo](/pl/#demo).*

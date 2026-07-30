@@ -2,7 +2,7 @@
 title: "Auto-QA vs klasyczne QA — 5 zmian, które warto znać"
 description: "Automatyczna kontrola jakości oceniająca 100% rozmów to nie tylko \"więcej danych\". To inna filozofia zarządzania jakością. Pięć kluczowych różnic."
 lang: "pl"
-slug: "/wiedza/blog/auto-qa-vs-klasyczne-qa/"
+slug: "/pl/wiedza/blog/auto-qa-vs-klasyczne-qa/"
 date: 2026-06-18
 author: "Zespół InOro"
 category: "Kontrola jakości"
@@ -58,4 +58,4 @@ Auto-QA nie jest wymianą jednego narzędzia na drugie. To zmiana modelu operacy
 
 ---
 
-*Chcesz zobaczyć jak wygląda Auto-QA na Twoich rozmowach? [Umów demo InOro](/#demo).*
+*Chcesz zobaczyć jak wygląda Auto-QA na Twoich rozmowach? [Umów demo InOro](/pl/#demo).*

@@ -2,7 +2,7 @@
 title: "Analiza rozmów sprzedażowych — 100% połączeń"
 description: "Zobacz, dlaczego najlepsi handlowcy domykają: zgodność z playbookiem, obsługa obiekcji i pominięte oferty mierzone w każdej rozmowie. Case: promocja w rozmowie = 92% zamówień."
 lang: "pl"
-slug: "/rozwiazania/sprzedaz/"
+slug: "/pl/rozwiazania/sprzedaz/"
 translationKey: "solutions-sales"
 order: 40
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Twój najlepszy handlowiec domyka więcej. Teraz dowiesz się dlaczego."
     subheading: "InOro mierzy to, co naprawdę dzieje się w rozmowach sprzedażowych — zgodność z playbookiem, obsługę obiekcji, złożone i pominięte oferty — na 100% połączeń. Coaching przestaje być opinią, a zaczyna być replikacją."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
 
@@ -55,7 +55,7 @@ sections:
         title: "Sygnały konwersji"
         body: "Typy obiekcji, wzmianki o konkurencji i intencja zakupowa w trendzie per kampania."
         linkText: "Czat AI: zapytaj swoje rozmowy"
-        linkHref: "/czat-ai/"
+        linkHref: "/pl/czat-ai/"
 
   - type: comparison-table
     kicker: "Skok jakościowy"
@@ -109,17 +109,17 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki dla operacji sprzedażowych."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "AI w call center"
         body: "Gdzie AI daje realny ROI."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
 
   - type: cta-band
     heading: "Znajdź swój pierwszy raport pominiętych ofert"
     body: "30-minutowe demo na Twoich rozmowach sprzedażowych. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

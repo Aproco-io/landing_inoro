@@ -1,8 +1,8 @@
 ---
 title: "Transkrypcja rozmów telefonicznych z analizą AI"
-description: "InOro transkrybuje 100% rozmów call center z rozdzieleniem mówiących i słownictwem Twojej branży. Polski i inne języki, anonimizacja danych, UE. Od 0,20 zł/min."
+description: "InOro transkrybuje 100% rozmów call center z rozdzieleniem mówiących i słownictwem Twojej branży. Polski i angielski, anonimizacja danych, UE. Od 0,20 zł/min."
 lang: "pl"
-slug: "/transkrypcja-rozmow/"
+slug: "/pl/transkrypcja-rozmow/"
 translationKey: "call-transcription"
 order: 50
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Każda rozmowa w tekście — z podziałem kto co powiedział"
     subheading: "InOro transkrybuje 100% rozmów Twojego call center z rozdzieleniem konsultant/klient i słownictwem dopasowanym do branży. A że transkrypcja to dopiero pierwsza warstwa — każdy transkrypt ma od razu streszczenie, ocenę i temat."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
     term: "Transkrypcja rozmów"
@@ -54,7 +54,7 @@ sections:
         body: "PESEL, numery kart i podobne dane maskowane w transkryptach. RODO by design."
       - icon: "🔍"
         title: "Pełna przeszukiwalność"
-        body: 'Każde słowo każdej rozmowy staje się przeszukiwalne — także zwykłym językiem przez <a href="/czat-ai/">czat AI</a>.'
+        body: 'Każde słowo każdej rozmowy staje się przeszukiwalne — także zwykłym językiem przez <a href="/pl/czat-ai/">czat AI</a>.'
 
   - type: at-a-glance
     kicker: "W skrócie"
@@ -88,10 +88,10 @@ sections:
   - type: results-band
     heading: "Sprawdzone na produkcji"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Transkrybowanych minut"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
+      - value: "1 000+"
+        label: "Agentów łącznie"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "Transkrypty zasilają kontrolę jakości za <strong>~20% kosztu</strong> ręcznego odsłuchu · case: analiza transkryptów skróciła proces weryfikacji — <strong>−20% porzuconych połączeń</strong>."
@@ -100,7 +100,7 @@ sections:
     heading: "Podłącz się do swojego stacku"
     names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki do CRM"]
     linkText: "Wszystkie integracje"
-    linkHref: "/integracje/"
+    linkHref: "/pl/integracje/"
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -118,7 +118,7 @@ sections:
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja, diaryzacja, streszczenia i pełna warstwa analizy w jednej cenie."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -141,33 +141,33 @@ sections:
     cards:
       - title: "Transkrypcja audio na tekst — metody i narzędzia"
         body: "Przegląd technologii i decyzja dla contact center."
-        href: "/wiedza/transkrypcja-audio-na-tekst/"
+        href: "/pl/wiedza/transkrypcja-audio-na-tekst/"
       - title: "RODO a nagrywanie rozmów"
         body: "Kiedy nagrywanie jest legalne i jakie są obowiązki."
-        href: "/wiedza/rodo-nagrywanie-rozmow/"
+        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
       - title: "Słownik"
         body: "STT, diaryzacja i pokrewne pojęcia."
-        href: "/wiedza/slownik/"
+        href: "/pl/wiedza/slownik/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
     heading: "Zobacz własne rozmowy jako przeszukiwalny tekst"
     body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

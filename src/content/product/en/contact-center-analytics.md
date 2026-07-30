@@ -102,10 +102,10 @@ sections:
   - type: results-band
     heading: "Proven in production"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
-      - value: "1,700+"
-        label: "Agents at a single client"
+      - value: "1,000+"
+        label: "Agents in total"
       - value: "6+"
         label: "Active customers"
     caseNote: "<strong>Anonymized case:</strong> topic analysis showed the verification step ran longer than required — trimming it cut abandoned calls by <strong>20%</strong>."

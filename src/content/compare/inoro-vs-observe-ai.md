@@ -69,7 +69,7 @@ sections:
       - value: "~20%"
         label: "Cost of manual QA"
       - value: "1,700+"
-        label: "Agents at one client"
+        label: "Agents in total"
 
   - type: faq
     heading: "Frequently asked questions"

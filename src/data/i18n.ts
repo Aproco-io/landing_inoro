@@ -18,61 +18,61 @@ export const URL_ALTERNATES: Record<string, string> = {
   '/pl/': '/',
 
   // Products (flat)
-  '/conversation-intelligence/': '/analiza-rozmow/',
-  '/analiza-rozmow/': '/conversation-intelligence/',
-  '/speech-analytics/': '/analiza-mowy/',
-  '/analiza-mowy/': '/speech-analytics/',
-  '/contact-center-analytics/': '/analityka-call-center/',
-  '/analityka-call-center/': '/contact-center-analytics/',
-  '/call-center-quality-assurance/': '/kontrola-jakosci-obslugi/',
-  '/kontrola-jakosci-obslugi/': '/call-center-quality-assurance/',
-  '/call-transcription/': '/transkrypcja-rozmow/',
-  '/transkrypcja-rozmow/': '/call-transcription/',
-  '/ai-chat/': '/czat-ai/',
-  '/czat-ai/': '/ai-chat/',
-  '/integrations/': '/integracje/',
-  '/integracje/': '/integrations/',
+  '/conversation-intelligence/': '/pl/analiza-rozmow/',
+  '/pl/analiza-rozmow/': '/conversation-intelligence/',
+  '/speech-analytics/': '/pl/analiza-mowy/',
+  '/pl/analiza-mowy/': '/speech-analytics/',
+  '/contact-center-analytics/': '/pl/analityka-call-center/',
+  '/pl/analityka-call-center/': '/contact-center-analytics/',
+  '/call-center-quality-assurance/': '/pl/kontrola-jakosci-obslugi/',
+  '/pl/kontrola-jakosci-obslugi/': '/call-center-quality-assurance/',
+  '/call-transcription/': '/pl/transkrypcja-rozmow/',
+  '/pl/transkrypcja-rozmow/': '/call-transcription/',
+  '/ai-chat/': '/pl/czat-ai/',
+  '/pl/czat-ai/': '/ai-chat/',
+  '/integrations/': '/pl/integracje/',
+  '/pl/integracje/': '/integrations/',
 
   // Solutions
-  '/solutions/bpo/': '/rozwiazania/bpo/',
-  '/rozwiazania/bpo/': '/solutions/bpo/',
-  '/solutions/compliance/': '/rozwiazania/compliance/',
-  '/rozwiazania/compliance/': '/solutions/compliance/',
-  '/solutions/retail/': '/rozwiazania/e-commerce/',
-  '/rozwiazania/e-commerce/': '/solutions/retail/',
-  '/solutions/sales/': '/rozwiazania/sprzedaz/',
-  '/rozwiazania/sprzedaz/': '/solutions/sales/',
+  '/solutions/bpo/': '/pl/rozwiazania/bpo/',
+  '/pl/rozwiazania/bpo/': '/solutions/bpo/',
+  '/solutions/compliance/': '/pl/rozwiazania/compliance/',
+  '/pl/rozwiazania/compliance/': '/solutions/compliance/',
+  '/solutions/retail/': '/pl/rozwiazania/e-commerce/',
+  '/pl/rozwiazania/e-commerce/': '/solutions/retail/',
+  '/solutions/sales/': '/pl/rozwiazania/sprzedaz/',
+  '/pl/rozwiazania/sprzedaz/': '/solutions/sales/',
 
   // Pricing
-  '/pricing/': '/cennik/',
-  '/cennik/': '/pricing/',
+  '/pricing/': '/pl/cennik/',
+  '/pl/cennik/': '/pricing/',
 
   // Resources / Wiedza
-  '/resources/call-center-kpis/': '/wiedza/wskazniki-call-center/',
-  '/wiedza/wskazniki-call-center/': '/resources/call-center-kpis/',
-  '/resources/call-center-dashboard/': '/wiedza/dashboard-call-center/',
-  '/wiedza/dashboard-call-center/': '/resources/call-center-dashboard/',
-  '/resources/what-is-conversation-intelligence/': '/wiedza/czym-jest-analiza-rozmow/',
-  '/wiedza/czym-jest-analiza-rozmow/': '/resources/what-is-conversation-intelligence/',
-  '/resources/ai-call-center-analytics/': '/wiedza/ai-w-call-center/',
-  '/wiedza/ai-w-call-center/': '/resources/ai-call-center-analytics/',
-  '/resources/glossary/': '/wiedza/slownik/',
-  '/wiedza/slownik/': '/resources/glossary/',
-  // Compare pages don't have a PL counterpart yet — omit.
+  '/resources/call-center-kpis/': '/pl/wiedza/wskazniki-call-center/',
+  '/pl/wiedza/wskazniki-call-center/': '/resources/call-center-kpis/',
+  '/resources/call-center-dashboard/': '/pl/wiedza/dashboard-call-center/',
+  '/pl/wiedza/dashboard-call-center/': '/resources/call-center-dashboard/',
+  '/resources/what-is-conversation-intelligence/': '/pl/wiedza/czym-jest-analiza-rozmow/',
+  '/pl/wiedza/czym-jest-analiza-rozmow/': '/resources/what-is-conversation-intelligence/',
+  '/resources/ai-call-center-analytics/': '/pl/wiedza/ai-w-call-center/',
+  '/pl/wiedza/ai-w-call-center/': '/resources/ai-call-center-analytics/',
+  '/resources/glossary/': '/pl/wiedza/slownik/',
+  '/pl/wiedza/slownik/': '/resources/glossary/',
   // Single-language resource pages omitted:
-  // PL-only: /wiedza/rodo-nagrywanie-rozmow/, /wiedza/transkrypcja-audio-na-tekst/, /wiedza/tajemniczy-klient/
+  // PL-only: /pl/wiedza/rodo-nagrywanie-rozmow/, /pl/wiedza/transkrypcja-audio-na-tekst/, /pl/wiedza/tajemniczy-klient/
   // EN-only: /resources/agent-performance-analytics/, /resources/best-speech-analytics-software/, /alternatives/*, /compare/*
 
   // Standalone EN pages (no PL counterpart yet)
   // /about/, /demo/, /security/ — omit; alternatesFor() falls back to home.
 
   // Blog
-  '/resources/blog/': '/wiedza/blog/',
-  '/wiedza/blog/': '/resources/blog/',
-  '/resources/blog/how-to-measure-fcr/': '/wiedza/blog/jak-mierzyc-fcr-w-call-center/',
-  '/wiedza/blog/jak-mierzyc-fcr-w-call-center/': '/resources/blog/how-to-measure-fcr/',
-  '/resources/blog/auto-qa-vs-classical-qa/': '/wiedza/blog/auto-qa-vs-klasyczne-qa/',
-  '/wiedza/blog/auto-qa-vs-klasyczne-qa/': '/resources/blog/auto-qa-vs-classical-qa/',
+  '/resources/blog/': '/pl/wiedza/blog/',
+  '/pl/wiedza/blog/': '/resources/blog/',
+  '/resources/blog/how-to-measure-fcr/': '/pl/wiedza/blog/jak-mierzyc-fcr-w-call-center/',
+  '/pl/wiedza/blog/jak-mierzyc-fcr-w-call-center/': '/resources/blog/how-to-measure-fcr/',
+  '/resources/blog/auto-qa-vs-classical-qa/': '/pl/wiedza/blog/auto-qa-vs-klasyczne-qa/',
+  '/pl/wiedza/blog/auto-qa-vs-klasyczne-qa/': '/resources/blog/auto-qa-vs-classical-qa/',
+  // Note: /pl/wiedza/blog/jak-mierzyc-jakosc-obslugi-call-center/ has no EN twin yet.
 };
 
 // Home URL per language (used by the language switcher when the current

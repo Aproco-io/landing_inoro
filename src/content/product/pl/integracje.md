@@ -2,7 +2,7 @@
 title: "Integracje — działa z Twoim systemem call center"
 description: "InOro łączy się z Genesys, Avaya, Cisco i każdym źródłem nagrań przez API lub SFTP. Power BI/Tableau, webhooki do CRM, SSO. Wdrożenie 1–2 tygodnie, bez wymiany systemu."
 lang: "pl"
-slug: "/integracje/"
+slug: "/pl/integracje/"
 translationKey: "integrations"
 order: 70
 seo:
@@ -81,13 +81,15 @@ sections:
   - type: results-band
     heading: "Sprawdzone w praktyce"
     stats:
+      - value: "10 mln+"
+        label: "Przeanalizowanych minut"
+        sub: "na produkcji"
+      - value: "1 000+"
+        label: "Agentów łącznie"
+        sub: "wdrożenia produkcyjne"
       - value: "SaaS + on-prem"
         label: "Oba modele na produkcji"
-      - value: "1–2 tyg."
-        label: "Typowe wdrożenie"
-      - value: "0"
-        label: "Zmian po stronie konsultantów"
-    caseNote: "Wdrożenia produkcyjne SaaS i on-premise · duże operacje wieloprojektowe podłączone przez istniejącą infrastrukturę — bez zmiany telefonii."
+    caseNote: "Wdrożenia produkcyjne SaaS i on-premise · duże operacje wieloprojektowe podłączone przez istniejącą infrastrukturę — bez zmiany telefonii, w 1–2 tygodnie i bez zmian po stronie konsultantów."
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -113,7 +115,7 @@ sections:
       - q: "Czy wyniki trafią do naszego CRM i BI?"
         a: "Tak — webhooki wysyłają streszczenia i zdarzenia do CRM; łącznik na żywo zasila Power BI/Tableau; resztę pokrywa REST API."
       - q: "Czy możemy uruchomić on-premise?"
-        a: 'Tak — pełne wdrożenie on-premise jest dostępne; dane nie opuszczają Twojej infrastruktury. <a href="/rozwiazania/compliance/">Compliance</a>'
+        a: 'Tak — pełne wdrożenie on-premise jest dostępne; dane nie opuszczają Twojej infrastruktury. <a href="/pl/rozwiazania/compliance/">Compliance</a>'
       - q: "A single sign-on?"
         a: "SSO przez SAML 2.0 z dostępem per rola i logami audytowymi."
 
@@ -122,33 +124,33 @@ sections:
     cards:
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "Dashboardy i raporty call center"
         body: "Szablony i best-practice."
-        href: "/wiedza/dashboard-call-center/"
+        href: "/pl/wiedza/dashboard-call-center/"
       - title: "RODO a nagrywanie rozmów"
         body: "Kiedy nagrywanie jest legalne."
-        href: "/wiedza/rodo-nagrywanie-rozmow/"
+        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
 
   - type: cta-band
     heading: "Powiedz nam, na czym pracujesz — rozpiszemy połączenie"
     body: "30 minut z inżynierem, plan integracji w cenie. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

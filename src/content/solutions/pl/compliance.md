@@ -2,7 +2,7 @@
 title: "Compliance na 100% rozmów — banki, windykacja, finanse"
 description: "Brak weryfikacji tożsamości, brak klauzuli zgody, flagi AML — wykrywane w każdej rozmowie tego samego dnia, nie przy audycie. Hosting w UE lub pełny on-premise."
 lang: "pl"
-slug: "/rozwiazania/compliance/"
+slug: "/pl/rozwiazania/compliance/"
 translationKey: "solutions-compliance"
 order: 20
 seo:
@@ -55,7 +55,7 @@ sections:
         title: "Zgodność z procedurą i SLA"
         body: "Każdy wymagany krok Twojego procesu, mierzony w każdej rozmowie."
         linkText: "Kontrola jakości obsługi"
-        linkHref: "/kontrola-jakosci-obslugi/"
+        linkHref: "/pl/kontrola-jakosci-obslugi/"
 
   - type: security-band
     heading: 'Zbudowane dla zespołów, których praca to „proszę to udowodnić”'
@@ -127,13 +127,13 @@ sections:
     cards:
       - title: "RODO a nagrywanie rozmów"
         body: "Kiedy nagrywanie jest legalne i jakie są obowiązki."
-        href: "/wiedza/rodo-nagrywanie-rozmow/"
+        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki jakości w operacjach regulowanych."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Słownik"
         body: "AML, KYC, DPA i inne pojęcia."
-        href: "/wiedza/slownik/"
+        href: "/pl/wiedza/slownik/"
 
   - type: cta-band
     heading: "Zrób przegląd zgodności rozmów z ostatniego miesiąca"

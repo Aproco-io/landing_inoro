@@ -9,35 +9,35 @@ export const MENU_PL: MenuItem[] = [
   {
     label: 'Produkt',
     children: [
-      { label: 'Analiza rozmów (AI)', href: '/analiza-rozmow/', description: 'Brand pillar, kotwica CSI' },
-      { label: 'Analiza mowy (speech analytics)', href: '/analiza-mowy/' },
-      { label: 'Analityka call center', href: '/analityka-call-center/' },
-      { label: 'Kontrola jakości obsługi (QA)', href: '/kontrola-jakosci-obslugi/' },
-      { label: 'Transkrypcja rozmów', href: '/transkrypcja-rozmow/' },
-      { label: 'Czat AI — zapytaj swoje rozmowy', href: '/czat-ai/' },
-      { label: 'Integracje (Genesys, Avaya…)', href: '/integracje/' },
+      { label: 'Analiza rozmów (AI)', href: '/pl/analiza-rozmow/', description: 'Brand pillar, kotwica CSI' },
+      { label: 'Analiza mowy (speech analytics)', href: '/pl/analiza-mowy/' },
+      { label: 'Analityka call center', href: '/pl/analityka-call-center/' },
+      { label: 'Kontrola jakości obsługi (QA)', href: '/pl/kontrola-jakosci-obslugi/' },
+      { label: 'Transkrypcja rozmów', href: '/pl/transkrypcja-rozmow/' },
+      { label: 'Czat AI — zapytaj swoje rozmowy', href: '/pl/czat-ai/' },
+      { label: 'Integracje (Genesys, Avaya…)', href: '/pl/integracje/' },
     ],
   },
   {
     label: 'Rozwiązania',
     children: [
-      { label: 'Dla BPO / outsourcingu (white-label)', href: '/rozwiazania/bpo/' },
-      { label: 'Dla banków, windykacji i compliance', href: '/rozwiazania/compliance/' },
-      { label: 'Dla e-commerce i retail', href: '/rozwiazania/e-commerce/' },
-      { label: 'Dla działów sprzedaży', href: '/rozwiazania/sprzedaz/' },
+      { label: 'Dla BPO / outsourcingu (white-label)', href: '/pl/rozwiazania/bpo/' },
+      { label: 'Dla banków, windykacji i compliance', href: '/pl/rozwiazania/compliance/' },
+      { label: 'Dla e-commerce i retail', href: '/pl/rozwiazania/e-commerce/' },
+      { label: 'Dla działów sprzedaży', href: '/pl/rozwiazania/sprzedaz/' },
     ],
   },
-  { label: 'Cennik', href: '/cennik/' },
+  { label: 'Cennik', href: '/pl/cennik/' },
   {
     label: 'Wiedza',
-    href: '/wiedza/blog/',
+    href: '/pl/wiedza/blog/',
     children: [
-      { label: 'Wskaźniki (KPI) jakości obsługi', href: '/wiedza/wskazniki-call-center/' },
-      { label: 'Dashboardy i raporty', href: '/wiedza/dashboard-call-center/' },
-      { label: 'RODO a nagrywanie rozmów', href: '/wiedza/rodo-nagrywanie-rozmow/' },
-      { label: 'AI w call center', href: '/wiedza/ai-w-call-center/' },
-      { label: 'Poradniki (czym jest…)', href: '/wiedza/czym-jest-analiza-rozmow/' },
-      { label: 'Słownik', href: '/wiedza/slownik/' },
+      { label: 'Wskaźniki (KPI) jakości obsługi', href: '/pl/wiedza/wskazniki-call-center/' },
+      { label: 'Dashboardy i raporty', href: '/pl/wiedza/dashboard-call-center/' },
+      { label: 'RODO a nagrywanie rozmów', href: '/pl/wiedza/rodo-nagrywanie-rozmow/' },
+      { label: 'AI w call center', href: '/pl/wiedza/ai-w-call-center/' },
+      { label: 'Poradniki (czym jest…)', href: '/pl/wiedza/czym-jest-analiza-rozmow/' },
+      { label: 'Słownik', href: '/pl/wiedza/slownik/' },
     ],
   },
 ];
@@ -77,16 +77,6 @@ export const MENU_EN: MenuItem[] = [
       { label: 'Glossary', href: '/resources/glossary/' },
     ],
   },
-  {
-    label: 'Compare',
-    children: [
-      { label: 'InOro vs NICE', href: '/compare/inoro-vs-nice/' },
-      { label: 'InOro vs Verint', href: '/compare/inoro-vs-verint/' },
-      { label: 'InOro vs CallMiner', href: '/compare/inoro-vs-callminer/' },
-      { label: 'InOro vs Observe.AI', href: '/compare/inoro-vs-observe-ai/' },
-      { label: 'NICE alternative', href: '/alternatives/nice-alternative/' },
-      { label: 'Verint alternative', href: '/alternatives/verint-alternative/' },
-      { label: 'CallMiner alternative', href: '/alternatives/callminer-alternative/' },
-    ],
-  },
+  // Compare/Alternatives dropdown hidden until legal review completes
+  // Files remain in src/content/compare/ but routes are removed.
 ];

@@ -2,7 +2,7 @@
 title: "Cennik — 0,20 zł za analizowaną minutę, wszystko w cenie"
 description: "Jedna cena za minutę: transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko, bez minimów, 30-dniowy bezpłatny pilotaż. 50 agentów × 1000 min ≈ 10 000 zł/mies."
 lang: "pl"
-slug: "/cennik/"
+slug: "/pl/cennik/"
 translationKey: "pricing"
 order: 10
 seo:

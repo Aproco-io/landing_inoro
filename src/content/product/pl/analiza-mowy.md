@@ -2,7 +2,7 @@
 title: "Analiza mowy (speech analytics) — każda rozmowa jako dane"
 description: "InOro zamienia audio z 100% rozmów na transkrypcje, sentyment, tematy i oceny jakości. Kontekstowa AI zamiast wyłapywania słów kluczowych. Hosting w UE, od 0,20 zł/min."
 lang: "pl"
-slug: "/analiza-mowy/"
+slug: "/pl/analiza-mowy/"
 translationKey: "speech-analytics"
 order: 20
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Analiza mowy, która rozumie każdą rozmowę z klientem"
     subheading: "InOro zamienia audio ze 100% połączeń na transkrypcje, sentyment, tematy i oceny jakości — kontekstową AI, która czyta całą rozmowę, a nie listę słów kluczowych. Dane przetwarzane w UE."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
     term: "Analiza mowy (speech analytics)"
@@ -31,7 +31,7 @@ sections:
       - title: "Mowa staje się danymi"
         body: "Dokładna transkrypcja z diaryzacją konsultant/klient, dopasowana do słownictwa Twojej branży. Potem kontekstowa AI czyta całą rozmowę: sentyment w czasie, tematy, zgodność ze skryptem, frazy ryzyka."
       - title: "Dane stają się decyzjami"
-        body: 'Oceny QA, trendy tematów zgłoszeń i sygnały sprzedażowe w panelu, eksport do Power BI/Tableau albo pytania zwykłym językiem przez <a href="/czat-ai/">czat AI</a>.'
+        body: 'Oceny QA, trendy tematów zgłoszeń i sygnały sprzedażowe w panelu, eksport do Power BI/Tableau albo pytania zwykłym językiem przez <a href="/pl/czat-ai/">czat AI</a>.'
 
   - type: capability-grid
     kicker: "Co słyszy"
@@ -41,7 +41,7 @@ sections:
         title: "Wielojęzyczna transkrypcja + diaryzacja"
         body: "Kto co powiedział, w tekście, ze słownictwem Twojej branży."
         linkText: "Transkrypcja rozmów"
-        linkHref: "/transkrypcja-rozmow/"
+        linkHref: "/pl/transkrypcja-rozmow/"
       - icon: "📊"
         title: "Sentyment na osi czasu"
         body: "Nie tylko „rozmowa negatywna”, ale moment, w którym się taka stała: obietnica zwrotu, urwana cierpliwość."
@@ -58,7 +58,7 @@ sections:
         title: "Ocena QA"
         body: "Każdy transkrypt punktowany wg Twojej karty oceny."
         linkText: "Kontrola jakości obsługi"
-        linkHref: "/kontrola-jakosci-obslugi/"
+        linkHref: "/pl/kontrola-jakosci-obslugi/"
 
   - type: at-a-glance
     kicker: "W skrócie"
@@ -102,10 +102,10 @@ sections:
   - type: results-band
     heading: "Co znajduje pełne pokrycie"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
+      - value: "1 000+"
+        label: "Agentów łącznie"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "Pełne pokrycie znajduje to, czego próbka nie widzi: u jednego z klientów promocja padała tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Inny klient skrócił proces weryfikacji po analizie transkryptów — <strong>−20% porzuconych połączeń</strong>. <em>(Anonimizowane wdrożenia produkcyjne.)</em>"
@@ -114,7 +114,7 @@ sections:
     heading: "Podłącz się do swojego stacku — bez wymiany systemu"
     names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
     linkText: "Wszystkie integracje"
-    linkHref: "/integracje/"
+    linkHref: "/pl/integracje/"
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -132,7 +132,7 @@ sections:
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja i każda warstwa analizy w jednej cenie."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -140,7 +140,7 @@ sections:
       - q: "Co to jest analiza mowy (speech analytics)?"
         a: "Technologia zamieniająca audio rozmów na uporządkowane dane — transkrypcje, sentyment, tematy, oceny jakości — dzięki której call center mierzy to, co naprawdę dzieje się w rozmowach."
       - q: "Czym różni się od analizy rozmów?"
-        a: 'Analiza mowy to warstwa audio→dane; <a href="/analiza-rozmow/">analiza rozmów</a> to pełna warstwa biznesowa zbudowana na niej. InOro dostarcza obie w jednej platformie.'
+        a: 'Analiza mowy to warstwa audio→dane; <a href="/pl/analiza-rozmow/">analiza rozmów</a> to pełna warstwa biznesowa zbudowana na niej. InOro dostarcza obie w jednej platformie.'
       - q: "Czy to keyword spotting?"
         a: "Nie. AI InOro czyta całą rozmowę w kontekście — odróżnia „chcę zrezygnować” od „nie zamierzam rezygnować” i mierzy zgodność ze skryptem, a nie dopasowanie słów."
       - q: "Real-time czy po rozmowie?"
@@ -157,33 +157,33 @@ sections:
     cards:
       - title: "AI w call center"
         body: "Gdzie AI daje realny ROI w call center."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Analiza sentymentu — jak działa"
         body: "Metody, ograniczenia i wnioski dla managera."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Słownik"
         body: "Kluczowe pojęcia analizy mowy i pokrewnych obszarów."
-        href: "/wiedza/slownik/"
+        href: "/pl/wiedza/slownik/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
-    heading: "Usłysz, co mówią Twoje rozmowy"
+    heading: "Usłysz, co mówi 98% Twoich rozmów"
     body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

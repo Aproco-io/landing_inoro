@@ -2,7 +2,7 @@
 title: "Kontrola jakości obsługi — auto-QA na 100% rozmów"
 description: "InOro ocenia każdą rozmowę wg Twojej karty oceny, automatycznie. 100% pokrycia za ~20% kosztu ręcznego odsłuchu. Karta QA przeniesiona 1:1, edycja drag & drop."
 lang: "pl"
-slug: "/kontrola-jakosci-obslugi/"
+slug: "/pl/kontrola-jakosci-obslugi/"
 translationKey: "quality-assurance"
 order: 40
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Kontrola jakości, która odsłuchuje każdą rozmowę — za ~20% kosztu"
     subheading: "InOro ocenia 100% rozmów według Twojej karty oceny, minuty po ich zakończeniu. Te same kryteria dla każdej rozmowy, każdego konsultanta, każdego dnia — zamiast próbki 2% i loterii oceniających."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
     term: "Auto-QA"
@@ -50,7 +50,7 @@ sections:
         title: "Alerty o naruszeniach"
         body: "Brak weryfikacji tożsamości, brak zgody, słowa krytyczne — flagowane tego samego dnia."
         linkText: "Compliance"
-        linkHref: "/rozwiazania/compliance/"
+        linkHref: "/pl/rozwiazania/compliance/"
       - icon: "🎓"
         title: "Coaching i biblioteka wzorcowych rozmów"
         body: "1:1 na danych, wzorcowe nagrania do onboardingu, plany naprawcze per konsultant."
@@ -101,17 +101,17 @@ sections:
       - value: "~80%"
         label: "Redukcja kosztu QA"
         sub: "vs. ręczna baseline"
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
+      - value: "1 000+"
+        label: "Agentów łącznie"
     caseNote: "<strong>Case anonimizowany:</strong> przy pełnym pokryciu okazało się, że konsultanci wspominali o promocji tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Próbka 2% w ogóle tego nie widziała. Koszt zespołu QA spadł do <strong>~20%</strong> poziomu ręcznego odsłuchu."
 
   - type: integrations-strip
     heading: "Podłącz się do swojego stacku"
     names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
     linkText: "Wszystkie integracje"
-    linkHref: "/integracje/"
+    linkHref: "/pl/integracje/"
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -128,7 +128,7 @@ sections:
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — ocena, widoki coachingowe i raporty w cenie. Bez opłat za stanowisko."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -151,33 +151,33 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Co mierzyć i jak InOro to wypełnia."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Tajemniczy klient a analiza 100% rozmów"
         body: "Kiedy tajemniczy klient przestaje wystarczać."
-        href: "/wiedza/tajemniczy-klient/"
+        href: "/pl/wiedza/tajemniczy-klient/"
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Czat AI"
-        href: "/czat-ai/"
+        href: "/pl/czat-ai/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
     heading: "Uruchom swoją kartę oceny na 100% rozmów z zeszłego tygodnia"
     body: "30-minutowe demo — przynieś swoją kartę oceny, pokażemy ją zautomatyzowaną. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

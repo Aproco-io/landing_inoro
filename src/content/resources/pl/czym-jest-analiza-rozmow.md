@@ -2,7 +2,7 @@
 title: "Czym jest analiza rozmów — przewodnik po polsku"
 description: "Analiza rozmów (conversation intelligence) to technologia AI, która transkrybuje, ocenia i wnioskuje ze 100% rozmów z klientami. Definicja, jak działa, jak wybrać platformę."
 lang: "pl"
-slug: "/wiedza/czym-jest-analiza-rozmow/"
+slug: "/pl/wiedza/czym-jest-analiza-rozmow/"
 translationKey: "resources-what-is-ci"
 order: 60
 seo:
@@ -58,13 +58,13 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki, które CI pozwala mierzyć."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "AI w call center"
         body: "Gdzie AI daje realny ROI."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Zobacz na swoich rozmowach →"
         body: "Analiza rozmów InOro."
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
 
   - type: cta-band
     heading: "Zobacz analizę rozmów na własnych nagraniach"

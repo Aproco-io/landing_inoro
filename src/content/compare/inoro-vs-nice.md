@@ -67,7 +67,7 @@ sections:
       - value: "1B+"
         label: "Minutes analyzed"
       - value: "1,700+"
-        label: "Agents at one client"
+        label: "Agents in total"
       - value: "1–2 weeks"
         label: "Deployment"
     caseNote: "Multiple production deployments; both SaaS and on-premise."

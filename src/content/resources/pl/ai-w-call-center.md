@@ -2,7 +2,7 @@
 title: "AI w call center: co naprawdę działa w 2026 (i czego unikać)"
 description: "AI w call center — trzy dojrzałe zastosowania: voiceboty, agent assist, analiza post-call. Ten przewodnik porządkuje kategorie i pokazuje, od czego zacząć."
 lang: "pl"
-slug: "/wiedza/ai-w-call-center/"
+slug: "/pl/wiedza/ai-w-call-center/"
 translationKey: "resources-ai-analytics"
 order: 50
 seo:
@@ -62,13 +62,13 @@ sections:
     cards:
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki, które AI pomaga mierzyć."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Warstwa AI na Twoim systemie →"
         body: "Analiza mowy InOro."
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
 
   - type: cta-band
     heading: "Warstwa analizy AI na Twoim obecnym systemie"

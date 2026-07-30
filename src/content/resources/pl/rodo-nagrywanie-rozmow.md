@@ -2,7 +2,7 @@
 title: "RODO a nagrywanie rozmów: co wolno, co trzeba, co grozi"
 description: "Firma może nagrywać rozmowy, jeśli spełni obowiązek informacyjny (art. 13 RODO) i ma podstawę przetwarzania. Ryzyko nie leży w samym nagrywaniu, lecz w tym, co się z nagraniami dzieje dalej."
 lang: "pl"
-slug: "/wiedza/rodo-nagrywanie-rozmow/"
+slug: "/pl/wiedza/rodo-nagrywanie-rozmow/"
 translationKey: "resources-rodo"
 order: 10
 seo:
@@ -66,13 +66,13 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki jakości w operacjach regulowanych."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Słownik"
         body: "AML, KYC, DPA i inne pojęcia."
-        href: "/wiedza/slownik/"
+        href: "/pl/wiedza/slownik/"
       - title: "Wykorzystuj 100% nagrań zgodnie z RODO →"
         body: "InOro dla compliance i sektora finansowego."
-        href: "/rozwiazania/compliance/"
+        href: "/pl/rozwiazania/compliance/"
 
   - type: cta-band
     heading: "Compliance-first analiza rozmów"

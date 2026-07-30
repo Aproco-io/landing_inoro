@@ -2,7 +2,7 @@
 title: "Jak poprawnie mierzyć FCR w call center — najczęstsze błędy"
 description: "First Contact Resolution to jeden z najbardziej mylnie interpretowanych wskaźników w call center. Pokazujemy pięć błędów, przez które FCR nie mówi tego, co powinien."
 lang: "pl"
-slug: "/wiedza/blog/jak-mierzyc-fcr-w-call-center/"
+slug: "/pl/wiedza/blog/jak-mierzyc-fcr-w-call-center/"
 date: 2026-06-24
 author: "Zespół InOro"
 category: "KPI"
@@ -54,4 +54,4 @@ Różnica między raportem a rzeczywistością często wynosi 15-20 punktów pro
 
 ---
 
-*Chcesz mierzyć FCR na bazie 100% rozmów, nie ankiet? [Umów demo InOro](/#demo).*
+*Chcesz mierzyć FCR na bazie 100% rozmów, nie ankiet? [Umów demo InOro](/pl/#demo).*

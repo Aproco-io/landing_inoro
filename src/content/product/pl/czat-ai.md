@@ -2,7 +2,7 @@
 title: "Czat AI — zapytaj swoje rozmowy"
 description: 'Pytaj o 100% historii rozmów po polsku lub angielsku. „Które rozmowy miały zastrzeżenia do ceny?” — odpowiedzi z rozmowami na dowód, w kilka sekund.'
 lang: "pl"
-slug: "/czat-ai/"
+slug: "/pl/czat-ai/"
 translationKey: "ai-chat"
 order: 60
 seo:
@@ -59,7 +59,7 @@ sections:
       - "Odpowiedzi z <strong>liczbami + konkretnymi rozmowami</strong> na dowód"
       - "Działa <strong>po polsku i angielsku</strong>"
       - "Bez języka zapytań, bez kreatora raportów, bez kolejki do analityka"
-      - 'Zbudowany na pełnej warstwie analizy InOro — <a href="/analiza-rozmow/">poznaj platformę</a>'
+      - 'Zbudowany na pełnej warstwie analizy InOro — <a href="/pl/analiza-rozmow/">poznaj platformę</a>'
 
   - type: comparison-table
     kicker: "Disambiguacja"
@@ -84,10 +84,10 @@ sections:
   - type: results-band
     heading: "Zbudowany na danych z produkcji"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
+      - value: "1 000+"
+        label: "Agentów łącznie"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "Każda odpowiedź jest podpięta do rozmów źródłowych, na których się opiera."
@@ -107,7 +107,7 @@ sections:
   - type: pricing-teaser
     body: "Czat AI jest w standardowej cenie za minutę — od <strong>0,20 zł/min</strong>, bez dopłat."
     linkText: "Zobacz cennik"
-    linkHref: "/cennik/"
+    linkHref: "/pl/cennik/"
 
   - type: faq
     heading: "Najczęstsze pytania"
@@ -130,33 +130,33 @@ sections:
     cards:
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "AI w call center"
         body: "Gdzie AI daje realny ROI."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Dashboardy i raporty call center"
         body: "Szablony i best-practice."
-        href: "/wiedza/dashboard-call-center/"
+        href: "/pl/wiedza/dashboard-call-center/"
 
   - type: explore-platform
     heading: "Poznaj platformę"
     links:
       - label: "Analiza rozmów"
-        href: "/analiza-rozmow/"
+        href: "/pl/analiza-rozmow/"
       - label: "Analiza mowy"
-        href: "/analiza-mowy/"
+        href: "/pl/analiza-mowy/"
       - label: "Analityka call center"
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
       - label: "Kontrola jakości obsługi"
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
       - label: "Transkrypcja rozmów"
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
       - label: "Integracje"
-        href: "/integracje/"
+        href: "/pl/integracje/"
 
   - type: cta-band
     heading: "Zadaj pierwsze pytanie własnym rozmowom"
     body: "30-minutowe demo — przynieś trzy pytania, na które dziś nie umiesz odpowiedzieć. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

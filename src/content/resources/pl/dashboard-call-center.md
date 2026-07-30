@@ -2,7 +2,7 @@
 title: "Dashboard call center: przykłady, szablony, best-practice"
 description: "Dobry dashboard call center odpowiada w 30 sekund na trzy pytania. Układy per rola, dobór KPI, darmowe szablony (Excel, Power BI)."
 lang: "pl"
-slug: "/wiedza/dashboard-call-center/"
+slug: "/pl/wiedza/dashboard-call-center/"
 translationKey: "resources-dashboard"
 order: 30
 seo:
@@ -56,13 +56,13 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki na dashboardach."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "AI w call center"
         body: "Gdzie AI wchodzi w workflow dashboardów."
-        href: "/wiedza/ai-w-call-center/"
+        href: "/pl/wiedza/ai-w-call-center/"
       - title: "Dashboard z Twoich rozmów →"
         body: "Live dashboard z Twoich nagrań."
-        href: "/analityka-call-center/"
+        href: "/pl/analityka-call-center/"
 
   - type: cta-band
     heading: "Dashboard zbudowany z Twoich rozmów"

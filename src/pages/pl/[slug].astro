@@ -9,9 +9,9 @@ import MarkdownBody from '../../components/MarkdownBody.astro';
 import SectionRenderer from '../../components/sections/SectionRenderer.astro';
 
 export async function getStaticPaths() {
-  const items = await getCollection('compare', (e) => e.data.variant === 'vs');
-  return items.map((entry) => ({
-    params: { slug: entry.data.slug.replace(/^\/compare\//, '').replace(/\/$/, '') },
+  const products = await getCollection('product', (e) => e.data.lang === 'pl');
+  return products.map((entry) => ({
+    params: { slug: entry.data.slug.replace(/^\/pl\//, '').replace(/\/$/, '') },
     props: { entry },
   }));
 }
@@ -20,33 +20,38 @@ const { entry } = Astro.props;
 const { data } = entry;
 const { Content } = await render(entry);
 
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Compare' }, { label: data.title }];
+const breadcrumbs = [
+  { label: 'Strona główna', href: '/pl/' },
+  { label: 'Produkt' },
+  { label: data.title },
+];
 const useSections = Array.isArray(data.sections) && data.sections.length > 0;
 ---
 <PageLayout
-  lang={data.lang}
+  lang="pl"
   title={data.seo?.metaTitle ?? data.title}
   description={data.seo?.metaDescription ?? data.description}
   currentPath={data.slug}
 >
   {useSections ? (
-    <SectionRenderer sections={data.sections!} lang={data.lang} breadcrumbs={breadcrumbs} />
+    <SectionRenderer sections={data.sections!} lang="pl" breadcrumbs={breadcrumbs} />
   ) : (
     <>
       {data.hero && (
         <PageHero
-          kicker={`InOro vs ${data.competitor}`}
+          kicker={data.hero.kicker}
           heading={data.hero.heading}
           subheading={data.hero.subheading}
           primaryCta={data.hero.primaryCta}
+          secondaryCta={data.hero.secondaryCta}
           breadcrumbs={breadcrumbs}
         />
       )}
-      {data.bullets.length > 0 && (
-        <BulletList kicker="Key differences" heading="Where InOro wins" items={data.bullets} />
-      )}
       {data.features.length > 0 && (
-        <FeatureGrid kicker="Side by side" heading="Feature comparison" features={data.features} />
+        <FeatureGrid kicker="Możliwości" heading="Co zyskujesz" features={data.features} />
+      )}
+      {data.bullets.length > 0 && (
+        <BulletList kicker="Kluczowe fakty" heading="W skrócie" items={data.bullets} />
       )}
       <MarkdownBody><Content /></MarkdownBody>
       {data.cta && (

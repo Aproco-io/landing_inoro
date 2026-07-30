@@ -84,11 +84,11 @@ sections:
   - type: results-band
     heading: "Built on real production data"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Analyzed minutes"
         sub: "in production"
-      - value: "1,700+"
-        label: "Agents at a single client"
+      - value: "1,000+"
+        label: "Agents in total"
       - value: "6+"
         label: "Active customers"
     caseNote: "Every answer traceable to the source calls that produced it."

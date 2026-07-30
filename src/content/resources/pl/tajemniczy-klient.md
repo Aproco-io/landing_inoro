@@ -2,7 +2,7 @@
 title: "Tajemniczy klient: jak działa, ile kosztuje — i co pokazuje, a czego nie"
 description: "Mystery shopping to audyt jakości przez pozorowane wizyty lub telefony. Daje głęboki wgląd, ale bada ułamek promila kontaktów — coraz częściej łączony z analizą 100% rozmów."
 lang: "pl"
-slug: "/wiedza/tajemniczy-klient/"
+slug: "/pl/wiedza/tajemniczy-klient/"
 translationKey: "resources-mystery-shopping"
 order: 45
 seo:
@@ -69,13 +69,13 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki, które wychodzą poza próbkę."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Czym jest analiza rozmów"
         body: "Alternatywa dla mystery shoppingu."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "Audyt każdej prawdziwej rozmowy →"
         body: "Auto-QA na 100% rozmów."
-        href: "/kontrola-jakosci-obslugi/"
+        href: "/pl/kontrola-jakosci-obslugi/"
 
   - type: cta-band
     heading: "Audyt każdej prawdziwej rozmowy, nie pozorowanej"

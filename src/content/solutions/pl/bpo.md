@@ -2,7 +2,7 @@
 title: "White-label analityka rozmów dla BPO"
 description: "Oferuj AI-owe QA i dashboardy każdemu klientowi pod własną marką. Multi-tenant, rozliczenie za minutę, billing per klient końcowy."
 lang: "pl"
-slug: "/rozwiazania/bpo/"
+slug: "/pl/rozwiazania/bpo/"
 translationKey: "solutions-bpo"
 order: 10
 seo:
@@ -14,7 +14,7 @@ sections:
     heading: "Twoja marka na analityce, o którą pytają Twoi klienci"
     subheading: "InOro to jedyna platforma analityki rozmów z pełnym white-label: AI-owa ocena jakości, dashboardy i raporty gotowe dla klienta końcowego — pod Twoim logo, w cenie za minutę, która skaluje się z wolumenem."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
 
@@ -52,7 +52,7 @@ sections:
         title: "Auto-QA na 100% rozmów"
         body: "Karty ocen przenoszone 1:1 per projekt kliencki; koszt QA ok. <strong>~20% ręcznego odsłuchu</strong>."
         linkText: "Kontrola jakości obsługi"
-        linkHref: "/kontrola-jakosci-obslugi/"
+        linkHref: "/pl/kontrola-jakosci-obslugi/"
       - icon: "📄"
         title: "Raporty gotowe dla klienta"
         body: "White-label per kampania i zespół; account manager wysyła je jako własną pracę."
@@ -76,9 +76,9 @@ sections:
   - type: results-band
     heading: "Sprawdzone na skali BPO"
     stats:
-      - value: "1 700+"
-        label: "Agentów u jednego klienta"
-      - value: "1 mld+"
+      - value: "1 000+"
+        label: "Agentów łącznie"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "~10 → 1–2"
         label: "Zmiana zespołu QA"
@@ -121,7 +121,7 @@ sections:
       - q: "Czy możemy pobierać za to opłaty od klientów?"
         a: "Tak — zużycie jest raportowane per klient końcowy: refakturujesz po koszcie albo odsprzedajesz z marżą. White-label jest do tego stworzony."
       - q: "Ile nas to kosztuje?"
-        a: 'Od 0,20 zł za analizowaną minutę, cała analiza w cenie. Bez opłat za stanowisko, bez minimów — 50 agentów × 1 000 min/mies. ≈ 10 000 zł. <a href="/cennik/">Cennik</a>'
+        a: 'Od 0,20 zł za analizowaną minutę, cała analiza w cenie. Bez opłat za stanowisko, bez minimów — 50 agentów × 1 000 min/mies. ≈ 10 000 zł. <a href="/pl/cennik/">Cennik</a>'
       - q: "Jak szybko podłączymy nowy projekt kliencki?"
         a: "Nagrania przez API, SFTP lub konektory (Genesys, Avaya, Cisco); nowy projekt to nowy workspace plus jego karta oceny — zwykle 1–2 tygodnie."
       - q: "Czy nasi konsultanci lub systemy klientów muszą się zmieniać?"
@@ -132,17 +132,17 @@ sections:
     cards:
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Co mierzyć w projektach BPO."
-        href: "/wiedza/wskazniki-call-center/"
+        href: "/pl/wiedza/wskazniki-call-center/"
       - title: "Dashboardy i raporty call center"
         body: "Szablony dla executive."
-        href: "/wiedza/dashboard-call-center/"
+        href: "/pl/wiedza/dashboard-call-center/"
       - title: "Czym jest analiza rozmów"
         body: "Kategoria wyjaśniona."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
 
   - type: cta-band
     heading: "Dopisz pozycję „analityka AI” do następnej oferty"
     body: "30-minutowe demo — pokażemy widok white-label dla klienta końcowego. 30-dniowy bezpłatny pilotaż • bez karty."
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

@@ -170,7 +170,7 @@ Zobacz **`docs/EDYCJA-TRESCI-INSTRUKCJA.md`** w projekcie — tabela URL → pli
 1. Otwórz `.md` który chcesz zmienić (np. `src/content/product/pl/analiza-rozmow.md`)
 2. Zmień treść
 3. **Ctrl+S / Cmd+S** żeby zapisać
-4. Przełącz się na przeglądarkę, na `http://localhost:4321/analiza-rozmow/`
+4. Przełącz się na przeglądarkę, na `http://localhost:4321/pl/analiza-rozmow/` (PL — z prefiksem `/pl/`) albo `http://localhost:4321/conversation-intelligence/` (EN — bez prefiksu)
 5. Odświeżenie jest automatyczne (Astro to wykrywa) — powinieneś od razu zobaczyć zmianę
 
 Jeśli nie odświeżyło się automatycznie — Ctrl+R / Cmd+R (hard refresh: Ctrl+Shift+R).

@@ -42,7 +42,7 @@ Zjedź na sam dół. Zobaczysz "Commit changes" — panel z opcjami:
 
 ### 5. Zobacz efekt na Vercelu
 
-Otwórz [inoro-khaki.vercel.app](https://inoro-khaki.vercel.app), przejdź do zmienionej podstrony (np. `/analiza-rozmow/`). Za ~60 sekund od commita powinnaś widzieć zmiany.
+Otwórz [inoro-khaki.vercel.app](https://inoro-khaki.vercel.app), przejdź do zmienionej podstrony (np. `/pl/analiza-rozmow/` — polskie podstrony mają teraz prefiks `/pl/`). Za ~60 sekund od commita powinnaś widzieć zmiany.
 
 Jeśli nie widać — hard-refresh (Ctrl+Shift+R lub Cmd+Shift+R).
 
@@ -66,17 +66,21 @@ Zobacz sekcję **Dwa tryby publikacji** niżej.
 
 Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 
+> **Konwencja URL (od 2026-07-30):** wszystkie podstrony **polskie** są pod prefiksem `/pl/`, wersje **angielskie** zostają w root (`/`). Wyjątek: home page — polska `/pl/`, angielska `/`.
+>
+> **Ważne:** jeśli w treści `.md` linkujesz do polskiej podstrony, zawsze używaj prefiksu `/pl/` (np. `/pl/analiza-rozmow/`), nie samego `/analiza-rozmow/`. To samo dotyczy `href:` w sekcjach `related-resources`, `capability-grid`, `cta-band` itd.
+
 ### Money pages (produkt)
 
 | URL | Plik |
 |---|---|
-| `/analiza-rozmow/` | `src/content/product/pl/analiza-rozmow.md` |
-| `/analiza-mowy/` | `src/content/product/pl/analiza-mowy.md` |
-| `/analityka-call-center/` | `src/content/product/pl/analityka-call-center.md` |
-| `/kontrola-jakosci-obslugi/` | `src/content/product/pl/kontrola-jakosci-obslugi.md` |
-| `/transkrypcja-rozmow/` | `src/content/product/pl/transkrypcja-rozmow.md` |
-| `/czat-ai/` | `src/content/product/pl/czat-ai.md` |
-| `/integracje/` | `src/content/product/pl/integracje.md` |
+| `/pl/analiza-rozmow/` | `src/content/product/pl/analiza-rozmow.md` |
+| `/pl/analiza-mowy/` | `src/content/product/pl/analiza-mowy.md` |
+| `/pl/analityka-call-center/` | `src/content/product/pl/analityka-call-center.md` |
+| `/pl/kontrola-jakosci-obslugi/` | `src/content/product/pl/kontrola-jakosci-obslugi.md` |
+| `/pl/transkrypcja-rozmow/` | `src/content/product/pl/transkrypcja-rozmow.md` |
+| `/pl/czat-ai/` | `src/content/product/pl/czat-ai.md` |
+| `/pl/integracje/` | `src/content/product/pl/integracje.md` |
 | `/conversation-intelligence/` | `src/content/product/en/conversation-intelligence.md` |
 | `/speech-analytics/` | `src/content/product/en/speech-analytics.md` |
 | `/contact-center-analytics/` | `src/content/product/en/contact-center-analytics.md` |
@@ -89,10 +93,10 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 
 | URL | Plik |
 |---|---|
-| `/rozwiazania/bpo/` | `src/content/solutions/pl/bpo.md` |
-| `/rozwiazania/compliance/` | `src/content/solutions/pl/compliance.md` |
-| `/rozwiazania/e-commerce/` | `src/content/solutions/pl/e-commerce.md` |
-| `/rozwiazania/sprzedaz/` | `src/content/solutions/pl/sprzedaz.md` |
+| `/pl/rozwiazania/bpo/` | `src/content/solutions/pl/bpo.md` |
+| `/pl/rozwiazania/compliance/` | `src/content/solutions/pl/compliance.md` |
+| `/pl/rozwiazania/e-commerce/` | `src/content/solutions/pl/e-commerce.md` |
+| `/pl/rozwiazania/sprzedaz/` | `src/content/solutions/pl/sprzedaz.md` |
 | `/solutions/bpo/` | `src/content/solutions/en/bpo.md` |
 | `/solutions/compliance/` | `src/content/solutions/en/compliance.md` |
 | `/solutions/retail/` | `src/content/solutions/en/retail.md` |
@@ -102,33 +106,35 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 
 | URL | Plik |
 |---|---|
-| `/cennik/` | `src/content/pricing/pl.md` |
+| `/pl/cennik/` | `src/content/pricing/pl.md` |
 | `/pricing/` | `src/content/pricing/en.md` |
 
 ### Compare & Alternatives
 
-| URL | Plik |
+> ⚠️ **Ukryte do czasu konsultacji prawnej.** Pliki `.md` zostają w repo — można je edytować — ale nie mają publicznych URL-i. Po zielonym świetle z prawnika Dominik przywróci route'y.
+
+| Plik | Status |
 |---|---|
-| `/compare/inoro-vs-nice/` | `src/content/compare/inoro-vs-nice.md` |
-| `/compare/inoro-vs-verint/` | `src/content/compare/inoro-vs-verint.md` |
-| `/compare/inoro-vs-callminer/` | `src/content/compare/inoro-vs-callminer.md` |
-| `/compare/inoro-vs-observe-ai/` | `src/content/compare/inoro-vs-observe-ai.md` |
-| `/alternatives/nice-alternative/` | `src/content/compare/nice-alternative.md` |
-| `/alternatives/verint-alternative/` | `src/content/compare/verint-alternative.md` |
-| `/alternatives/callminer-alternative/` | `src/content/compare/callminer-alternative.md` |
+| `src/content/compare/inoro-vs-nice.md` | offline |
+| `src/content/compare/inoro-vs-verint.md` | offline |
+| `src/content/compare/inoro-vs-callminer.md` | offline |
+| `src/content/compare/inoro-vs-observe-ai.md` | offline |
+| `src/content/compare/nice-alternative.md` | offline |
+| `src/content/compare/verint-alternative.md` | offline |
+| `src/content/compare/callminer-alternative.md` | offline |
 
 ### Wiedza / Resources (huby edukacyjne)
 
 | URL | Plik |
 |---|---|
-| `/wiedza/wskazniki-call-center/` | `src/content/resources/pl/wskazniki-call-center.md` |
-| `/wiedza/rodo-nagrywanie-rozmow/` | `src/content/resources/pl/rodo-nagrywanie-rozmow.md` |
-| `/wiedza/dashboard-call-center/` | `src/content/resources/pl/dashboard-call-center.md` |
-| `/wiedza/ai-w-call-center/` | `src/content/resources/pl/ai-w-call-center.md` |
-| `/wiedza/czym-jest-analiza-rozmow/` | `src/content/resources/pl/czym-jest-analiza-rozmow.md` |
-| `/wiedza/slownik/` | `src/content/resources/pl/slownik.md` |
-| `/wiedza/transkrypcja-audio-na-tekst/` | `src/content/resources/pl/transkrypcja-audio-na-tekst.md` |
-| `/wiedza/tajemniczy-klient/` | `src/content/resources/pl/tajemniczy-klient.md` |
+| `/pl/wiedza/wskazniki-call-center/` | `src/content/resources/pl/wskazniki-call-center.md` |
+| `/pl/wiedza/rodo-nagrywanie-rozmow/` | `src/content/resources/pl/rodo-nagrywanie-rozmow.md` |
+| `/pl/wiedza/dashboard-call-center/` | `src/content/resources/pl/dashboard-call-center.md` |
+| `/pl/wiedza/ai-w-call-center/` | `src/content/resources/pl/ai-w-call-center.md` |
+| `/pl/wiedza/czym-jest-analiza-rozmow/` | `src/content/resources/pl/czym-jest-analiza-rozmow.md` |
+| `/pl/wiedza/slownik/` | `src/content/resources/pl/slownik.md` |
+| `/pl/wiedza/transkrypcja-audio-na-tekst/` | `src/content/resources/pl/transkrypcja-audio-na-tekst.md` |
+| `/pl/wiedza/tajemniczy-klient/` | `src/content/resources/pl/tajemniczy-klient.md` |
 | `/resources/call-center-kpis/` | `src/content/resources/en/call-center-kpis.md` |
 | `/resources/call-center-dashboard/` | `src/content/resources/en/call-center-dashboard.md` |
 | `/resources/what-is-conversation-intelligence/` | `src/content/resources/en/what-is-conversation-intelligence.md` |
@@ -141,9 +147,9 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 
 | URL | Plik |
 |---|---|
-| `/wiedza/blog/` | Archiwum PL (auto-generowane z folderu) |
+| `/pl/wiedza/blog/` | Archiwum PL (auto-generowane z folderu) |
 | `/resources/blog/` | Archiwum EN (auto-generowane z folderu) |
-| `/wiedza/blog/{slug}/` | `src/content/blog/pl/{slug}.md` |
+| `/pl/wiedza/blog/{slug}/` | `src/content/blog/pl/{slug}.md` |
 | `/resources/blog/{slug}/` | `src/content/blog/en/{slug}.md` |
 
 ### Standalone
@@ -169,7 +175,7 @@ Każdy plik ma dwie części: **front matter** (metadane, YAML na górze między
 title: "Analiza rozmów AI"
 description: "Krótki opis pod SEO"
 lang: "pl"
-slug: "/analiza-rozmow/"
+slug: "/pl/analiza-rozmow/"
 translationKey: "conversation-intelligence"
 order: 10
 seo:
@@ -181,7 +187,7 @@ sections:
     heading: "H1 nagłówek"
     subheading: "Zdanie pod H1"
     primaryCta: { label: "Umów demo", href: "/demo/" }
-    secondaryCta: { label: "Zobacz cennik", href: "/cennik/" }
+    secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
     term: "Analiza rozmów"
@@ -226,7 +232,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   heading: "Nagłówek H1"
   subheading: "Podnagłówek pod H1"
   primaryCta: { label: "CTA", href: "/demo/" }    # opcjonalne
-  secondaryCta: { label: "Cennik", href: "/cennik/" }  # opcjonalne
+  secondaryCta: { label: "Cennik", href: "/pl/cennik/" }  # opcjonalne — PL prefix na PL stronach!
   imageSrc: "/assets/screenshot.png"              # opcjonalne (obrazek po prawej)
   imageAlt: "Opis obrazka"                        # jeśli imageSrc
 ```
@@ -311,11 +317,11 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
 - type: results-band
   heading: "H2 sekcji"
   stats:
-    - value: "1 mld+"
+    - value: "10 mln+"
       label: "Analizowanych minut"
       sub: "na produkcji"          # opcjonalne
-    - value: "1 700+"
-      label: "Agentów u klienta"
+    - value: "1 000+"
+      label: "Agentów łącznie"
   caseNote: "Opcjonalny opis case'a pod liczbami."
 ```
 
@@ -338,7 +344,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   heading: "Działa z Twoim stackiem"
   names: ["Genesys", "Avaya", "Cisco", "REST API"]
   linkText: "Wszystkie integracje"       # opcjonalne
-  linkHref: "/integracje/"               # opcjonalne
+  linkHref: "/pl/integracje/"            # opcjonalne — PL prefix na PL stronach
 ```
 
 ### `security-band` — pasek bezpieczeństwa (S15)
@@ -360,7 +366,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
 - type: pricing-teaser
   body: "Od <strong>0,20 zł/min</strong> — wszystko w cenie."
   linkText: "Zobacz cennik"
-  linkHref: "/cennik/"
+  linkHref: "/pl/cennik/"
 ```
 
 ### `faq` — akordeon pytań (S18)
@@ -383,7 +389,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   cards:
     - title: "Tytuł powiązanego artykułu"
       body: "Krótki opis"                # opcjonalne
-      href: "/wiedza/link/"
+      href: "/pl/wiedza/link/"           # PL prefix na PL stronach
 ```
 
 ### `explore-platform` — mini-nawigacja po innych modułach (S20)
@@ -393,9 +399,9 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   heading: "Poznaj platformę"
   links:
     - label: "Analiza mowy"
-      href: "/analiza-mowy/"
+      href: "/pl/analiza-mowy/"
     - label: "Kontrola jakości"
-      href: "/kontrola-jakosci-obslugi/"
+      href: "/pl/kontrola-jakosci-obslugi/"
 ```
 
 ### `cta-band` — pasek CTA na koniec (S21)
@@ -405,10 +411,10 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   heading: "Nagłówek CTA"
   body: "Opis pod nagłówkiem"                    # opcjonalne
   primaryCta: { label: "Umów demo", href: "/demo/" }
-  secondaryCta: { label: "Cennik", href: "/cennik/" }   # opcjonalne
+  secondaryCta: { label: "Cennik", href: "/pl/cennik/" }   # opcjonalne — PL prefix na PL stronach
 ```
 
-### `pricing-plans` — tylko na /pricing/ i /cennik/
+### `pricing-plans` — tylko na /pricing/ i /pl/cennik/
 
 ```yaml
 - type: pricing-plans
@@ -495,7 +501,7 @@ Wklej szablon:
 title: "Tytuł artykułu"
 description: "Krótki opis pod SEO/OG"
 lang: "pl"
-slug: "/wiedza/blog/nazwa-artykulu/"
+slug: "/pl/wiedza/blog/nazwa-artykulu/"
 date: 2026-08-15
 author: "Zespół InOro"
 category: "KPI"
@@ -512,7 +518,7 @@ Tu piszesz **czystym markdownem**. Nagłówki `## H2`, listy `- punkt`, linki `[
 Treść akapitu.
 ```
 
-Commit → za ~60 sek pojawi się na `/wiedza/blog/nazwa-artykulu/`.
+Commit → za ~60 sek pojawi się na `/pl/wiedza/blog/nazwa-artykulu/` (dla PL) albo `/resources/blog/nazwa-artykulu/` (dla EN — bez prefiksu, bo EN jest w root).
 
 **Cover artykułu:** jeśli chcesz obrazek zamiast gradientu, dodaj `cover: "/blog/nazwa-artykulu.jpg"` we front matter i wrzuć plik do `public/blog/nazwa-artykulu.jpg` (przez "Upload files" na tym folderze).
 

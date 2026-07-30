@@ -81,10 +81,10 @@ sections:
   - type: results-band
     heading: "Battle-tested at scale"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
-      - value: "1,700+"
-        label: "Agents at one client"
+      - value: "1,000+"
+        label: "Agents in total"
       - value: "SaaS + on-prem"
         label: "Both models in production"
     caseNote: "Deployments running both SaaS and fully on-premise; large multi-program operations connected through existing infrastructure without touching telephony."

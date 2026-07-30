@@ -2,7 +2,7 @@
 title: "Transkrypcja audio na tekst: metody, narzędzia, dokładność (2026)"
 description: "Trzy metody transkrypcji: ręczna, automatyczna AI, hybrydowa. Porównanie narzędzi (w tym darmowych), realnych ograniczeń i przypadków biznesowych."
 lang: "pl"
-slug: "/wiedza/transkrypcja-audio-na-tekst/"
+slug: "/pl/wiedza/transkrypcja-audio-na-tekst/"
 translationKey: "resources-transcription"
 order: 40
 seo:
@@ -50,13 +50,13 @@ sections:
     cards:
       - title: "Czym jest analiza rozmów"
         body: "Warstwa biznesowa nad transkrypcją."
-        href: "/wiedza/czym-jest-analiza-rozmow/"
+        href: "/pl/wiedza/czym-jest-analiza-rozmow/"
       - title: "RODO a nagrywanie rozmów"
         body: "Legalne aspekty transkrypcji."
-        href: "/wiedza/rodo-nagrywanie-rozmow/"
+        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
       - title: "Transkrypcja 100% rozmów z analizą →"
         body: "Transkrypcja InOro z warstwą AI."
-        href: "/transkrypcja-rozmow/"
+        href: "/pl/transkrypcja-rozmow/"
 
   - type: cta-band
     heading: "Transkrypcja 100% rozmów call center — z analizą w cenie"

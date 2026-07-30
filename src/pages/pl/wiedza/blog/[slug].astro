@@ -1,13 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
-import PageLayout from '../../../layouts/PageLayout.astro';
-import MarkdownBody from '../../../components/MarkdownBody.astro';
-import CtaSection from '../../../components/CtaSection.astro';
+import PageLayout from '../../../../layouts/PageLayout.astro';
+import MarkdownBody from '../../../../components/MarkdownBody.astro';
+import CtaSection from '../../../../components/CtaSection.astro';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'pl' && !p.data.draft);
   return items.map((entry) => ({
-    params: { slug: entry.data.slug.replace(/^\/wiedza\/blog\//, '').replace(/\/$/, '') },
+    params: { slug: entry.data.slug.replace(/^\/pl\/wiedza\/blog\//, '').replace(/\/$/, '') },
     props: { entry },
   }));
 }
@@ -32,9 +32,9 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
     <header class="blog-post__head">
       <div class="inoro-container">
         <nav class="blog-post__crumbs" aria-label="Breadcrumb">
-          <a href="/">Strona główna</a>
+          <a href="/pl/">Strona główna</a>
           <span class="sep">/</span>
-          <a href="/wiedza/blog/">Wiedza</a>
+          <a href="/pl/wiedza/blog/">Wiedza</a>
           <span class="sep">/</span>
           <span>{data.title}</span>
         </nav>
@@ -80,7 +80,7 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
     heading="Zobacz InOro w akcji"
     subheading="30-minutowe demo dopasowane do Twojego call center."
     buttonLabel="Umów demo"
-    buttonHref="/#demo"
+    buttonHref="/pl/#demo"
   />
 </PageLayout>
 
