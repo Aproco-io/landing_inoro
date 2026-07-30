@@ -8,6 +8,8 @@ author: "Adam Sipowicz"
 category: "Jakość i KPI"
 excerpt: "Telefonia mówi jak szybko, ankiety — co klient deklaruje, a dopiero treść rozmów pokazuje, co się faktycznie wydarzyło. Framework 3 źródeł prawdy i dlaczego odsłuch 2% rozmów to statystyczna loteria."
 coverGradient: "linear-gradient(135deg, #1AA7E0 0%, #0b1f3d 100%)"
+cover: "/blog/jak-mierzyc-jakosc.jpg"
+coverAlt: "Zestaw słuchawkowy konsultanta obok laptopa — obraz stanowiska call center"
 readTime: 11
 tags: ["jakosc-obslugi", "quality-score", "kpi", "auto-qa"]
 seo:

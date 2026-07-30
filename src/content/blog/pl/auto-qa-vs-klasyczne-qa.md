@@ -8,6 +8,8 @@ author: "Zespół InOro"
 category: "Kontrola jakości"
 excerpt: "Automatyczna kontrola jakości oceniająca 100% rozmów to nie tylko \"więcej danych\". To inna filozofia zarządzania jakością. Pięć kluczowych różnic."
 coverGradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+cover: "/blog/auto-qa-vs-klasyczne.jpg"
+coverAlt: "Uśmiechnięta konsultantka ze słuchawkami przy komputerze — codzienna praca zespołu QA"
 readTime: 8
 tags: ["qa", "auto-qa", "ai"]
 ---

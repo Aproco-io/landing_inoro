@@ -8,6 +8,8 @@ author: "Zespół InOro"
 category: "RODO"
 excerpt: "Podstawa prawna, retencja, klauzule informacyjne, prawo do usunięcia. Aktualna checklista audytowa RODO dla nagrywania rozmów w call center."
 coverGradient: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"
+cover: "/blog/rodo-nagrywanie.jpg"
+coverAlt: "Złota kłódka leżąca na klawiaturze — symbol bezpieczeństwa danych i zgodności z RODO"
 readTime: 7
 tags: ["rodo", "compliance", "audyt"]
 ---

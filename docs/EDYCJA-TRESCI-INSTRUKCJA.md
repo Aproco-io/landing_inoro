@@ -520,7 +520,29 @@ Treść akapitu.
 
 Commit → za ~60 sek pojawi się na `/pl/wiedza/blog/nazwa-artykulu/` (dla PL) albo `/resources/blog/nazwa-artykulu/` (dla EN — bez prefiksu, bo EN jest w root).
 
-**Cover artykułu:** jeśli chcesz obrazek zamiast gradientu, dodaj `cover: "/blog/nazwa-artykulu.jpg"` we front matter i wrzuć plik do `public/blog/nazwa-artykulu.jpg` (przez "Upload files" na tym folderze).
+### Cover artykułu (obraz wyróżniający)
+
+Kolejność priorytetów w renderze: jeśli jest `cover`, karta i strona pokazują obraz; jeśli nie ma — zostaje `coverGradient` jako tło. Zostawiać można oba naraz — `cover` po prostu wygra.
+
+**Krok 1 — wrzuć plik.** Wejdź w `public/blog/` na GitHubie → **Add file → Upload files** → przeciągnij `.jpg` lub `.webp` → commit. Rekomendowany rozmiar: **1600 × 900 px** (16:9), JPG, ≤ 200 KB. Nazwa bez spacji i polskich znaków, np. `moj-artykul.jpg`.
+
+**Krok 2 — podepnij we front matter.**
+
+```yaml
+cover: "/blog/moj-artykul.jpg"
+coverAlt: "Krótki opis obrazu dla dostępności i SEO"
+```
+
+`/blog/…` (nie `/public/blog/…`) — Astro serwuje wszystko z `public/` w root.
+
+**Skąd brać darmowe obrazy:**
+- [unsplash.com](https://unsplash.com) — licencja free, komercyjne OK, atrybucja niewymagana
+- [pexels.com](https://pexels.com) — to samo
+- [pixabay.com](https://pixabay.com) — to samo
+
+Pobierz w rozmiarze "Small" lub "Medium" (nie oryginalnym — będzie za ciężki). Uwaga na `plus.unsplash.com` / "Unsplash+" — to płatne, omijaj.
+
+**Aktualne posty PL już mają cover'y** — zobacz `src/content/blog/pl/*.md` jako wzór.
 
 ---
 

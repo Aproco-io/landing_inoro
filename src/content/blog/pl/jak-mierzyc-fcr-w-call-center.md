@@ -8,6 +8,8 @@ author: "Zespół InOro"
 category: "KPI"
 excerpt: "First Contact Resolution to jeden z najbardziej mylnie interpretowanych wskaźników w call center. Pokazujemy pięć błędów, przez które FCR nie mówi tego, co powinien."
 coverGradient: "linear-gradient(135deg, #259bf7 0%, #1e3a66 100%)"
+cover: "/blog/jak-mierzyc-fcr.jpg"
+coverAlt: "Wykresy analityki wydajności na ekranie laptopa — wizualizacja KPI call center"
 readTime: 6
 tags: ["fcr", "kpi", "jakosc-obslugi"]
 ---
