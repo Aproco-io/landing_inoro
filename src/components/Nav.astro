@@ -100,7 +100,7 @@ const enHref = switchTo(currentPath || '/', 'en');
     </button>
   </div>
 
-  <div class="inoro-subnav__mobile" hidden>
+  <div class="inoro-subnav__mobile">
     <ul>
       {menu.map((item) => (
         <li>
@@ -378,10 +378,18 @@ const enHref = switchTo(currentPath || '/', 'en');
   const toggle = document.querySelector('.inoro-subnav__toggle');
   const mobile = document.querySelector('.inoro-subnav__mobile');
   if (toggle && mobile) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const open = mobile.getAttribute('data-open') === 'true';
       mobile.setAttribute('data-open', open ? 'false' : 'true');
       toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    // Auto-close when user taps a link
+    mobile.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('a')) {
+        mobile.setAttribute('data-open', 'false');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 
