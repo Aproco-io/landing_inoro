@@ -69,6 +69,6 @@ sections:
 
   - type: cta-band
     heading: "Score 100% of calls on your own scorecard"
-    body: "30-minute demo — bring your scorecard. 30-day pilot • no credit card."
+    body: "30-minute demo — bring your scorecard. 30-day pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
 ---

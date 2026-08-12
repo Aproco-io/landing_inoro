@@ -102,7 +102,7 @@ sections:
       - q: "Czy handlowcy poczują się inwigilowani?"
         a: 'Zmiana idzie z „wyrywkowych łapanek” na te same zasady dla wszystkich: każda rozmowa, te same kryteria, widoczne uzasadnienia, biblioteka wzorcowych rozmów do rozwoju. Większość woli uczciwe 100% od losowych 2%.'
       - q: "Jak szybko będą pierwsze wnioski?"
-        a: "Wdrożenie 1–2 tygodnie; pierwszy raport zgodności z playbookiem kilka dni po podłączeniu nagrań. 30-dniowy pilotaż na prawdziwych rozmowach."
+        a: "Wdrożenie 1 dzień; pierwszy raport zgodności z playbookiem kilka dni po podłączeniu nagrań. 30-dniowy pilotaż na prawdziwych rozmowach."
 
   - type: related-resources
     heading: "Zgłęb temat"
@@ -119,7 +119,7 @@ sections:
 
   - type: cta-band
     heading: "Znajdź swój pierwszy raport pominiętych ofert"
-    body: "30-minutowe demo na Twoich rozmowach sprzedażowych. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo na Twoich rozmowach sprzedażowych. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

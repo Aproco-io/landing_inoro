@@ -137,7 +137,7 @@ sections:
 
   - type: cta-band
     heading: "Run a compliance check on last month's calls"
-    body: "30-minute demo — we'll configure two of your real procedures live. 30-day free pilot • no credit card."
+    body: "30-minute demo — we'll configure two of your real procedures live. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "Security details", href: "/security/" }
 ---

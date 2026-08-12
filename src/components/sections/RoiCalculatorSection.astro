@@ -3,8 +3,28 @@ interface Props {
   heading?: string;
   perMinutePrice: number;
   currency?: string;
+  /** Per-seat competitor cost range (per agent per month), in the same currency as `currency`. */
+  perSeatLow?: number;
+  perSeatHigh?: number;
+  lang?: 'pl' | 'en';
 }
-const { heading, perMinutePrice, currency = '€' } = Astro.props;
+const {
+  heading,
+  perMinutePrice,
+  currency = '€',
+  perSeatLow = 100,
+  perSeatHigh = 250,
+  lang = 'en',
+} = Astro.props;
+const labels = lang === 'pl'
+  ? { agents: 'Liczba agentów', minutes: 'Minuty / agent / miesiąc', inoro: 'InOro (za minutę)', competitor: 'Konkurencja (za stanowisko)' }
+  : { agents: 'Agents', minutes: 'Minutes / agent / month', inoro: 'InOro (per-minute)', competitor: 'Typical per-seat competitor' };
+const fmt = (n: number) => `${currency}${Math.round(n).toLocaleString('en-US')}`;
+const defaultAgents = 50;
+const defaultMinutes = 1000;
+const inoroInit = fmt(defaultAgents * defaultMinutes * perMinutePrice);
+const compLowInit = fmt(defaultAgents * perSeatLow);
+const compHighInit = fmt(defaultAgents * perSeatHigh);
 ---
 <section class="s-roi">
   <div class="inoro-container">
@@ -12,22 +32,26 @@ const { heading, perMinutePrice, currency = '€' } = Astro.props;
       <h2>{heading ?? 'Cost estimate'}</h2>
       <div class="s-roi__row">
         <label>
-          Agents
-          <input type="number" id="roi-agents" value="50" min="1" step="1" />
+          {labels.agents}
+          <input type="number" id="roi-agents" value={String(defaultAgents)} min="1" step="1" />
         </label>
         <label>
-          Minutes / agent / month
-          <input type="number" id="roi-minutes" value="1000" min="1" step="100" />
+          {labels.minutes}
+          <input type="number" id="roi-minutes" value={String(defaultMinutes)} min="1" step="100" />
         </label>
       </div>
       <div class="s-roi__result">
         <div>
-          <span class="s-roi__label">InOro (per-minute)</span>
-          <span class="s-roi__value" id="roi-inoro" data-currency={currency} data-rate={perMinutePrice}>{currency}2,500</span>
+          <span class="s-roi__label">{labels.inoro}</span>
+          <span class="s-roi__value" id="roi-inoro"
+            data-currency={currency}
+            data-rate={perMinutePrice}>{inoroInit}</span>
         </div>
         <div>
-          <span class="s-roi__label">Typical per-seat competitor</span>
-          <span class="s-roi__value muted" id="roi-competitor">{currency}5,000 – {currency}12,500</span>
+          <span class="s-roi__label">{labels.competitor}</span>
+          <span class="s-roi__value muted" id="roi-competitor"
+            data-seat-low={perSeatLow}
+            data-seat-high={perSeatHigh}>{compLowInit} – {compHighInit}</span>
         </div>
       </div>
     </div>
@@ -45,8 +69,8 @@ const { heading, perMinutePrice, currency = '€' } = Astro.props;
   if (agentsEl && minEl && inoroEl && competitorEl) {
     const rate = parseFloat(inoroEl.getAttribute('data-rate') || '0.05');
     const currency = inoroEl.getAttribute('data-currency') || '€';
-    const perSeatLow = 100;
-    const perSeatHigh = 250;
+    const perSeatLow = parseFloat(competitorEl.getAttribute('data-seat-low') || '100');
+    const perSeatHigh = parseFloat(competitorEl.getAttribute('data-seat-high') || '250');
     const recalc = () => {
       const agents = parseInt(agentsEl.value || '0', 10);
       const mins = parseInt(minEl.value || '0', 10);

@@ -177,7 +177,7 @@ sections:
 
   - type: cta-band
     heading: "Uruchom swoją kartę oceny na 100% rozmów z zeszłego tygodnia"
-    body: "30-minutowe demo — przynieś swoją kartę oceny, pokażemy ją zautomatyzowaną. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo — przynieś swoją kartę oceny, pokażemy ją zautomatyzowaną. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

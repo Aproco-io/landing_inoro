@@ -167,7 +167,7 @@ sections:
 
   - type: cta-band
     heading: "See your own calls as searchable text"
-    body: "30-minute demo on your recordings. 30-day free pilot • no credit card."
+    body: "30-minute demo on your recordings. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

@@ -33,7 +33,7 @@ sections:
       - label: "Analytics approach"
         values: ["mature speech analytics, phrase/category driven", "contextual LLM analysis of whole conversations"]
       - label: "Time to live"
-        values: ["enterprise project", "1–2 weeks"]
+        values: ["enterprise project", "1 day"]
       - label: "Pricing"
         values: ["per-seat / per-module licensing", "€0.05/analyzed minute, all-inclusive"]
       - label: "Deployment"
@@ -68,7 +68,7 @@ sections:
         label: "Minutes analyzed"
       - value: "~20%"
         label: "Cost of manual QA"
-      - value: "1–2 weeks"
+      - value: "1 day"
         label: "Deployment"
 
   - type: faq

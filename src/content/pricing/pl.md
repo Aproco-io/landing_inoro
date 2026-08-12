@@ -39,6 +39,8 @@ sections:
     heading: "Ile to wyjdzie u Ciebie?"
     perMinutePrice: 0.20
     currency: "zł "
+    perSeatLow: 420
+    perSeatHigh: 1060
 
   - type: comparison-table
     kicker: "Model rozliczenia"
@@ -58,7 +60,7 @@ sections:
       - label: "Progi funkcji"
         values: ['analityka często tylko „Enterprise”', "wszystko w jednej cenie"]
       - label: "Pilotaż"
-        values: ["negocjacja kontraktu", "30 dni gratis, bez karty"]
+        values: ["negocjacja kontraktu", "30 dni gratis"]
 
   - type: how-it-works
     kicker: "Od pilotażu do produkcji"
@@ -93,7 +95,7 @@ sections:
       - q: "Czy czat AI albo white-label kosztują ekstra?"
         a: "Nie — czat AI i raporty white-label są w standardowej cenie."
       - q: "Co obejmuje 30-dniowy pilotaż?"
-        a: "Pełne wdrożenie na Twoich nagraniach, przeniesienie karty oceny, prawdziwą analizę na prawdziwych rozmowach. Bezpłatnie, bez karty."
+        a: "Do 500 nagrań, które nam przekazujesz razem z metadanymi (kampania, typ sprawy, konsultant). Uzgadniamy z Tobą kryteria oceny, przetwarzamy je na naszej infrastrukturze i prezentujemy wyniki w panelu — bezpłatnie. Pilotaż nie obejmuje pełnej integracji technicznej z Twoją telefonią ani jeden-do-jednego przeniesienia całej karty QA — to jest zakres kolejnej fazy."
       - q: "Jak wygląda wycena on-premise?"
         a: 'Wdrożenia on-premise wyceniamy indywidualnie — <a href="/pl/#demo">umów demo</a> i opowiedz o swojej infrastrukturze.'
       - q: "Czy są rabaty wolumenowe?"
@@ -101,6 +103,6 @@ sections:
 
   - type: cta-band
     heading: "Poproś o wycenę dla swojego wolumenu rozmów"
-    body: "30-minutowe demo + indywidualna wycena. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo + indywidualna wycena. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

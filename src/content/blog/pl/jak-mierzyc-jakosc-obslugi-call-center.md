@@ -79,7 +79,7 @@ Taki scorecard można liczyć ręcznie — ale wtedy wracamy do matematyki prób
 
 Inoro analizuje rozmowy po ich zakończeniu (post-call) — nie nagrywa i nie wymaga wymiany systemu call center; pobiera istniejące nagrania z Genesys, Avaya, Cisco lub przez API/SFTP. Klienci przed wdrożeniem odsłuchiwali zwykle 1–2% rozmów; z Inoro analizują 100% — i to jest inny poziom wiedzy o operacjach: dopiero wtedy widać, co naprawdę dzieje się na liniach.
 
-Co to zmienia organizacyjnie: zamiast modelu „10 osób w dziale jakości odsłuchuje ~2% rozmów" — 2 analityków, którzy już nie słuchają, tylko pracują na raportach i przetworzonych danych, zgodnie z wytycznymi i kartami oceny. To nie redukcja funkcji kontroli jakości, tylko podniesienie jej roli: mniej żmudnego odsłuchu, więcej analizy i coachingu. Kosztowo automatyczna kontrola jakości to około 20% kosztu ręcznego odsłuchu; rozliczenie od 0,20 zł za minutę analizy, bez opłat per stanowisko. System liczenia i agregacji quality score jest za każdym razem ustalany i parametryzowany z klientem — łącznie Inoro przeanalizowało ponad 10 mln minut rozmów z pracy ponad 1000 agentów, a wdrożenie trwa zwykle 1–2 tygodnie.
+Co to zmienia organizacyjnie: zamiast modelu „10 osób w dziale jakości odsłuchuje ~2% rozmów" — 2 analityków, którzy już nie słuchają, tylko pracują na raportach i przetworzonych danych, zgodnie z wytycznymi i kartami oceny. To nie redukcja funkcji kontroli jakości, tylko podniesienie jej roli: mniej żmudnego odsłuchu, więcej analizy i coachingu. Kosztowo automatyczna kontrola jakości to około 20% kosztu ręcznego odsłuchu; rozliczenie od 0,20 zł za minutę analizy, bez opłat per stanowisko. System liczenia i agregacji quality score jest za każdym razem ustalany i parametryzowany z klientem — łącznie Inoro przeanalizowało ponad 10 mln minut rozmów z pracy ponad 1000 agentów, a wdrożenie trwa zwykle 1 dzień.
 
 Jak dokładnie wygląda automatyczny scoring i raportowanie na trzech poziomach (rozmowa → menedżer → analityk), opisujemy na stronie [kontroli jakości obsługi](/pl/kontrola-jakosci-obslugi/). A jeśli budujesz cały system wskaźników, zacznij od katalogu w hubie [wskaźniki call center](/pl/wiedza/wskazniki-call-center/).
 
@@ -107,7 +107,7 @@ W Inoro rozliczenie jest usage-based, od 0,20 zł za minutę przeanalizowanej ro
 
 ### Czy analiza 100% rozmów wymaga zmiany systemu call center?
 
-Nie. Analiza działa post-call: system pobiera istniejące nagrania i metadane z obecnej telefonii (m.in. Genesys, Avaya, Cisco) przez API lub SFTP. Niczego nie nagrywa i nie ingeruje w rozmowę w czasie rzeczywistym; typowe wdrożenie trwa 1–2 tygodnie.
+Nie. Analiza działa post-call: system pobiera istniejące nagrania i metadane z obecnej telefonii (m.in. Genesys, Avaya, Cisco) przez API lub SFTP. Niczego nie nagrywa i nie ingeruje w rozmowę w czasie rzeczywistym; typowe wdrożenie trwa 1 dzień.
 
 ---
 

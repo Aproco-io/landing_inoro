@@ -66,6 +66,6 @@ sections:
 
   - type: cta-band
     heading: "See a dashboard built from your own calls"
-    body: "30-minute demo on your recordings. 30-day pilot • no credit card."
+    body: "30-minute demo on your recordings. 30-day pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
 ---

@@ -137,7 +137,7 @@ sections:
 
   - type: cta-band
     heading: "Zrób przegląd zgodności rozmów z ostatniego miesiąca"
-    body: "30-minutowe demo — skonfigurujemy na żywo dwie Twoje realne procedury. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo — skonfigurujemy na żywo dwie Twoje realne procedury. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/security/" }
 ---

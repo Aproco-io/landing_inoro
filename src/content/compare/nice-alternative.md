@@ -44,7 +44,7 @@ sections:
     cards:
       - icon: "🥇"
         title: "1. InOro"
-        body: "Conversation-analytics overlay: 100% of calls transcribed, scored on your scorecard 1:1, compliance flags, sales signals, AI chat (EN/PL). EU hosting or on-premise, €0.05/min all-inclusive, white-label for BPOs, live in 1–2 weeks.<br><strong>Best for:</strong> EU contact centers & BPOs. <strong>Watch out for:</strong> no real-time agent assist; deliberately analytics-only."
+        body: "Conversation-analytics overlay: 100% of calls transcribed, scored on your scorecard 1:1, compliance flags, sales signals, AI chat (EN/PL). EU hosting or on-premise, €0.05/min all-inclusive, white-label for BPOs, Live in 1 day.<br><strong>Best for:</strong> EU contact centers & BPOs. <strong>Watch out for:</strong> no real-time agent assist; deliberately analytics-only."
         linkText: "See InOro"
         linkHref: "/conversation-intelligence/"
       - icon: "🔍"
@@ -76,7 +76,7 @@ sections:
       - "Time-to-live"
     rows:
       - label: "InOro"
-        values: ["per minute, all-inclusive", "EU + on-prem", "built in", "1–2 weeks"]
+        values: ["per minute, all-inclusive", "EU + on-prem", "built in", "1 day"]
       - label: "CallMiner"
         values: ["enterprise licensing", "US-cloud primarily", "not core", "enterprise cycle"]
       - label: "Verint"
@@ -94,11 +94,11 @@ sections:
       - q: "When is NICE still the right choice?"
         a: "When you're consolidating routing, WFM, QM and analytics under one enterprise vendor and have the budget and timeline to match."
       - q: "What does migration involve?"
-        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1–2 weeks, no telephony changes."
+        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1 day, no telephony changes."
 
   - type: cta-band
     heading: "Pilot the top alternative on your own calls"
-    body: "InOro — free for 30 days, no credit card."
+    body: "InOro — free for 30 days."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

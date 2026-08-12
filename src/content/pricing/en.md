@@ -91,7 +91,7 @@ sections:
       - q: "Is the AI chat or white-label extra?"
         a: "No — AI chat and white-label reports are included in the standard price."
       - q: "What does the 30-day pilot include?"
-        a: "Full setup on your recordings, your scorecard mapped, real analysis on real calls. Free, no credit card."
+        a: "Up to 500 recordings you send us with metadata (campaign, case type, agent). We agree the evaluation criteria, process them on our infrastructure and present results in the platform — free. The pilot does not include full technical integration with your telephony or a 1:1 rebuild of your QA scorecard — that's the next phase."
       - q: "How does on-premise pricing work?"
         a: 'On-premise deployments are quoted individually — <a href="/demo/">book a demo</a> and tell us about your infrastructure.'
       - q: "Do you offer volume discounts?"
@@ -99,6 +99,6 @@ sections:
 
   - type: cta-band
     heading: "Get a quote for your call volume"
-    body: "30-minute demo + custom estimate. 30-day free pilot • no credit card."
+    body: "30-minute demo + custom estimate. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
 ---

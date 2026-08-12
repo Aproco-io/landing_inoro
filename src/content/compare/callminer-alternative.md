@@ -44,7 +44,7 @@ sections:
     cards:
       - icon: "🥇"
         title: "1. InOro"
-        body: "LLM-based conversation analytics with plain-language AI chat. 100% coverage, per-minute pricing, EU or on-premise, white-label for BPOs. Live in 1–2 weeks.<br><strong>Best for:</strong> business users wanting answers without an analyst. <strong>Watch out for:</strong> no real-time agent assist."
+        body: "LLM-based conversation analytics with plain-language AI chat. 100% coverage, per-minute pricing, EU or on-premise, white-label for BPOs. Live in 1 day.<br><strong>Best for:</strong> business users wanting answers without an analyst. <strong>Watch out for:</strong> no real-time agent assist."
         linkText: "See InOro"
         linkHref: "/conversation-intelligence/"
       - icon: "⚡"
@@ -76,7 +76,7 @@ sections:
       - "Deployment"
     rows:
       - label: "InOro"
-        values: ["business users ask in plain language", "EU + on-prem", "€0.05/min all-inclusive", "1–2 weeks"]
+        values: ["business users ask in plain language", "EU + on-prem", "€0.05/min all-inclusive", "1 day"]
       - label: "CallMiner"
         values: ["analyst tooling", "US-cloud primarily", "enterprise licensing", "enterprise cycle"]
 
@@ -88,11 +88,11 @@ sections:
       - q: "When is CallMiner still the right choice?"
         a: "When you have a dedicated analytics team and an analytics program that requires deep customization and long-horizon configuration."
       - q: "What does migration involve?"
-        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1–2 weeks, no telephony changes."
+        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1 day, no telephony changes."
 
   - type: cta-band
     heading: "Pilot InOro on your own calls"
-    body: "Free for 30 days, no credit card."
+    body: "Free for 30 days."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

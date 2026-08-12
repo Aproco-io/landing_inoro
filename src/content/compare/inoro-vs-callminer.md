@@ -31,7 +31,7 @@ sections:
       - label: "Category"
         values: ["enterprise conversation analytics (Eureka)", "conversation-analytics overlay"]
       - label: "Depth vs speed"
-        values: ["deep, customizable, analyst-driven programs", "pre-built insights + AI chat, live in 1–2 weeks"]
+        values: ["deep, customizable, analyst-driven programs", "pre-built insights + AI chat, Live in 1 day"]
       - label: "Pricing"
         values: ["enterprise licensing", "€0.05/analyzed minute, all-inclusive"]
       - label: "Data residency"
@@ -84,7 +84,7 @@ sections:
 
   - type: cta-band
     heading: "Run InOro next to your current tool for 30 days"
-    body: "30-day free pilot, no credit card."
+    body: "30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

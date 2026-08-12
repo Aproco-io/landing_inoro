@@ -64,6 +64,6 @@ sections:
 
   - type: cta-band
     heading: "Contextual AI on 100% of your calls"
-    body: "See it in a 30-minute demo. 30-day pilot • no credit card."
+    body: "See it in a 30-minute demo. 30-day pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
 ---

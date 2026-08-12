@@ -136,7 +136,7 @@ sections:
 
   - type: cta-band
     heading: "Zadaj pierwsze pytanie własnym rozmowom"
-    body: "30-minutowe demo — przynieś trzy pytania, na które dziś nie umiesz odpowiedzieć. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo — przynieś trzy pytania, na które dziś nie umiesz odpowiedzieć. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

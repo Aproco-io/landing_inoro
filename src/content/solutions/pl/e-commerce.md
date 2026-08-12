@@ -122,7 +122,7 @@ sections:
 
   - type: cta-band
     heading: "Usłysz, co Twoi klienci powiedzieli w tym tygodniu"
-    body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

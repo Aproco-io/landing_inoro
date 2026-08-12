@@ -29,7 +29,7 @@ sections:
     heading: "From recording to decision in three steps"
     steps:
       - title: "Connect recordings"
-        body: "API, SFTP or native connectors for Genesys, Avaya, Cisco. No telephony changes, nothing new for agents. Live in 1–2 weeks."
+        body: "API, SFTP or native connectors for Genesys, Avaya, Cisco. No telephony changes, nothing new for agents. Live in 1 day."
       - title: "AI analyzes every call"
         body: "Transcription with speaker separation, scoring against your own QA scorecard, topic categorization, sentiment, compliance and sales-signal detection. Results ~30–60 seconds after each call ends."
       - title: "Act on insights"
@@ -73,7 +73,7 @@ sections:
       - "InOro analyzes <strong>100% of calls</strong>; manual QA typically reviews <strong>~2%</strong>"
       - "Score and alerts <strong>~30–60 seconds</strong> after each call ends (post-call — InOro is not a voicebot and doesn't record calls)"
       - "Automated QA runs at <strong>~20% of the cost</strong> of manual review"
-      - "Implementation in <strong>1–2 weeks</strong>, agents change nothing"
+      - "Implementation in <strong>1 day</strong>, agents change nothing"
       - "<strong>EU hosting or full on-premise</strong> — data never leaves your infrastructure"
       - "From <strong>€0.05 per analyzed minute</strong>, no per-seat fees"
 
@@ -165,7 +165,7 @@ sections:
       - q: "What languages are supported?"
         a: "English and Polish. Contact us about other languages."
       - q: "How long is implementation?"
-        a: "Typically 1–2 weeks via API, SFTP or native connectors (Genesys, Avaya, Cisco)."
+        a: "Typically 1 day via API, SFTP or native connectors (Genesys, Avaya, Cisco)."
 
   - type: related-resources
     heading: "Go deeper"
@@ -198,7 +198,7 @@ sections:
 
   - type: cta-band
     heading: "See your calls through AI's eyes"
-    body: "30-minute demo on your calls. 30-day free pilot • no credit card."
+    body: "30-minute demo on your calls. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

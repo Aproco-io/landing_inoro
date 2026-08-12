@@ -68,6 +68,6 @@ sections:
 
   - type: cta-band
     heading: "Zobacz analizę rozmów na własnych nagraniach"
-    body: "30-minutowe demo. 30-dniowy pilotaż • bez karty."
+    body: "30-minutowe demo. 30-dniowy pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

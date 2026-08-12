@@ -123,7 +123,7 @@ sections:
       - q: "Ile nas to kosztuje?"
         a: 'Od 0,20 zł za analizowaną minutę, cała analiza w cenie. Bez opłat za stanowisko, bez minimów — 50 agentów × 1 000 min/mies. ≈ 10 000 zł. <a href="/pl/cennik/">Cennik</a>'
       - q: "Jak szybko podłączymy nowy projekt kliencki?"
-        a: "Nagrania przez API, SFTP lub konektory (Genesys, Avaya, Cisco); nowy projekt to nowy workspace plus jego karta oceny — zwykle 1–2 tygodnie."
+        a: "Nagrania przez API, SFTP lub konektory (Genesys, Avaya, Cisco); nowy projekt to nowy workspace plus jego karta oceny — zwykle 1 dzień."
       - q: "Czy nasi konsultanci lub systemy klientów muszą się zmieniać?"
         a: "Nie. InOro działa post-call na istniejących nagraniach; nic nie jest instalowane na stanowiskach."
 
@@ -142,7 +142,7 @@ sections:
 
   - type: cta-band
     heading: "Dopisz pozycję „analityka AI” do następnej oferty"
-    body: "30-minutowe demo — pokażemy widok white-label dla klienta końcowego. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo — pokażemy widok white-label dla klienta końcowego. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

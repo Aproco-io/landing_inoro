@@ -180,7 +180,7 @@ sections:
 
   - type: cta-band
     heading: "See this week's dashboard built from your own calls"
-    body: "30-minute demo on your calls. 30-day free pilot • no credit card."
+    body: "30-minute demo on your calls. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

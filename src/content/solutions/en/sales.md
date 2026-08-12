@@ -102,7 +102,7 @@ sections:
       - q: "Will agents feel surveilled?"
         a: "The shift is from 'gotcha' sampling to the same rules for everyone: every call, same criteria, visible reasons, best-call library for growth. Most agents prefer a fair 100% to a random 2%."
       - q: "How fast until first insights?"
-        a: "Setup 1–2 weeks; first playbook-adherence report within days of connecting recordings. 30-day pilot on your real calls."
+        a: "Setup 1 day; first playbook-adherence report within days of connecting recordings. 30-day pilot on your real calls."
 
   - type: related-resources
     heading: "Related resources"
@@ -119,7 +119,7 @@ sections:
 
   - type: cta-band
     heading: "Find your first missed-offer report"
-    body: "30-minute demo on your sales calls. 30-day free pilot • no credit card."
+    body: "30-minute demo on your sales calls. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

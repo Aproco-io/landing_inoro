@@ -43,7 +43,7 @@ sections:
     cards:
       - icon: "🥇"
         title: "1. InOro"
-        body: "Conversation-analytics overlay: 100%, per-minute, EU + on-prem, white-label. Live in 1–2 weeks. <strong>Watch out for:</strong> analytics-only — no real-time assist."
+        body: "Conversation-analytics overlay: 100%, per-minute, EU + on-prem, white-label. Live in 1 day. <strong>Watch out for:</strong> analytics-only — no real-time assist."
       - icon: "🥈"
         title: "2. CallMiner"
         body: "Deep, analyst-driven analytics (Eureka). <strong>Watch out for:</strong> US-cloud focus, enterprise setup."
@@ -73,7 +73,7 @@ sections:
       - "Time-to-live"
     rows:
       - label: "InOro"
-        values: ["per minute", "EU + on-prem", "built in", "1–2 weeks"]
+        values: ["per minute", "EU + on-prem", "built in", "1 day"]
       - label: "CallMiner"
         values: ["enterprise licensing", "US-cloud primarily", "not core", "enterprise cycle"]
       - label: "NICE"
@@ -89,11 +89,11 @@ sections:
       - q: "Is 'best' the same for every operation?"
         a: "No. 'Best' depends on your primary constraint: cost, deployment speed, data residency, or feature depth. This list is ordered for the average EU contact-center reader; pick differently if your constraints differ."
       - q: "How can I test them?"
-        a: "InOro offers a 30-day free pilot on your own calls, no credit card. Most enterprise tools require a sales-led evaluation."
+        a: "InOro offers a 30-day free pilot on your own calls. Most enterprise tools require a sales-led evaluation."
 
   - type: cta-band
     heading: "Test the #1 pick on your own calls"
-    body: "30-day free pilot, no credit card."
+    body: "30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

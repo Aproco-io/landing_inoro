@@ -76,7 +76,7 @@ const { sections, lang, breadcrumbs } = Astro.props;
     case 'pricing-plans':
       return <PricingPlansSection {...s} />;
     case 'roi-calculator':
-      return <RoiCalculatorSection {...s} />;
+      return <RoiCalculatorSection {...s} lang={lang} />;
     case 'rich-body':
       return <RichBodySection {...s} />;
     default:

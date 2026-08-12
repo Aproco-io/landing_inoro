@@ -1,18 +1,18 @@
 ---
 title: "Integrations — Works With Your Call Center Stack"
-description: "InOro connects to Genesys, Avaya, Cisco and any recording source via API or SFTP. Power BI/Tableau, CRM webhooks, SSO. Live in 1–2 weeks, no rip & replace."
+description: "InOro connects to Genesys, Avaya, Cisco and any recording source via API or SFTP. Power BI/Tableau, CRM webhooks, SSO. Live in 1 day, no rip & replace."
 lang: "en"
 slug: "/integrations/"
 translationKey: "integrations"
 order: 70
 seo:
   metaTitle: "Integrations — Works With Your Call Center Stack | InOro"
-  metaDescription: "InOro connects to Genesys, Avaya, Cisco and any recording source via API or SFTP. Power BI/Tableau, CRM webhooks, SSO. Live in 1–2 weeks, no rip & replace."
+  metaDescription: "InOro connects to Genesys, Avaya, Cisco and any recording source via API or SFTP. Power BI/Tableau, CRM webhooks, SSO. Live in 1 day, no rip & replace."
 sections:
   - type: hero
     badge: "No rip & replace"
     heading: "InOro plugs into the call center you already have"
-    subheading: "No telephony migration, nothing installed on agent desktops, no new tools for your team to learn. InOro connects to your recordings, analyzes them, and pushes results wherever you work — live in 1–2 weeks."
+    subheading: "No telephony migration, nothing installed on agent desktops, no new tools for your team to learn. InOro connects to your recordings, analyzes them, and pushes results wherever you work — Live in 1 day."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "Talk to an engineer", href: "/demo/" }
 
@@ -53,7 +53,7 @@ sections:
     kicker: "At a glance"
     heading: "Deployment made ordinary"
     bullets:
-      - "Live in <strong>1–2 weeks</strong>, typical setup"
+      - "Live in <strong>1 day</strong>, typical setup"
       - "<strong>Zero changes for agents</strong> — works in the background on recordings"
       - "Native: <strong>Genesys · Avaya · Cisco</strong>; everything else via <strong>API/SFTP</strong>"
       - "Results out: <strong>Power BI/Tableau, webhooks, REST API</strong>"
@@ -68,7 +68,7 @@ sections:
       - "Adding InOro as overlay"
     rows:
       - label: "Timeline"
-        values: ["months–years", "1–2 weeks"]
+        values: ["months–years", "1 day"]
       - label: "Agent impact"
         values: ["retraining, new tools", "none"]
       - label: "Telephony"
@@ -109,7 +109,7 @@ sections:
       - q: "Do agents need to install or change anything?"
         a: "No. InOro runs in the background on recordings; the interface is browser-based, nothing on workstations."
       - q: "How long does integration take?"
-        a: "Typically 1–2 weeks, depending on your infrastructure. The 30-day pilot includes the setup."
+        a: "The standard technical integration takes 1 day — API/SFTP/native connector plus configuration. Separate phases: (1) pilot on submitted recordings (30 days), (2) technical integration with your system (1 day standard), (3) full production rollout with your scorecard."
       - q: "Can results flow into our CRM and BI?"
         a: "Yes — webhooks push summaries and events to your CRM; a live connector feeds Power BI/Tableau; the REST API covers everything else."
       - q: "Can we run it on-premise?"
@@ -148,7 +148,7 @@ sections:
 
   - type: cta-band
     heading: "Tell us what you run — we'll map the connection"
-    body: "30-minute call with an engineer, integration plan included. 30-day free pilot • no credit card."
+    body: "30-minute call with an engineer, integration plan included. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

@@ -44,7 +44,7 @@ sections:
     cards:
       - icon: "🥇"
         title: "1. InOro"
-        body: "LLM-based conversation analytics overlay. 100% coverage, per-minute pricing, EU or on-premise. Your scorecard 1:1. Live in 1–2 weeks.<br><strong>Best for:</strong> teams that want modern analytics without a suite. <strong>Watch out for:</strong> no WFM, no routing."
+        body: "LLM-based conversation analytics overlay. 100% coverage, per-minute pricing, EU or on-premise. Your scorecard 1:1. Live in 1 day.<br><strong>Best for:</strong> teams that want modern analytics without a suite. <strong>Watch out for:</strong> no WFM, no routing."
         linkText: "See InOro"
         linkHref: "/conversation-intelligence/"
       - icon: "🏢"
@@ -76,7 +76,7 @@ sections:
       - "Deployment"
     rows:
       - label: "InOro"
-        values: ["contextual LLM, whole conversation", "per-minute, all-inclusive", "EU + on-prem", "1–2 weeks"]
+        values: ["contextual LLM, whole conversation", "per-minute, all-inclusive", "EU + on-prem", "1 day"]
       - label: "Verint"
         values: ["phrase/category speech analytics", "per-seat + modules", "cloud + on-prem", "enterprise cycle"]
 
@@ -88,11 +88,11 @@ sections:
       - q: "When is Verint still the right choice?"
         a: "When your core need is WFM/compliance recording and analytics is an add-on to the same stack."
       - q: "What does migration involve?"
-        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1–2 weeks, no telephony changes."
+        a: "Connecting recordings (API/SFTP/native), mapping your scorecard 1:1 — typically 1 day, no telephony changes."
 
   - type: cta-band
     heading: "Pilot InOro on your own calls"
-    body: "Free for 30 days, no credit card."
+    body: "Free for 30 days."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

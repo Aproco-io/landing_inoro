@@ -124,7 +124,7 @@ sections:
       - q: "What does it cost us?"
         a: 'From €0.05 per analyzed minute, all analysis included. No per-seat fees, no minimums — 50 agents × 1,000 min/mo ≈ €2,500. <a href="/pricing/">Pricing</a>'
       - q: "How fast can we onboard a new client program?"
-        a: "The platform connects to recordings via API, SFTP or native connectors (Genesys, Avaya, Cisco); a new program is a new workspace plus its scorecard — typically live in 1–2 weeks."
+        a: "The platform connects to recordings via API, SFTP or native connectors (Genesys, Avaya, Cisco); a new program is a new workspace plus its scorecard — typically Live in 1 day."
       - q: "Do our agents or our clients' systems need to change?"
         a: "No. InOro works post-call on existing recordings; nothing is installed on agent desktops."
 
@@ -143,7 +143,7 @@ sections:
 
   - type: cta-band
     heading: "Add an AI analytics line to your next proposal"
-    body: "30-minute demo — we'll show the white-label client view on real scenarios. 30-day free pilot • no credit card."
+    body: "30-minute demo — we'll show the white-label client view on real scenarios. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

@@ -137,7 +137,7 @@ sections:
 
   - type: cta-band
     heading: "Ask your first question on your own calls"
-    body: "30-minute demo — bring three questions you can't answer today. 30-day free pilot • no credit card."
+    body: "30-minute demo — bring three questions you can't answer today. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

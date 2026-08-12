@@ -179,7 +179,7 @@ sections:
 
   - type: cta-band
     heading: "Run your scorecard on 100% of last week's calls"
-    body: "30-minute demo — bring your scorecard, we'll show it automated. 30-day free pilot • no credit card."
+    body: "30-minute demo — bring your scorecard, we'll show it automated. 30-day free pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 ---

@@ -19,7 +19,7 @@ sections:
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 
   - type: bluf
-    body: "<strong>Choose NICE</strong> if you're consolidating routing, workforce management and analytics into one enterprise suite and have the budget and timeline for it. <strong>Choose InOro</strong> if you want conversation analytics on 100% of calls without replacing anything — per-minute pricing, EU hosting or on-premise, white-label for BPOs, live in 1–2 weeks."
+    body: "<strong>Choose NICE</strong> if you're consolidating routing, workforce management and analytics into one enterprise suite and have the budget and timeline for it. <strong>Choose InOro</strong> if you want conversation analytics on 100% of calls without replacing anything — per-minute pricing, EU hosting or on-premise, white-label for BPOs, Live in 1 day."
 
   - type: comparison-table
     kicker: "Side by side"
@@ -33,7 +33,7 @@ sections:
       - label: "Deployment"
         values: ["cloud suite migration", "API/SFTP/native connectors; telephony unchanged"]
       - label: "Time to live"
-        values: ["enterprise implementation cycle", "1–2 weeks"]
+        values: ["enterprise implementation cycle", "1 day"]
       - label: "Pricing model"
         values: ["per-agent licensing, module tiers", "€0.05/analyzed minute, all features included"]
       - label: "EU data residency"
@@ -68,7 +68,7 @@ sections:
         label: "Minutes analyzed"
       - value: "1,700+"
         label: "Agents in total"
-      - value: "1–2 weeks"
+      - value: "1 day"
         label: "Deployment"
     caseNote: "Multiple production deployments; both SaaS and on-premise."
 

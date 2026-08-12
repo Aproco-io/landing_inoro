@@ -69,7 +69,7 @@ sections:
       - "Analiza kontekstowa całej rozmowy — <strong>nie keyword spotting</strong>"
       - "<strong>Polski i angielski</strong>; dopasowanie do słownictwa branżowego"
       - "<strong>Hosting w UE lub on-premise</strong>; anonimizacja danych wrażliwych (PESEL, nr kart)"
-      - "Wdrożenie w <strong>1–2 tygodnie</strong> na obecnych nagraniach"
+      - "Wdrożenie w <strong>1 dzień</strong> na obecnych nagraniach"
 
   - type: comparison-table
     kicker: "Skok jakościowy"
@@ -183,7 +183,7 @@ sections:
 
   - type: cta-band
     heading: "Usłysz, co mówi 98% Twoich rozmów"
-    body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

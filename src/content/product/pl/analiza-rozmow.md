@@ -29,7 +29,7 @@ sections:
     heading: "Od nagrania do decyzji w trzech krokach"
     steps:
       - title: "Podłącz nagrania"
-        body: "API, SFTP lub natywne konektory Genesys, Avaya, Cisco. Bez zmiany telefonii, bez niczego nowego dla konsultantów. Wdrożenie 1–2 tygodnie."
+        body: "API, SFTP lub natywne konektory Genesys, Avaya, Cisco. Bez zmiany telefonii, bez niczego nowego dla konsultantów. Wdrożenie 1 dzień."
       - title: "AI analizuje każdą rozmowę"
         body: "Transkrypcja z rozdzieleniem mówiących, ocena wg Twojej karty QA, kategoryzacja tematów, sentyment, wykrywanie naruszeń i sygnałów sprzedażowych. Wynik ok. 30–60 sekund po rozmowie."
       - title: "Działaj na insightach"
@@ -73,7 +73,7 @@ sections:
       - "InOro analizuje <strong>100% rozmów</strong>; ręczna kontrola jakości obejmuje zwykle <strong>~2%</strong>"
       - "Ocena i alerty <strong>~30–60 sekund</strong> po zakończeniu rozmowy (post-call — InOro nie nagrywa rozmów i nie jest voicebotem)"
       - "Automatyczna kontrola jakości kosztuje <strong>~20% kosztu</strong> ręcznego odsłuchu"
-      - "Wdrożenie w <strong>1–2 tygodnie</strong>, konsultanci niczego nie zmieniają"
+      - "Wdrożenie w <strong>1 dzień</strong>, konsultanci niczego nie zmieniają"
       - "<strong>Hosting w UE lub w pełni on-premise</strong> — dane nie opuszczają organizacji"
       - "Od <strong>0,20 zł za analizowaną minutę</strong>, bez opłat za stanowisko"
 
@@ -165,7 +165,7 @@ sections:
       - q: "Jakie języki obsługuje?"
         a: "Polski i angielski."
       - q: "Ile trwa wdrożenie?"
-        a: "Zwykle 1–2 tygodnie — przez API, SFTP lub konektory natywne (Genesys, Avaya, Cisco)."
+        a: "Zwykle 1 dzień — przez API, SFTP lub konektory natywne (Genesys, Avaya, Cisco)."
 
   - type: related-resources
     heading: "Zgłęb temat"
@@ -198,7 +198,7 @@ sections:
 
   - type: cta-band
     heading: "Zobacz swoje rozmowy oczami AI"
-    body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

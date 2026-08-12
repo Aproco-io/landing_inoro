@@ -167,7 +167,7 @@ sections:
 
   - type: cta-band
     heading: "Zobacz własne rozmowy jako przeszukiwalny tekst"
-    body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

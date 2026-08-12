@@ -1,18 +1,18 @@
 ---
 title: "Integracje — działa z Twoim systemem call center"
-description: "InOro łączy się z Genesys, Avaya, Cisco i każdym źródłem nagrań przez API lub SFTP. Power BI/Tableau, webhooki do CRM, SSO. Wdrożenie 1–2 tygodnie, bez wymiany systemu."
+description: "InOro łączy się z Genesys, Avaya, Cisco i każdym źródłem nagrań przez API lub SFTP. Power BI/Tableau, webhooki do CRM, SSO. Wdrożenie 1 dzień, bez wymiany systemu."
 lang: "pl"
 slug: "/pl/integracje/"
 translationKey: "integrations"
 order: 70
 seo:
   metaTitle: "Integracje — działa z Twoim systemem call center | InOro"
-  metaDescription: "InOro łączy się z Genesys, Avaya, Cisco i każdym źródłem nagrań przez API lub SFTP. Power BI/Tableau, webhooki do CRM, SSO. Wdrożenie 1–2 tygodnie, bez wymiany systemu."
+  metaDescription: "InOro łączy się z Genesys, Avaya, Cisco i każdym źródłem nagrań przez API lub SFTP. Power BI/Tableau, webhooki do CRM, SSO. Wdrożenie 1 dzień, bez wymiany systemu."
 sections:
   - type: hero
     badge: "Bez wymiany systemu"
     heading: "InOro podpina się do call center, które już masz"
-    subheading: "Bez migracji telefonii, bez instalacji na stanowiskach konsultantów, bez nowych narzędzi do nauki. InOro łączy się z Twoimi nagraniami, analizuje je i oddaje wyniki tam, gdzie pracujesz — wdrożenie w 1–2 tygodnie."
+    subheading: "Bez migracji telefonii, bez instalacji na stanowiskach konsultantów, bez nowych narzędzi do nauki. InOro łączy się z Twoimi nagraniami, analizuje je i oddaje wyniki tam, gdzie pracujesz — wdrożenie w 1 dzień."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Porozmawiaj z inżynierem", href: "/pl/#demo" }
 
@@ -53,7 +53,7 @@ sections:
     kicker: "W skrócie"
     heading: "Wdrożenie bez rewolucji"
     bullets:
-      - "Wdrożenie w <strong>1–2 tygodnie</strong> (typowo)"
+      - "Wdrożenie w <strong>1 dzień</strong> (typowo)"
       - "<strong>Zero zmian dla konsultantów</strong> — działa w tle na nagraniach"
       - "Natywnie: <strong>Genesys · Avaya · Cisco</strong>; reszta przez <strong>API/SFTP</strong>"
       - "Wyniki: <strong>Power BI/Tableau, webhooki, REST API</strong>"
@@ -68,7 +68,7 @@ sections:
       - "InOro jako nakładka"
     rows:
       - label: "Czas"
-        values: ["miesiące–lata", "1–2 tygodnie"]
+        values: ["miesiące–lata", "1 dzień"]
       - label: "Wpływ na konsultantów"
         values: ["szkolenia, nowe narzędzia", "żaden"]
       - label: "Telefonia"
@@ -89,7 +89,7 @@ sections:
         sub: "wdrożenia produkcyjne"
       - value: "SaaS + on-prem"
         label: "Oba modele na produkcji"
-    caseNote: "Wdrożenia produkcyjne SaaS i on-premise · duże operacje wieloprojektowe podłączone przez istniejącą infrastrukturę — bez zmiany telefonii, w 1–2 tygodnie i bez zmian po stronie konsultantów."
+    caseNote: "Wdrożenia produkcyjne SaaS i on-premise · duże operacje wieloprojektowe podłączone przez istniejącą infrastrukturę — bez zmiany telefonii, w 1 dzień i bez zmian po stronie konsultantów."
 
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
@@ -111,7 +111,7 @@ sections:
       - q: "Czy konsultanci muszą coś instalować lub zmieniać?"
         a: "Nie. InOro pracuje w tle na nagraniach; interfejs działa w przeglądarce, nic nie staje na stanowiskach."
       - q: "Ile trwa integracja?"
-        a: "Zwykle 1–2 tygodnie, zależnie od infrastruktury. 30-dniowy pilotaż obejmuje wdrożenie."
+        a: "Standardowa integracja techniczna zajmuje 1 dzień — API/SFTP/konektor natywny plus konfiguracja. Osobne fazy to: (1) pilotaż na przesłanych nagraniach (30 dni), (2) integracja techniczna z Twoim systemem (1 dzień standardowo), (3) pełne wdrożenie produkcyjne z Twoją kartą oceny."
       - q: "Czy wyniki trafią do naszego CRM i BI?"
         a: "Tak — webhooki wysyłają streszczenia i zdarzenia do CRM; łącznik na żywo zasila Power BI/Tableau; resztę pokrywa REST API."
       - q: "Czy możemy uruchomić on-premise?"
@@ -150,7 +150,7 @@ sections:
 
   - type: cta-band
     heading: "Powiedz nam, na czym pracujesz — rozpiszemy połączenie"
-    body: "30 minut z inżynierem, plan integracji w cenie. 30-dniowy bezpłatny pilotaż • bez karty."
+    body: "30 minut z inżynierem, plan integracji w cenie. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

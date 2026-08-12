@@ -68,6 +68,6 @@ sections:
 
   - type: cta-band
     heading: "See conversation intelligence on your own calls"
-    body: "30-minute demo. 30-day pilot • no credit card."
+    body: "30-minute demo. 30-day pilot."
     primaryCta: { label: "Book a demo", href: "/demo/" }
 ---
