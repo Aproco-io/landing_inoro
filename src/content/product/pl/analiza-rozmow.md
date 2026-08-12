@@ -29,7 +29,7 @@ sections:
     heading: "Od nagrania do decyzji w trzech krokach"
     steps:
       - title: "Podłącz nagrania"
-        body: "API, SFTP lub natywne konektory Genesys, Avaya, Cisco. Bez zmiany telefonii, bez niczego nowego dla konsultantów. Wdrożenie 1 dzień."
+        body: "API, SFTP lub konektory natywne (Focus Telecom, Genesys, Avaya, Cisco, Amazon Connect). Bez zmiany telefonii, bez niczego nowego dla konsultantów. Standardowa integracja techniczna zajmuje 1 dzień."
       - title: "AI analizuje każdą rozmowę"
         body: "Transkrypcja z rozdzieleniem mówiących, ocena wg Twojej karty QA, kategoryzacja tematów, sentyment, wykrywanie naruszeń i sygnałów sprzedażowych. Wynik ok. 30–60 sekund po rozmowie."
       - title: "Działaj na insightach"

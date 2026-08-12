@@ -27,7 +27,7 @@ sections:
     cards:
       - icon: "📞"
         title: "Konektory natywne"
-        body: "Genesys, Avaya, Cisco: nagrania płyną automatycznie, bez pośredników."
+        body: "Focus Telecom, Genesys, Avaya, Cisco, Amazon Connect — nagrania płyną automatycznie, bez pośredników."
       - icon: "🔌"
         title: "REST API"
         body: "Wysyłaj nagrania i metadane programistycznie z dowolnego dialera, centrali czy platformy nagrywającej; to samo API wystawia wszystkie wyniki."
@@ -55,7 +55,7 @@ sections:
     bullets:
       - "Wdrożenie w <strong>1 dzień</strong> (typowo)"
       - "<strong>Zero zmian dla konsultantów</strong> — działa w tle na nagraniach"
-      - "Natywnie: <strong>Genesys · Avaya · Cisco</strong>; reszta przez <strong>API/SFTP</strong>"
+      - "Natywnie: <strong>Focus Telecom · Genesys · Avaya · Cisco · Amazon Connect</strong>; reszta przez <strong>API/SFTP</strong>"
       - "Wyniki: <strong>Power BI/Tableau, webhooki, REST API</strong>"
       - "Logowanie: <strong>SSO (SAML 2.0)</strong>, dostęp per rola"
       - "Wdrożenie: <strong>SaaS lub w pełni on-premise</strong>"

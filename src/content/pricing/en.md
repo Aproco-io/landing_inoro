@@ -11,8 +11,8 @@ seo:
 plans: []
 sections:
   - type: hero
-    heading: "Pay for what you use. Nothing more."
-    subheading: "No per-seat fees. No hidden platform charges. One per-minute price that includes transcription and every analysis layer — and scales down as well as up."
+    heading: "Pay for analyzed conversations, not seats"
+    subheading: "One per-minute price includes transcription and full AI analysis. Technical implementation and on-premise mode are quoted separately based on scope."
     primaryCta: { label: "Get a custom quote", href: "/demo/" }
     secondaryCta: { label: "Book a demo", href: "/demo/" }
 
@@ -86,8 +86,8 @@ sections:
     items:
       - q: 'What counts as an "analyzed minute"?'
         a: "Each minute of call audio processed by InOro — transcription, scoring and all analysis included in the same minute price."
-      - q: "Are there minimums or platform fees?"
-        a: "No minimums, no per-seat fees, no platform fee. You pay for analyzed minutes."
+      - q: "What is included in the per-minute price?"
+        a: "Transcription with speaker separation, content analysis (topics, sentiment, phrase detection, scorecard evaluation), platform access, exports, webhooks, AI chat and reporting. It does not include technical integration with your system or on-premise mode — those are quoted separately based on scope."
       - q: "Is the AI chat or white-label extra?"
         a: "No — AI chat and white-label reports are included in the standard price."
       - q: "What does the 30-day pilot include?"

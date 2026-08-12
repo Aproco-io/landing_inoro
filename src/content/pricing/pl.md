@@ -11,8 +11,8 @@ seo:
 plans: []
 sections:
   - type: hero
-    heading: "Płacisz za to, z czego korzystasz. Nic więcej."
-    subheading: "Bez opłat za stanowisko. Bez ukrytych opłat platformowych. Jedna cena za minutę, która obejmuje transkrypcję i każdą warstwę analizy — i skaluje się w dół tak samo dobrze jak w górę."
+    heading: "Płacisz za przeanalizowane rozmowy, nie za stanowiska"
+    subheading: "Jedna cena za minutę obejmuje transkrypcję i pełną analizę AI. Wdrożenie techniczne i tryb on-premise są wyceniane osobno w zależności od zakresu."
     primaryCta: { label: "Indywidualna wycena", href: "/pl/#demo" }
     secondaryCta: { label: "Umów demo", href: "/pl/#demo" }
 
@@ -90,8 +90,8 @@ sections:
     items:
       - q: 'Co liczy się jako „analizowana minuta”?'
         a: "Każda minuta audio przetworzona przez InOro — transkrypcja, ocena i cała analiza w tej samej cenie minuty."
-      - q: "Czy są minima albo opłaty platformowe?"
-        a: "Nie. Bez minimów, bez opłat za stanowisko, bez opłaty platformowej. Płacisz za analizowane minuty."
+      - q: "Co obejmuje cena za minutę?"
+        a: "Transkrypcję z rozdzieleniem mówiących, analizę treści (tematy, sentyment, wykrywanie fraz, ocenę scorecardem), dostęp do panelu, eksporty, webhooki, czat AI i raportowanie. Nie obejmuje wdrożenia technicznego z Twoim systemem ani trybu on-premise — te są wyceniane osobno w zależności od zakresu."
       - q: "Czy czat AI albo white-label kosztują ekstra?"
         a: "Nie — czat AI i raporty white-label są w standardowej cenie."
       - q: "Co obejmuje 30-dniowy pilotaż?"
