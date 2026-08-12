@@ -5,6 +5,12 @@ lang: "pl"
 slug: "/pl/wiedza/rodo-nagrywanie-rozmow/"
 translationKey: "resources-rodo"
 order: 10
+# Wstrzymane do review prawnika / DPO — audyt klienta (audyt-10) wskazał
+# na kategoryczne stwierdzenia i limity nieudokumentowane w RODO (np.
+# „IVR nie może przekroczyć 20-25 sek", „UODO w praktyce nie toleruje
+# więcej niż 21 dni"). Odblokować dopiero po weryfikacji i dodaniu
+# disclaimeru „nie stanowi porady prawnej".
+draft: true
 seo:
   metaTitle: "RODO a nagrywanie rozmów: co wolno, co trzeba, co grozi | InOro"
   metaDescription: "Firma może nagrywać rozmowy z klientami, jeśli spełnia obowiązek informacyjny (art. 13 RODO) i ma podstawę przetwarzania. Praktyczny przewodnik."

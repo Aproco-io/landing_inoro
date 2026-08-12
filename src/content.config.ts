@@ -276,7 +276,7 @@ const solutions = defineCollection({
 
 const resources = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/resources' }),
-  schema: legacyPageBase.extend({ parent: z.string().optional() }),
+  schema: legacyPageBase.extend({ parent: z.string().optional(), draft: z.boolean().default(false) }),
 });
 
 const compare = defineCollection({

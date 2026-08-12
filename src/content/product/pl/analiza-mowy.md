@@ -119,7 +119,7 @@ sections:
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
     tiles:
-      - title: "Hosting w UE, RODO by design"
+      - title: "Hosting w UE, wspiera compliance RODO"
         body: "Dane przechowywane i przetwarzane wyłącznie w centrach w UE."
       - title: "Opcja on-premise"
         body: "Audio i transkrypty nie opuszczają organizacji."

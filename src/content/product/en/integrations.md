@@ -93,7 +93,7 @@ sections:
     heading: "Enterprise security by default"
     tiles:
       - title: "EU hosting or on-premise"
-        body: "GDPR by design."
+        body: "supports GDPR compliance."
       - title: "SSO, SAML 2.0, RBAC"
         body: "Enterprise access controls."
       - title: "Audit logs"

@@ -103,7 +103,7 @@ sections:
     heading: "Bezpieczeństwo w standardzie"
     tiles:
       - title: "Hosting w UE lub on-premise"
-        body: "RODO by design, umowy powierzenia per klient końcowy."
+        body: "wspiera zgodność z RODO., umowy powierzenia per klient końcowy."
       - title: "SSO, SAML 2.0, RBAC per tenant"
         body: "Izolacja, którą pokażesz klientom."
       - title: "Pełne logi audytowe"

@@ -9,7 +9,7 @@ import MarkdownBody from '../../components/MarkdownBody.astro';
 import SectionRenderer from '../../components/sections/SectionRenderer.astro';
 
 export async function getStaticPaths() {
-  const items = await getCollection('resources', (e) => e.data.lang === 'en');
+  const items = await getCollection('resources', (e) => e.data.lang === 'en' && !e.data.draft);
   return items.map((entry) => ({
     params: { slug: entry.data.slug.replace(/^\/resources\//, '').replace(/\/$/, '') },
     props: { entry },

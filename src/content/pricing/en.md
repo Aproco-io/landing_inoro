@@ -56,7 +56,7 @@ sections:
       - label: "Feature tiers"
         values: ['analytics often "Enterprise only"', "everything in one price"]
       - label: "Pilot"
-        values: ["negotiate a contract first", "30 days free, no card"]
+        values: ["negotiate a contract first", "30 days free"]
 
   - type: how-it-works
     kicker: "Pilot → production"
@@ -73,7 +73,7 @@ sections:
     heading: "Enterprise security in every plan"
     tiles:
       - title: "EU hosting or on-premise"
-        body: "GDPR by design."
+        body: "supports GDPR compliance."
       - title: "SSO, SAML 2.0, RBAC"
         body: "Enterprise access controls."
       - title: "Full audit logs"

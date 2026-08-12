@@ -51,7 +51,7 @@ sections:
         body: "Strukturyzowane podsumowanie 3–5 zdań per rozmowa, wysyłane wprost do CRM webhookiem — konsultanci przestają pisać notatki."
       - icon: "🔒"
         title: "Anonimizacja danych wrażliwych"
-        body: "PESEL, numery kart i podobne dane maskowane w transkryptach. RODO by design."
+        body: "PESEL, numery kart i podobne dane maskowane w transkryptach. wspiera zgodność z RODO."
       - icon: "🔍"
         title: "Pełna przeszukiwalność"
         body: 'Każde słowo każdej rozmowy staje się przeszukiwalne — także zwykłym językiem przez <a href="/pl/czat-ai/">czat AI</a>.'
@@ -105,7 +105,7 @@ sections:
   - type: security-band
     heading: "Bezpieczeństwo w standardzie"
     tiles:
-      - title: "Hosting w UE, RODO by design"
+      - title: "Hosting w UE, wspiera compliance RODO"
         body: "Audio i transkrypty w centrach w UE."
       - title: "Opcja on-premise"
         body: "Audio i transkrypty nie opuszczają infrastruktury."

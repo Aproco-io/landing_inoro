@@ -120,7 +120,7 @@ sections:
   - type: security-band
     heading: "Enterprise security by default"
     tiles:
-      - title: "EU hosting, GDPR by design"
+      - title: "EU hosting, supports GDPR compliance"
         body: "Data stored and processed exclusively in EU data centers."
       - title: "On-premise option"
         body: "Audio and transcripts never leave your organization."

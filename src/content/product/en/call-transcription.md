@@ -51,7 +51,7 @@ sections:
         body: "A structured, 3–5 sentence summary per call, pushable straight to your CRM via webhook — agents stop writing call notes."
       - icon: "🔒"
         title: "Sensitive-data anonymization"
-        body: "National IDs, card numbers and similar data masked in transcripts. GDPR by design."
+        body: "National IDs, card numbers and similar data masked in transcripts. supports GDPR compliance."
       - icon: "🔍"
         title: "Full-text searchability"
         body: 'Every word of every call becomes searchable — including in plain language via <a href="/ai-chat/">AI chat</a>.'
@@ -105,7 +105,7 @@ sections:
   - type: security-band
     heading: "Enterprise security by default"
     tiles:
-      - title: "EU hosting, GDPR by design"
+      - title: "EU hosting, supports GDPR compliance"
         body: "Audio and transcripts stored in EU data centers."
       - title: "On-premise option"
         body: "Data never leaves your infrastructure."

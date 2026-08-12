@@ -41,7 +41,7 @@ sections:
       - label: "White-label for BPO"
         values: ["not a core model", "built in"]
       - label: "Pilot"
-        values: ["sales-led evaluation", "30-day free pilot, no card"]
+        values: ["sales-led evaluation", "30-day free pilot"]
       - label: "Best for"
         values: ["analytics-mature enterprises, US-centric", "EU operations, BPOs, fast time-to-value"]
 

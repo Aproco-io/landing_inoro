@@ -12,6 +12,9 @@ cover: "/blog/rodo-nagrywanie.jpg"
 coverAlt: "Złota kłódka leżąca na klawiaturze — symbol bezpieczeństwa danych i zgodności z RODO"
 readTime: 7
 tags: ["rodo", "compliance", "audyt"]
+# Wstrzymane do review prawnika / DPO — audyt klienta wskazał na wątpliwe
+# limity czasowe i kategoryczne stwierdzenia. Odblokować po weryfikacji.
+draft: true
 ---
 
 > **Ten artykuł ma charakter informacyjny. Nie stanowi porady prawnej. Konsultuj z inspektorem ochrony danych i radcą prawnym.**

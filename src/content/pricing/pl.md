@@ -77,7 +77,7 @@ sections:
     heading: "Bezpieczeństwo w każdym planie"
     tiles:
       - title: "Hosting w UE lub on-premise"
-        body: "RODO by design."
+        body: "wspiera zgodność z RODO."
       - title: "SSO, SAML 2.0, RBAC"
         body: "Enterprise kontrola dostępów."
       - title: "Pełne logi audytu"

@@ -104,7 +104,7 @@ sections:
     heading: "Enterprise security by default"
     tiles:
       - title: "EU hosting or on-premise"
-        body: "GDPR by design, DPAs per end client."
+        body: "supports GDPR compliance., DPAs per end client."
       - title: "SSO, SAML 2.0, RBAC per tenant"
         body: "Isolation you can prove to your clients."
       - title: "Full audit logs"
