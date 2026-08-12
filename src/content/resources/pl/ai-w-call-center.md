@@ -73,5 +73,5 @@ sections:
   - type: cta-band
     heading: "Warstwa analizy AI na Twoim obecnym systemie"
     body: "30-minutowe demo. 30-dniowy pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

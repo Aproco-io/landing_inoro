@@ -2,18 +2,21 @@
 interface Props {
   heading?: string;
   cards: { title: string; body?: string; href: string }[];
+  lang?: 'pl' | 'en';
 }
-const { heading, cards } = Astro.props;
+const { heading, cards, lang = 'en' } = Astro.props;
+const defaultHeading = lang === 'pl' ? 'Powiązane materiały' : 'Related resources';
+const readMore = lang === 'pl' ? 'Czytaj dalej →' : 'Read more →';
 ---
 <section class="s-related">
   <div class="inoro-container">
-    <h2>{heading ?? 'Related resources'}</h2>
+    <h2>{heading ?? defaultHeading}</h2>
     <div class="s-related__grid">
       {cards.map((c) => (
         <a class="s-related__card" href={c.href}>
           <h3>{c.title}</h3>
           {c.body && <p set:html={c.body} />}
-          <span class="s-related__arrow">Read more →</span>
+          <span class="s-related__arrow">{readMore}</span>
         </a>
       ))}
     </div>

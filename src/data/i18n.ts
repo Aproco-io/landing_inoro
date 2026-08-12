@@ -102,19 +102,14 @@ export function alternatesFor(currentPath: string, currentLang: Lang): { en: str
 }
 
 /**
- * Target URL for clicking the "other language" button in the nav.
- * If the current page has a direct translation, go there. Otherwise
- * go to the home page of the target language.
+ * Target URL for a language-switcher button. Requires currentLang so it
+ * knows which side of the mapping to return — asking for the same lang
+ * you're already on should give you the current URL, not the alternate.
+ * Kept for callers that don't have access to both sides at once.
  */
-export function switchTo(currentPath: string, targetLang: Lang): string {
-  const path = normalize(currentPath);
-  const mapped = URL_ALTERNATES[path];
-  if (mapped) {
-    // mapped is always the other language of `path`. If target matches
-    // the other language, use it; otherwise stay on the current URL.
-    return mapped;
-  }
-  return HOME_URL[targetLang];
+export function switchTo(currentPath: string, targetLang: Lang, currentLang: Lang): string {
+  const alt = alternatesFor(currentPath, currentLang);
+  return targetLang === 'pl' ? alt.pl : alt.en;
 }
 
 function normalize(p: string): string {

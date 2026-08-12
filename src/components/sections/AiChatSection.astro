@@ -2,8 +2,12 @@
 interface Props {
   heading?: string;
   exchanges: { user: string; ai: string }[];
+  lang?: 'pl' | 'en';
 }
-const { heading, exchanges } = Astro.props;
+const { heading, exchanges, lang = 'en' } = Astro.props;
+const note = lang === 'pl'
+  ? 'Przykład ilustracyjny na danych demo.'
+  : 'Illustrative example with demo data.';
 ---
 <section class="s-aichat">
   <div class="inoro-container">
@@ -20,7 +24,7 @@ const { heading, exchanges } = Astro.props;
         </>
       ))}
     </div>
-    <p class="s-aichat__note">Illustrative example with demo data.</p>
+    <p class="s-aichat__note">{note}</p>
   </div>
 </section>
 

@@ -67,5 +67,5 @@ sections:
   - type: cta-band
     heading: "Dashboard zbudowany z Twoich rozmów"
     body: "30-minutowe demo na Twoich nagraniach."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

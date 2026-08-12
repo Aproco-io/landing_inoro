@@ -33,9 +33,19 @@
   }
 
   function getCurrentLang() {
+    /* 1. Explicit user choice in localStorage wins. */
     try {
       var s = localStorage.getItem(LANG_KEY);
-      if (s === 'pl') return 'pl';
+      if (s === 'pl' || s === 'en') return s;
+    } catch (e) {}
+    /* 2. Fall back to the page's declared language (Astro sets <html lang>). */
+    var docLang = (document.documentElement.lang || '').toLowerCase();
+    if (docLang.indexOf('pl') === 0) return 'pl';
+    if (docLang.indexOf('en') === 0) return 'en';
+    /* 3. Last resort: browser preference. */
+    try {
+      var browserLang = (navigator.language || '').toLowerCase();
+      if (browserLang.indexOf('pl') === 0) return 'pl';
     } catch (e) {}
     return 'en';
   }
@@ -60,7 +70,7 @@
     textEl.textContent = t.message + ' ';
 
     var link = document.createElement('a');
-    link.href = 'Polityka-Prywatnosci.pdf';
+    link.href = '/Polityka-Prywatnosci.pdf';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.style.cssText = 'color:#259bf7;text-decoration:underline;white-space:nowrap;';

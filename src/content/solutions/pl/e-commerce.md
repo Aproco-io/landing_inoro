@@ -13,7 +13,7 @@ sections:
     badge: "CX i przychód"
     heading: "Twoi klienci dzwonią. Wiesz, co Ci mówią?"
     subheading: 'Każde „gdzie moje zamówienie” niesie dane o CX, sygnały odejścia i szanse dosprzedaży. InOro czyta 100% takich rozmów — naprawiasz przyczyny zamiast ankietować ułamek klientów i łapiesz przychód, który ucieka między skryptami.'
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
@@ -23,14 +23,14 @@ sections:
     heading: "Ankiety dają wynik. Rozmowy dają powód."
     pains:
       - icon: "📉"
-        title: 'NPS mówi „spadło”, ale nie dlaczego'
-        body: "Ankiety obejmują tych kilku, którzy odpowiedzą; powody leżą w tysiącach nieprzeanalizowanych rozmów."
+        title: "Ankiety pokazują wynik. Rozmowy wyjaśniają dlaczego"
+        body: "Ankiety obejmują tylko tych klientów, którzy zdecydowali się odpowiedzieć — powody, dla których pozostali odchodzą, leżą w rozmowach, których nikt nie odsłuchał."
       - icon: "🎄"
         title: "Szczyt sezonu zasłania wszystko"
         body: "W Q4 wolumen rośnie 3×, a pokrycie QA się załamuje dokładnie wtedy, gdy ryzyko dla marki jest największe."
       - icon: "💸"
-        title: "Skrypty przeciekają przychodem"
-        body: "Jeśli konsultanci pomijają promocję albo propozycję dosprzedaży, na próbce 2% nikt tego nie zobaczy."
+        title: "Pełna analiza ujawnia niewykorzystane szanse sprzedażowe"
+        body: "Jeśli konsultanci pomijają promocję albo propozycję dosprzedaży, na próbce nikt tego nie zobaczy — analiza wszystkich rozmów pokazuje realną skalę zjawiska."
     costCard:
       heading: "Niewidzialna strata"
       body: "Optymalizujesz checkout o 2% konwersji, a kanał głosowy traci zamówienia niewidocznie."
@@ -48,8 +48,8 @@ sections:
         title: "Sentyment klientów w trendzie"
         body: "Co klienci czują wobec dostaw, zwrotów i linii produktowych — tydzień po tygodniu, z realnych rozmów, nie ankiet."
       - icon: "🗂️"
-        title: "Przyczyny źródłowe kontaktu"
-        body: 'Automatyczny rozkład tematów („opóźniona dostawa”, „status zwrotu”, „błąd na fakturze”) z wolumenem i priorytetem — usuwasz czołowe przyczyny i zdejmujesz połączenia z infolinii.'
+        title: "Powody kontaktu klientów"
+        body: 'Automatyczny rozkład tematów („opóźniona dostawa”, „status zwrotu”, „błąd na fakturze”) z liczbą wystąpień i priorytetem — usuwasz najczęstsze powody i zdejmujesz połączenia z infolinii.'
       - icon: "📜"
         title: "Compliance w kredytach konsumenckich"
         body: "Wymagane pouczenia przy ratach i kredycie konsumenckim sprawdzane w każdej rozmowie sprzedażowej."
@@ -123,6 +123,6 @@ sections:
   - type: cta-band
     heading: "Usłysz, co Twoi klienci powiedzieli w tym tygodniu"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

@@ -9,7 +9,7 @@ export const MENU_PL: MenuItem[] = [
   {
     label: 'Produkt',
     children: [
-      { label: 'Analiza rozmów (AI)', href: '/pl/analiza-rozmow/', description: 'Brand pillar, kotwica CSI' },
+      { label: 'Analiza rozmów (AI)', href: '/pl/analiza-rozmow/' },
       { label: 'Analiza mowy (speech analytics)', href: '/pl/analiza-mowy/' },
       { label: 'Analityka call center', href: '/pl/analityka-call-center/' },
       { label: 'Kontrola jakości obsługi (QA)', href: '/pl/kontrola-jakosci-obslugi/' },
@@ -46,7 +46,7 @@ export const MENU_EN: MenuItem[] = [
   {
     label: 'Product',
     children: [
-      { label: 'Conversation Intelligence', href: '/conversation-intelligence/', description: 'Brand pillar' },
+      { label: 'Conversation Intelligence', href: '/conversation-intelligence/' },
       { label: 'Speech Analytics', href: '/speech-analytics/' },
       { label: 'Contact Center Analytics', href: '/contact-center-analytics/' },
       { label: 'Quality Assurance (Auto-QA)', href: '/call-center-quality-assurance/' },

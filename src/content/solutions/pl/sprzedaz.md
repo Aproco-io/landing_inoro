@@ -13,7 +13,7 @@ sections:
     badge: "Telesprzedaż · Inside sales"
     heading: "Twój najlepszy handlowiec domyka więcej. Teraz dowiesz się dlaczego."
     subheading: "InOro mierzy to, co naprawdę dzieje się w rozmowach sprzedażowych — zgodność z playbookiem, obsługę obiekcji, złożone i pominięte oferty — na 100% połączeń. Coaching przestaje być opinią, a zaczyna być replikacją."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
@@ -120,6 +120,6 @@ sections:
   - type: cta-band
     heading: "Znajdź swój pierwszy raport pominiętych ofert"
     body: "30-minutowe demo na Twoich rozmowach sprzedażowych. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

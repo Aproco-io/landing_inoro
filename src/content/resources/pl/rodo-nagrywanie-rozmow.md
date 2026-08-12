@@ -77,5 +77,5 @@ sections:
   - type: cta-band
     heading: "Compliance-first analiza rozmów"
     body: "Zobacz jak InOro pomaga w compliance nagrywania."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

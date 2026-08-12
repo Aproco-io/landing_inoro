@@ -54,7 +54,7 @@ const { sections, lang, breadcrumbs } = Astro.props;
     case 'results-band':
       return <ResultsBandSection {...s} />;
     case 'ai-chat':
-      return <AiChatSection {...s} />;
+      return <AiChatSection {...s} lang={lang} />;
     case 'who-its-for':
       return <WhoItsForSection {...s} />;
     case 'integrations-strip':
@@ -68,7 +68,7 @@ const { sections, lang, breadcrumbs } = Astro.props;
     case 'faq':
       return <FaqSection {...s} />;
     case 'related-resources':
-      return <RelatedResourcesSection {...s} />;
+      return <RelatedResourcesSection {...s} lang={lang} />;
     case 'explore-platform':
       return <ExplorePlatformSection {...s} />;
     case 'cta-band':

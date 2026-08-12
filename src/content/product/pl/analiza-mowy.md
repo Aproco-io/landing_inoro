@@ -13,7 +13,7 @@ sections:
     badge: "Silnik platformy"
     heading: "Analiza mowy, która rozumie każdą rozmowę z klientem"
     subheading: "InOro zamienia audio ze 100% połączeń na transkrypcje, sentyment, tematy i oceny jakości — kontekstową AI, która czyta całą rozmowę, a nie listę słów kluczowych. Dane przetwarzane w UE."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -46,7 +46,7 @@ sections:
         title: "Sentyment na osi czasu"
         body: "Nie tylko „rozmowa negatywna”, ale moment, w którym się taka stała: obietnica zwrotu, urwana cierpliwość."
       - icon: "🗂️"
-        title: "Tematy i przyczyny źródłowe"
+        title: "Tematy i powody kontaktu"
         body: "Automatyczna kategoryzacja powodów kontaktu, żeby najczęstsze usuwać u źródła."
       - icon: "📋"
         title: "Zgodność ze skryptem i playbookiem"
@@ -184,6 +184,6 @@ sections:
   - type: cta-band
     heading: "Usłysz, co mówi 98% Twoich rozmów"
     body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

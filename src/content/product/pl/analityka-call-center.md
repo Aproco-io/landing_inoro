@@ -13,7 +13,7 @@ sections:
     badge: "Dashboardy i raporty"
     heading: "Analityka call center, która mierzy rozmowy, nie tylko połączenia"
     subheading: "Telefonia mówi Ci, ile połączeń i jak szybko. InOro mówi, co się w nich wydarzyło — oceny jakości, tematy zgłoszeń, naruszenia i sygnały sprzedażowe ze 100% rozmów, w jednym panelu."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -181,6 +181,6 @@ sections:
   - type: cta-band
     heading: "Zobacz dashboard z tego tygodnia zbudowany z Twoich rozmów"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

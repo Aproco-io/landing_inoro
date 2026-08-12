@@ -1,6 +1,6 @@
 ---
 import { MENU_PL, MENU_EN } from '../data/menu.ts';
-import { switchTo } from '../data/i18n.ts';
+import { alternatesFor } from '../data/i18n.ts';
 
 interface Props {
   lang: 'pl' | 'en';
@@ -11,10 +11,12 @@ const { lang, currentPath = '' } = Astro.props;
 const menu = lang === 'pl' ? MENU_PL : MENU_EN;
 const homeHref = lang === 'pl' ? '/pl/' : '/';
 const ctaLabel = lang === 'pl' ? 'Umów demo' : 'Book a demo';
-// Precompute switch targets at build time so we can render them as
-// real <a> hrefs — nice for SEO and lets middle-click open in new tab.
-const plHref = switchTo(currentPath || '/', 'pl');
-const enHref = switchTo(currentPath || '/', 'en');
+const ctaHref = lang === 'pl' ? '/pl/#demo' : '/demo/';
+// Language switcher targets: PL button always goes to the PL URL for this
+// page (staying put if we're already on PL); EN button same for EN.
+// alternatesFor() knows the direction based on currentLang, so it never
+// swaps the meaning of the pair.
+const { pl: plHref, en: enHref } = alternatesFor(currentPath || (lang === 'pl' ? '/pl/' : '/'), lang);
 ---
 
 <nav class="inoro-subnav">
@@ -92,7 +94,7 @@ const enHref = switchTo(currentPath || '/', 'en');
           aria-current={lang === 'en' ? 'true' : 'false'}
         >EN</a>
       </div>
-      <a class="inoro-subnav__demo" href="#demo">{ctaLabel}</a>
+      <a class="inoro-subnav__demo" href={ctaHref}>{ctaLabel}</a>
     </div>
 
     <button type="button" class="inoro-subnav__toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -124,7 +126,7 @@ const enHref = switchTo(currentPath || '/', 'en');
           )}
         </li>
       ))}
-      <li><a class="mobile-cta" href="#demo">{ctaLabel}</a></li>
+      <li><a class="mobile-cta" href={ctaHref}>{ctaLabel}</a></li>
     </ul>
   </div>
 </nav>

@@ -61,26 +61,6 @@ sections:
       - "No query language, no report builder, no analyst queue"
       - 'Built on InOro''s full analysis layer — <a href="/conversation-intelligence/">see the platform</a>'
 
-  - type: comparison-table
-    kicker: "Disambiguation"
-    heading: "What AI Chat is — and isn't"
-    columns:
-      - "AI Chat is not"
-      - "AI Chat is"
-    rows:
-      - label: "Interface"
-        values:
-          - "a voicebot talking to your customers"
-          - "a natural-language interface to your analyzed call history"
-      - label: "Timing"
-        values:
-          - "a real-time agent-assist whisper tool"
-          - "post-call analytics you can question"
-      - label: "Data"
-        values:
-          - "a generic chatbot guessing from thin air"
-          - "built on transcripts of your own calls"
-
   - type: results-band
     heading: "Built on real production data"
     stats:

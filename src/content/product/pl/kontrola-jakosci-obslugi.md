@@ -13,7 +13,7 @@ sections:
     badge: "Auto-QA"
     heading: "Kontrola jakości, która odsłuchuje każdą rozmowę — za ~20% kosztu"
     subheading: "InOro ocenia 100% rozmów według Twojej karty oceny, minuty po ich zakończeniu. Te same kryteria dla każdej rozmowy, każdego konsultanta, każdego dnia — zamiast próbki 2% i loterii oceniających."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -178,6 +178,6 @@ sections:
   - type: cta-band
     heading: "Uruchom swoją kartę oceny na 100% rozmów z zeszłego tygodnia"
     body: "30-minutowe demo — przynieś swoją kartę oceny, pokażemy ją zautomatyzowaną. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

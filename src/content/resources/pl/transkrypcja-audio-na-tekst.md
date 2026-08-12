@@ -61,5 +61,5 @@ sections:
   - type: cta-band
     heading: "Transkrypcja 100% rozmów call center — z analizą w cenie"
     body: "30-minutowe demo na Twoich nagraniach."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---

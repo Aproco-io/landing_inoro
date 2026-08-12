@@ -13,7 +13,7 @@ sections:
     badge: "Tylko w InOro"
     heading: "Zapytaj swoje rozmowy. Wszystkie."
     subheading: 'Każde pytanie, które chciałbyś zadać swojemu call center — „które rozmowy miały zastrzeżenia do ceny?”, „czemu we wtorek skoczyły reklamacje?” — z odpowiedzią w kilka sekund, ze 100% historii rozmów, po polsku lub angielsku.'
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz, jak działa", href: "#chat" }
 
   - type: bluf
@@ -60,26 +60,6 @@ sections:
       - "Działa <strong>po polsku i angielsku</strong>"
       - "Bez języka zapytań, bez kreatora raportów, bez kolejki do analityka"
       - 'Zbudowany na pełnej warstwie analizy InOro — <a href="/pl/analiza-rozmow/">poznaj platformę</a>'
-
-  - type: comparison-table
-    kicker: "Disambiguacja"
-    heading: "Czym czat AI jest — a czym nie jest"
-    columns:
-      - "Czat AI to nie"
-      - "Czat AI to"
-    rows:
-      - label: "Rola"
-        values:
-          - "voicebot rozmawiający z Twoimi klientami"
-          - "interfejs w języku naturalnym do przeanalizowanej historii rozmów"
-      - label: "Kiedy działa"
-        values:
-          - "podpowiadacz dla konsultanta w trakcie rozmowy (agent assist)"
-          - "analityka post-call, którą można odpytywać"
-      - label: "Dane"
-        values:
-          - "ogólny chatbot zgadujący bez danych"
-          - "zbudowany na transkryptach Twoich własnych rozmów"
 
   - type: results-band
     heading: "Zbudowany na danych z produkcji"
@@ -157,6 +137,6 @@ sections:
   - type: cta-band
     heading: "Zadaj pierwsze pytanie własnym rozmowom"
     body: "30-minutowe demo — przynieś trzy pytania, na które dziś nie umiesz odpowiedzieć. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

@@ -13,8 +13,8 @@ sections:
   - type: hero
     heading: "Płacisz za to, z czego korzystasz. Nic więcej."
     subheading: "Bez opłat za stanowisko. Bez ukrytych opłat platformowych. Jedna cena za minutę, która obejmuje transkrypcję i każdą warstwę analizy — i skaluje się w dół tak samo dobrze jak w górę."
-    primaryCta: { label: "Indywidualna wycena", href: "/demo/" }
-    secondaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Indywidualna wycena", href: "/pl/#demo" }
+    secondaryCta: { label: "Umów demo", href: "/pl/#demo" }
 
   - type: pricing-plans
     plans:
@@ -33,7 +33,7 @@ sections:
           - "Raporty white-label (BPO)"
           - "Rezydencja danych w UE"
         ctaLabel: "Indywidualna wycena"
-        ctaHref: "/demo/"
+        ctaHref: "/pl/#demo"
 
   - type: roi-calculator
     heading: "Ile to wyjdzie u Ciebie?"
@@ -95,12 +95,12 @@ sections:
       - q: "Co obejmuje 30-dniowy pilotaż?"
         a: "Pełne wdrożenie na Twoich nagraniach, przeniesienie karty oceny, prawdziwą analizę na prawdziwych rozmowach. Bezpłatnie, bez karty."
       - q: "Jak wygląda wycena on-premise?"
-        a: 'Wdrożenia on-premise wyceniamy indywidualnie — <a href="/demo/">umów demo</a> i opowiedz o swojej infrastrukturze.'
+        a: 'Wdrożenia on-premise wyceniamy indywidualnie — <a href="/pl/#demo">umów demo</a> i opowiedz o swojej infrastrukturze.'
       - q: "Czy są rabaty wolumenowe?"
         a: "Cennik zaczyna się od 0,20 zł/min; przy dużych wolumenach poproś o indywidualną wycenę."
 
   - type: cta-band
     heading: "Poproś o wycenę dla swojego wolumenu rozmów"
     body: "30-minutowe demo + indywidualna wycena. 30-dniowy bezpłatny pilotaż • bez karty."
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
 ---
