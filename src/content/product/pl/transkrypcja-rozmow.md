@@ -96,25 +96,6 @@ sections:
         label: "Aktywnych klientów"
     caseNote: "Transkrypty zasilają kontrolę jakości za <strong>~20% kosztu</strong> ręcznego odsłuchu · case: analiza transkryptów skróciła proces weryfikacji — <strong>−20% porzuconych połączeń</strong>."
 
-  - type: integrations-strip
-    heading: "Podłącz się do swojego stacku"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki do CRM"]
-    linkText: "Wszystkie integracje"
-    linkHref: "/pl/integracje/"
-
-  - type: security-band
-    heading: "Bezpieczeństwo w standardzie"
-    tiles:
-      - title: "Hosting w UE, wspiera compliance RODO"
-        body: "Audio i transkrypty w centrach w UE."
-      - title: "Opcja on-premise"
-        body: "Audio i transkrypty nie opuszczają infrastruktury."
-      - title: "SSO, SAML 2.0, RBAC, logi audytu"
-        body: "Enterprise kontrola dostępów."
-      - title: "Anonimizacja danych wrażliwych"
-        body: "PESEL i numery kart maskowane w transkryptach."
-    footer: "Nagrania nie trenują modeli bez Twojej zgody."
-
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja, diaryzacja, streszczenia i pełna warstwa analizy w jednej cenie."
     linkText: "Zobacz cennik"

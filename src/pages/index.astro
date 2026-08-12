@@ -15,7 +15,7 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     {isGithub && <base href={assetBase} />}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InOro.ai | AI-Powered Conversation Intelligence for Contact Centers</title>
     <meta
       name="description"
@@ -27,7 +27,35 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
       content="Analyze 100% of customer calls with AI. Boost sales, service quality, and compliance."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://inoro.ai/" />
+    <meta property="og:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
+    <meta property="og:site_name" content="InOro.ai" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
     <link rel="canonical" href="https://inoro.ai/" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'InOro.ai',
+      url: 'https://inoro.ai',
+      logo: 'https://inoro.ai/assets/logos/InOro_Logo.svg',
+      email: 'contact@inoro.ai',
+      parentOrganization: { '@type': 'Organization', name: 'Aproco', url: 'https://aproco.io' },
+      areaServed: ['PL', 'EU'],
+      description: 'InOro is an AI conversation intelligence platform for contact centers — transcription, QA scoring, speech analytics for 100% of calls.',
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'InOro',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, on-premise',
+      offers: {
+        '@type': 'Offer', price: '0.05', priceCurrency: 'EUR',
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '0.05', priceCurrency: 'EUR', unitText: 'analyzed minute' },
+      },
+    })} />
     <link rel="alternate" hreflang="en" href="https://inoro.ai/" />
     <link rel="alternate" hreflang="pl" href="https://inoro.ai/pl/" />
     <link rel="alternate" hreflang="x-default" href="https://inoro.ai/" />

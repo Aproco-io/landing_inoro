@@ -73,18 +73,6 @@ sections:
         label: "Active customers"
     caseNote: "Every answer traceable to the source calls that produced it."
 
-  - type: security-band
-    heading: "Enterprise-grade privacy"
-    tiles:
-      - title: "EU or on-premise"
-        body: "Call data stays where it belongs."
-      - title: "Role-based access"
-        body: "Decide what each user can ask about."
-      - title: "Query audit logs"
-        body: "Every question logged for governance."
-      - title: "No training on your data"
-        body: "Models are never trained on your calls without consent."
-
   - type: pricing-teaser
     body: "AI Chat is included in the standard per-minute price — from <strong>€0.05/min</strong>, no add-on fee."
     linkText: "See pricing"

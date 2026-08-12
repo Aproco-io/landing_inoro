@@ -12,6 +12,21 @@ cover: "/blog/jak-mierzyc-fcr.jpg"
 coverAlt: "Wykresy analityki wydajności na ekranie laptopa — wizualizacja KPI call center"
 readTime: 6
 tags: ["fcr", "kpi", "jakosc-obslugi"]
+updatedDate: 2026-08-12
+authorBio: "redakcja InOro (Aproco). Materiał przygotowany na podstawie danych z wdrożeń produkcyjnych oraz publicznych źródeł branżowych."
+sources:
+  - title: "How many calls do you monitor per agent per month? (poll)"
+    url: "https://www.callcentrehelper.com/poll-how-many-calls-do-you-monitor-per-agent-per-month-43247.htm"
+    publisher: "Call Centre Helper"
+  - title: "FCR — 7 essential customer service metrics"
+    url: "https://www.sqmgroup.com/resources/library/blog/7-essential-customer-service-metrics-and-how-you-measure-them"
+    publisher: "SQM Group"
+  - title: "FCR metric operating philosophy"
+    url: "https://www.sqmgroup.com/resources/library/blog/fcr-metric-operating-philosophy"
+    publisher: "SQM Group"
+  - title: "What contact centers are measuring (2025)"
+    url: "https://www.icmi.com/resources/2025/what-contact-centers-are-measuring"
+    publisher: "ICMI"
 ---
 
 FCR (First Contact Resolution) to jeden z najstarszych i najczęściej cytowanych wskaźników jakości w call center. W praktyce jednak większość operacji mierzy go w sposób, który daje **złudzenie kontroli**, a nie realny obraz jakości obsługi.

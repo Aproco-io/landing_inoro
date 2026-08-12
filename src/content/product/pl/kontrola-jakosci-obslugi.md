@@ -107,24 +107,6 @@ sections:
         label: "Agentów łącznie"
     caseNote: "<strong>Case anonimizowany:</strong> przy pełnym pokryciu okazało się, że konsultanci wspominali o promocji tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Próbka 2% w ogóle tego nie widziała. Koszt zespołu QA spadł do <strong>~20%</strong> poziomu ręcznego odsłuchu."
 
-  - type: integrations-strip
-    heading: "Podłącz się do swojego stacku"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
-    linkText: "Wszystkie integracje"
-    linkHref: "/pl/integracje/"
-
-  - type: security-band
-    heading: "Bezpieczeństwo w standardzie"
-    tiles:
-      - title: "Hosting w UE, wspiera compliance RODO"
-        body: "Dane przechowywane i przetwarzane w UE."
-      - title: "Opcja on-premise"
-        body: "Dane nie opuszczają Twojej organizacji."
-      - title: "SSO, SAML 2.0, RBAC, logi audytu"
-        body: "Enterprise kontrola dostępów."
-      - title: "Anonimizacja danych wrażliwych"
-        body: "PESEL, numery kart, PII maskowane."
-
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — ocena, widoki coachingowe i raporty w cenie. Bez opłat za stanowisko."
     linkText: "Zobacz cennik"

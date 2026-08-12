@@ -96,25 +96,6 @@ sections:
         label: "Active customers"
     caseNote: "Transcripts feed QA at <strong>~20% of manual review cost</strong>, and topic analysis on transcripts cut abandoned calls at one client by <strong>20%</strong>."
 
-  - type: integrations-strip
-    heading: "Plug into your stack"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "CRM webhooks"]
-    linkText: "All integrations"
-    linkHref: "/integrations/"
-
-  - type: security-band
-    heading: "Enterprise security by default"
-    tiles:
-      - title: "EU hosting, supports GDPR compliance"
-        body: "Audio and transcripts stored in EU data centers."
-      - title: "On-premise option"
-        body: "Data never leaves your infrastructure."
-      - title: "SSO, SAML 2.0, RBAC, audit logs"
-        body: "Enterprise access controls."
-      - title: "Sensitive-data anonymization"
-        body: "IDs and card numbers masked in transcripts."
-    footer: "Your recordings are never used to train models without consent."
-
   - type: pricing-teaser
     body: "From <strong>€0.05 per analyzed minute</strong> — transcription, diarization, summaries and the full analysis layer in one price."
     linkText: "See pricing"

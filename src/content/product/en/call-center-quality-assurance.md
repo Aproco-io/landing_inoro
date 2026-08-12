@@ -109,24 +109,6 @@ sections:
         label: "Agents in total"
     caseNote: "<strong>Anonymized case:</strong> with full coverage, one client found agents mentioned the current promo in only <strong>60% of calls</strong> — where it was mentioned, <strong>92% ended in an order</strong>. A 2% sample had missed it entirely. QA team cost dropped to <strong>~20%</strong> of the manual baseline."
 
-  - type: integrations-strip
-    heading: "Plug into your stack"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooks"]
-    linkText: "All integrations"
-    linkHref: "/integrations/"
-
-  - type: security-band
-    heading: "Enterprise security by default"
-    tiles:
-      - title: "EU hosting, supports GDPR compliance"
-        body: "Data stored and processed in EU."
-      - title: "On-premise option"
-        body: "Data never leaves your organization."
-      - title: "SSO, SAML 2.0, RBAC, audit logs"
-        body: "Enterprise access controls."
-      - title: "Sensitive-data anonymization"
-        body: "PII masking in transcripts."
-
   - type: pricing-teaser
     body: "From <strong>€0.05 per analyzed minute</strong> — scoring, coaching views and reports included. No per-seat fees."
     linkText: "See pricing"

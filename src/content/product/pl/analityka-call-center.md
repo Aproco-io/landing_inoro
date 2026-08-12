@@ -110,24 +110,6 @@ sections:
         label: "Aktywnych klientów"
     caseNote: "<strong>Case anonimizowany:</strong> analiza tematów pokazała, że proces weryfikacji trwał dłużej, niż wymagały procedury — skrócenie go do części obligatoryjnych dało <strong>−20% porzuconych połączeń</strong>."
 
-  - type: integrations-strip
-    heading: "Podłącz się do swojego stacku"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
-    linkText: "Wszystkie integracje"
-    linkHref: "/pl/integracje/"
-
-  - type: security-band
-    heading: "Bezpieczeństwo w standardzie"
-    tiles:
-      - title: "Hosting w UE, wspiera compliance RODO"
-        body: "Dane przechowywane i przetwarzane w UE."
-      - title: "Opcja on-premise"
-        body: "Dane nie opuszczają Twojej organizacji."
-      - title: "SSO, SAML 2.0, RBAC, logi audytu"
-        body: "Enterprise kontrola dostępów."
-      - title: "Anonimizacja danych wrażliwych"
-        body: "PESEL, numery kart, PII maskowane."
-
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — wszystkie dashboardy, raporty i eksporty w cenie."
     linkText: "Zobacz cennik"

@@ -395,6 +395,21 @@ const { pl: plHref, en: enHref } = alternatesFor(currentPath || (lang === 'pl' ?
     });
   }
 
+  // Sync aria-expanded on desktop dropdown triggers with the actual open
+  // state (which CSS drives via :hover and :focus-within). Screen-reader
+  // users get the right state; sighted users get the same UX.
+  document.querySelectorAll('.inoro-subnav__item.has-dropdown').forEach((li) => {
+    const trigger = li.querySelector('.inoro-subnav__trigger');
+    if (!trigger) return;
+    const setExpanded = (v: boolean) => trigger.setAttribute('aria-expanded', v ? 'true' : 'false');
+    li.addEventListener('mouseenter', () => setExpanded(true));
+    li.addEventListener('mouseleave', () => setExpanded(false));
+    li.addEventListener('focusin', () => setExpanded(true));
+    li.addEventListener('focusout', (e) => {
+      if (!li.contains((e as FocusEvent).relatedTarget as Node)) setExpanded(false);
+    });
+  });
+
   // Language buttons are real <a> links to the alternate URL. On captured
   // home pages the old JS listens for [data-inoro-lang] clicks and would
   // try to toggle a hidden div that no longer exists — intercept in the

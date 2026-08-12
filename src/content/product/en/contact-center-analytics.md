@@ -110,24 +110,6 @@ sections:
         label: "Active customers"
     caseNote: "<strong>Anonymized case:</strong> topic analysis showed the verification step ran longer than required — trimming it cut abandoned calls by <strong>20%</strong>."
 
-  - type: integrations-strip
-    heading: "Plug into your stack"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooks"]
-    linkText: "All integrations"
-    linkHref: "/integrations/"
-
-  - type: security-band
-    heading: "Enterprise security by default"
-    tiles:
-      - title: "EU hosting, supports GDPR compliance"
-        body: "Data stored and processed in EU."
-      - title: "On-premise option"
-        body: "Data never leaves your organization."
-      - title: "SSO, SAML 2.0, RBAC, audit logs"
-        body: "Enterprise access controls."
-      - title: "Sensitive-data anonymization"
-        body: "PII masking in transcripts and analytics."
-
   - type: pricing-teaser
     body: "From <strong>€0.05 per analyzed minute</strong> — all dashboards, reports and exports included."
     linkText: "See pricing"

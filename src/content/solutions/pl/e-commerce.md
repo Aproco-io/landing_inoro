@@ -1,13 +1,13 @@
 ---
 title: "Analiza rozmów dla e-commerce i retail"
-description: "Każda rozmowa z klientem to dane o CX, ryzyku odejścia i szansach sprzedaży. InOro czyta 100% z nich: sygnały sprzedażowe, sentyment, benchmarking zespołów. Od 0,20 zł/min."
+description: "Każda rozmowa z klientem to dane o obsłudze, powodach rezygnacji i szansach sprzedaży. InOro analizuje 100% z nich: pominięte oferty, zmiany nastawienia, porównanie zespołów. Od 0,20 zł/min."
 lang: "pl"
 slug: "/pl/rozwiazania/e-commerce/"
 translationKey: "solutions-retail"
 order: 30
 seo:
   metaTitle: "Analiza rozmów dla e-commerce i retail | InOro"
-  metaDescription: "Każda rozmowa z klientem to dane o CX, ryzyku odejścia i szansach sprzedaży. InOro czyta 100% z nich: sygnały sprzedażowe, sentyment, benchmarking zespołów. Od 0,20 zł/min."
+  metaDescription: "Każda rozmowa z klientem to dane o obsłudze, powodach rezygnacji i szansach sprzedaży. InOro analizuje 100% z nich: pominięte oferty, zmiany nastawienia, porównanie zespołów. Od 0,20 zł/min."
 sections:
   - type: hero
     badge: "CX i przychód"
@@ -56,14 +56,14 @@ sections:
         linkText: "Compliance"
         linkHref: "/pl/rozwiazania/compliance/"
       - icon: "🏆"
-        title: "Benchmarking sklepów i zespołów"
+        title: "Porównanie sklepów i zespołów"
         body: "Porównuj zespoły, lokalizacje i kampanie na tej samej karcie oceny; znajdź i powielaj to, co robią najlepsi."
 
   - type: comparison-table
     kicker: "Dwa widoki"
     heading: "Dwa widoki tego samego klienta"
     columns:
-      - "Ankiety (CSAT/NPS)"
+      - "Ankiety po rozmowie"
       - "Analiza rozmów InOro"
     rows:
       - label: "Pokrycie"
@@ -96,8 +96,8 @@ sections:
   - type: faq
     heading: "Najczęstsze pytania"
     items:
-      - q: "Mierzymy już NPS i CSAT — co to dodaje?"
-        a: '„Dlaczego” za wynikami, ze 100% rozmów zamiast od respondentów ankiet — plus sygnały, których ankieta nigdy nie złapie: język odejścia, wzmianki o konkurencji, pominięte propozycje sprzedażowe.'
+      - q: "Mierzymy już satysfakcję klientów w ankietach — co to dodaje?"
+        a: '„Dlaczego” za wynikami, ze 100% rozmów zamiast od respondentów ankiet — plus sygnały, których ankieta nigdy nie złapie: język rezygnacji, wzmianki o konkurencji, pominięte propozycje sprzedażowe.'
       - q: "Czy udźwignie wolumen sezonowy?"
         a: "Tak — cena za minutę i automatyczna analiza skalują się z wolumenem; pokrycie zostaje 100% w szczycie sezonu, kiedy znaczy najwięcej."
       - q: "Czy działa z naszym zewnętrznym call center?"

@@ -111,25 +111,6 @@ sections:
         label: "Active customers"
     caseNote: "Full-coverage speech analytics finds what samples can't: at one client, the current promo was mentioned in only <strong>60% of calls</strong> — where it was, <strong>92%</strong> ended in an order. Another client cut abandoned calls by <strong>20%</strong> after transcripts showed the verification step ran longer than required. <em>(Anonymized production deployments.)</em>"
 
-  - type: integrations-strip
-    heading: "Plug into your stack — no rip & replace"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooks"]
-    linkText: "All integrations"
-    linkHref: "/integrations/"
-
-  - type: security-band
-    heading: "Enterprise security by default"
-    tiles:
-      - title: "EU hosting, supports GDPR compliance"
-        body: "Data stored and processed exclusively in EU data centers."
-      - title: "On-premise option"
-        body: "Audio and transcripts never leave your organization."
-      - title: "SSO, SAML 2.0, RBAC, audit logs"
-        body: "Enterprise access controls and full audit trail."
-      - title: "Anonymization of sensitive data"
-        body: "National IDs, card numbers masked in transcripts and analytics."
-    footer: "Your data is never used to train models without consent."
-
   - type: pricing-teaser
     body: "From <strong>€0.05 per analyzed minute</strong> — transcription and every analysis layer included. No per-seat fees, no minimums."
     linkText: "See pricing"

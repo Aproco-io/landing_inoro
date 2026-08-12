@@ -31,13 +31,13 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
     <div class="s-roi__panel">
       <h2>{heading ?? 'Cost estimate'}</h2>
       <div class="s-roi__row">
-        <label>
+        <label for="roi-agents">
           {labels.agents}
-          <input type="number" id="roi-agents" value={String(defaultAgents)} min="1" step="1" />
+          <input type="number" id="roi-agents" name="roi-agents" value={String(defaultAgents)} min="1" step="1" />
         </label>
-        <label>
+        <label for="roi-minutes">
           {labels.minutes}
-          <input type="number" id="roi-minutes" value={String(defaultMinutes)} min="1" step="100" />
+          <input type="number" id="roi-minutes" name="roi-minutes" value={String(defaultMinutes)} min="1" step="100" />
         </label>
       </div>
       <div class="s-roi__result">

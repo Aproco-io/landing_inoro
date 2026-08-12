@@ -72,18 +72,6 @@ sections:
         label: "Aktywnych klientów"
     caseNote: "Każda odpowiedź jest podpięta do rozmów źródłowych, na których się opiera."
 
-  - type: security-band
-    heading: "Prywatność w standardzie enterprise"
-    tiles:
-      - title: "UE lub on-premise"
-        body: "Dane rozmów zostają tam, gdzie powinny."
-      - title: "Dostęp per rola"
-        body: "Decydujesz, o co kto może pytać."
-      - title: "Logi zapytań"
-        body: "Każde pytanie zalogowane dla governance."
-      - title: "Brak trenowania na Twoich danych"
-        body: "Modele nie trenują na Twoich rozmowach bez zgody."
-
   - type: pricing-teaser
     body: "Czat AI jest w standardowej cenie za minutę — od <strong>0,20 zł/min</strong>, bez dopłat."
     linkText: "Zobacz cennik"

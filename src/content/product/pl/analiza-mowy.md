@@ -110,25 +110,6 @@ sections:
         label: "Aktywnych klientów"
     caseNote: "Pełne pokrycie znajduje to, czego próbka nie widzi: u jednego z klientów promocja padała tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Inny klient skrócił proces weryfikacji po analizie transkryptów — <strong>−20% porzuconych połączeń</strong>. <em>(Anonimizowane wdrożenia produkcyjne.)</em>"
 
-  - type: integrations-strip
-    heading: "Podłącz się do swojego stacku — bez wymiany systemu"
-    names: ["Genesys", "Avaya", "Cisco", "REST API", "SFTP", "Power BI / Tableau", "Webhooki"]
-    linkText: "Wszystkie integracje"
-    linkHref: "/pl/integracje/"
-
-  - type: security-band
-    heading: "Bezpieczeństwo w standardzie"
-    tiles:
-      - title: "Hosting w UE, wspiera compliance RODO"
-        body: "Dane przechowywane i przetwarzane wyłącznie w centrach w UE."
-      - title: "Opcja on-premise"
-        body: "Audio i transkrypty nie opuszczają organizacji."
-      - title: "SSO, SAML 2.0, RBAC, logi audytu"
-        body: "Enterprise kontrola dostępów i pełen ślad każdej akcji."
-      - title: "Anonimizacja danych wrażliwych"
-        body: "PESEL, numery kart, PII maskowane w transkrypcji i analityce."
-    footer: "Twoje dane nie trenują modeli bez Twojej zgody."
-
   - type: pricing-teaser
     body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja i każda warstwa analizy w jednej cenie."
     linkText: "Zobacz cennik"

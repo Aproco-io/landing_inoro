@@ -21,6 +21,26 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
   month: 'long',
   year: 'numeric',
 }).format(data.date);
+const formattedUpdated = data.updatedDate
+  ? new Intl.DateTimeFormat('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' }).format(data.updatedDate)
+  : null;
+
+// JSON-LD Article schema — trustworthy authorship signals for Google/AI-search
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: data.title,
+  description: data.description,
+  datePublished: data.date.toISOString(),
+  ...(data.updatedDate ? { dateModified: data.updatedDate.toISOString() } : {}),
+  author: { '@type': 'Person', name: data.author, ...(data.authorUrl ? { url: data.authorUrl } : {}) },
+  publisher: {
+    '@type': 'Organization',
+    name: 'InOro.ai',
+    logo: { '@type': 'ImageObject', url: 'https://inoro.ai/assets/logos/InOro_Logo.svg' },
+  },
+  ...(data.cover ? { image: `https://inoro.ai${data.cover}` } : {}),
+};
 ---
 <PageLayout
   lang="pl"
@@ -45,6 +65,12 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
           <span>{data.author}</span>
           <span class="dot">·</span>
           <time datetime={data.date.toISOString()}>{formattedDate}</time>
+          {formattedUpdated && (
+            <>
+              <span class="dot">·</span>
+              <span>zaktualizowano {formattedUpdated}</span>
+            </>
+          )}
           {data.readTime && (
             <>
               <span class="dot">·</span>
@@ -52,6 +78,9 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
             </>
           )}
         </div>
+        {data.reviewedBy && (
+          <p class="blog-post__reviewed"><em>Zweryfikował: {data.reviewedBy}</em></p>
+        )}
       </div>
     </header>
 
@@ -67,6 +96,31 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
       <Content />
     </MarkdownBody>
 
+    {data.authorBio && (
+      <aside class="blog-post__author">
+        <div class="inoro-container">
+          <h3>O autorze</h3>
+          <p><strong>{data.author}</strong> — {data.authorBio}</p>
+        </div>
+      </aside>
+    )}
+
+    {data.sources.length > 0 && (
+      <aside class="blog-post__sources">
+        <div class="inoro-container">
+          <h3>Źródła</h3>
+          <ol>
+            {data.sources.map((s) => (
+              <li>
+                <a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a>
+                {s.publisher && <span class="blog-post__source-pub"> — {s.publisher}</span>}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </aside>
+    )}
+
     {data.tags.length > 0 && (
       <div class="blog-post__tags">
         <div class="inoro-container">
@@ -75,6 +129,7 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
       </div>
     )}
   </article>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
   <CtaSection
     heading="Zobacz InOro w akcji"
@@ -146,6 +201,28 @@ const formattedDate = new Intl.DateTimeFormat('pl-PL', {
     border-radius: 0.85rem;
     box-shadow: 0 25px 55px -30px rgba(15, 23, 42, 0.3);
   }
+  .blog-post__reviewed {
+    color: #64748b; font-size: 0.85rem; margin: 0.75rem 0 0;
+  }
+  .blog-post__author,
+  .blog-post__sources {
+    padding: 2rem 0;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+  }
+  .blog-post__author > .inoro-container,
+  .blog-post__sources > .inoro-container { max-width: 780px; }
+  .blog-post__author h3,
+  .blog-post__sources h3 {
+    font-family: Play, Inter, sans-serif;
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+  }
+  .blog-post__author p { color: #475569; margin: 0; line-height: 1.6; font-size: 0.95rem; }
+  .blog-post__sources ol { color: #475569; font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; }
+  .blog-post__sources a { color: #1AA7E0; word-break: break-word; }
+  .blog-post__source-pub { color: #94a3b8; }
   .blog-post__tags {
     padding: 0 0 3rem;
     background: #ffffff;

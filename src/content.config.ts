@@ -314,7 +314,14 @@ const blog = defineCollection({
     lang: z.enum(['pl', 'en']),
     slug: z.string(),
     date: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     author: z.string().default('Zespół InOro'),
+    authorBio: z.string().optional(),
+    authorUrl: z.string().optional(),
+    reviewedBy: z.string().optional(),
+    sources: z
+      .array(z.object({ title: z.string(), url: z.string(), publisher: z.string().optional() }))
+      .default([]),
     category: z.string().optional(),
     cover: z.string().optional(),
     coverAlt: z.string().optional(),
