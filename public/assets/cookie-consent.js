@@ -30,6 +30,19 @@
 
   function setConsent(val) {
     try { localStorage.setItem(CONSENT_KEY, val); } catch (e) {}
+    if (val === 'accepted') grantAnalytics();
+  }
+
+  /* Consent Mode v2: the page declares everything 'denied' by default before
+     gtag/js loads. We only ever flip analytics_storage to 'granted' — a
+     decline simply leaves the default in place. */
+  function grantAnalytics() {
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(['consent', 'update', { analytics_storage: 'granted' }]);
+    }
   }
 
   function getCurrentLang() {
@@ -103,6 +116,9 @@
   }
 
   function createBanner() {
+    /* Returning visitor who already accepted: re-grant on every load,
+       because Consent Mode defaults back to 'denied' on each page view. */
+    if (getConsent() === 'accepted') { grantAnalytics(); return; }
     if (getConsent() !== null) return;
 
     var lang = getCurrentLang();

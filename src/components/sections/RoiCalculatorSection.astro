@@ -3,28 +3,28 @@ interface Props {
   heading?: string;
   perMinutePrice: number;
   currency?: string;
-  /** Per-seat competitor cost range (per agent per month), in the same currency as `currency`. */
-  perSeatLow?: number;
-  perSeatHigh?: number;
   lang?: 'pl' | 'en';
 }
-const {
-  heading,
-  perMinutePrice,
-  currency = '€',
-  perSeatLow = 100,
-  perSeatHigh = 250,
-  lang = 'en',
-} = Astro.props;
+// Per-seat competitor figures were removed deliberately: the ranges were
+// undocumented, so the calculator now estimates InOro cost only.
+const { heading, perMinutePrice, currency = '€', lang = 'en' } = Astro.props;
 const labels = lang === 'pl'
-  ? { agents: 'Liczba agentów', minutes: 'Minuty / agent / miesiąc', inoro: 'InOro (za minutę)', competitor: 'Konkurencja (za stanowisko)' }
-  : { agents: 'Agents', minutes: 'Minutes / agent / month', inoro: 'InOro (per-minute)', competitor: 'Typical per-seat competitor' };
+  ? {
+      agents: 'Liczba agentów',
+      minutes: 'Minuty / agent / miesiąc',
+      inoro: 'Szacowany koszt InOro',
+      note: 'Szacunek na podstawie stawki za przeanalizowaną minutę. Wdrożenie techniczne i tryb on-premise wyceniamy osobno.',
+    }
+  : {
+      agents: 'Agents',
+      minutes: 'Minutes / agent / month',
+      inoro: 'Estimated InOro cost',
+      note: 'Estimate based on the per-analyzed-minute rate. Technical implementation and on-premise mode are quoted separately.',
+    };
 const fmt = (n: number) => `${currency}${Math.round(n).toLocaleString('en-US')}`;
 const defaultAgents = 50;
 const defaultMinutes = 1000;
 const inoroInit = fmt(defaultAgents * defaultMinutes * perMinutePrice);
-const compLowInit = fmt(defaultAgents * perSeatLow);
-const compHighInit = fmt(defaultAgents * perSeatHigh);
 ---
 <section class="s-roi">
   <div class="inoro-container">
@@ -40,20 +40,15 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
           <input type="number" id="roi-minutes" name="roi-minutes" value={String(defaultMinutes)} min="1" step="100" />
         </label>
       </div>
-      <div class="s-roi__result">
+      <div class="s-roi__result s-roi__result--single">
         <div>
           <span class="s-roi__label">{labels.inoro}</span>
           <span class="s-roi__value" id="roi-inoro"
             data-currency={currency}
             data-rate={perMinutePrice}>{inoroInit}</span>
         </div>
-        <div>
-          <span class="s-roi__label">{labels.competitor}</span>
-          <span class="s-roi__value muted" id="roi-competitor"
-            data-seat-low={perSeatLow}
-            data-seat-high={perSeatHigh}>{compLowInit} – {compHighInit}</span>
-        </div>
       </div>
+      <p class="s-roi__note">{labels.note}</p>
     </div>
   </div>
 </section>
@@ -65,20 +60,13 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
   const agentsEl = document.getElementById('roi-agents') as HTMLInputElement | null;
   const minEl = document.getElementById('roi-minutes') as HTMLInputElement | null;
   const inoroEl = document.getElementById('roi-inoro');
-  const competitorEl = document.getElementById('roi-competitor');
-  if (agentsEl && minEl && inoroEl && competitorEl) {
+  if (agentsEl && minEl && inoroEl) {
     const rate = parseFloat(inoroEl.getAttribute('data-rate') || '0.05');
     const currency = inoroEl.getAttribute('data-currency') || '€';
-    const perSeatLow = parseFloat(competitorEl.getAttribute('data-seat-low') || '100');
-    const perSeatHigh = parseFloat(competitorEl.getAttribute('data-seat-high') || '250');
     const recalc = () => {
       const agents = parseInt(agentsEl.value || '0', 10);
       const mins = parseInt(minEl.value || '0', 10);
-      const inoro = agents * mins * rate;
-      const compLow = agents * perSeatLow;
-      const compHigh = agents * perSeatHigh;
-      inoroEl.textContent = fmt(inoro, currency);
-      competitorEl.textContent = `${fmt(compLow, currency)} – ${fmt(compHigh, currency)}`;
+      inoroEl.textContent = fmt(agents * mins * rate, currency);
     };
     agentsEl.addEventListener('input', recalc);
     minEl.addEventListener('input', recalc);
@@ -96,7 +84,7 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
     padding: 2.25rem 2.25rem;
   }
   .s-roi__panel h2 {
-    font-family: Play, Inter, sans-serif;
+    font-family: Sora, Inter, sans-serif;
     text-align: center;
     margin: 0 0 1.5rem;
     color: #0f172a;
@@ -132,6 +120,8 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
     gap: 1rem;
   }
   @media (max-width: 600px) { .s-roi__result { grid-template-columns: 1fr; } }
+  .s-roi__result--single { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .s-roi__note { margin: 1rem 0 0; text-align: center; color: #64748b; font-size: 0.8rem; line-height: 1.5; }
   .s-roi__result > div {
     background: #fff;
     border-radius: 0.7rem;
@@ -145,7 +135,7 @@ const compHighInit = fmt(defaultAgents * perSeatHigh);
     margin-bottom: 0.25rem;
   }
   .s-roi__value {
-    font-family: Play, Inter, sans-serif;
+    font-family: Sora, Inter, sans-serif;
     color: #0E8AC1;
     font-size: 1.4rem;
     font-weight: 700;

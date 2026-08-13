@@ -29,7 +29,7 @@ sections:
     heading: "Od nagrania do decyzji w trzech krokach"
     steps:
       - title: "Podłącz nagrania"
-        body: "API, SFTP lub konektory natywne (Focus Telecom, Genesys, Avaya, Cisco, Amazon Connect). Bez zmiany telefonii, bez niczego nowego dla konsultantów. Standardowa integracja techniczna zajmuje 1 dzień."
+        body: "API, SFTP lub konektory natywne (Genesys, Avaya, Cisco). Bez zmiany telefonii, bez niczego nowego dla konsultantów. Standardowa integracja techniczna zajmuje 1 dzień."
       - title: "AI analizuje każdą rozmowę"
         body: "Transkrypcja z rozdzieleniem mówiących, ocena wg Twojej karty QA, kategoryzacja tematów, sentyment, wykrywanie naruszeń i sygnałów sprzedażowych. Wynik ok. 30–60 sekund po rozmowie."
       - title: "Działaj na insightach"
@@ -41,12 +41,12 @@ sections:
     cards:
       - icon: "📋"
         title: "Ocena QA wg Twojej karty"
-        body: "Twój arkusz oceny przeniesiony 1:1, kryteria edytujesz drag & drop. Każda rozmowa oceniana tak samo, każdego dnia."
+        body: "Twój arkusz oceny przeniesiony 1:1, kryteria edytujesz metodą przeciągnij i upuść. Każda rozmowa oceniana tak samo, każdego dnia."
         linkText: "Kontrola jakości obsługi"
         linkHref: "/pl/kontrola-jakosci-obslugi/"
       - icon: "🗂️"
         title: "Tematy i powody kontaktu"
-        body: "Automatyczny rozkład, o co dzwonią klienci, z wolumenem i priorytetem. Naprawiasz przyczynę, nie objaw."
+        body: "Analizujemy, z jakimi sprawami i problemami kontaktują się klienci. Raporty pokazują najczęściej powtarzające się zgłoszenia, dzięki czemu łatwiej wskazać procesy do usprawnienia lub automatyzacji."
       - icon: "📈"
         title: "Sentyment na osi czasu"
         body: "Jak zmieniało się nastawienie klienta w trakcie rozmowy plus automatyczne flagowanie rozmów krytycznych i eskalacji."
@@ -114,12 +114,12 @@ sections:
   - type: results-band
     heading: "Sprawdzone na skalę produkcyjną"
     stats:
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
         sub: "na produkcji"
-      - value: "1 000+"
-        label: "Agentów łącznie"
-        sub: "wdrożenia produkcyjne"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
+        sub: "skala między zespołami"
       - value: "6+"
         label: "Aktywnych klientów"
         sub: "BPO, finanse, retail"
@@ -145,7 +145,7 @@ sections:
     footer: "Twoje dane nie trenują modeli bez Twojej zgody."
 
   - type: pricing-teaser
-    body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko, bez minimów."
+    body: "Od <strong>0,20 zł za analizowaną minutę</strong> — transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko i bez opłat platformowych."
     linkText: "Zobacz cennik"
     linkHref: "/pl/cennik/"
 

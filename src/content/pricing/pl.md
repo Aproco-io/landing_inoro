@@ -1,13 +1,13 @@
 ---
 title: "Cennik — 0,20 zł za analizowaną minutę, wszystko w cenie"
-description: "Jedna cena za minutę: transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko, bez minimów, 30-dniowy bezpłatny pilotaż. 50 agentów × 1000 min ≈ 10 000 zł/mies."
+description: "Jedna cena za minutę: transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko i bez opłat platformowych, 30-dniowy bezpłatny pilotaż. 50 agentów × 1000 min ≈ 10 000 zł/mies."
 lang: "pl"
 slug: "/pl/cennik/"
 translationKey: "pricing"
 order: 10
 seo:
   metaTitle: "Cennik — 0,20 zł za analizowaną minutę, wszystko w cenie | InOro"
-  metaDescription: "Jedna cena za minutę: transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko, bez minimów, 30-dniowy bezpłatny pilotaż. 50 agentów × 1000 min ≈ 10 000 zł/mies."
+  metaDescription: "Jedna cena za minutę: transkrypcja i pełna analiza AI w cenie. Bez opłat za stanowisko i bez opłat platformowych, 30-dniowy bezpłatny pilotaż. 50 agentów × 1000 min ≈ 10 000 zł/mies."
 plans: []
 sections:
   - type: hero
@@ -39,8 +39,6 @@ sections:
     heading: "Ile to wyjdzie u Ciebie?"
     perMinutePrice: 0.20
     currency: "zł "
-    perSeatLow: 420
-    perSeatHigh: 1060
 
   - type: comparison-table
     kicker: "Model rozliczenia"
@@ -50,7 +48,7 @@ sections:
       - "InOro za minutę"
     rows:
       - label: "50 agentów × 1 000 min/mies."
-        values: ["21 000–53 000 zł/mies.", "~10 000 zł/mies."]
+        values: ["roczne licencje niezależne od wolumenu", "~10 000 zł/mies."]
       - label: "Sezonowy spadek wolumenu"
         values: ["płacisz za puste stanowiska", "koszt spada z wolumenem"]
       - label: "Krótkie projekty klienckie"
@@ -61,17 +59,6 @@ sections:
         values: ['analityka często tylko „Enterprise”', "wszystko w jednej cenie"]
       - label: "Pilotaż"
         values: ["negocjacja kontraktu", "30 dni gratis"]
-
-  - type: how-it-works
-    kicker: "Od pilotażu do produkcji"
-    heading: "Od pilotażu do produkcji"
-    steps:
-      - title: "Dni 1–7"
-        body: "Podłączenie nagrań (API/SFTP/konektory), przeniesienie Twojej karty oceny 1:1."
-      - title: "Dni 8–30"
-        body: "InOro analizuje Twój realny ruch; sprawdzasz dokładność, dashboardy i wnioski na własnych rozmowach."
-      - title: "Dzień 30"
-        body: "Zostawiasz konfigurację i przechodzisz na rozliczenie za minutę — albo rezygnujesz, bez zobowiązań."
 
   - type: security-band
     heading: "Bezpieczeństwo w każdym planie"

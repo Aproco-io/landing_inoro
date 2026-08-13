@@ -85,6 +85,11 @@ export const HOME_URL: Record<Lang, string> = {
 /**
  * For a given current path, return the pair (en, pl) URLs to place in
  * hreflang tags. Falls back to home when a page has no alternate mapped.
+ *
+ * Prefer `hreflangFor()` for emitting tags — it correctly omits the missing
+ * side instead of pointing it at a home page (which Google reads as a bad
+ * return link). This function stays for the language switcher, where falling
+ * back to the other language's home page IS the desired behaviour.
  */
 export function alternatesFor(currentPath: string, currentLang: Lang): { en: string; pl: string } {
   const path = normalize(currentPath);
@@ -99,6 +104,31 @@ export function alternatesFor(currentPath: string, currentLang: Lang): { en: str
   return currentLang === 'en'
     ? { en: path, pl: HOME_URL.pl }
     : { pl: path, en: HOME_URL.en };
+}
+
+/**
+ * hreflang tags for a page, per the binding rule:
+ *  - page WITH a translation → exactly 3 tags (en, pl, x-default → the EN URL
+ *    of *this* subpage, never the site home),
+ *  - page WITHOUT a translation → exactly 1 tag, its own language, self-referencing.
+ * Never point hreflang at the other language's home page.
+ */
+export function hreflangFor(
+  currentPath: string,
+  currentLang: Lang,
+): Array<{ hreflang: string; href: string }> {
+  const path = normalize(currentPath);
+  const mapped = URL_ALTERNATES[path];
+  if (!mapped) {
+    return [{ hreflang: currentLang, href: path }];
+  }
+  const en = currentLang === 'en' ? path : mapped;
+  const pl = currentLang === 'pl' ? path : mapped;
+  return [
+    { hreflang: 'en', href: en },
+    { hreflang: 'pl', href: pl },
+    { hreflang: 'x-default', href: en },
+  ];
 }
 
 /**

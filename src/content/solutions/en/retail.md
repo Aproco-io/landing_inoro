@@ -23,14 +23,14 @@ sections:
     heading: "Surveys tell you scores. Calls tell you why."
     pains:
       - icon: "📉"
-        title: "NPS says 'down' but not why"
-        body: "Surveys cover the few who answer; the reasons live in thousands of unanalyzed calls."
+        title: "Surveys show the score. Conversations explain why."
+        body: "Surveys only include customers who choose to respond. Conversation analysis helps you understand what shapes their experience — which problems recur, what customers expect and what causes dissatisfaction."
       - icon: "🎄"
         title: "Peak season hides everything"
         body: "Q4 volume triples, QA coverage collapses exactly when brand risk is highest."
       - icon: "💸"
-        title: "Scripts leak revenue"
-        body: "If agents skip the promo or the cross-sell prompt, nobody sees it on a 2% sample."
+        title: "Full analysis reveals missed sales opportunities"
+        body: "A small sample can easily miss conversations where agents fail to mention a promotion or additional offer. Analyzing every conversation reveals the scale of the issue and shows where the team is losing sales opportunities."
     costCard:
       heading: "The invisible loss"
       body: "You optimize checkout for 2% conversion gains while the voice channel loses orders invisibly."
@@ -105,7 +105,7 @@ sections:
       - q: "Which calls does it analyze — service, sales, both?"
         a: "Both, plus reservations and complaints; scorecards are configured per line of business."
       - q: "What does it cost for a seasonal operation?"
-        a: 'From €0.05 per analyzed minute, no per-seat fees, no minimums — cost follows your call volume. <a href="/pricing/">Pricing</a>'
+        a: 'From €0.05 per analyzed minute, no per-seat fees — cost follows your call volume. <a href="/pricing/">Pricing</a>'
 
   - type: related-resources
     heading: "Related resources"

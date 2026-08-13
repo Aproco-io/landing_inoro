@@ -7,13 +7,13 @@ import { FORMSPREE_ID } from '../../formspree.config.js';
 <PageLayout
   lang="en"
   title="Book a Demo — See InOro on Your Calls | InOro"
-  description="30-minute demo of InOro on your own recordings. 30-day free pilot, no credit card."
+  description="30-minute demo of InOro on your own recordings, plus a 30-day free pilot."
   currentPath="/demo/"
 >
   <HeroSection
     badge="Book a demo"
     heading="See InOro on your own calls"
-    subheading="30-minute demo tailored to your operation, using your recordings. If you like what you see, start a 30-day free pilot — no credit card, no commitment."
+    subheading="30-minute demo tailored to your operation, using your recordings. If you like what you see, start a 30-day free pilot."
     breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Demo' }]}
   />
 
@@ -50,7 +50,12 @@ import { FORMSPREE_ID } from '../../formspree.config.js';
             <input type="text" name="telephony" placeholder="Genesys, Avaya, Cisco, other…" />
           </label>
           <button type="submit">Book a demo</button>
-          <p class="demo-form__note">30-day free pilot • no credit card • setup in 1–2 weeks</p>
+          <p class="demo-form__note">30-day free pilot • standard integration takes 1 day</p>
+          <p class="demo-form__privacy">
+            Aproco (operator of InOro.ai) is the data controller. We will use your details
+            only to contact you about the demo.
+            <a href="/Polityka-Prywatnosci.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          </p>
         </form>
       </div>
     </div>
@@ -118,6 +123,14 @@ import { FORMSPREE_ID } from '../../formspree.config.js';
     margin-top: 0.5rem;
   }
   .demo-form button:hover { background: #0E8AC1; }
+  .demo-form__privacy {
+    margin: 0.75rem 0 0;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #64748b;
+    text-align: center;
+  }
+  .demo-form__privacy a { color: #1AA7E0; }
   .demo-form__note {
     text-align: center;
     color: #64748b;

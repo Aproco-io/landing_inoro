@@ -10,9 +10,9 @@ seo:
   metaDescription: "See why your best agents convert: playbook adherence, objection handling and missed offers measured on every call. Anonymized case: promo mentioned = 92% close rate."
 sections:
   - type: hero
-    badge: "Telesales · Inside sales"
-    heading: "Your best agents convert more. Now you'll know why."
-    subheading: "InOro measures what actually happens in sales calls — playbook adherence, objection handling, offers made and missed — on 100% of calls. So coaching stops being opinion and starts being replication."
+    badge: "Telesales"
+    heading: "Learn what works in your best sales calls — and apply it across the team"
+    subheading: "InOro analyzes call structure, objection handling and the elements shared by conversations that result in a sale. Managers can use real examples to tailor coaching to each salesperson's needs, while proven practices become part of the team's standard approach."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 
@@ -100,7 +100,7 @@ sections:
       - q: "How does it find missed opportunities?"
         a: "It detects where required offers or prompts didn't happen, and correlates with outcomes — like the promo case above (60% mentioned / 92% close when mentioned)."
       - q: "Will agents feel surveilled?"
-        a: "The shift is from 'gotcha' sampling to the same rules for everyone: every call, same criteria, visible reasons, best-call library for growth. Most agents prefer a fair 100% to a random 2%."
+        a: "The shift is from 'gotcha' sampling to the same rules for everyone: every call, same criteria, visible reasons, best-call library for growth. Most agents prefer a fair 100% to a random sample."
       - q: "How fast until first insights?"
         a: "Setup 1 day; first playbook-adherence report within days of connecting recordings. 30-day pilot on your real calls."
 

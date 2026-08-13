@@ -64,10 +64,10 @@ sections:
   - type: results-band
     heading: "Zbudowany na danych z produkcji"
     stats:
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
-      - value: "1 000+"
-        label: "Agentów łącznie"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "Każda odpowiedź jest podpięta do rozmów źródłowych, na których się opiera."
@@ -84,8 +84,8 @@ sections:
         a: 'O wszystko, na co odpowiada treść rozmów: tematy, trendy, wyniki konsultantów, luki compliance, wzmianki o konkurencji, obiekcje — np. „które rozmowy wspominały konkurenta X w kontekście rezygnacji?”'
       - q: "Skąd wiem, że odpowiedź jest prawdziwa?"
         a: "Każda odpowiedź linkuje do rozmów źródłowych, z liczbami i kontekstem — możesz otworzyć dowolny transkrypt i zweryfikować."
-      - q: "Czy to voicebot albo agent assist?"
-        a: "Nie. Czat AI nie rozmawia z klientami i nie podpowiada konsultantom w trakcie połączeń. To interfejs analityczny post-call dla managerów i analityków."
+      - q: "Czy czat AI rozmawia z klientami?"
+        a: "Nie. Czat AI służy do analizy zakończonych rozmów. Nie prowadzi rozmów z klientami i nie podpowiada konsultantom w trakcie połączenia."
       - q: "W jakich językach działa?"
         a: "Po polsku i angielsku."
       - q: "Kto ma dostęp?"

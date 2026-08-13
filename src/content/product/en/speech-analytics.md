@@ -102,17 +102,17 @@ sections:
   - type: results-band
     heading: "What full coverage finds"
     stats:
-      - value: "10M+"
+      - value: "1B+"
         label: "Minutes analyzed"
         sub: "in production"
-      - value: "1,000+"
-        label: "Agents in total"
+      - value: "1,700+"
+        label: "Agents at a single client"
       - value: "6+"
         label: "Active customers"
     caseNote: "Full-coverage speech analytics finds what samples can't: at one client, the current promo was mentioned in only <strong>60% of calls</strong> — where it was, <strong>92%</strong> ended in an order. Another client cut abandoned calls by <strong>20%</strong> after transcripts showed the verification step ran longer than required. <em>(Anonymized production deployments.)</em>"
 
   - type: pricing-teaser
-    body: "From <strong>€0.05 per analyzed minute</strong> — transcription and every analysis layer included. No per-seat fees, no minimums."
+    body: "From <strong>€0.05 per analyzed minute</strong> — transcription and every analysis layer included. No per-seat fees and no hidden platform charges."
     linkText: "See pricing"
     linkHref: "/pricing/"
 

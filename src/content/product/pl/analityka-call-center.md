@@ -102,10 +102,10 @@ sections:
   - type: results-band
     heading: "Sprawdzone na produkcji"
     stats:
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
-      - value: "1 000+"
-        label: "Agentów łącznie"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "<strong>Case anonimizowany:</strong> analiza tematów pokazała, że proces weryfikacji trwał dłużej, niż wymagały procedury — skrócenie go do części obligatoryjnych dało <strong>−20% porzuconych połączeń</strong>."
@@ -129,7 +129,7 @@ sections:
       - q: "Jak świeże są dane?"
         a: "Wynik każdej rozmowy wpada ok. 30–60 sekund po jej zakończeniu — trendy i alerty są z tego samego dnia, nie z końca miesiąca."
       - q: "Czy to tylko dla dużych call center?"
-        a: "Nie — bez minimów; cena za minutę skaluje się w dół tak samo jak w górę."
+        a: "Nie — nie pobieramy opłat platformowych; cena za minutę skaluje się w dół tak samo jak w górę."
 
   - type: related-resources
     heading: "Zgłęb temat"

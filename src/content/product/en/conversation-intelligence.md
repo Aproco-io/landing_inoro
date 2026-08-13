@@ -45,7 +45,7 @@ sections:
         linkText: "Quality Assurance"
         linkHref: "/call-center-quality-assurance/"
       - icon: "🗂️"
-        title: "Topics & root causes"
+        title: "Topics and reasons for contact"
         body: "Automatic categorization of why customers call, with volume and priority. Fix the cause, not the symptom."
       - icon: "📈"
         title: "Sentiment timeline"
@@ -114,12 +114,12 @@ sections:
   - type: results-band
     heading: "Proven at production scale"
     stats:
-      - value: "10M+"
+      - value: "1B+"
         label: "Minutes analyzed"
         sub: "in production"
-      - value: "1,000+"
-        label: "Agents in total"
-        sub: "across production deployments"
+      - value: "1,700+"
+        label: "Agents at a single client"
+        sub: "scaling across teams"
       - value: "6+"
         label: "Active customers"
         sub: "BPO, BFSI, Retail"
@@ -145,7 +145,7 @@ sections:
     footer: "Your data is never used to train models without consent."
 
   - type: pricing-teaser
-    body: "From <strong>€0.05 per analyzed minute</strong> — transcription and full AI analysis included. No per-seat fees, no minimums."
+    body: "From <strong>€0.05 per analyzed minute</strong> — transcription and full AI analysis included. No per-seat fees and no hidden platform charges."
     linkText: "See pricing"
     linkHref: "/pricing/"
 

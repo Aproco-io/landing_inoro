@@ -9,15 +9,17 @@ interface Props {
     ctaHref: string;
     highlight?: boolean;
   }[];
+  lang?: 'pl' | 'en';
 }
-const { plans } = Astro.props;
+const { plans, lang = 'en' } = Astro.props;
+const recommendedLabel = lang === 'pl' ? 'Polecany' : 'Recommended';
 ---
 <section class="s-plans">
   <div class="inoro-container">
     <div class="s-plans__grid">
       {plans.map((p) => (
         <div class={`s-plans__card ${p.highlight ? 'is-highlight' : ''}`}>
-          {p.highlight && <div class="s-plans__badge">Recommended</div>}
+          {p.highlight && <div class="s-plans__badge">{recommendedLabel}</div>}
           <h3>{p.name}</h3>
           <div class="s-plans__price">
             <span class="amount">{p.price}</span>
@@ -67,14 +69,14 @@ const { plans } = Astro.props;
     letter-spacing: 0.05em;
   }
   .s-plans__card h3 {
-    font-family: Play, Inter, sans-serif;
+    font-family: Sora, Inter, sans-serif;
     color: #0f172a;
     margin: 0;
     font-size: 1.35rem;
   }
   .s-plans__price { display: flex; align-items: baseline; gap: 0.35rem; }
   .s-plans__price .amount {
-    font-family: Play, Inter, sans-serif;
+    font-family: Sora, Inter, sans-serif;
     color: #1AA7E0;
     font-size: 2.5rem;
     font-weight: 700;

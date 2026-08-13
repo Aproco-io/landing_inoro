@@ -102,10 +102,10 @@ sections:
   - type: results-band
     heading: "Proven in production"
     stats:
-      - value: "10M+"
+      - value: "1B+"
         label: "Minutes analyzed"
-      - value: "1,000+"
-        label: "Agents in total"
+      - value: "1,700+"
+        label: "Agents at a single client"
       - value: "6+"
         label: "Active customers"
     caseNote: "<strong>Anonymized case:</strong> topic analysis showed the verification step ran longer than required — trimming it cut abandoned calls by <strong>20%</strong>."
@@ -129,7 +129,7 @@ sections:
       - q: "How fresh is the data?"
         a: "Each call's results land ~30–60 seconds after it ends, so trends and alerts are same-day, not end-of-month."
       - q: "Is it only for large call centers?"
-        a: "No minimums — per-minute pricing scales down as well as up."
+        a: "No platform fees — per-minute pricing scales down as well as up."
 
   - type: related-resources
     heading: "Related resources"

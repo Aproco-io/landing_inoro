@@ -1,13 +1,13 @@
 ---
 title: "Kontrola jakości obsługi — auto-QA na 100% rozmów"
-description: "InOro ocenia każdą rozmowę wg Twojej karty oceny, automatycznie. 100% pokrycia za ~20% kosztu ręcznego odsłuchu. Karta QA przeniesiona 1:1, edycja drag & drop."
+description: "InOro ocenia każdą rozmowę wg Twojej karty oceny, automatycznie. 100% pokrycia za ~20% kosztu ręcznego odsłuchu. Karta QA przeniesiona 1:1, edycja metodą przeciągnij i upuść."
 lang: "pl"
 slug: "/pl/kontrola-jakosci-obslugi/"
 translationKey: "quality-assurance"
 order: 40
 seo:
   metaTitle: "Kontrola jakości obsługi — auto-QA na 100% rozmów | InOro"
-  metaDescription: "InOro ocenia każdą rozmowę wg Twojej karty oceny, automatycznie. 100% pokrycia za ~20% kosztu ręcznego odsłuchu. Karta QA przeniesiona 1:1, edycja drag & drop."
+  metaDescription: "InOro ocenia każdą rozmowę wg Twojej karty oceny, automatycznie. 100% pokrycia za ~20% kosztu ręcznego odsłuchu. Karta QA przeniesiona 1:1, edycja metodą przeciągnij i upuść."
 sections:
   - type: hero
     badge: "Auto-QA"
@@ -27,7 +27,7 @@ sections:
     heading: "Twoja karta oceny, zautomatyzowana w trzech krokach"
     steps:
       - title: "Przynieś swoją kartę oceny"
-        body: "Przenosimy Twój obecny arkusz 1:1. Kryteria edytujesz sam, drag & drop; nowe kryterium dodasz w kilkanaście minut, bez zgłoszenia do dostawcy."
+        body: "Przenosimy Twój obecny arkusz 1:1. Kryteria edytujesz sam, metodą przeciągnij i upuść; nowe kryterium dodasz w kilkanaście minut, bez zgłoszenia do dostawcy."
       - title: "AI ocenia każdą rozmowę"
         body: "Według Twoich kryteriów, kontekstowo: kompletność pytań, prezentacja oferty, poprawne zamknięcie — nie dopasowanie słów kluczowych. Punktacja z uzasadnieniem ok. 30–60 s po rozmowie."
       - title: "Coachuj na danych"
@@ -65,7 +65,7 @@ sections:
       - "<strong>100% rozmów ocenionych</strong> — ręczna kontrola obejmuje ~1–2%"
       - "Auto-QA kosztuje <strong>~20% kosztu</strong> ręcznego odsłuchu (≈80% redukcji)"
       - "Typowa zmiana: <strong>~10 odsłuchujących → 1–2 analityków</strong> na gotowych scorecardach"
-      - "Twoja karta oceny przeniesiona <strong>1:1</strong>, edycja <strong>drag & drop</strong>"
+      - "Twoja karta oceny przeniesiona <strong>1:1</strong>, edycja <strong>metodą przeciągnij i upuść</strong>"
       - "Punktacja z uzasadnieniem <strong>~30–60 s</strong> po zakończeniu rozmowy"
       - "<strong>Hosting w UE lub on-premise</strong>; od 0,20 zł/min"
 
@@ -101,10 +101,10 @@ sections:
       - value: "~80%"
         label: "Redukcja kosztu QA"
         sub: "vs. ręczna baseline"
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
-      - value: "1 000+"
-        label: "Agentów łącznie"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
     caseNote: "<strong>Case anonimizowany:</strong> przy pełnym pokryciu okazało się, że konsultanci wspominali o promocji tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Próbka 2% w ogóle tego nie widziała. Koszt zespołu QA spadł do <strong>~20%</strong> poziomu ręcznego odsłuchu."
 
   - type: pricing-teaser
@@ -118,7 +118,7 @@ sections:
       - q: "Co to jest auto-QA?"
         a: "Automatyczna kontrola jakości: AI ocenia każdą rozmowę według Twoich kryteriów zamiast człowieka przesłuchującego próbkę. Punktacja przychodzi z uzasadnieniem podpiętym do transkryptu."
       - q: "Czy możemy zachować obecną kartę oceny?"
-        a: "Tak — przenosimy ją 1:1, bez upraszczania. Kryteria edytujesz sam metodą drag & drop, nowe dodasz w kilkanaście minut."
+        a: "Tak — przenosimy ją 1:1, bez upraszczania. Kryteria edytujesz sam metodą przeciągnij i upuść, nowe dodasz w kilkanaście minut."
       - q: "Czy zespół QA jest jeszcze potrzebny?"
         a: "Tak, ale inaczej: zamiast ~10 osób odsłuchujących próbki pracuje 1–2 analityków na gotowych scorecardach — kalibrują kryteria, coachują konsultantów, audytują przypadki graniczne."
       - q: "Jak AI radzi sobie z kontekstem — ironią, przerywaniem, dialektami?"

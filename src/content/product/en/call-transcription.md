@@ -88,10 +88,10 @@ sections:
   - type: results-band
     heading: "Proven at production scale"
     stats:
-      - value: "10M+"
+      - value: "1B+"
         label: "Minutes transcribed & analyzed"
-      - value: "1,000+"
-        label: "Agents in total"
+      - value: "1,700+"
+        label: "Agents at a single client"
       - value: "6+"
         label: "Active customers"
     caseNote: "Transcripts feed QA at <strong>~20% of manual review cost</strong>, and topic analysis on transcripts cut abandoned calls at one client by <strong>20%</strong>."

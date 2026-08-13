@@ -1,7 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { alternatesFor, SITE_URL } from '../data/i18n.ts';
+import { hreflangFor, SITE_URL } from '../data/i18n.ts';
 
 interface Props {
   lang: 'pl' | 'en';
@@ -14,12 +14,8 @@ interface Props {
 const { lang, title, description, currentPath, ogImage } = Astro.props;
 const htmlLang = lang;
 
-const alternates = currentPath
-  ? alternatesFor(currentPath, lang)
-  : { en: '/', pl: '/pl/' };
 const canonicalUrl = `${SITE_URL}${currentPath ?? '/'}`;
-const enUrl = `${SITE_URL}${alternates.en}`;
-const plUrl = `${SITE_URL}${alternates.pl}`;
+const hreflangs = hreflangFor(currentPath ?? (lang === 'pl' ? '/pl/' : '/'), lang);
 const ogImageUrl = ogImage
   ? (ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`)
   : `${SITE_URL}/assets/hero-dashboard-custom.png`;
@@ -84,11 +80,22 @@ const softwareApplicationSchema = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="pl" href={plUrl} />
-    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/`} />
+    {hreflangs.map((h) => (
+      <link rel="alternate" hreflang={h.hreflang} href={`${SITE_URL}${h.href}`} />
+    ))}
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(softwareApplicationSchema)} />
+    <!-- Consent Mode v2 — must run BEFORE gtag/js so nothing is stored pre-consent -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6396RL0EK"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -99,7 +106,7 @@ const softwareApplicationSchema = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
     <style is:global>
@@ -128,7 +135,7 @@ const softwareApplicationSchema = {
         font-family: Inter, system-ui, sans-serif;
         line-height: 1.6;
       }
-      h1, h2, h3, h4 { font-family: Play, Inter, sans-serif; letter-spacing: -0.01em; }
+      h1, h2, h3, h4 { font-family: Sora, Inter, sans-serif; letter-spacing: -0.01em; }
       a { color: var(--primary); }
       img { max-width: 100%; height: auto; }
       .inoro-container {

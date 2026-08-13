@@ -88,10 +88,10 @@ sections:
   - type: results-band
     heading: "Sprawdzone na produkcji"
     stats:
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Transkrybowanych minut"
-      - value: "1 000+"
-        label: "Agentów łącznie"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
       - value: "6+"
         label: "Aktywnych klientów"
     caseNote: "Transkrypty zasilają kontrolę jakości za <strong>~20% kosztu</strong> ręcznego odsłuchu · case: analiza transkryptów skróciła proces weryfikacji — <strong>−20% porzuconych połączeń</strong>."
@@ -123,9 +123,6 @@ sections:
       - title: "Transkrypcja audio na tekst — metody i narzędzia"
         body: "Przegląd technologii i decyzja dla contact center."
         href: "/pl/wiedza/transkrypcja-audio-na-tekst/"
-      - title: "RODO a nagrywanie rozmów"
-        body: "Kiedy nagrywanie jest legalne i jakie są obowiązki."
-        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
       - title: "Słownik"
         body: "STT, diaryzacja i pokrewne pojęcia."
         href: "/pl/wiedza/slownik/"

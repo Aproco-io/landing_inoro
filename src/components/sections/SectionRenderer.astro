@@ -74,7 +74,7 @@ const { sections, lang, breadcrumbs } = Astro.props;
     case 'cta-band':
       return <CtaBandSection {...s} />;
     case 'pricing-plans':
-      return <PricingPlansSection {...s} />;
+      return <PricingPlansSection {...s} lang={lang} />;
     case 'roi-calculator':
       return <RoiCalculatorSection {...s} lang={lang} />;
     case 'rich-body':

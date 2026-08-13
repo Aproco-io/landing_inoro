@@ -27,7 +27,7 @@ sections:
     cards:
       - icon: "📞"
         title: "Konektory natywne"
-        body: "Focus Telecom, Genesys, Avaya, Cisco, Amazon Connect — nagrania płyną automatycznie, bez pośredników."
+        body: "Genesys, Avaya, Cisco — nagrania płyną automatycznie, bez pośredników."
       - icon: "🔌"
         title: "REST API"
         body: "Wysyłaj nagrania i metadane programistycznie z dowolnego dialera, centrali czy platformy nagrywającej; to samo API wystawia wszystkie wyniki."
@@ -55,7 +55,7 @@ sections:
     bullets:
       - "Wdrożenie w <strong>1 dzień</strong> (typowo)"
       - "<strong>Zero zmian dla konsultantów</strong> — działa w tle na nagraniach"
-      - "Natywnie: <strong>Focus Telecom · Genesys · Avaya · Cisco · Amazon Connect</strong>; reszta przez <strong>API/SFTP</strong>"
+      - "Natywnie: <strong>Genesys · Avaya · Cisco</strong>; reszta przez <strong>API/SFTP</strong>"
       - "Wyniki: <strong>Power BI/Tableau, webhooki, REST API</strong>"
       - "Logowanie: <strong>SSO (SAML 2.0)</strong>, dostęp per rola"
       - "Wdrożenie: <strong>SaaS lub w pełni on-premise</strong>"
@@ -81,12 +81,12 @@ sections:
   - type: results-band
     heading: "Sprawdzone w praktyce"
     stats:
-      - value: "10 mln+"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
         sub: "na produkcji"
-      - value: "1 000+"
-        label: "Agentów łącznie"
-        sub: "wdrożenia produkcyjne"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
+        sub: "skala między zespołami"
       - value: "SaaS + on-prem"
         label: "Oba modele na produkcji"
     caseNote: "Wdrożenia produkcyjne SaaS i on-premise · duże operacje wieloprojektowe podłączone przez istniejącą infrastrukturę — bez zmiany telefonii, w 1 dzień i bez zmian po stronie konsultantów."
@@ -128,9 +128,6 @@ sections:
       - title: "Dashboardy i raporty call center"
         body: "Szablony i best-practice."
         href: "/pl/wiedza/dashboard-call-center/"
-      - title: "RODO a nagrywanie rozmów"
-        body: "Kiedy nagrywanie jest legalne."
-        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
 
   - type: explore-platform
     heading: "Poznaj platformę"

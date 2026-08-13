@@ -33,7 +33,6 @@ export const MENU_PL: MenuItem[] = [
     children: [
       { label: 'Wskaźniki (KPI) jakości obsługi', href: '/pl/wiedza/wskazniki-call-center/' },
       { label: 'Dashboardy i raporty', href: '/pl/wiedza/dashboard-call-center/' },
-      { label: 'RODO a nagrywanie rozmów', href: '/pl/wiedza/rodo-nagrywanie-rozmow/' },
       { label: 'AI w call center', href: '/pl/wiedza/ai-w-call-center/' },
       { label: 'Poradniki (czym jest…)', href: '/pl/wiedza/czym-jest-analiza-rozmow/' },
       { label: 'Słownik', href: '/pl/wiedza/slownik/' },

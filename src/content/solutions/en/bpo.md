@@ -1,18 +1,18 @@
 ---
 title: "White-Label Conversation Analytics for BPOs"
-description: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,000+ agents in production."
+description: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
 lang: "en"
 slug: "/solutions/bpo/"
 translationKey: "solutions-bpo"
 order: 10
 seo:
   metaTitle: "White-Label Conversation Analytics for BPOs | InOro"
-  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,000+ agents in production."
+  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
 sections:
   - type: hero
     badge: "White-label"
     heading: "Your brand on the analytics your clients are asking for"
-    subheading: "InOro is the only conversation-analytics platform with full white-label: AI quality scoring, dashboards and client-ready reports for 100% of calls — delivered under your logo, at per-minute prices that scale with your volume."
+    subheading: "InOro is a conversation-analytics platform with full white-label: AI quality scoring, dashboards and client-ready reports for 100% of calls — delivered under your logo, at per-minute prices that scale with your volume."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See pricing", href: "/pricing/" }
 
@@ -65,7 +65,7 @@ sections:
       - "InOro per-minute"
     rows:
       - label: "50 agents × 1,000 min/mo"
-        values: ["€5,000–12,500/mo", "~€2,500/mo"]
+        values: ["annual seat licenses regardless of volume", "~€2,500/mo"]
       - label: "Seasonal ramp-down"
         values: ["you keep paying for seats", "cost falls with volume"]
       - label: "Short client programs"
@@ -76,9 +76,9 @@ sections:
   - type: results-band
     heading: "Proven at BPO scale"
     stats:
-      - value: "1,000+"
-        label: "Agents in total"
-      - value: "10M+"
+      - value: "1,700+"
+        label: "Agents at a single client"
+      - value: "1B+"
         label: "Minutes analyzed"
         sub: "in production"
       - value: "~10 → 1–2"
@@ -104,7 +104,7 @@ sections:
     heading: "Enterprise security by default"
     tiles:
       - title: "EU hosting or on-premise"
-        body: "supports GDPR compliance., DPAs per end client."
+        body: "supports GDPR compliance, DPAs per end client."
       - title: "SSO, SAML 2.0, RBAC per tenant"
         body: "Isolation you can prove to your clients."
       - title: "Full audit logs"
@@ -122,9 +122,9 @@ sections:
       - q: "Can we charge our clients for it?"
         a: "Yes — usage is reported per end client, so you can chargeback at cost or resell at margin. White-label resale is the intended model."
       - q: "What does it cost us?"
-        a: 'From €0.05 per analyzed minute, all analysis included. No per-seat fees, no minimums — 50 agents × 1,000 min/mo ≈ €2,500. <a href="/pricing/">Pricing</a>'
+        a: 'From €0.05 per analyzed minute, all analysis included. No per-seat fees and no hidden platform charges — 50 agents × 1,000 min/mo ≈ €2,500. <a href="/pricing/">Pricing</a>'
       - q: "How fast can we onboard a new client program?"
-        a: "The platform connects to recordings via API, SFTP or native connectors (Genesys, Avaya, Cisco); a new program is a new workspace plus its scorecard — typically Live in 1 day."
+        a: "The platform connects to recordings via API, SFTP or native connectors (Genesys, Avaya, Cisco); a new program is a new workspace plus its scorecard — typically live in 1 day."
       - q: "Do our agents or our clients' systems need to change?"
         a: "No. InOro works post-call on existing recordings; nothing is installed on agent desktops."
 

@@ -12,7 +12,7 @@ sections:
   - type: hero
     badge: "White-label"
     heading: "Twoja marka na analityce, o którą pytają Twoi klienci"
-    subheading: "InOro to jedyna platforma analityki rozmów z pełnym white-label: AI-owa ocena jakości, dashboardy i raporty gotowe dla klienta końcowego — pod Twoim logo, w cenie za minutę, która skaluje się z wolumenem."
+    subheading: "InOro to platforma analityki rozmów z pełnym white-label: AI-owa ocena jakości, dashboardy i raporty gotowe dla klienta końcowego — pod Twoim logo, w cenie za minutę, która skaluje się z wolumenem."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
@@ -65,7 +65,7 @@ sections:
       - "InOro za minutę"
     rows:
       - label: "50 agentów × 1 000 min/mies."
-        values: ["21 000–53 000 zł/mies.", "~10 000 zł/mies."]
+        values: ["roczne licencje niezależne od wolumenu", "~10 000 zł/mies."]
       - label: "Sezonowy spadek"
         values: ["płacisz za puste stanowiska", "koszt spada z wolumenem"]
       - label: "Krótkie projekty klienckie"
@@ -76,9 +76,9 @@ sections:
   - type: results-band
     heading: "Sprawdzone na skali BPO"
     stats:
-      - value: "1 000+"
-        label: "Agentów łącznie"
-      - value: "10 mln+"
+      - value: "1 700+"
+        label: "Agentów u jednego klienta"
+      - value: "1 mld+"
         label: "Przeanalizowanych minut"
       - value: "~10 → 1–2"
         label: "Zmiana zespołu QA"
@@ -103,7 +103,7 @@ sections:
     heading: "Bezpieczeństwo w standardzie"
     tiles:
       - title: "Hosting w UE lub on-premise"
-        body: "wspiera zgodność z RODO., umowy powierzenia per klient końcowy."
+        body: "wspiera zgodność z RODO, umowy powierzenia per klient końcowy."
       - title: "SSO, SAML 2.0, RBAC per tenant"
         body: "Izolacja, którą pokażesz klientom."
       - title: "Pełne logi audytowe"
@@ -121,7 +121,7 @@ sections:
       - q: "Czy możemy pobierać za to opłaty od klientów?"
         a: "Tak — zużycie jest raportowane per klient końcowy: refakturujesz po koszcie albo odsprzedajesz z marżą. White-label jest do tego stworzony."
       - q: "Ile nas to kosztuje?"
-        a: 'Od 0,20 zł za analizowaną minutę, cała analiza w cenie. Bez opłat za stanowisko, bez minimów — 50 agentów × 1 000 min/mies. ≈ 10 000 zł. <a href="/pl/cennik/">Cennik</a>'
+        a: 'Od 0,20 zł za analizowaną minutę, cała analiza w cenie. Bez opłat za stanowisko i bez opłat platformowych — 50 agentów × 1 000 min/mies. ≈ 10 000 zł. <a href="/pl/cennik/">Cennik</a>'
       - q: "Jak szybko podłączymy nowy projekt kliencki?"
         a: "Nagrania przez API, SFTP lub konektory (Genesys, Avaya, Cisco); nowy projekt to nowy workspace plus jego karta oceny — zwykle 1 dzień."
       - q: "Czy nasi konsultanci lub systemy klientów muszą się zmieniać?"

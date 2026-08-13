@@ -11,8 +11,8 @@ seo:
 sections:
   - type: hero
     badge: "Sprzedaż telefoniczna"
-    heading: "Twój najlepszy handlowiec kończy więcej. Teraz dowiesz się, jak."
-    subheading: "InOro mierzy to, co naprawdę dzieje się w rozmowach sprzedażowych — zgodność ze skryptem, obsługę obiekcji, złożone i pominięte oferty — na 100% połączeń. Wiesz konkretnie, co Twoi najlepsi handlowcy robią inaczej — i możesz to pokazać reszcie zespołu na prawdziwych przykładach."
+    heading: "Dowiedz się, co działa w najlepszych rozmowach — i wykorzystaj to w całym zespole"
+    subheading: "InOro analizuje strukturę rozmów, sposób reagowania na obiekcje oraz elementy wspólne dla rozmów zakończonych sprzedażą. Dzięki temu coaching opiera się na konkretnych przykładach i jest dopasowany do potrzeb każdego handlowca. Dobre praktyki najlepszych osób stają się standardem całego zespołu."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
@@ -96,11 +96,11 @@ sections:
       - q: "Czy to coś jak Gong?"
         a: "Ten sam pomysł, inna arena: Gong celuje w spotkania B2B i pipeline; InOro jest zbudowane pod wysokowolumenową telesprzedaż i call center — cena za minutę, karty QA, hosting w UE."
       - q: "Czy może oceniać według naszego skryptu sprzedażowego?"
-        a: "Tak — Twój skrypt sprzedażowy staje się kartą oceny, przeniesioną 1:1; kryteria edytujesz drag & drop, gdy skrypt się zmienia."
+        a: "Tak — Twój skrypt sprzedażowy staje się kartą oceny, przeniesioną 1:1; kryteria edytujesz metodą przeciągnij i upuść, gdy skrypt się zmienia."
       - q: "Jak znajduje pominięte okazje?"
         a: "Wykrywa, gdzie wymagane oferty lub propozycje nie padły, i koreluje z wynikami — jak w case promocji (60% wzmianek / 92% domknięć, gdy padła)."
       - q: "Czy handlowcy poczują się inwigilowani?"
-        a: 'Zmiana idzie z „wyrywkowych łapanek” na te same zasady dla wszystkich: każda rozmowa, te same kryteria, widoczne uzasadnienia, biblioteka wzorcowych rozmów do rozwoju. Większość woli uczciwe 100% od losowych 2%.'
+        a: 'Zmiana idzie z „wyrywkowych łapanek” na te same zasady dla wszystkich: każda rozmowa, te same kryteria, widoczne uzasadnienia, biblioteka wzorcowych rozmów do rozwoju. Większość woli uczciwe 100% od wyrywkowej próbki.'
       - q: "Jak szybko będą pierwsze wnioski?"
         a: "Wdrożenie 1 dzień; pierwszy raport ze skryptem kilka dni po podłączeniu nagrań. 30-dniowy pilotaż na prawdziwych rozmowach."
 

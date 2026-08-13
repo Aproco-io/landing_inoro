@@ -1,13 +1,13 @@
 ---
 title: "Pricing — €0.05 per Analyzed Minute, Everything Included"
-description: "One per-minute price with transcription and full AI analysis included. No per-seat fees, no minimums, 30-day free pilot. 50 agents × 1,000 min ≈ €2,500/mo."
+description: "One per-minute price with transcription and full AI analysis included. No per-seat fees and no hidden platform charges, 30-day free pilot. 50 agents × 1,000 min ≈ €2,500/mo."
 lang: "en"
 slug: "/pricing/"
 translationKey: "pricing"
 order: 10
 seo:
   metaTitle: "Pricing — €0.05 per Analyzed Minute, Everything Included | InOro"
-  metaDescription: "One per-minute price with transcription and full AI analysis included. No per-seat fees, no minimums, 30-day free pilot. 50 agents × 1,000 min ≈ €2,500/mo."
+  metaDescription: "One per-minute price with transcription and full AI analysis included. No per-seat fees and no hidden platform charges, 30-day free pilot. 50 agents × 1,000 min ≈ €2,500/mo."
 plans: []
 sections:
   - type: hero
@@ -48,7 +48,7 @@ sections:
       - "InOro per-minute"
     rows:
       - label: "50 agents × 1,000 min/mo"
-        values: ["€5,000–12,500/mo", "~€2,500/mo"]
+        values: ["annual seat licenses regardless of volume", "~€2,500/mo"]
       - label: "Seasonal ramp-down"
         values: ["you pay for empty seats", "cost follows volume"]
       - label: "Part-time & rotating agents"
@@ -57,17 +57,6 @@ sections:
         values: ['analytics often "Enterprise only"', "everything in one price"]
       - label: "Pilot"
         values: ["negotiate a contract first", "30 days free"]
-
-  - type: how-it-works
-    kicker: "Pilot → production"
-    heading: "From pilot to production"
-    steps:
-      - title: "Days 1–7"
-        body: "Connect recordings (API/SFTP/native), map your scorecard 1:1."
-      - title: "Days 8–30"
-        body: "InOro analyzes your real traffic; you check accuracy, dashboards and findings on your own calls."
-      - title: "Day 30"
-        body: "Keep the setup and switch to per-minute billing — or walk away, no obligation."
 
   - type: security-band
     heading: "Enterprise security in every plan"

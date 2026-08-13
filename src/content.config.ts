@@ -194,8 +194,6 @@ const roiCalculatorSection = z.object({
   heading: z.string().optional(),
   perMinutePrice: z.number(),
   currency: z.string().default('€'),
-  perSeatLow: z.number().optional(),
-  perSeatHigh: z.number().optional(),
 });
 
 const richBodySection = z.object({

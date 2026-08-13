@@ -11,7 +11,7 @@ seo:
 sections:
   - type: hero
     badge: "BFSI · Collections"
-    heading: "Every regulated call, checked. Every violation, visible the same day."
+    heading: "Compliance support on 100% of regulated calls — violations flagged the same day"
     subheading: "In finance and collections, one missed consent clause is a regulatory finding waiting to happen. InOro checks 100% of calls for procedure and compliance violations — instead of hoping the audit sample looks like the rest."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "See security details", href: "/security/" }

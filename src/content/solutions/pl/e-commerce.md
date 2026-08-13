@@ -73,7 +73,7 @@ sections:
       - label: "Opóźnienie"
         values: ["dni–tygodnie", "ten sam dzień"]
       - label: "Szczyt sezonu"
-        values: ["response rate spada", "pokrycie bez zmian"]
+        values: ["odsetek odpowiedzi spada", "pokrycie bez zmian"]
 
   - type: ai-chat
     heading: "Zapytaj, co klienci mówili w tym tygodniu"
@@ -105,7 +105,7 @@ sections:
       - q: "Które rozmowy analizuje — obsługę, sprzedaż?"
         a: "Obie, plus rezerwacje i reklamacje; karty ocen konfiguruje się per linia biznesowa."
       - q: "Ile to kosztuje przy operacji sezonowej?"
-        a: 'Od 0,20 zł za analizowaną minutę, bez opłat za stanowisko, bez minimów — koszt podąża za wolumenem rozmów. <a href="/pl/cennik/">Cennik</a>'
+        a: 'Od 0,20 zł za analizowaną minutę, bez opłat za stanowisko i bez opłat platformowych — koszt podąża za wolumenem rozmów. <a href="/pl/cennik/">Cennik</a>'
 
   - type: related-resources
     heading: "Zgłęb temat"

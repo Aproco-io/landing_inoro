@@ -11,7 +11,7 @@ seo:
 sections:
   - type: hero
     badge: "BFSI · Windykacja"
-    heading: "Każda regulowana rozmowa sprawdzona. Każde naruszenie widoczne tego samego dnia."
+    heading: "Wsparcie zgodności na 100% regulowanych rozmów — naruszenia widoczne tego samego dnia"
     subheading: "W finansach i windykacji jedna pominięta klauzula to gotowe ustalenie z kontroli. InOro sprawdza 100% rozmów pod kątem naruszeń procedur i zgodności — zamiast liczyć, że próbka do audytu wygląda jak reszta."
     primaryCta: { label: "Umów demo", href: "/pl/#demo" }
     secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/security/" }
@@ -125,9 +125,6 @@ sections:
   - type: related-resources
     heading: "Zgłęb temat"
     cards:
-      - title: "RODO a nagrywanie rozmów"
-        body: "Kiedy nagrywanie jest legalne i jakie są obowiązki."
-        href: "/pl/wiedza/rodo-nagrywanie-rozmow/"
       - title: "Wskaźniki (KPI) jakości obsługi"
         body: "Metryki jakości w operacjach regulowanych."
         href: "/pl/wiedza/wskazniki-call-center/"

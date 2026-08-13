@@ -57,7 +57,7 @@ sections:
         body: "Business users need answers without an analyst layer (ask-your-calls); GDPR/EU residency or on-prem is non-negotiable; cost must follow volume; you resell analytics to clients."
 
   - type: pricing-teaser
-    body: "<strong>€0.05 per analyzed minute</strong>. No per-seat fees, no minimums, everything included."
+    body: "<strong>€0.05 per analyzed minute</strong>. No per-seat fees and no hidden platform charges, everything included."
     linkText: "See pricing"
     linkHref: "/pricing/"
 

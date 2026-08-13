@@ -12,7 +12,7 @@ sections:
   - type: hero
     badge: "No rip & replace"
     heading: "InOro plugs into the call center you already have"
-    subheading: "No telephony migration, nothing installed on agent desktops, no new tools for your team to learn. InOro connects to your recordings, analyzes them, and pushes results wherever you work — Live in 1 day."
+    subheading: "No telephony migration, nothing installed on agent desktops, no new tools for your team to learn. InOro connects to your recordings, analyzes them, and pushes results wherever you work — live in 1 day."
     primaryCta: { label: "Book a demo", href: "/demo/" }
     secondaryCta: { label: "Talk to an engineer", href: "/demo/" }
 
@@ -81,10 +81,10 @@ sections:
   - type: results-band
     heading: "Battle-tested at scale"
     stats:
-      - value: "10M+"
+      - value: "1B+"
         label: "Minutes analyzed"
-      - value: "1,000+"
-        label: "Agents in total"
+      - value: "1,700+"
+        label: "Agents at a single client"
       - value: "SaaS + on-prem"
         label: "Both models in production"
     caseNote: "Deployments running both SaaS and fully on-premise; large multi-program operations connected through existing infrastructure without touching telephony."
