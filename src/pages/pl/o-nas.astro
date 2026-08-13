@@ -1,0 +1,53 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import BlufSection from '../../components/sections/BlufSection.astro';
+import RichBodySection from '../../components/sections/RichBodySection.astro';
+import CtaBandSection from '../../components/sections/CtaBandSection.astro';
+import LogoBarSection from '../../components/sections/LogoBarSection.astro';
+---
+<PageLayout
+  lang="pl"
+  title="O nas — InOro tworzą praktycy contact center | InOro"
+  description="InOro to platforma analizy rozmów tworzona przez praktyków contact center w Aproco. Hosting w UE, rozliczenie za minutę, opcja on-premise."
+  currentPath="/pl/o-nas/"
+>
+  <HeroSection
+    badge="O nas"
+    heading="Tworzone przez praktyków contact center"
+    subheading="InOro to platforma analizy rozmów zbudowana w Europie, wyceniana według realnego zużycia i projektowana z myślą o ludziach, którzy na co dzień prowadzą operacje."
+    breadcrumbs={[{ label: 'Strona główna', href: '/pl/' }, { label: 'O nas' }]}
+  />
+
+  <BlufSection
+    term="InOro"
+    body="to platforma analizy rozmów należąca do <strong>Aproco</strong>. Pomagamy contact center, firmom BPO i operacjom regulowanym analizować 100% rozmów — z rozliczeniem za minutę, wdrożeniem w UE lub on-premise i nowoczesnym stackiem opartym o duże modele językowe. Zespół, który za tym stoi, od lat buduje oprogramowanie dla contact center i wewnątrz nich."
+  />
+
+  <LogoBarSection lang="pl" />
+
+  <RichBodySection body={`
+    <h2>Dla kogo to budujemy</h2>
+    <p>Dla osób prowadzących contact center, kierowników jakości, specjalistów compliance i założycieli firm BPO. Jeśli Twoja praca zależy od tego, czy wiesz, co naprawdę dzieje się w rozmowach z klientami — a nie co pokazuje wyrywkowa próbka — budujemy to dla Ciebie.</p>
+    <h2>Czego nie zrobimy</h2>
+    <ul>
+      <li>Nie narzucimy licencji za stanowisko firmie, która rozlicza się wolumenem.</li>
+      <li>Nie zamkniemy Twoich danych głosowych w chmurze poza UE, kiedy regulator wymaga Europy.</li>
+      <li>Nie schowamy analityki za progiem „tylko Enterprise" — każda funkcja jest w tej samej cenie za minutę.</li>
+      <li>Nie sprzedamy Ci pakietu, którego nie potrzebujesz. InOro to wyłącznie warstwa analityczna nad stackiem, który już masz.</li>
+    </ul>
+    <h2>Gdzie działamy</h2>
+    <p>Domyślnie hosting w Unii Europejskiej. Pełne wdrożenie on-premise dla zespołów, które potrzebują trzymać audio, transkrypty i wyniki wewnątrz własnej infrastruktury. Wspieramy zgodność z RODO, pracujemy zgodnie z praktykami spójnymi z ISO 27001, nie trenujemy modeli na danych klientów bez ich zgody.</p>
+    <h2>Ludzie</h2>
+    <p>Autorem i opiekunem InOro jest <strong>Adam Sipowicz</strong>, współzałożyciel, oraz zespół Aproco. Treści w naszej sekcji Wiedza piszą osoby, które prowadziły operacje, w których pomagamy — nie dział marketingu.</p>
+    <h2>Kontakt</h2>
+    <p>Najszybszy sposób, żeby sprawdzić, czy InOro pasuje do Twojej operacji: <a href="/pl/demo/">umów 30-minutowe demo</a> na własnych rozmowach. Albo napisz na <a href="mailto:contact@inoro.ai">contact@inoro.ai</a>.</p>
+  `} />
+
+  <CtaBandSection
+    heading="Zobacz InOro na własnych rozmowach"
+    body="30-minutowe demo. 30-dniowy bezpłatny pilotaż."
+    primaryCta={{ label: "Umów demo", href: "/pl/demo/" }}
+    secondaryCta={{ label: "Zobacz cennik", href: "/pl/cennik/" }}
+  />
+</PageLayout>

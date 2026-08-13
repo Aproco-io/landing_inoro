@@ -33,6 +33,12 @@ const t = lang === 'pl'
         { label: 'Słownik', href: '/pl/wiedza/slownik/' },
         { label: 'Blog', href: '/pl/wiedza/blog/' },
       ],
+      companyLinks: [
+        { label: 'O nas', href: '/pl/o-nas/' },
+        { label: 'Bezpieczeństwo', href: '/pl/bezpieczenstwo/' },
+        { label: 'Cennik', href: '/pl/cennik/' },
+        { label: 'Umów demo', href: '/pl/demo/' },
+      ],
     }
   : {
       tagline: 'AI-powered conversation intelligence for modern contact centers.',
@@ -62,6 +68,12 @@ const t = lang === 'pl'
         { label: 'AI Analytics', href: '/resources/ai-call-center-analytics/' },
         { label: 'Glossary', href: '/resources/glossary/' },
         { label: 'Blog', href: '/resources/blog/' },
+      ],
+      companyLinks: [
+        { label: 'About', href: '/about/' },
+        { label: 'Security', href: '/security/' },
+        { label: 'Pricing', href: '/pricing/' },
+        { label: 'Book a demo', href: '/demo/' },
       ],
     };
 ---
@@ -93,6 +105,12 @@ const t = lang === 'pl'
           {t.resourceLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
         </ul>
       </div>
+      <div>
+        <h4>{t.company}</h4>
+        <ul>
+          {t.companyLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        </ul>
+      </div>
     </div>
   </div>
   <div class="inoro-footer__bottom">
@@ -112,7 +130,7 @@ const t = lang === 'pl'
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.6fr;
     gap: 3rem;
   }
   .inoro-footer__brand img {
@@ -134,7 +152,7 @@ const t = lang === 'pl'
   }
   .inoro-footer__cols {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
   .inoro-footer__cols h4 {

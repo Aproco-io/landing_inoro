@@ -52,6 +52,12 @@ export const URL_ALTERNATES: Record<string, string> = {
   '/demo/': '/pl/demo/',
   '/pl/demo/': '/demo/',
 
+  // Company pages
+  '/about/': '/pl/o-nas/',
+  '/pl/o-nas/': '/about/',
+  '/security/': '/pl/bezpieczenstwo/',
+  '/pl/bezpieczenstwo/': '/security/',
+
   // Resources / Wiedza
   '/resources/call-center-kpis/': '/pl/wiedza/wskazniki-call-center/',
   '/pl/wiedza/wskazniki-call-center/': '/resources/call-center-kpis/',
@@ -67,8 +73,6 @@ export const URL_ALTERNATES: Record<string, string> = {
   // PL-only: /pl/wiedza/rodo-nagrywanie-rozmow/, /pl/wiedza/transkrypcja-audio-na-tekst/, /pl/wiedza/tajemniczy-klient/
   // EN-only: /resources/agent-performance-analytics/, /resources/best-speech-analytics-software/, /alternatives/*, /compare/*
 
-  // Standalone EN pages (no PL counterpart yet)
-  // /about/, /security/ — omit; hreflangFor() emits a single self-referencing tag.
 
   // Blog
   '/resources/blog/': '/pl/wiedza/blog/',

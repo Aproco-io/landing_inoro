@@ -17,7 +17,7 @@ seo:
   metaDescription: "Jak mierzyć jakość obsługi w call center? Odsłuch 1–2% rozmów to loteria, ankiety mierzą deklaracje. Framework 3 źródeł prawdy i quality score liczony na 100% rozmów."
 updatedDate: 2026-08-12
 authorBio: "strategia AI i sprzedaż enterprise w Aproco (właściciel produktu InOro). 15+ lat w call center, telco i sprzedaży B2B."
-authorUrl: "https://inoro.ai/about/"
+authorUrl: "https://inoro.ai/pl/o-nas/"
 reviewedBy: "Zespół InOro (produkt + wdrożenia)"
 sources:
   - title: "Poll: how many calls do you monitor per agent per month?"

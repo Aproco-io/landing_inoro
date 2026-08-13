@@ -14,7 +14,7 @@ sections:
     heading: "Wsparcie zgodności na 100% regulowanych rozmów — naruszenia widoczne tego samego dnia"
     subheading: "W finansach i windykacji jedna pominięta klauzula to gotowe ustalenie z kontroli. InOro sprawdza 100% rozmów pod kątem naruszeń procedur i zgodności — zamiast liczyć, że próbka do audytu wygląda jak reszta."
     primaryCta: { label: "Umów demo", href: "/pl/demo/" }
-    secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/security/" }
+    secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/pl/bezpieczenstwo/" }
 
   - type: logo-bar
 
@@ -136,5 +136,5 @@ sections:
     heading: "Zrób przegląd zgodności rozmów z ostatniego miesiąca"
     body: "30-minutowe demo — skonfigurujemy na żywo dwie Twoje realne procedury. 30-dniowy bezpłatny pilotaż."
     primaryCta: { label: "Umów demo", href: "/pl/demo/" }
-    secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/security/" }
+    secondaryCta: { label: "Szczegóły bezpieczeństwa", href: "/pl/bezpieczenstwo/" }
 ---
