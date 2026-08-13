@@ -69,6 +69,8 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 > **Konwencja URL (od 2026-07-30):** wszystkie podstrony **polskie** są pod prefiksem `/pl/`, wersje **angielskie** zostają w root (`/`). Wyjątek: home page — polska `/pl/`, angielska `/`.
 >
 > **Ważne:** jeśli w treści `.md` linkujesz do polskiej podstrony, zawsze używaj prefiksu `/pl/` (np. `/pl/analiza-rozmow/`), nie samego `/analiza-rozmow/`. To samo dotyczy `href:` w sekcjach `related-resources`, `capability-grid`, `cta-band` itd.
+>
+> **CTA „Umów demo":** na stronach PL zawsze `/pl/demo/`, na stronach EN `/demo/`. Obie wersje mają własną stronę z formularzem — dzięki temu przełącznik języka i hreflang działają symetrycznie.
 
 ### Money pages (produkt)
 
@@ -128,7 +130,7 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 | URL | Plik |
 |---|---|
 | `/pl/wiedza/wskazniki-call-center/` | `src/content/resources/pl/wskazniki-call-center.md` |
-| `/pl/wiedza/rodo-nagrywanie-rozmow/` | `src/content/resources/pl/rodo-nagrywanie-rozmow.md` |
+| ~~`/pl/wiedza/rodo-nagrywanie-rozmow/`~~ ⚠️ **offline** | `src/content/resources/pl/rodo-nagrywanie-rozmow.md` — `draft: true` do czasu recenzji radcy prawnego |
 | `/pl/wiedza/dashboard-call-center/` | `src/content/resources/pl/dashboard-call-center.md` |
 | `/pl/wiedza/ai-w-call-center/` | `src/content/resources/pl/ai-w-call-center.md` |
 | `/pl/wiedza/czym-jest-analiza-rozmow/` | `src/content/resources/pl/czym-jest-analiza-rozmow.md` |
@@ -156,7 +158,8 @@ Kolumna "URL" = adres na inoro.ai. Kolumna "Plik" = ścieżka do edycji w repo.
 
 | URL | Plik |
 |---|---|
-| `/demo/` | `src/pages/demo.astro` — formularz demo (⚠️ zmiana wymaga Dominika) |
+| `/demo/` | `src/pages/demo.astro` — formularz demo EN (⚠️ zmiana wymaga Dominika) |
+| `/pl/demo/` | `src/pages/pl/demo.astro` — formularz demo PL (⚠️ zmiana wymaga Dominika) |
 | `/about/` | `src/pages/about.astro` — o firmie (⚠️ Dominik) |
 | `/security/` | `src/pages/security.astro` — polityka bezpieczeństwa (⚠️ Dominik) |
 
@@ -186,7 +189,7 @@ sections:
     badge: "Platforma"
     heading: "H1 nagłówek"
     subheading: "Zdanie pod H1"
-    primaryCta: { label: "Umów demo", href: "/demo/" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -231,7 +234,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
   badge: "Platforma"                              # opcjonalne (mała pigułka nad H1)
   heading: "Nagłówek H1"
   subheading: "Podnagłówek pod H1"
-  primaryCta: { label: "CTA", href: "/demo/" }    # opcjonalne
+  primaryCta: { label: "CTA", href: "/pl/demo/" }  # opcjonalne — PL prefix na PL stronach
   secondaryCta: { label: "Cennik", href: "/pl/cennik/" }  # opcjonalne — PL prefix na PL stronach!
   imageSrc: "/assets/screenshot.png"              # opcjonalne (obrazek po prawej)
   imageAlt: "Opis obrazka"                        # jeśli imageSrc
@@ -410,7 +413,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
 - type: cta-band
   heading: "Nagłówek CTA"
   body: "Opis pod nagłówkiem"                    # opcjonalne
-  primaryCta: { label: "Umów demo", href: "/demo/" }
+  primaryCta: { label: "Umów demo", href: "/pl/demo/" }
   secondaryCta: { label: "Cennik", href: "/pl/cennik/" }   # opcjonalne — PL prefix na PL stronach
 ```
 
@@ -427,7 +430,7 @@ Każda sekcja zaczyna się od `- type: nazwa-typu`. Niżej lista typów które m
         - "Feature 1"
         - "Feature 2"
       ctaLabel: "Zamów"
-      ctaHref: "/demo/"
+      ctaHref: "/pl/demo/"
 ```
 
 ### `roi-calculator` — kalkulator ROI (interaktywny)
@@ -626,7 +629,7 @@ sections:
     heading: "Nagłówek"     # 4 spacje przed "heading" (2+2)
     primaryCta:             # 4 spacje
       label: "CTA"          # 6 spacji (4+2)
-      href: "/demo/"
+      href: "/pl/demo/"
 ```
 
 GitHub Web UI renderuje spacje poprawnie — nie musisz się martwić o tabulatory.

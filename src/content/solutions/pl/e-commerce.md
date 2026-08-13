@@ -13,7 +13,7 @@ sections:
     badge: "CX i przychód"
     heading: "Twoi klienci dzwonią. Wiesz, co Ci mówią?"
     subheading: 'Każde „gdzie moje zamówienie” niesie dane o CX, sygnały odejścia i szanse dosprzedaży. InOro czyta 100% takich rozmów — naprawiasz przyczyny zamiast ankietować ułamek klientów i łapiesz przychód, który ucieka między skryptami.'
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
@@ -123,6 +123,6 @@ sections:
   - type: cta-band
     heading: "Usłysz, co Twoi klienci powiedzieli w tym tygodniu"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

@@ -13,7 +13,7 @@ sections:
     badge: "White-label"
     heading: "Twoja marka na analityce, o którą pytają Twoi klienci"
     subheading: "InOro to platforma analityki rozmów z pełnym white-label: AI-owa ocena jakości, dashboardy i raporty gotowe dla klienta końcowego — pod Twoim logo, w cenie za minutę, która skaluje się z wolumenem."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
@@ -143,6 +143,6 @@ sections:
   - type: cta-band
     heading: "Dopisz pozycję „analityka AI” do następnej oferty"
     body: "30-minutowe demo — pokażemy widok white-label dla klienta końcowego. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

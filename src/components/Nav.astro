@@ -11,7 +11,7 @@ const { lang, currentPath = '' } = Astro.props;
 const menu = lang === 'pl' ? MENU_PL : MENU_EN;
 const homeHref = lang === 'pl' ? '/pl/' : '/';
 const ctaLabel = lang === 'pl' ? 'Umów demo' : 'Book a demo';
-const ctaHref = lang === 'pl' ? '/pl/#demo' : '/demo/';
+const ctaHref = lang === 'pl' ? '/pl/demo/' : '/demo/';
 // Language switcher targets: PL button always goes to the PL URL for this
 // page (staying put if we're already on PL); EN button same for EN.
 // alternatesFor() knows the direction based on currentLang, so it never

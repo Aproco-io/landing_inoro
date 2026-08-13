@@ -13,7 +13,7 @@ sections:
     badge: "Warstwa podstawowa"
     heading: "Każda rozmowa w tekście — z podziałem kto co powiedział"
     subheading: "InOro transkrybuje 100% rozmów Twojego call center z rozdzieleniem konsultant/klient i słownictwem dopasowanym do branży. A że transkrypcja to dopiero pierwsza warstwa — każdy transkrypt ma od razu streszczenie, ocenę i temat."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -146,6 +146,6 @@ sections:
   - type: cta-band
     heading: "Zobacz własne rozmowy jako przeszukiwalny tekst"
     body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

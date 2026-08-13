@@ -13,7 +13,7 @@ sections:
     badge: "Silnik platformy"
     heading: "Analiza mowy, która rozumie każdą rozmowę z klientem"
     subheading: "InOro zamienia audio ze 100% połączeń na transkrypcje, sentyment, tematy i oceny jakości — kontekstową AI, która czyta całą rozmowę, a nie listę słów kluczowych. Dane przetwarzane w UE."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: bluf
@@ -165,6 +165,6 @@ sections:
   - type: cta-band
     heading: "Usłysz, co mówi 98% Twoich rozmów"
     body: "30-minutowe demo na Twoich nagraniach. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

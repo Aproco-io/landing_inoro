@@ -47,6 +47,11 @@ export const URL_ALTERNATES: Record<string, string> = {
   '/pricing/': '/pl/cennik/',
   '/pl/cennik/': '/pricing/',
 
+  // Demo (CTA landing — both languages have a dedicated page so the
+  // language switcher and hreflang stay symmetric)
+  '/demo/': '/pl/demo/',
+  '/pl/demo/': '/demo/',
+
   // Resources / Wiedza
   '/resources/call-center-kpis/': '/pl/wiedza/wskazniki-call-center/',
   '/pl/wiedza/wskazniki-call-center/': '/resources/call-center-kpis/',
@@ -63,7 +68,7 @@ export const URL_ALTERNATES: Record<string, string> = {
   // EN-only: /resources/agent-performance-analytics/, /resources/best-speech-analytics-software/, /alternatives/*, /compare/*
 
   // Standalone EN pages (no PL counterpart yet)
-  // /about/, /demo/, /security/ — omit; alternatesFor() falls back to home.
+  // /about/, /security/ — omit; hreflangFor() emits a single self-referencing tag.
 
   // Blog
   '/resources/blog/': '/pl/wiedza/blog/',

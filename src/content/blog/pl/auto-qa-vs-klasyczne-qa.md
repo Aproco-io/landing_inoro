@@ -69,4 +69,4 @@ Auto-QA nie jest wymianą jednego narzędzia na drugie. To zmiana modelu operacy
 
 ---
 
-*Chcesz zobaczyć jak wygląda Auto-QA na Twoich rozmowach? [Umów demo InOro](/pl/#demo).*
+*Chcesz zobaczyć jak wygląda Auto-QA na Twoich rozmowach? [Umów demo InOro](/pl/demo/).*

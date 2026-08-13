@@ -83,4 +83,4 @@ Jeśli w audycie wyszło Ci więcej niż jedno "trzeba by uporządkować", warto
 
 ---
 
-*Zobacz jak InOro pomaga w compliance nagrywania rozmów. [Umów demo](/pl/#demo).*
+*Zobacz jak InOro pomaga w compliance nagrywania rozmów. [Umów demo](/pl/demo/).*

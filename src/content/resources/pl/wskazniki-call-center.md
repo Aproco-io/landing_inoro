@@ -70,6 +70,6 @@ sections:
   - type: cta-band
     heading: "Mierz KPI z treści 100% rozmów"
     body: "Zobacz metryki z treści na własnych nagraniach."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

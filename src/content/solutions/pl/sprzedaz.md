@@ -13,7 +13,7 @@ sections:
     badge: "Sprzedaż telefoniczna"
     heading: "Dowiedz się, co działa w najlepszych rozmowach — i wykorzystaj to w całym zespole"
     subheading: "InOro analizuje strukturę rozmów, sposób reagowania na obiekcje oraz elementy wspólne dla rozmów zakończonych sprzedażą. Dzięki temu coaching opiera się na konkretnych przykładach i jest dopasowany do potrzeb każdego handlowca. Dobre praktyki najlepszych osób stają się standardem całego zespołu."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 
   - type: logo-bar
@@ -120,6 +120,6 @@ sections:
   - type: cta-band
     heading: "Znajdź swój pierwszy raport pominiętych ofert"
     body: "30-minutowe demo na Twoich rozmowach sprzedażowych. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

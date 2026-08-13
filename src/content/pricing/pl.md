@@ -13,8 +13,8 @@ sections:
   - type: hero
     heading: "Płacisz za przeanalizowane rozmowy, nie za stanowiska"
     subheading: "Jedna cena za minutę obejmuje transkrypcję i pełną analizę AI. Wdrożenie techniczne i tryb on-premise są wyceniane osobno w zależności od zakresu."
-    primaryCta: { label: "Indywidualna wycena", href: "/pl/#demo" }
-    secondaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Indywidualna wycena", href: "/pl/demo/" }
+    secondaryCta: { label: "Umów demo", href: "/pl/demo/" }
 
   - type: pricing-plans
     plans:
@@ -33,7 +33,7 @@ sections:
           - "Raporty white-label (BPO)"
           - "Rezydencja danych w UE"
         ctaLabel: "Indywidualna wycena"
-        ctaHref: "/pl/#demo"
+        ctaHref: "/pl/demo/"
 
   - type: roi-calculator
     heading: "Ile to wyjdzie u Ciebie?"
@@ -84,12 +84,12 @@ sections:
       - q: "Co obejmuje 30-dniowy pilotaż?"
         a: "Do 500 nagrań, które nam przekazujesz razem z metadanymi (kampania, typ sprawy, konsultant). Uzgadniamy z Tobą kryteria oceny, przetwarzamy je na naszej infrastrukturze i prezentujemy wyniki w panelu — bezpłatnie. Pilotaż nie obejmuje pełnej integracji technicznej z Twoją telefonią ani jeden-do-jednego przeniesienia całej karty QA — to jest zakres kolejnej fazy."
       - q: "Jak wygląda wycena on-premise?"
-        a: 'Wdrożenia on-premise wyceniamy indywidualnie — <a href="/pl/#demo">umów demo</a> i opowiedz o swojej infrastrukturze.'
+        a: 'Wdrożenia on-premise wyceniamy indywidualnie — <a href="/pl/demo/">umów demo</a> i opowiedz o swojej infrastrukturze.'
       - q: "Czy są rabaty wolumenowe?"
         a: "Cennik zaczyna się od 0,20 zł/min; przy dużych wolumenach poproś o indywidualną wycenę."
 
   - type: cta-band
     heading: "Poproś o wycenę dla swojego wolumenu rozmów"
     body: "30-minutowe demo + indywidualna wycena. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
 ---

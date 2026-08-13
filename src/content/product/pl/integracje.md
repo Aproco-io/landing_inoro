@@ -13,8 +13,8 @@ sections:
     badge: "Bez wymiany systemu"
     heading: "InOro podpina się do call center, które już masz"
     subheading: "Bez migracji telefonii, bez instalacji na stanowiskach konsultantów, bez nowych narzędzi do nauki. InOro łączy się z Twoimi nagraniami, analizuje je i oddaje wyniki tam, gdzie pracujesz — wdrożenie w 1 dzień."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
-    secondaryCta: { label: "Porozmawiaj z inżynierem", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
+    secondaryCta: { label: "Porozmawiaj z inżynierem", href: "/pl/demo/" }
 
   - type: bluf
     body: "InOro to <strong>nakładka, nie zamiennik</strong>: pobiera nagrania rozmów z Twojego obecnego systemu (natywnie z Genesys, Avaya i Cisco; przez REST API lub SFTP z każdego innego), analizuje je po zakończeniu połączeń i zwraca wyniki przez dashboardy, Power BI/Tableau, webhooki i otwarte API."
@@ -148,6 +148,6 @@ sections:
   - type: cta-band
     heading: "Powiedz nam, na czym pracujesz — rozpiszemy połączenie"
     body: "30 minut z inżynierem, plan integracji w cenie. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

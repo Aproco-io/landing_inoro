@@ -13,7 +13,7 @@ sections:
     badge: "Tylko w InOro"
     heading: "Zapytaj swoje rozmowy. Wszystkie."
     subheading: 'Każde pytanie, które chciałbyś zadać swojemu call center — „które rozmowy miały zastrzeżenia do ceny?”, „czemu we wtorek skoczyły reklamacje?” — z odpowiedzią w kilka sekund, ze 100% historii rozmów, po polsku lub angielsku.'
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz, jak działa", href: "#chat" }
 
   - type: bluf
@@ -125,6 +125,6 @@ sections:
   - type: cta-band
     heading: "Zadaj pierwsze pytanie własnym rozmowom"
     body: "30-minutowe demo — przynieś trzy pytania, na które dziś nie umiesz odpowiedzieć. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

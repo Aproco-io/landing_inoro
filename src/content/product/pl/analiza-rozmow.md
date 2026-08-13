@@ -13,7 +13,7 @@ sections:
     badge: "Platforma"
     heading: "Analiza rozmów AI, która słyszy 100% Twoich połączeń"
     subheading: "InOro transkrybuje, ocenia i analizuje każdą rozmowę z klientem — jakość obsługi, ryzyka compliance i sygnały sprzedażowe w jednym panelu, ok. 60 sekund po zakończeniu połączenia. Nie próbka 2%."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
     imageSrc: "/assets/hero-dashboard-custom.png"
     imageAlt: "Panel InOro z pełnym pokryciem rozmów i ocenami QA"
@@ -199,6 +199,6 @@ sections:
   - type: cta-band
     heading: "Zobacz swoje rozmowy oczami AI"
     body: "30-minutowe demo na Twoich rozmowach. 30-dniowy bezpłatny pilotaż."
-    primaryCta: { label: "Umów demo", href: "/pl/#demo" }
+    primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }
 ---

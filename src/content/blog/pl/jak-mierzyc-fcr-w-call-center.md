@@ -71,4 +71,4 @@ Różnica między raportem a rzeczywistością często wynosi 15-20 punktów pro
 
 ---
 
-*Chcesz mierzyć FCR na bazie 100% rozmów, nie ankiet? [Umów demo InOro](/pl/#demo).*
+*Chcesz mierzyć FCR na bazie 100% rozmów, nie ankiet? [Umów demo InOro](/pl/demo/).*
