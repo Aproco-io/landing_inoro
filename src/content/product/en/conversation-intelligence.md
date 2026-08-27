@@ -114,13 +114,13 @@ sections:
   - type: results-band
     heading: "Proven at production scale"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
         sub: "in production"
       - value: "1,700+"
         label: "Agents at a single client"
         sub: "scaling across teams"
-      - value: "6+"
+      - value: "10+"
         label: "Active customers"
         sub: "BPO, BFSI, Retail"
     caseNote: "<strong>Anonymized case:</strong> agents mentioned the current promo in only <strong>60% of calls</strong> — where they did, <strong>92% ended in an order</strong>. Found in week one of full coverage."

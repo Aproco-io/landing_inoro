@@ -102,11 +102,11 @@ sections:
   - type: results-band
     heading: "Sprawdzone na produkcji"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "1 700+"
         label: "Agentów u jednego klienta"
-      - value: "6+"
+      - value: "10+"
         label: "Aktywnych klientów"
     caseNote: "<strong>Case anonimizowany:</strong> analiza tematów pokazała, że proces weryfikacji trwał dłużej, niż wymagały procedury — skrócenie go do części obligatoryjnych dało <strong>−20% porzuconych połączeń</strong>."
 

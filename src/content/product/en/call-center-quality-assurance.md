@@ -103,7 +103,7 @@ sections:
       - value: "~80%"
         label: "QA cost reduction"
         sub: "vs. manual baseline"
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
       - value: "1,700+"
         label: "Agents at a single client"

@@ -64,7 +64,7 @@ sections:
   - type: results-band
     heading: "Post-call, at scale"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
       - value: "~20%"
         label: "Cost of manual QA"

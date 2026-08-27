@@ -1,13 +1,13 @@
 ---
 title: "White-label analityka rozmów dla BPO"
-description: "Oferuj AI-owe QA i dashboardy każdemu klientowi pod własną marką. Multi-tenant, rozliczenie za minutę, billing per klient końcowy."
+description: "Oferuj AI-owe QA i dashboardy każdemu klientowi pod własną marką. Chronimy dane każdego klienta osobno, rozliczenie za minutę, billing per klient końcowy."
 lang: "pl"
 slug: "/pl/rozwiazania/bpo/"
 translationKey: "solutions-bpo"
 order: 10
 seo:
   metaTitle: "White-label analityka rozmów dla BPO | InOro"
-  metaDescription: "Oferuj AI-owe QA i dashboardy każdemu klientowi pod własną marką. Multi-tenant, rozliczenie za minutę, billing per klient końcowy."
+  metaDescription: "Oferuj AI-owe QA i dashboardy każdemu klientowi pod własną marką. Chronimy dane każdego klienta osobno, rozliczenie za minutę, billing per klient końcowy."
 sections:
   - type: hero
     badge: "White-label"
@@ -43,8 +43,8 @@ sections:
         title: "Pełny white-label"
         body: "Twoje logo, kolory, domena. Klient końcowy widzi Twój produkt; InOro pozostaje niewidoczne."
       - icon: "🏢"
-        title: "Multi-tenant"
-        body: "Każdy klient końcowy w izolowanym workspace, z osobnymi uprawnieniami, kartami ocen i dashboardami per projekt."
+        title: "Chronimy Twoje dane"
+        body: "Dane każdego klienta końcowego są od siebie oddzielone — osobne uprawnienia, karty ocen i dashboardy dla każdego projektu."
       - icon: "💰"
         title: "Billing per klient"
         body: "Zużycie raportowane per klient końcowy, gotowe do refaktury lub odsprzedaży z marżą."
@@ -78,7 +78,7 @@ sections:
     stats:
       - value: "1 700+"
         label: "Agentów u jednego klienta"
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "~10 → 1–2"
         label: "Zmiana zespołu QA"
@@ -117,7 +117,7 @@ sections:
       - q: "Czy nasi klienci dowiedzą się, że to InOro?"
         a: "Nie. Pełny white-label: Twoje logo, kolory, domena. InOro to niewidoczna warstwa."
       - q: "Jak rozdzielone są dane naszych klientów?"
-        a: "Każdy klient końcowy działa w izolowanym workspace multi-tenant, z własnymi uprawnieniami, kartami ocen i dashboardami."
+        a: "Dane każdego klienta końcowego są od siebie oddzielone — każdy projekt ma własne uprawnienia, karty ocen i dashboardy, a dostęp do nich kontrolujesz osobno."
       - q: "Czy możemy pobierać za to opłaty od klientów?"
         a: "Tak — zużycie jest raportowane per klient końcowy: refakturujesz po koszcie albo odsprzedajesz z marżą. White-label jest do tego stworzony."
       - q: "Ile nas to kosztuje?"

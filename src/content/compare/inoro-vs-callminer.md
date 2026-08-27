@@ -64,7 +64,7 @@ sections:
   - type: results-band
     heading: "Deployed at scale"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
       - value: "60% → 92%"
         label: "Promo case"

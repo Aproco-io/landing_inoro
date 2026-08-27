@@ -102,11 +102,11 @@ sections:
   - type: results-band
     heading: "Co znajduje pełne pokrycie"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "1 700+"
         label: "Agentów u jednego klienta"
-      - value: "6+"
+      - value: "10+"
         label: "Aktywnych klientów"
     caseNote: "Pełne pokrycie znajduje to, czego próbka nie widzi: u jednego z klientów promocja padała tylko w <strong>60% rozmów</strong> — tam, gdzie padła, <strong>92%</strong> kończyło się zamówieniem. Inny klient skrócił proces weryfikacji po analizie transkryptów — <strong>−20% porzuconych połączeń</strong>. <em>(Anonimizowane wdrożenia produkcyjne.)</em>"
 

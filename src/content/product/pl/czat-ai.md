@@ -64,11 +64,11 @@ sections:
   - type: results-band
     heading: "Zbudowany na danych z produkcji"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "1 700+"
         label: "Agentów u jednego klienta"
-      - value: "6+"
+      - value: "10+"
         label: "Aktywnych klientów"
     caseNote: "Każda odpowiedź jest podpięta do rozmów źródłowych, na których się opiera."
 

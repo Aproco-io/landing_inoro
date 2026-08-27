@@ -101,7 +101,7 @@ sections:
       - value: "~80%"
         label: "Redukcja kosztu QA"
         sub: "vs. ręczna baseline"
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
       - value: "1 700+"
         label: "Agentów u jednego klienta"

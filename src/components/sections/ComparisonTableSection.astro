@@ -60,7 +60,15 @@ const { heading, kicker, columns, rows } = Astro.props;
     border-radius: 0.85rem;
     background: #fff;
   }
-  table { width: 100%; border-collapse: collapse; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  /* Pod tę szerokość kolumny robią się nieczytelne — wtedy zamiast
+     ściskać tekst pozwalamy wrapperowi przewijać się w poziomie. */
+  @media (max-width: 720px) {
+    table { min-width: 560px; }
+  }
   thead th {
     background: #f8fafc;
     color: #64748b;
@@ -84,6 +92,7 @@ const { heading, kicker, columns, rows } = Astro.props;
     text-align: left;
     background: #fff;
     width: 30%;
+    min-width: 9rem;
   }
   tbody td {
     padding: 1rem 1.1rem;
@@ -91,6 +100,8 @@ const { heading, kicker, columns, rows } = Astro.props;
     font-size: 0.95rem;
     border-bottom: 1px solid #f1f5f9;
     vertical-align: top;
+    text-align: left;
+    hyphens: auto;
   }
   tbody td.is-highlight {
     color: #0f172a;
@@ -98,4 +109,20 @@ const { heading, kicker, columns, rows } = Astro.props;
     font-weight: 500;
   }
   tbody tr:last-child th, tbody tr:last-child td { border-bottom: none; }
+
+  @media (max-width: 720px) {
+    .s-compare { padding: 2.5rem 0; }
+    .s-compare__wrap {
+      /* cień na krawędzi sygnalizuje, że jest co przewijać */
+      background:
+        linear-gradient(to right, #fff 30%, rgba(255,255,255,0)),
+        linear-gradient(to right, rgba(255,255,255,0), #fff 70%) 100% 0,
+        radial-gradient(farthest-side at 0 50%, rgba(15,23,42,.12), transparent),
+        radial-gradient(farthest-side at 100% 50%, rgba(15,23,42,.12), transparent) 100% 0;
+      background-repeat: no-repeat;
+      background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+      background-attachment: local, local, scroll, scroll;
+    }
+    thead th, tbody th, tbody td { padding: 0.75rem 0.85rem; font-size: 0.88rem; }
+  }
 </style>

@@ -1,13 +1,13 @@
 ---
 title: "White-Label Conversation Analytics for BPOs"
-description: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
+description: "Offer AI-powered QA and analytics to every client under your own brand. Every client's data kept separate, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
 lang: "en"
 slug: "/solutions/bpo/"
 translationKey: "solutions-bpo"
 order: 10
 seo:
   metaTitle: "White-Label Conversation Analytics for BPOs | InOro"
-  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Multi-tenant, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
+  metaDescription: "Offer AI-powered QA and analytics to every client under your own brand. Every client's data kept separate, per-minute pricing, per-client billing. Proven at 1,700+ agents at a single client."
 sections:
   - type: hero
     badge: "White-label"
@@ -43,8 +43,8 @@ sections:
         title: "Full white-label"
         body: "Your logo, colors and domain. Your client sees your product; InOro stays invisible under the hood."
       - icon: "🏢"
-        title: "Multi-tenant workspaces"
-        body: "Each end client isolated, with separate permissions, scorecards and dashboards per program."
+        title: "We protect your data"
+        body: "Every end client's data is kept separate — its own permissions, scorecards and dashboards per program."
       - icon: "💰"
         title: "Per-client billing"
         body: "Usage segmented per end client, ready for chargeback or margin-priced resale."
@@ -78,7 +78,7 @@ sections:
     stats:
       - value: "1,700+"
         label: "Agents at a single client"
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
         sub: "in production"
       - value: "~10 → 1–2"
@@ -118,7 +118,7 @@ sections:
       - q: "Will our clients know it's InOro?"
         a: "No. Full white-label: your logo, colors and domain. InOro is the invisible layer."
       - q: "How is data separated between our clients?"
-        a: "Each end client runs in an isolated multi-tenant workspace with its own permissions, scorecards and dashboards."
+        a: "Every end client's data is kept separate — each program has its own permissions, scorecards and dashboards, and you control access to each one independently."
       - q: "Can we charge our clients for it?"
         a: "Yes — usage is reported per end client, so you can chargeback at cost or resell at margin. White-label resale is the intended model."
       - q: "What does it cost us?"

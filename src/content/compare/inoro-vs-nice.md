@@ -64,7 +64,7 @@ sections:
   - type: results-band
     heading: "Battle-tested in production"
     stats:
-      - value: "1B+"
+      - value: "10M+"
         label: "Minutes analyzed"
       - value: "1,700+"
         label: "Agents at a single client"

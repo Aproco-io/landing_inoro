@@ -81,7 +81,7 @@ sections:
   - type: results-band
     heading: "Sprawdzone w praktyce"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
         sub: "na produkcji"
       - value: "1 700+"

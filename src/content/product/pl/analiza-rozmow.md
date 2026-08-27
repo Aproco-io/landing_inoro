@@ -114,13 +114,13 @@ sections:
   - type: results-band
     heading: "Sprawdzone na skalę produkcyjną"
     stats:
-      - value: "1 mld+"
+      - value: "10 mln+"
         label: "Przeanalizowanych minut"
         sub: "na produkcji"
       - value: "1 700+"
         label: "Agentów u jednego klienta"
         sub: "skala między zespołami"
-      - value: "6+"
+      - value: "10+"
         label: "Aktywnych klientów"
         sub: "BPO, finanse, retail"
     caseNote: "<strong>Case anonimizowany:</strong> konsultanci wspominali o aktualnej promocji tylko w <strong>60% rozmów</strong> — tam, gdzie promocja padła, <strong>92%</strong> kończyło się zamówieniem. Wykryte w pierwszym tygodniu pełnego pokrycia."
