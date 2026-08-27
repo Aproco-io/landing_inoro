@@ -1,0 +1,85 @@
+---
+interface Props {
+  heading?: string;
+  items: { q: string; a: string }[];
+}
+const { heading, items } = Astro.props;
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((it) => ({
+    '@type': 'Question',
+    name: it.q,
+    acceptedAnswer: { '@type': 'Answer', text: it.a.replace(/<[^>]+>/g, '') },
+  })),
+};
+---
+<section class="s-faq">
+  <div class="inoro-container">
+    <h2>{heading ?? 'FAQ'}</h2>
+    <div class="s-faq__list">
+      {items.map((it, i) => (
+        <details open={i === 0}>
+          <summary>
+            <span>{it.q}</span>
+            <span class="s-faq__chevron" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.02l3.71-3.79a.75.75 0 111.08 1.04l-4.25 4.34a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </span>
+          </summary>
+          <div class="s-faq__answer" set:html={it.a} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
+
+<style>
+  .s-faq { padding: 4rem 0; background: #f8fafc; }
+  .s-faq h2 {
+    font-family: Sora, Inter, sans-serif;
+    max-width: 780px; margin: 0 auto 2rem; text-align: center;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem); color: #0f172a;
+  }
+  .s-faq__list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.6rem; }
+  details {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.7rem;
+    overflow: hidden;
+  }
+  details[open] {
+    border-color: rgba(26, 167, 224, 0.35);
+    box-shadow: 0 10px 24px -18px rgba(15, 23, 42, 0.15);
+  }
+  summary {
+    padding: 1.1rem 1.35rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.45;
+    list-style: none;
+    gap: 1rem;
+  }
+  summary::-webkit-details-marker { display: none; }
+  .s-faq__chevron {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 999px;
+    background: #E8F5FC;
+    color: #1AA7E0;
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  details[open] .s-faq__chevron { transform: rotate(180deg); }
+  .s-faq__answer {
+    padding: 0 1.35rem 1.25rem;
+    color: #475569; font-size: 0.95rem; line-height: 1.65;
+  }
+  .s-faq__answer :global(a) { color: #1AA7E0; }
+</style>

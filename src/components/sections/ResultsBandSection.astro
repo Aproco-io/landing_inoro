@@ -1,0 +1,73 @@
+---
+interface Props {
+  heading?: string;
+  stats: { value: string; label: string; sub?: string }[];
+  caseNote?: string;
+}
+const { heading, stats, caseNote } = Astro.props;
+---
+<section class="s-results">
+  <div class="inoro-container">
+    {heading && <h2>{heading}</h2>}
+    <div class="s-results__grid" data-count={stats.length}>
+      {stats.map((s) => (
+        <div class="s-results__stat">
+          <div class="value">{s.value}</div>
+          <div class="label">{s.label}</div>
+          {s.sub && <div class="sub">{s.sub}</div>}
+        </div>
+      ))}
+    </div>
+    {caseNote && <p class="s-results__case" set:html={caseNote} />}
+  </div>
+</section>
+
+<style>
+  .s-results {
+    padding: 4rem 0;
+    background: #0b1f3d;
+    color: #f8fafc;
+  }
+  .s-results h2 {
+    font-family: Sora, Inter, sans-serif;
+    text-align: center;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0 0 2rem;
+    color: #fff;
+  }
+  .s-results__grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .s-results__stat { text-align: center; }
+  .s-results__stat .value {
+    font-family: Sora, Inter, sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #1AA7E0;
+    line-height: 1.1;
+  }
+  .s-results__stat .label {
+    margin-top: 0.35rem;
+    color: #f8fafc;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .s-results__stat .sub {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+  .s-results__case {
+    margin: 2.5rem auto 0;
+    max-width: 700px;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .s-results__case :global(strong) { color: #fff; }
+</style>

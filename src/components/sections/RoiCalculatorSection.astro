@@ -1,0 +1,144 @@
+---
+interface Props {
+  heading?: string;
+  perMinutePrice: number;
+  currency?: string;
+  lang?: 'pl' | 'en';
+}
+// Per-seat competitor figures were removed deliberately: the ranges were
+// undocumented, so the calculator now estimates InOro cost only.
+const { heading, perMinutePrice, currency = '€', lang = 'en' } = Astro.props;
+const labels = lang === 'pl'
+  ? {
+      agents: 'Liczba agentów',
+      minutes: 'Minuty / agent / miesiąc',
+      inoro: 'Szacowany koszt InOro',
+      note: 'Szacunek na podstawie stawki za przeanalizowaną minutę. Wdrożenie techniczne i tryb on-premise wyceniamy osobno.',
+    }
+  : {
+      agents: 'Agents',
+      minutes: 'Minutes / agent / month',
+      inoro: 'Estimated InOro cost',
+      note: 'Estimate based on the per-analyzed-minute rate. Technical implementation and on-premise mode are quoted separately.',
+    };
+const fmt = (n: number) => `${currency}${Math.round(n).toLocaleString('en-US')}`;
+const defaultAgents = 50;
+const defaultMinutes = 1000;
+const inoroInit = fmt(defaultAgents * defaultMinutes * perMinutePrice);
+---
+<section class="s-roi">
+  <div class="inoro-container">
+    <div class="s-roi__panel">
+      <h2>{heading ?? 'Cost estimate'}</h2>
+      <div class="s-roi__row">
+        <label for="roi-agents">
+          {labels.agents}
+          <input type="number" id="roi-agents" name="roi-agents" value={String(defaultAgents)} min="1" step="1" />
+        </label>
+        <label for="roi-minutes">
+          {labels.minutes}
+          <input type="number" id="roi-minutes" name="roi-minutes" value={String(defaultMinutes)} min="1" step="100" />
+        </label>
+      </div>
+      <div class="s-roi__result s-roi__result--single">
+        <div>
+          <span class="s-roi__label">{labels.inoro}</span>
+          <span class="s-roi__value" id="roi-inoro"
+            data-currency={currency}
+            data-rate={perMinutePrice}>{inoroInit}</span>
+        </div>
+      </div>
+      <p class="s-roi__note">{labels.note}</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function fmt(n: number, cur: string) {
+    return `${cur}${Math.round(n).toLocaleString('en-US')}`;
+  }
+  const agentsEl = document.getElementById('roi-agents') as HTMLInputElement | null;
+  const minEl = document.getElementById('roi-minutes') as HTMLInputElement | null;
+  const inoroEl = document.getElementById('roi-inoro');
+  if (agentsEl && minEl && inoroEl) {
+    const rate = parseFloat(inoroEl.getAttribute('data-rate') || '0.05');
+    const currency = inoroEl.getAttribute('data-currency') || '€';
+    const recalc = () => {
+      const agents = parseInt(agentsEl.value || '0', 10);
+      const mins = parseInt(minEl.value || '0', 10);
+      inoroEl.textContent = fmt(agents * mins * rate, currency);
+    };
+    agentsEl.addEventListener('input', recalc);
+    minEl.addEventListener('input', recalc);
+    recalc();
+  }
+</script>
+
+<style>
+  .s-roi { padding: 4rem 0; background: #fff; }
+  .s-roi__panel {
+    max-width: 780px; margin: 0 auto;
+    background: #E8F5FC;
+    border: 1px solid rgba(26, 167, 224, 0.25);
+    border-radius: 1rem;
+    padding: 2.25rem 2.25rem;
+  }
+  .s-roi__panel h2 {
+    font-family: Sora, Inter, sans-serif;
+    text-align: center;
+    margin: 0 0 1.5rem;
+    color: #0f172a;
+    font-size: 1.35rem;
+  }
+  .s-roi__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) { .s-roi__row { grid-template-columns: 1fr; } }
+  .s-roi__row label {
+    display: flex; flex-direction: column;
+    gap: 0.35rem;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .s-roi__row input {
+    padding: 0.75rem 0.85rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    font-size: 1rem;
+    color: #0f172a;
+    font-family: inherit;
+  }
+  .s-roi__row input:focus { outline: 2px solid #1AA7E0; outline-offset: -1px; border-color: transparent; }
+  .s-roi__result {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 600px) { .s-roi__result { grid-template-columns: 1fr; } }
+  .s-roi__result--single { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .s-roi__note { margin: 1rem 0 0; text-align: center; color: #64748b; font-size: 0.8rem; line-height: 1.5; }
+  .s-roi__result > div {
+    background: #fff;
+    border-radius: 0.7rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid #e2e8f0;
+  }
+  .s-roi__label {
+    display: block;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  .s-roi__value {
+    font-family: Sora, Inter, sans-serif;
+    color: #0E8AC1;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .s-roi__value.muted { color: #94a3b8; font-size: 1.15rem; }
+</style>

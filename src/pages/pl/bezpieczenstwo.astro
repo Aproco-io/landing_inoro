@@ -1,0 +1,81 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import HeroSection from '../../components/sections/HeroSection.astro';
+import BlufSection from '../../components/sections/BlufSection.astro';
+import SecurityBandSection from '../../components/sections/SecurityBandSection.astro';
+import RichBodySection from '../../components/sections/RichBodySection.astro';
+import FaqSection from '../../components/sections/FaqSection.astro';
+import CtaBandSection from '../../components/sections/CtaBandSection.astro';
+---
+<PageLayout
+  lang="pl"
+  title="Bezpieczeństwo i suwerenność danych — InOro"
+  description="Hosting w UE lub on-premise, wsparcie zgodności z RODO, SSO/SAML, RBAC, logi audytowe, anonimizacja danych wrażliwych. Pełny obraz bezpieczeństwa InOro."
+  currentPath="/pl/bezpieczenstwo/"
+>
+  <HeroSection
+    badge="Bezpieczeństwo"
+    heading="Bezpieczeństwo klasy enterprise w standardzie — a on-premise, gdy standard nie wystarcza"
+    subheading="Hosting w UE, wsparcie zgodności z RODO, SSO i logi audytowe są w każdym wdrożeniu. Kiedy dane nie mogą opuścić Twojej infrastruktury, InOro działa w pełni on-premise."
+    breadcrumbs={[{ label: 'Strona główna', href: '/pl/' }, { label: 'Bezpieczeństwo' }]}
+  />
+
+  <BlufSection
+    body="InOro domyślnie przetwarza i przechowuje dane głosowe klientów w Unii Europejskiej. Dla zespołów, których sytuacja regulacyjna lub zapisy umowne tego wymagają, <strong>pełne wdrożenie on-premise</strong> zostawia każdy bajt audio, transkryptu i wyniku wewnątrz własnej infrastruktury. SSO/SAML 2.0, dostęp per rola, kompletne logi audytowe i anonimizacja danych wrażliwych są elementem każdego wdrożenia."
+  />
+
+  <SecurityBandSection
+    heading="Pełny obraz"
+    tiles={[
+      { title: 'Hosting w UE, wsparcie zgodności z RODO', body: 'Dane domyślnie przechowywane i przetwarzane wyłącznie w centrach danych w UE.' },
+      { title: 'Pełna opcja on-premise', body: 'Audio, transkrypty i wyniki nigdy nie opuszczają Twojej infrastruktury.' },
+      { title: 'SSO, SAML 2.0, RBAC', body: 'Enterprise kontrola tożsamości i dostępu — per zespół, kampania lub przestrzeń robocza.' },
+      { title: 'Pełne logi audytowe', body: 'Każdy dostęp i każde zapytanie zalogowane; każda flaga możliwa do odtworzenia do konkretnej rozmowy i momentu.' },
+      { title: 'Anonimizacja danych wrażliwych', body: 'PESEL, numery kart i inne dane osobowe maskowane automatycznie w transkryptach.' },
+      { title: 'Bez trenowania na Twoich danych', body: 'Twoje nagrania nigdy nie służą do trenowania modeli bez pisemnej zgody.' },
+      { title: 'Szyfrowanie w transmisji i spoczynku', body: 'TLS 1.2+ w transmisji, AES-256 w spoczynku.' },
+      { title: 'Umowa powierzenia na życzenie', body: 'Umowy powierzenia przetwarzania gotowe do przeglądu — także w łańcuchach BPO.' },
+    ]}
+    footer="Praktyki spójne z ISO 27001. Mapa drogowa certyfikacji dostępna na życzenie."
+  />
+
+  <RichBodySection body={`
+    <h2>Lokalizacja danych</h2>
+    <p>Wszystkie dane głosowe klientów — nagrania, transkrypty, wyniki analiz — są domyślnie przechowywane i przetwarzane w centrach danych na terenie UE. Bez transferu do państw trzecich, chyba że zostanie to jawnie skonfigurowane i zapisane w umowie.</p>
+    <h2>Wdrożenie on-premise</h2>
+    <p>Dla zespołów, które tego wymagają (regulowane finanse, obronność, wrażliwy sektor publiczny), pełne wdrożenie on-premise instaluje stack InOro w Twoim własnym centrum danych. Audio, transkrypty i wyniki w ogóle nie dotykają naszej infrastruktury. Te same funkcje, ten sam interfejs, wdrażane i aktualizowane zgodnie z Twoim procesem zmian.</p>
+    <h2>Kontrola dostępu</h2>
+    <ul>
+      <li><strong>Logowanie jednokrotne (SSO)</strong> przez SAML 2.0; OpenID Connect na życzenie.</li>
+      <li><strong>Dostęp per rola</strong> — na poziomie zespołu, kampanii i grupy konsultantów.</li>
+      <li><strong>Szczegółowe uprawnienia</strong> — kto może odsłuchiwać, kto oceniać, kto eksportować.</li>
+      <li><strong>Ślad audytowy</strong> każdego dostępu, zapytania i eksportu.</li>
+    </ul>
+    <h2>Anonimizacja</h2>
+    <p>Dane wrażliwe — PESEL, numery kart, dane osobowe specyficzne dla branży — są maskowane automatycznie w transkryptach i widokach analitycznych. Oryginalne audio pozostaje zachowane zgodnie z regułami retencji, które sam definiujesz.</p>
+    <h2>Nadzór nad modelami</h2>
+    <p>Twoje nagrania i transkrypty nigdy nie służą do trenowania ani dostrajania modeli bez pisemnej zgody. Każda aktualizacja modelu, która miałaby korzystać z Twoich danych, wymaga aneksu do umowy powierzenia z wyraźną zgodą.</p>
+    <h2>Certyfikacje i audyty</h2>
+    <p>InOro działa zgodnie z praktykami spójnymi z ISO 27001. Formalne certyfikacje są na naszej mapie drogowej — o aktualny status zapytaj pod NDA.</p>
+    <h2>Umowa powierzenia</h2>
+    <p>Umowy powierzenia przetwarzania danych są dostępne na życzenie — występujemy jako podmiot przetwarzający. Przy wdrożeniach BPO obsługujemy ustalenia dotyczące dalszego powierzenia per klient końcowy.</p>
+  `} />
+
+  <FaqSection
+    heading="FAQ — bezpieczeństwo"
+    items={[
+      { q: 'Czy InOro ma certyfikat SOC 2 lub ISO 27001?', a: 'InOro działa zgodnie z praktykami spójnymi z ISO 27001. Formalne certyfikacje są na mapie drogowej — o aktualny status zapytaj nas pod NDA.' },
+      { q: 'Czy możemy wymagać, żeby nasze dane zostały w Polsce (lub innym konkretnym kraju UE)?', a: 'Tak — lokalizacja danych w UE jest domyślna, a wymagania co do konkretnego kraju przetwarzania jesteśmy w stanie uwzględnić. Przy ścisłych wymogach lokalności danych pewną ścieżką jest wdrożenie on-premise.' },
+      { q: 'Jak InOro obsługuje wniosek osoby, której dane dotyczą?', a: 'InOro daje narzędzia do odnalezienia wszystkich rozmów i danych pochodnych powiązanych z danym identyfikatorem; eksport i usunięcie per rozmowa są obsługiwane w aplikacji i przez API.' },
+      { q: 'Jakie macie SLA na reakcję na incydent?', a: 'Standard SaaS: 24 h na wstępne potwierdzenie przy incydentach krytycznych, 72 h na zgłoszenie naruszenia ochrony danych zgodnie z RODO. Indywidualne SLA są możliwe w umowach enterprise.' },
+      { q: 'Czy korzystacie z dalszych podmiotów przetwarzających?', a: 'Krótka lista podwykonawców infrastrukturalnych i dostawcy silnika mowa-na-tekst jest ujawniona w umowie powierzenia. Wszyscy mają siedzibę w UE lub są umownie zobowiązani do hostingu w UE dla obciążeń InOro.' },
+    ]}
+  />
+
+  <CtaBandSection
+    heading="Porozmawiaj z nami o bezpieczeństwie i zakupach"
+    body="30 minut z inżynierem o Twoich wymaganiach bezpieczeństwa."
+    primaryCta={{ label: "Umów demo", href: "/pl/demo/" }}
+    secondaryCta={{ label: "Zobacz cennik", href: "/pl/cennik/" }}
+  />
+</PageLayout>

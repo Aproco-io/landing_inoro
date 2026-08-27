@@ -1,0 +1,76 @@
+---
+interface Props {
+  heading?: string;
+  rows: {
+    heading: string;
+    body: string;
+    metric?: string;
+    imageSrc: string;
+    imageAlt: string;
+  }[];
+}
+const { heading, rows } = Astro.props;
+---
+<section class="s-deepdive">
+  <div class="inoro-container">
+    {heading && <h2>{heading}</h2>}
+    {rows.map((row, i) => (
+      <div class="s-deepdive__row" data-reverse={i % 2 === 1}>
+        <div class="s-deepdive__col">
+          <h3>{row.heading}</h3>
+          {row.metric && <div class="s-deepdive__metric">{row.metric}</div>}
+          <p set:html={row.body} />
+        </div>
+        <div class="s-deepdive__visual">
+          <img src={row.imageSrc} alt={row.imageAlt} loading="lazy" />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .s-deepdive { padding: 4rem 0; background: #f8fafc; }
+  .s-deepdive h2 {
+    font-family: Sora, Inter, sans-serif;
+    text-align: center;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0 0 2.5rem; color: #0f172a;
+  }
+  .s-deepdive__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .s-deepdive__row[data-reverse="true"] .s-deepdive__col { order: 2; }
+  @media (max-width: 900px) {
+    .s-deepdive__row { grid-template-columns: 1fr; gap: 1.5rem; }
+    .s-deepdive__row[data-reverse="true"] .s-deepdive__col { order: 0; }
+  }
+  .s-deepdive__col h3 {
+    font-family: Sora, Inter, sans-serif;
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    color: #0f172a;
+  }
+  .s-deepdive__metric {
+    display: inline-block;
+    color: #0E8AC1;
+    background: #E8F5FC;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.4rem;
+    font-family: Sora, Inter, sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .s-deepdive__col p { margin: 0; color: #475569; font-size: 1rem; line-height: 1.65; }
+  .s-deepdive__visual img {
+    width: 100%;
+    border-radius: 0.85rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 40px -25px rgba(15, 23, 42, 0.25);
+  }
+</style>

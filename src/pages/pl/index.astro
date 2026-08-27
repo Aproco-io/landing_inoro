@@ -1,0 +1,94 @@
+---
+import StaticBody from '../../components/StaticBody.astro';
+import Nav from '../../components/Nav.astro';
+import HomeStyles from '../../components/HomeStyles.astro';
+const base = import.meta.env.BASE_URL || '/';
+const isGithub = base !== '/' && base.length > 1;
+const rawBase = import.meta.env.PUBLIC_FULL_BASE_URL
+  || (isGithub && (import.meta.env.SITE || '').replace(/\/$/, '') + base)
+  || '';
+const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
+---
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    {isGithub && <base href={assetBase} />}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InOro.ai | Inteligentna analiza rozmów AI dla call center</title>
+    <meta
+      name="description"
+      content="InOro.ai analizuje AI-em 100% rozmów z klientami — sprzedaż, jakość obsługi i compliance. Dla BPO, banków, retail."
+    />
+    <meta property="og:title" content="InOro.ai | Inteligentna analiza rozmów AI" />
+    <meta
+      property="og:description"
+      content="AI-owa analiza 100% rozmów z klientami. Więcej sprzedaży, lepsza jakość obsługi, compliance."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://inoro.ai/pl/" />
+    <meta property="og:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
+    <meta property="og:site_name" content="InOro.ai" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
+    <link rel="canonical" href="https://inoro.ai/pl/" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'InOro.ai',
+      url: 'https://inoro.ai',
+      logo: 'https://inoro.ai/assets/logos/InOro_Logo.svg',
+      email: 'contact@inoro.ai',
+      parentOrganization: { '@type': 'Organization', name: 'Aproco', url: 'https://aproco.io' },
+      areaServed: ['PL', 'EU'],
+      description: 'InOro to platforma analizy rozmów AI dla contact centers — transkrypcja, ocena QA, analiza mowy dla 100% rozmów.',
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'InOro',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, on-premise',
+      offers: {
+        '@type': 'Offer', price: '0.20', priceCurrency: 'PLN',
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '0.20', priceCurrency: 'PLN', unitText: 'analizowana minuta' },
+      },
+    })} />
+    <link rel="alternate" hreflang="en" href="https://inoro.ai/" />
+    <link rel="alternate" hreflang="pl" href="https://inoro.ai/pl/" />
+    <link rel="alternate" hreflang="x-default" href="https://inoro.ai/" />
+    <!-- Google Analytics -->
+    <!-- Consent Mode v2 — must run BEFORE gtag/js so nothing is stored pre-consent -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6396RL0EK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M6396RL0EK');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/index-DCgweMnR.css" />
+    <HomeStyles />
+  </head>
+  <body>
+    <Nav lang="pl" currentPath="/pl/" />
+    <StaticBody lang="pl" />
+  </body>
+</html>

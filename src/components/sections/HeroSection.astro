@@ -1,0 +1,128 @@
+---
+interface Props {
+  heading: string;
+  subheading: string;
+  badge?: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  imageSrc?: string;
+  imageAlt?: string;
+  breadcrumbs?: { label: string; href?: string }[];
+}
+const { heading, subheading, badge, primaryCta, secondaryCta, imageSrc, imageAlt, breadcrumbs } =
+  Astro.props;
+---
+<section class="s-hero">
+  <div class="inoro-container s-hero__grid" data-has-image={!!imageSrc}>
+    <div class="s-hero__col">
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <nav class="s-hero__crumbs" aria-label="Breadcrumb">
+          {breadcrumbs.map((c, i) => (
+            <span>
+              {c.href ? <a href={c.href}>{c.label}</a> : <span>{c.label}</span>}
+              {i < breadcrumbs.length - 1 && <span class="sep">/</span>}
+            </span>
+          ))}
+        </nav>
+      )}
+      {badge && <span class="s-hero__badge">{badge}</span>}
+      <h1>{heading}</h1>
+      <p class="s-hero__sub">{subheading}</p>
+      {(primaryCta || secondaryCta) && (
+        <div class="s-hero__actions">
+          {primaryCta && <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label}</a>}
+          {secondaryCta && <a class="btn btn--ghost" href={secondaryCta.href}>{secondaryCta.label}</a>}
+        </div>
+      )}
+    </div>
+    {imageSrc && (
+      <div class="s-hero__visual">
+        <img src={imageSrc} alt={imageAlt ?? heading} loading="eager" />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .s-hero {
+    position: relative;
+    padding: 4.5rem 0 3.5rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+  }
+  .s-hero::before {
+    content: "";
+    position: absolute;
+    top: -140px; right: -140px;
+    width: 380px; height: 380px;
+    background: radial-gradient(closest-side, rgba(26, 167, 224, 0.16), transparent);
+    filter: blur(20px);
+    z-index: 0;
+  }
+  .s-hero__grid {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .s-hero__grid[data-has-image="true"] { grid-template-columns: 1.15fr 1fr; }
+  @media (max-width: 900px) {
+    .s-hero__grid[data-has-image="true"] { grid-template-columns: 1fr; }
+  }
+  .s-hero__col { max-width: 640px; }
+  .s-hero__crumbs {
+    font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;
+    display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;
+  }
+  .s-hero__crumbs a { color: #64748b; text-decoration: none; }
+  .s-hero__crumbs a:hover { color: #1AA7E0; }
+  .s-hero__crumbs .sep { color: #cbd5e1; margin: 0 0.25rem; }
+  .s-hero__badge {
+    display: inline-block;
+    background: #E8F5FC;
+    color: #0E8AC1;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+  .s-hero h1 {
+    font-family: Sora, Inter, sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    color: #0f172a;
+    letter-spacing: -0.015em;
+  }
+  .s-hero__sub {
+    font-size: 1.15rem; color: #475569;
+    margin: 0 0 2rem; line-height: 1.6;
+  }
+  .s-hero__actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .s-hero__visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.9rem;
+    box-shadow: 0 25px 55px -30px rgba(15, 23, 42, 0.3);
+    border: 1px solid #e2e8f0;
+  }
+  .btn {
+    display: inline-flex; align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.55rem;
+    text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    transition: all 0.15s ease;
+  }
+  .btn--primary { background: #1AA7E0; color: #fff; }
+  .btn--primary:hover { background: #0E8AC1; }
+  .btn--ghost {
+    background: #fff; color: #0f172a;
+    border: 1px solid #cbd5e1;
+  }
+  .btn--ghost:hover { border-color: #1AA7E0; color: #1AA7E0; }
+</style>

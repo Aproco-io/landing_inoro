@@ -7,15 +7,14 @@
     en: {
       retail: {
         title: 'Retail & E-commerce',
-        desc: 'Turn every customer call into sales and service insights. Improve NPS, reduce churn, and grow revenue.',
+        desc: 'Use conversation analysis to improve sales, raise service quality and better understand customer needs.',
         bullets: [
-          'Sales signal detection at scale',
-          'Customer sentiment across channels',
-          'Compliance for consumer lending',
-          'Store & agent benchmarking',
+          'Detect missed sales opportunities and promotions',
+          'Track customer sentiment and how it changes during a conversation',
+          'Verify that required disclosures were delivered correctly and confirmed by the customer',
         ],
-        result: 'Real result',
-        resultSub: 'Proven in retail contact centers.',
+        result: 'Business impact',
+        resultSub: 'More sales opportunities captured, a more consistent service standard and a lower risk of missing required disclosures.',
       },
       bpo: {
         title: 'BPO / Contact Centers',
@@ -45,15 +44,14 @@
     pl: {
       retail: {
         title: 'Retail i e-commerce',
-        desc: 'Zamieniaj każdą rozmowę z klientem w insighty sprzedaży i obsługi. Podnoś NPS, ograniczaj churn, zwiększaj przychody.',
+        desc: 'Wykorzystuj analizę rozmów, aby zwiększać sprzedaż, poprawiać jakość obsługi i lepiej rozumieć potrzeby klientów.',
         bullets: [
-          'Wykrywanie sygnałów sprzedaży w skali',
-          'Sentyment klienta w kanałach',
-          'Compliance w kredytach konsumenckich',
-          'Benchmarking sklepów i agentów',
+          'Wykrywanie niewykorzystanych szans sprzedażowych i pominiętych promocji',
+          'Analiza nastawienia klienta i jego zmian w trakcie rozmowy',
+          'Weryfikacja, czy agent prawidłowo przekazał wymagane zgody, a klient je potwierdził',
         ],
         result: 'Rzeczywisty efekt',
-        resultSub: 'Sprawdzone w retailowych contact center.',
+        resultSub: 'Więcej wykorzystanych szans sprzedażowych, wyższy standard obsługi i mniejsze ryzyko pominięcia wymaganych zgód.',
       },
       bpo: {
         title: 'BPO / Contact center',

@@ -1,0 +1,475 @@
+---
+import { MENU_PL, MENU_EN } from '../data/menu.ts';
+import { alternatesFor } from '../data/i18n.ts';
+
+interface Props {
+  lang: 'pl' | 'en';
+  currentPath?: string;
+}
+
+const { lang, currentPath = '' } = Astro.props;
+const menu = lang === 'pl' ? MENU_PL : MENU_EN;
+const homeHref = lang === 'pl' ? '/pl/' : '/';
+const ctaLabel = lang === 'pl' ? 'Umów demo' : 'Book a demo';
+const ctaHref = lang === 'pl' ? '/pl/demo/' : '/demo/';
+// Language switcher targets: PL button always goes to the PL URL for this
+// page (staying put if we're already on PL); EN button same for EN.
+// alternatesFor() knows the direction based on currentLang, so it never
+// swaps the meaning of the pair.
+const { pl: plHref, en: enHref } = alternatesFor(currentPath || (lang === 'pl' ? '/pl/' : '/'), lang);
+---
+
+<nav class="inoro-subnav">
+  <div class="inoro-subnav__inner">
+    <a class="inoro-subnav__brand" href={homeHref}>
+      <img src="/assets/logos/InOro_Logo.svg" alt="InOro.ai" />
+    </a>
+
+    <ul class="inoro-subnav__menu" role="menubar">
+      {menu.map((item) => (
+        <li class={`inoro-subnav__item ${item.children ? 'has-dropdown' : ''}`} role="none">
+          {item.children ? (
+            <>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  class={`inoro-subnav__trigger ${currentPath === item.href ? 'is-current' : ''}`}
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  {item.label}
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.02l3.71-3.79a.75.75 0 111.08 1.04l-4.25 4.34a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              ) : (
+                <button type="button" class="inoro-subnav__trigger" aria-haspopup="true" aria-expanded="false">
+                  {item.label}
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.02l3.71-3.79a.75.75 0 111.08 1.04l-4.25 4.34a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              )}
+              <div class="inoro-subnav__dropdown" role="menu">
+                <ul>
+                  {item.children.map((child) => (
+                    <li>
+                      <a
+                        href={child.href}
+                        role="menuitem"
+                        class={currentPath === child.href ? 'is-current' : ''}
+                      >
+                        <span class="dropdown-label">{child.label}</span>
+                        {child.description && <span class="dropdown-desc">{child.description}</span>}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          ) : (
+            <a href={item.href} class={`inoro-subnav__link ${currentPath === item.href ? 'is-current' : ''}`}>
+              {item.label}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <div class="inoro-subnav__cta">
+      <div class="inoro-subnav__lang" role="group" aria-label="Language">
+        <a
+          class="inoro-lang-btn"
+          href={plHref}
+          hreflang="pl"
+          data-inoro-lang="pl"
+          aria-current={lang === 'pl' ? 'true' : 'false'}
+        >PL</a>
+        <span class="inoro-subnav__lang-sep">/</span>
+        <a
+          class="inoro-lang-btn"
+          href={enHref}
+          hreflang="en"
+          data-inoro-lang="en"
+          aria-current={lang === 'en' ? 'true' : 'false'}
+        >EN</a>
+      </div>
+      <a class="inoro-subnav__demo" href={ctaHref}>{ctaLabel}</a>
+    </div>
+
+    <button type="button" class="inoro-subnav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="inoro-subnav__mobile">
+    <ul>
+      {menu.map((item) => (
+        <li>
+          {item.children ? (
+            <details>
+              <summary>
+                {item.href ? (
+                  <a class="mobile-parent-link" href={item.href}>{item.label}</a>
+                ) : (
+                  <span>{item.label}</span>
+                )}
+              </summary>
+              <ul>
+                {item.children.map((child) => (
+                  <li><a href={child.href}>{child.label}</a></li>
+                ))}
+              </ul>
+            </details>
+          ) : (
+            <a href={item.href}>{item.label}</a>
+          )}
+        </li>
+      ))}
+      <li><a class="mobile-cta" href={ctaHref}>{ctaLabel}</a></li>
+      <li class="mobile-lang-row">
+        <span class="mobile-lang-label">{lang === 'pl' ? 'Język' : 'Language'}</span>
+        <span class="mobile-lang" role="group" aria-label={lang === 'pl' ? 'Wybór języka' : 'Language'}>
+          <a
+            href={plHref}
+            hreflang="pl"
+            data-inoro-lang="pl"
+            aria-current={lang === 'pl' ? 'true' : 'false'}
+          >Polski</a>
+          <a
+            href={enHref}
+            hreflang="en"
+            data-inoro-lang="en"
+            aria-current={lang === 'en' ? 'true' : 'false'}
+          >English</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .inoro-subnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  }
+  .inoro-subnav__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    height: 68px;
+  }
+  .inoro-subnav__brand img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .inoro-subnav__menu {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
+  }
+  .inoro-subnav__item {
+    position: relative;
+  }
+  .inoro-subnav__trigger,
+  .inoro-subnav__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.85rem;
+    border: none;
+    background: transparent;
+    color: #334155;
+    font-family: Inter, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .inoro-subnav__trigger:hover,
+  .inoro-subnav__link:hover,
+  .inoro-subnav__link.is-current {
+    background: rgba(26, 167, 224, 0.08);
+    color: #1AA7E0;
+  }
+  .inoro-subnav__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    min-width: 300px;
+    padding-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+  .inoro-subnav__dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+  }
+  .inoro-subnav__dropdown ul {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 45px -20px rgba(15, 23, 42, 0.25);
+    padding: 0.5rem;
+  }
+  .inoro-subnav__item.has-dropdown:hover .inoro-subnav__dropdown,
+  .inoro-subnav__item.has-dropdown:focus-within .inoro-subnav__dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .inoro-subnav__dropdown ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .inoro-subnav__dropdown a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #0f172a;
+    transition: background 0.15s ease;
+  }
+  .inoro-subnav__dropdown a:hover,
+  .inoro-subnav__dropdown a.is-current {
+    background: rgba(26, 167, 224, 0.1);
+    color: #1AA7E0;
+  }
+  .dropdown-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .dropdown-desc {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  .inoro-subnav__cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .inoro-subnav__lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .inoro-subnav__lang-sep {
+    color: #cbd5e1;
+    line-height: 1;
+  }
+  .inoro-lang-btn {
+    background: transparent;
+    border: none;
+    padding: 0.2rem 0.35rem;
+    color: #64748b;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .inoro-lang-btn:hover {
+    color: #1AA7E0;
+  }
+  .inoro-lang-btn[aria-current="true"] {
+    color: #1AA7E0;
+    font-weight: 600;
+    pointer-events: none;
+  }
+  .inoro-subnav__demo {
+    background: #1AA7E0;
+    color: #fff;
+    padding: 0.55rem 1.1rem;
+    border-radius: 0.55rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.15s ease;
+  }
+  .inoro-subnav__demo:hover {
+    background: #0E8AC1;
+  }
+  .inoro-subnav__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .inoro-subnav__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #0f172a;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 1024px) {
+    .inoro-subnav__menu,
+    .inoro-subnav__cta { display: none; }
+    .inoro-subnav__toggle { display: inline-flex; }
+    .inoro-subnav__inner { justify-content: space-between; }
+  }
+
+  .inoro-subnav__mobile {
+    display: none;
+    background: #fff;
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem 1.25rem 1.5rem;
+  }
+  .inoro-subnav__mobile[data-open="true"] {
+    display: block;
+  }
+  .inoro-subnav__mobile > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .inoro-subnav__mobile a,
+  .inoro-subnav__mobile summary {
+    display: block;
+    padding: 0.65rem 0.5rem;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0.4rem;
+  }
+  .inoro-subnav__mobile summary { list-style: none; }
+  .inoro-subnav__mobile details ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0.25rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .inoro-subnav__mobile details ul a {
+    padding: 0.4rem 0.5rem;
+    color: #334155;
+    font-size: 0.9rem;
+  }
+  .mobile-lang-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  .mobile-lang-label {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .mobile-lang {
+    display: inline-flex;
+    gap: 0.35rem;
+  }
+  .inoro-subnav__mobile .mobile-lang a {
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    background: #fff;
+  }
+  .inoro-subnav__mobile .mobile-lang a[aria-current="true"] {
+    background: rgba(26, 167, 224, 0.1);
+    border-color: rgba(26, 167, 224, 0.45);
+    color: #0E8AC1;
+  }
+  .mobile-cta {
+    background: #1AA7E0;
+    color: #fff !important;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.inoro-subnav__toggle');
+  const mobile = document.querySelector('.inoro-subnav__mobile');
+  if (toggle && mobile) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = mobile.getAttribute('data-open') === 'true';
+      mobile.setAttribute('data-open', open ? 'false' : 'true');
+      toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    // Auto-close when user taps a link
+    mobile.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('a')) {
+        mobile.setAttribute('data-open', 'false');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Sync aria-expanded on desktop dropdown triggers with the actual open
+  // state (which CSS drives via :hover and :focus-within). Screen-reader
+  // users get the right state; sighted users get the same UX.
+  document.querySelectorAll('.inoro-subnav__item.has-dropdown').forEach((li) => {
+    const trigger = li.querySelector('.inoro-subnav__trigger');
+    if (!trigger) return;
+    const setExpanded = (v: boolean) => trigger.setAttribute('aria-expanded', v ? 'true' : 'false');
+    li.addEventListener('mouseenter', () => setExpanded(true));
+    li.addEventListener('mouseleave', () => setExpanded(false));
+    li.addEventListener('focusin', () => setExpanded(true));
+    li.addEventListener('focusout', (e) => {
+      if (!li.contains((e as FocusEvent).relatedTarget as Node)) setExpanded(false);
+    });
+  });
+
+  // Language buttons are real <a> links to the alternate URL. On captured
+  // home pages the old JS listens for [data-inoro-lang] clicks and would
+  // try to toggle a hidden div that no longer exists — intercept in the
+  // capture phase and stop propagation so only the browser navigation runs.
+  document.querySelectorAll('.inoro-subnav [data-inoro-lang]').forEach((btn) => {
+    btn.addEventListener(
+      'click',
+      (e) => {
+        e.stopImmediatePropagation();
+      },
+      true,
+    );
+  });
+</script>

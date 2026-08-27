@@ -1,0 +1,39 @@
+---
+interface Props { quote: string; author: string; role?: string; company?: string }
+const { quote, author, role, company } = Astro.props;
+---
+<section class="s-testimonial">
+  <div class="inoro-container">
+    <blockquote>
+      <p>&ldquo;{quote}&rdquo;</p>
+      <cite>
+        <strong>{author}</strong>
+        {(role || company) && <span>{[role, company].filter(Boolean).join(', ')}</span>}
+      </cite>
+    </blockquote>
+  </div>
+</section>
+
+<style>
+  .s-testimonial { padding: 4rem 0; background: #fff; }
+  blockquote {
+    max-width: 800px; margin: 0 auto;
+    padding: 0 2rem;
+    border-left: 4px solid #1AA7E0;
+    text-align: left;
+  }
+  blockquote p {
+    font-family: Sora, Inter, sans-serif;
+    color: #0f172a;
+    font-size: 1.25rem;
+    line-height: 1.55;
+    margin: 0 0 1rem;
+  }
+  cite {
+    display: flex; flex-direction: column;
+    font-style: normal;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  cite strong { color: #0f172a; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.15rem; }
+</style>

@@ -1,0 +1,81 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import BlufSection from '../components/sections/BlufSection.astro';
+import SecurityBandSection from '../components/sections/SecurityBandSection.astro';
+import RichBodySection from '../components/sections/RichBodySection.astro';
+import FaqSection from '../components/sections/FaqSection.astro';
+import CtaBandSection from '../components/sections/CtaBandSection.astro';
+---
+<PageLayout
+  lang="en"
+  title="Security & Data Sovereignty — InOro"
+  description="EU hosting or on-premise, supports GDPR compliance, SSO/SAML, RBAC, audit logs, PII anonymization. The full security posture for InOro."
+  currentPath="/security/"
+>
+  <HeroSection
+    badge="Security"
+    heading="Enterprise security by default — and on-premise when default isn't enough"
+    subheading="EU hosting, supports GDPR compliance, SSO and audit logs are standard. When your data can't leave your infrastructure, InOro runs fully on-premise."
+    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Security' }]}
+  />
+
+  <BlufSection
+    body="InOro processes and stores customer voice data in the EU by default. For teams whose regulatory or contractual position requires it, a <strong>full on-premise deployment</strong> keeps every byte of audio, transcript and result inside your own infrastructure. SSO/SAML 2.0, role-based access, complete audit logs and anonymization of sensitive data are included in every deployment."
+  />
+
+  <SecurityBandSection
+    heading="The full posture"
+    tiles={[
+      { title: 'EU hosting, supports GDPR compliance', body: 'Data stored and processed exclusively in EU data centers by default.' },
+      { title: 'Full on-premise option', body: 'Audio, transcripts and results never leave your infrastructure.' },
+      { title: 'SSO, SAML 2.0, RBAC', body: 'Enterprise identity and access controls, per team, campaign or workspace.' },
+      { title: 'Full audit logs', body: 'Every access and query logged; every flag traceable to a call and moment.' },
+      { title: 'Sensitive-data anonymization', body: 'National IDs, card numbers, PII masked automatically in transcripts.' },
+      { title: 'No training on your data', body: 'Your recordings are never used to train models without written consent.' },
+      { title: 'Encryption in transit & at rest', body: 'TLS 1.2+ in transit, AES-256 at rest.' },
+      { title: 'DPA available on request', body: 'Data processing agreements ready for review, in EU and BPO chains.' },
+    ]}
+    footer="ISO 27001-aligned practices. Certification roadmap on request."
+  />
+
+  <RichBodySection body={`
+    <h2>Data residency</h2>
+    <p>All customer voice data — recordings, transcripts, analysis results — is stored and processed in EU data centers by default. No transfer to third countries unless explicitly configured and contracted.</p>
+    <h2>On-premise deployment</h2>
+    <p>For teams that require it (regulated finance, defense, sensitive public sector), a full on-premise deployment installs InOro's stack in your own datacenter. Audio, transcripts and results never touch our infrastructure. Same features, same UX, deployed and updated per your change process.</p>
+    <h2>Access controls</h2>
+    <ul>
+      <li><strong>Single sign-on</strong> via SAML 2.0; OpenID Connect on request.</li>
+      <li><strong>Role-based access</strong> per team, campaign, agent group.</li>
+      <li><strong>Fine-grained permissions</strong> — who can listen, who can score, who can export.</li>
+      <li><strong>Audit trail</strong> of every access, query and export.</li>
+    </ul>
+    <h2>Anonymization</h2>
+    <p>Sensitive data — national IDs, card numbers, sector-specific PII — is masked automatically in transcripts and analytics views. Original audio is preserved with retention rules you define.</p>
+    <h2>Model governance</h2>
+    <p>Your recordings and transcripts are never used to train or fine-tune models without written consent. Any model updates that would benefit from your data require an opt-in DPA amendment.</p>
+    <h2>Certifications and audits</h2>
+    <p>InOro operates under ISO 27001-aligned practices. Formal certifications on our roadmap — request the current status under NDA.</p>
+    <h2>Vendor DPA</h2>
+    <p>Data processing agreements are available on request as processor. For BPO deployments, sub-processor arrangements per end client are supported.</p>
+  `} />
+
+  <FaqSection
+    heading="Security FAQ"
+    items={[
+      { q: 'Is InOro SOC 2 or ISO 27001 certified?', a: 'InOro operates under ISO 27001-aligned practices. Formal certifications are on the roadmap; contact us for the current status under NDA.' },
+      { q: 'Can we require our data to stay in Poland (or another specific EU country)?', a: 'Yes — EU data residency is the default; specific country-of-processing requirements can be accommodated. For strict data-locality, on-premise is the certain path.' },
+      { q: 'How does InOro handle a data subject access request?', a: 'InOro provides tooling to locate all calls and derived data linked to an identifier; per-call export and deletion are supported via the app and API.' },
+      { q: 'What is your incident response SLA?', a: 'Standard SaaS: 24h initial acknowledgment for critical incidents, 72h notification for data-breach events per GDPR. Custom SLAs available in enterprise contracts.' },
+      { q: 'Do you sub-process to any third parties?', a: 'A short list of infrastructure and STT sub-processors is disclosed in the DPA. All are EU-based or contractually EU-hosted for InOro workloads.' },
+    ]}
+  />
+
+  <CtaBandSection
+    heading="Talk to security & procurement"
+    body="30-minute call with an engineer on your security posture and requirements."
+    primaryCta={{ label: "Book a demo", href: "/demo/" }}
+    secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+  />
+</PageLayout>

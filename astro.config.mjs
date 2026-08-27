@@ -8,4 +8,9 @@ const base = process.env.PUBLIC_BASE_PATH || '/';
 export default defineConfig({
   site,
   base,
+  vite: {
+    server: {
+      allowedHosts: ['.trycloudflare.com'],
+    },
+  },
 });

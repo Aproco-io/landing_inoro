@@ -30,12 +30,35 @@
 
   function setConsent(val) {
     try { localStorage.setItem(CONSENT_KEY, val); } catch (e) {}
+    if (val === 'accepted') grantAnalytics();
+  }
+
+  /* Consent Mode v2: the page declares everything 'denied' by default before
+     gtag/js loads. We only ever flip analytics_storage to 'granted' — a
+     decline simply leaves the default in place. */
+  function grantAnalytics() {
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(['consent', 'update', { analytics_storage: 'granted' }]);
+    }
   }
 
   function getCurrentLang() {
+    /* 1. Explicit user choice in localStorage wins. */
     try {
       var s = localStorage.getItem(LANG_KEY);
-      if (s === 'pl') return 'pl';
+      if (s === 'pl' || s === 'en') return s;
+    } catch (e) {}
+    /* 2. Fall back to the page's declared language (Astro sets <html lang>). */
+    var docLang = (document.documentElement.lang || '').toLowerCase();
+    if (docLang.indexOf('pl') === 0) return 'pl';
+    if (docLang.indexOf('en') === 0) return 'en';
+    /* 3. Last resort: browser preference. */
+    try {
+      var browserLang = (navigator.language || '').toLowerCase();
+      if (browserLang.indexOf('pl') === 0) return 'pl';
     } catch (e) {}
     return 'en';
   }
@@ -60,7 +83,7 @@
     textEl.textContent = t.message + ' ';
 
     var link = document.createElement('a');
-    link.href = 'Polityka-Prywatnosci.pdf';
+    link.href = '/Polityka-Prywatnosci.pdf';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.style.cssText = 'color:#259bf7;text-decoration:underline;white-space:nowrap;';
@@ -93,6 +116,9 @@
   }
 
   function createBanner() {
+    /* Returning visitor who already accepted: re-grant on every load,
+       because Consent Mode defaults back to 'denied' on each page view. */
+    if (getConsent() === 'accepted') { grantAnalytics(); return; }
     if (getConsent() !== null) return;
 
     var lang = getCurrentLang();

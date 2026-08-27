@@ -1,0 +1,85 @@
+---
+import HeroSection from './HeroSection.astro';
+import LogoBarSection from './LogoBarSection.astro';
+import ProblemSection from './ProblemSection.astro';
+import BlufSection from './BlufSection.astro';
+import HowItWorksSection from './HowItWorksSection.astro';
+import CapabilityGridSection from './CapabilityGridSection.astro';
+import FeatureDeepDiveSection from './FeatureDeepDiveSection.astro';
+import AtGlanceSection from './AtGlanceSection.astro';
+import ComparisonTableSection from './ComparisonTableSection.astro';
+import ResultsBandSection from './ResultsBandSection.astro';
+import AiChatSection from './AiChatSection.astro';
+import WhoItsForSection from './WhoItsForSection.astro';
+import IntegrationsStripSection from './IntegrationsStripSection.astro';
+import SecurityBandSection from './SecurityBandSection.astro';
+import PricingTeaserSection from './PricingTeaserSection.astro';
+import TestimonialSection from './TestimonialSection.astro';
+import FaqSection from './FaqSection.astro';
+import RelatedResourcesSection from './RelatedResourcesSection.astro';
+import ExplorePlatformSection from './ExplorePlatformSection.astro';
+import CtaBandSection from './CtaBandSection.astro';
+import PricingPlansSection from './PricingPlansSection.astro';
+import RoiCalculatorSection from './RoiCalculatorSection.astro';
+import RichBodySection from './RichBodySection.astro';
+
+interface Props {
+  sections: any[];
+  lang?: 'pl' | 'en';
+  breadcrumbs?: { label: string; href?: string }[];
+}
+const { sections, lang, breadcrumbs } = Astro.props;
+---
+{sections.map((s, i) => {
+  const isFirstHero = s.type === 'hero' && i === 0;
+  switch (s.type) {
+    case 'hero':
+      return <HeroSection {...s} breadcrumbs={isFirstHero ? breadcrumbs : undefined} />;
+    case 'logo-bar':
+      return <LogoBarSection {...s} lang={lang} />;
+    case 'problem':
+      return <ProblemSection {...s} />;
+    case 'bluf':
+      return <BlufSection {...s} />;
+    case 'how-it-works':
+      return <HowItWorksSection {...s} />;
+    case 'capability-grid':
+      return <CapabilityGridSection {...s} />;
+    case 'feature-deep-dive':
+      return <FeatureDeepDiveSection {...s} />;
+    case 'at-a-glance':
+      return <AtGlanceSection {...s} />;
+    case 'comparison-table':
+      return <ComparisonTableSection {...s} />;
+    case 'results-band':
+      return <ResultsBandSection {...s} />;
+    case 'ai-chat':
+      return <AiChatSection {...s} lang={lang} />;
+    case 'who-its-for':
+      return <WhoItsForSection {...s} />;
+    case 'integrations-strip':
+      return <IntegrationsStripSection {...s} />;
+    case 'security-band':
+      return <SecurityBandSection {...s} />;
+    case 'pricing-teaser':
+      return <PricingTeaserSection {...s} />;
+    case 'testimonial':
+      return <TestimonialSection {...s} />;
+    case 'faq':
+      return <FaqSection {...s} />;
+    case 'related-resources':
+      return <RelatedResourcesSection {...s} lang={lang} />;
+    case 'explore-platform':
+      return <ExplorePlatformSection {...s} />;
+    case 'cta-band':
+      return <CtaBandSection {...s} />;
+    case 'pricing-plans':
+      return <PricingPlansSection {...s} lang={lang} />;
+    case 'roi-calculator':
+      return <RoiCalculatorSection {...s} lang={lang} />;
+    case 'rich-body':
+      return <RichBodySection {...s} />;
+    default:
+      return null;
+  }
+})}

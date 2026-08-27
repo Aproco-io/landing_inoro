@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import BlogCard from '../../components/BlogCard.astro';
+
+const raw = await getCollection('blog', (p) => p.data.lang === 'en' && !p.data.draft);
+const posts = raw.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const categories = Array.from(
+  new Set(posts.map((p) => p.data.category).filter(Boolean))
+) as string[];
+---
+<PageLayout
+  lang="en"
+  title="InOro Resources — Conversation Intelligence, AI & Contact Center Quality"
+  description="Practical articles for contact center leaders. Auto-QA, Speech Analytics, KPIs, GDPR, AI deployments — with concrete case studies."
+  currentPath="/resources/blog/"
+>
+  <PageHero
+    kicker="Resources"
+    heading="InOro Resources"
+    subheading="Practical articles for contact center leaders — from AI and Speech Analytics to KPIs, GDPR, and deployment case studies."
+    breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Resources' }]}
+  />
+
+  {categories.length > 0 && (
+    <section class="blog-filters">
+      <div class="inoro-container">
+        <div class="blog-filters__wrap">
+          <span class="blog-filters__label">Categories:</span>
+          <div class="blog-filters__chips">
+            <button type="button" class="chip is-active" data-cat="all">All</button>
+            {categories.map((c) => (
+              <button type="button" class="chip" data-cat={c}>{c}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="blog-archive">
+    <div class="inoro-container">
+      {posts.length === 0 ? (
+        <p class="blog-archive__empty">First posts coming soon.</p>
+      ) : (
+        <div class="blog-grid" id="blog-grid">
+          {posts.map((post) => (
+            <div class="blog-grid__item" data-cat={post.data.category ?? ''}>
+              <BlogCard
+                href={post.data.slug}
+                title={post.data.title}
+                excerpt={post.data.excerpt ?? post.data.description}
+                category={post.data.category}
+                date={post.data.date}
+                author={post.data.author}
+                cover={post.data.cover}
+                coverAlt={post.data.coverAlt}
+                coverGradient={post.data.coverGradient}
+                readTime={post.data.readTime}
+                lang="en"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .blog-filters {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.1rem 0;
+  }
+  .blog-filters__wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+  .blog-filters__label {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .blog-filters__chips { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .chip {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover {
+    border-color: #1AA7E0;
+    color: #1AA7E0;
+  }
+  .chip.is-active {
+    background: #1AA7E0;
+    border-color: #1AA7E0;
+    color: #fff;
+  }
+  .blog-archive {
+    padding: 3rem 0 5rem;
+    background: #f8fafc;
+    min-height: 60vh;
+  }
+  .blog-archive__empty {
+    text-align: center;
+    color: #64748b;
+    padding: 4rem 0;
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .blog-grid__item[hidden] { display: none !important; }
+</style>
+
+<script>
+  const grid = document.getElementById('blog-grid');
+  const chips = document.querySelectorAll<HTMLButtonElement>('.blog-filters .chip');
+  if (grid && chips.length > 0) {
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((c) => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        const cat = chip.getAttribute('data-cat');
+        grid.querySelectorAll<HTMLElement>('.blog-grid__item').forEach((item) => {
+          const itemCat = item.getAttribute('data-cat') || '';
+          const match = cat === 'all' || itemCat === cat;
+          if (match) item.removeAttribute('hidden');
+          else item.setAttribute('hidden', '');
+        });
+      });
+    });
+  }
+</script>

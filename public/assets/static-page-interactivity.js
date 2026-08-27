@@ -132,6 +132,13 @@
       scrollToId(href === '#' ? 'top' : href);
       return;
     }
+    // Only apply text→scroll hijacking to clicks INSIDE the captured hero body.
+    // Otherwise clicks on the Astro Nav labels like "Cennik" / "Pricing" would
+    // scroll to #pricing on the home page instead of navigating to /pl/cennik/.
+    if (!getActiveRoot().contains(t)) return;
+    // Real anchors with a href (not just #) should navigate normally, even if
+    // their text matches a scroll key — the site nav wants /pl/cennik/, not #pricing.
+    if (t.tagName === 'A' && href && href.charAt(0) !== '#') return;
     var txt = getClickText(t);
     for (var i = 0; i < scrollMap.length; i++) {
       for (var j = 0; j < scrollMap[i].keys.length; j++) {

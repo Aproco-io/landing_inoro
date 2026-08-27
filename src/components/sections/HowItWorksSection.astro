@@ -1,0 +1,72 @@
+---
+interface Props {
+  heading: string;
+  kicker?: string;
+  steps: { title: string; body: string }[];
+}
+const { heading, kicker, steps } = Astro.props;
+---
+<section class="s-how">
+  <div class="inoro-container">
+    <div class="s-how__head">
+      {kicker && <span class="s-how__kicker">{kicker}</span>}
+      <h2>{heading}</h2>
+    </div>
+    <ol class="s-how__grid">
+      {steps.map((step, i) => (
+        <li class="s-how__step">
+          <div class="s-how__num">{i + 1}</div>
+          <h3>{step.title}</h3>
+          <p set:html={step.body} />
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .s-how { padding: 4rem 0; background: #f8fafc; }
+  .s-how__head { text-align: center; max-width: 700px; margin: 0 auto 2.5rem; }
+  .s-how__kicker {
+    display: inline-block; color: #1AA7E0;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .s-how__head h2 {
+    font-family: Sora, Inter, sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.4rem);
+    margin: 0; color: #0f172a;
+  }
+  .s-how__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    list-style: none; padding: 0; margin: 0;
+    counter-reset: step;
+  }
+  .s-how__step {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.9rem;
+    padding: 1.75rem;
+    position: relative;
+  }
+  .s-how__num {
+    width: 40px; height: 40px;
+    border-radius: 0.5rem;
+    background: #E8F5FC;
+    color: #0E8AC1;
+    font-family: Sora, Inter, sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .s-how__step h3 {
+    font-family: Sora, Inter, sans-serif;
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    color: #0f172a;
+  }
+  .s-how__step p { margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.6; }
+</style>

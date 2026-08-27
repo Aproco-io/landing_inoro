@@ -1,0 +1,72 @@
+---
+interface Props {
+  heading?: string;
+  kicker?: string;
+  personas: { name: string; role: string; body: string }[];
+}
+const { heading, kicker, personas } = Astro.props;
+---
+<section class="s-persona">
+  <div class="inoro-container">
+    {(kicker || heading) && (
+      <div class="s-persona__head">
+        {kicker && <span class="s-persona__kicker">{kicker}</span>}
+        {heading && <h2>{heading}</h2>}
+      </div>
+    )}
+    <div class="s-persona__grid">
+      {personas.map((p) => (
+        <article class="s-persona__card">
+          <div class="s-persona__role">{p.role}</div>
+          <h3>{p.name}</h3>
+          <p set:html={p.body} />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-persona { padding: 4rem 0; background: #f8fafc; }
+  .s-persona__head { text-align: center; max-width: 700px; margin: 0 auto 2rem; }
+  .s-persona__kicker {
+    display: inline-block; color: #1AA7E0;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem;
+  }
+  .s-persona__head h2 {
+    font-family: Sora, Inter, sans-serif;
+    font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+    margin: 0; color: #0f172a;
+  }
+  .s-persona__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.15rem;
+  }
+  .s-persona__card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.85rem;
+    padding: 1.5rem;
+  }
+  .s-persona__role {
+    display: inline-block;
+    color: #0E8AC1;
+    background: #E8F5FC;
+    padding: 0.25rem 0.65rem;
+    border-radius: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .s-persona__card h3 {
+    font-family: Sora, Inter, sans-serif;
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    color: #0f172a;
+  }
+  .s-persona__card p { margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.55; }
+</style>

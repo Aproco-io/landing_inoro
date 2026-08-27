@@ -1,12 +1,12 @@
 ---
 import StaticBody from '../components/StaticBody.astro';
+import Nav from '../components/Nav.astro';
+import HomeStyles from '../components/HomeStyles.astro';
 const base = import.meta.env.BASE_URL || '/';
 const isGithub = base !== '/' && base.length > 1;
-// Użyj jawnie ustawionego URL (workflow) albo złoż z SITE+BASE
 const rawBase = import.meta.env.PUBLIC_FULL_BASE_URL
   || (isGithub && (import.meta.env.SITE || '').replace(/\/$/, '') + base)
   || '';
-// Base href MUST end with / so relative assets/... resolve correctly
 const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
 ---
 <!doctype html>
@@ -15,7 +15,7 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     {isGithub && <base href={assetBase} />}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InOro.ai | AI-Powered Conversation Intelligence for Contact Centers</title>
     <meta
       name="description"
@@ -27,7 +27,50 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
       content="Analyze 100% of customer calls with AI. Boost sales, service quality, and compliance."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://inoro.ai/" />
+    <meta property="og:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
+    <meta property="og:site_name" content="InOro.ai" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://inoro.ai/assets/hero-dashboard-custom.png" />
+    <link rel="canonical" href="https://inoro.ai/" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'InOro.ai',
+      url: 'https://inoro.ai',
+      logo: 'https://inoro.ai/assets/logos/InOro_Logo.svg',
+      email: 'contact@inoro.ai',
+      parentOrganization: { '@type': 'Organization', name: 'Aproco', url: 'https://aproco.io' },
+      areaServed: ['PL', 'EU'],
+      description: 'InOro is an AI conversation intelligence platform for contact centers — transcription, QA scoring, speech analytics for 100% of calls.',
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'InOro',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, on-premise',
+      offers: {
+        '@type': 'Offer', price: '0.05', priceCurrency: 'EUR',
+        priceSpecification: { '@type': 'UnitPriceSpecification', price: '0.05', priceCurrency: 'EUR', unitText: 'analyzed minute' },
+      },
+    })} />
+    <link rel="alternate" hreflang="en" href="https://inoro.ai/" />
+    <link rel="alternate" hreflang="pl" href="https://inoro.ai/pl/" />
+    <link rel="alternate" hreflang="x-default" href="https://inoro.ai/" />
     <!-- Google Analytics -->
+    <!-- Consent Mode v2 — must run BEFORE gtag/js so nothing is stored pre-consent -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6396RL0EK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -38,227 +81,14 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/index-DCgweMnR.css" />
-    <style is:global>
-      /* Custom pricing block replacing slider section */
-      .pricing-custom {
-        background: #020b1f;
-        color: #e2e8f0;
-      }
-      .pricing-custom .wrap {
-        max-width: 1240px;
-        margin: 0 auto;
-        padding: 0 1rem;
-      }
-      .pricing-custom .kicker {
-        color: #259bf7;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        font-size: 0.75rem;
-        font-weight: 700;
-      }
-      .pricing-custom h2 {
-        margin: 0.5rem 0 0;
-        font-family: Sora, Inter, sans-serif;
-        line-height: 1.05;
-        font-size: clamp(2.25rem, 5vw, 4rem);
-        color: #f8fafc;
-      }
-      .pricing-custom .subtitle {
-        margin-top: 1rem;
-        max-width: 40rem;
-        color: #94a3b8;
-        font-size: 1.15rem;
-      }
-      .pricing-custom .panel {
-        margin-top: 2.25rem;
-        border-radius: 1.05rem;
-        border: 1px solid #1e3a66;
-        background: #0b1f3d;
-        padding: 1.35rem;
-      }
-      .pricing-custom .grid {
-        display: grid;
-        grid-template-columns: 1fr 1.1fr 1fr;
-        gap: 1rem;
-      }
-      .pricing-custom .card {
-        background: #0a162d;
-        border: 1px solid #1b3258;
-        border-radius: 0.9rem;
-        padding: 1.1rem;
-      }
-      .pricing-custom .start {
-        color: #64748b;
-        font-size: 0.95rem;
-      }
-      .pricing-custom .price {
-        margin: 0.2rem 0 0.25rem;
-        font-family: Sora, Inter, sans-serif;
-        font-size: clamp(2.3rem, 5vw, 3.6rem);
-        color: #259bf7;
-        font-weight: 700;
-      }
-      .pricing-custom .muted {
-        color: #64748b;
-      }
-      .pricing-custom ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .pricing-custom li {
-        margin: 0.6rem 0;
-        color: #cbd5e1;
-      }
-      .pricing-custom li::before {
-        content: "✓";
-        margin-right: 0.55rem;
-        color: #259bf7;
-        font-weight: 700;
-      }
-      .pricing-custom .quote {
-        margin-top: 0.9rem;
-        display: inline-block;
-        width: 100%;
-        background: #259bf7;
-        color: #ffffff;
-        text-align: center;
-        padding: 0.82rem 1rem;
-        border-radius: 0.7rem;
-        text-decoration: none;
-        font-weight: 700;
-      }
-      .pricing-custom .bottom {
-        margin-top: 1rem;
-        border-radius: 0.9rem;
-        border: 1px solid #1b3258;
-        background: #0a162d;
-        color: #94a3b8;
-        padding: 0.9rem 1rem;
-      }
-      @media (max-width: 980px) {
-        .pricing-custom .grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .segment-shot-wrap {
-        border-radius: 0.75rem;
-        overflow: hidden;
-        aspect-ratio: 1024 / 850;
-      }
-
-      .segment-shot {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center center;
-      }
-
-      /* Nav bar – white bg + shadow (static GitHub Pages, captured HTML ma bg-transparent) */
-      nav.fixed {
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-      }
-      .dark nav.fixed {
-        background: rgba(15, 23, 42, 0.95) !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Tło traction/footer – ten sam chłodny navy co pricing (#0b1f3d, #1e3a66), jaśniejsze dla log */
-      #traction,
-      footer {
-        background-color: #2a4565 !important;
-      }
-
-      /* Trusted by – pełna szerokość, wyśrodkowany blok */
-      #hero .hero-trusted-by {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      /* Loga firm – jedna linia na desktop, zawijanie na mobilce – hero + traction */
-      #hero .client-logos-grid,
-      #traction .client-logos-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        flex-direction: row !important;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-      }
-      @media (max-width: 767px) {
-        #hero .client-logos-grid,
-        #traction .client-logos-grid {
-          flex-wrap: wrap !important;
-          overflow: visible;
-          gap: 1.5rem;
-        }
-        #hero .client-logos-grid > div,
-        #traction .client-logos-grid > div {
-          width: 120px !important;
-          min-width: 120px !important;
-        }
-      }
-      #hero .client-logos-grid > div,
-      #traction .client-logos-grid > div {
-        flex: 0 0 auto !important;
-        width: 150px !important;
-        height: 52px !important;
-        min-width: 150px !important;
-        min-height: 52px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-      #hero .client-logos-grid img,
-      #traction .client-logos-grid img {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        object-fit: contain !important;
-        object-position: center !important;
-        opacity: 0.92 !important;
-      }
-      #hero .client-logos-grid img:hover,
-      #traction .client-logos-grid img:hover {
-        opacity: 1 !important;
-      }
-      /* Footer – zapobieganie rozjeżdżaniu */
-      footer .container { max-width: 1280px; overflow-x: hidden; }
-      footer .grid { min-width: 0; }
-
-      /* Hero waveform – ukryta */
-      .hero-waveform { display: none !important; }
-
-      /* Przełącznik języka PL/EN */
-      .inoro-lang-btn[aria-current="true"] {
-        font-weight: 600;
-        color: #259bf7;
-      }
-      .inoro-lang-btn[aria-current="false"] {
-        font-weight: 500;
-        color: rgb(100 116 139);
-      }
-      .dark .inoro-lang-btn[aria-current="false"] {
-        color: rgb(148 163 184);
-      }
-
-    </style>
+    <HomeStyles />
   </head>
   <body>
-    <StaticBody />
+    <Nav lang="en" currentPath="/" />
+    <StaticBody lang="en" />
   </body>
 </html>
