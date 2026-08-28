@@ -1,0 +1,5 @@
+# InOro.ai — https://inoro.ai
+User-agent: *
+Allow: /
+
+Sitemap: https://inoro.ai/sitemap-index.xml
