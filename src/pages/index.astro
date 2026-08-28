@@ -16,6 +16,62 @@ const assetBase = rawBase && !rawBase.endsWith('/') ? rawBase + '/' : rawBase;
     <link rel="icon" type="image/png" href="/favicon.png" />
     {isGithub && <base href={assetBase} />}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Automatyczny wybór języka. Działa TYLKO na stronie głównej EN (/)
+         i tylko w jedną stronę: / → /pl/. Wersje pod konkretnymi adresami
+         (/pl/analiza-rozmow/, /conversation-intelligence/) nigdy nie
+         przekierowują — użytkownik trafił tam świadomie.
+         Skrypt musi być inline i przed CSS, żeby przekierować przed
+         pierwszym renderem (bez mignięcia angielskiej treści). -->
+    <script is:inline>
+      (function () {
+        var PREF_KEY = 'inoro-lang-pref';
+        var PL_HOME = '/pl/';
+
+        function goPl() {
+          if (location.pathname === PL_HOME) return;
+          location.replace(PL_HOME + location.search + location.hash);
+        }
+
+        // 1. Boty zostają na /. Googlebot musi zaindeksować wersję EN pod
+        //    adresem głównym, inaczej hreflang traci sens.
+        var ua = navigator.userAgent || '';
+        if (/bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora link preview|outbrain|pinterest|vkShare|W3C_Validator|lighthouse|gtmetrix|pingdom|headlesschrome/i.test(ua)) return;
+
+        // 2. Jawny parametr ?lang= wygrywa ze wszystkim i zostaje zapamiętany.
+        //    Daje działający link "pokaż mi wersję EN" do wklejenia komukolwiek.
+        var forced = null;
+        try { forced = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+        if (forced === 'en' || forced === 'pl') {
+          try { localStorage.setItem(PREF_KEY, forced); } catch (e) {}
+          if (forced === 'pl') goPl();
+          return;
+        }
+
+        // 3. Wcześniejszy świadomy wybór (kliknięcie w przełącznik) ma
+        //    pierwszeństwo przed ustawieniami przeglądarki.
+        var stored = null;
+        try { stored = localStorage.getItem(PREF_KEY); } catch (e) {}
+        if (stored === 'en') return;
+        if (stored === 'pl') { goPl(); return; }
+
+        // 4. Wejście z tej samej domeny = nawigacja wewnętrzna (np. ktoś
+        //    właśnie kliknął EN na /pl/). Nie odsyłamy go z powrotem.
+        if (document.referrer && document.referrer.indexOf(location.origin) === 0) return;
+
+        // 5. Dopiero teraz preferencje przeglądarki, w kolejności priorytetu.
+        //    Pierwsze trafienie wygrywa: ['en-GB','pl'] zostaje na EN,
+        //    ['pl','en'] idzie na PL.
+        var langs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || navigator.userLanguage || ''];
+        for (var i = 0; i < langs.length; i++) {
+          var l = String(langs[i]).toLowerCase();
+          if (l.indexOf('pl') === 0) { goPl(); return; }
+          if (l.indexOf('en') === 0) return;
+        }
+        // Żaden z obsługiwanych języków — zostaje EN jako domyślny.
+      })();
+    </script>
     <title>InOro.ai | AI-Powered Conversation Intelligence for Contact Centers</title>
     <meta
       name="description"

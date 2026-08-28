@@ -80,7 +80,9 @@
     },
   };
 
-  var IMG = { bpo: 'assets/segment-retail.png', bfsi: 'assets/hero-dashboard-custom.png', retail: 'assets/segment-bpo.png' };
+  // Ścieżki MUSZĄ być absolutne. Względne 'assets/...' rozwiązywały się
+  // względem bieżącego adresu, więc na /pl/ leciały na /pl/assets/... → 404.
+  var IMG = { bpo: '/assets/segment-retail.png', bfsi: '/assets/hero-dashboard-custom.png', retail: '/assets/segment-bpo.png' };
 
   function getLang() {
     var pl = document.getElementById('lang-pl');

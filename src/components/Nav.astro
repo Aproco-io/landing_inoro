@@ -467,6 +467,13 @@ const { pl: plHref, en: enHref } = alternatesFor(currentPath || (lang === 'pl' ?
     btn.addEventListener(
       'click',
       (e) => {
+        // Zapamiętaj świadomy wybór języka. Strona główna (/) sprawdza tę
+        // wartość PRZED ustawieniami przeglądarki, więc kliknięcie EN przez
+        // polskojęzycznego użytkownika nie zostanie cofnięte przy następnej
+        // wizycie na inoro.ai.
+        try {
+          localStorage.setItem('inoro-lang-pref', btn.getAttribute('data-inoro-lang'));
+        } catch (err) {}
         e.stopImmediatePropagation();
       },
       true,
