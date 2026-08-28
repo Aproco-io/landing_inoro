@@ -30,6 +30,10 @@ export default defineConfig({
       // każdym deployu. Pusty lastmod jest uczciwszy niż zmyślony.
       // priority/changefreq też pomijamy — Google je ignoruje, a wartości
       // brane z sufitu to tylko szum.
+      // Arkusz stylów tylko dla ludzkiego oka — patrz public/sitemap.xsl.
+      // Chrome nie pretty-printuje XML-a zawierającego elementy XHTML,
+      // a nasze wpisy hreflang właśnie takie są.
+      xslURL: '/sitemap.xsl',
       serialize(item) {
         const path = pathOf(item.url);
 
