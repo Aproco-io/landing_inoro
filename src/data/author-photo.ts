@@ -8,7 +8,8 @@
  * komponenty spokojnie renderują inicjały.
  *
  * Pole `photo` w rejestrze zostaje jako ręczne nadpisanie (inna nazwa pliku,
- * zdjęcie z CDN-u itp.).
+ * zdjęcie z CDN-u itp.). Instrukcja dla redakcji: docs/zdjecia-autorow.md
+ * (poza `public/`, bo wszystko z tego katalogu trafia na serwer).
  */
 import fs from 'node:fs';
 import path from 'node:path';
