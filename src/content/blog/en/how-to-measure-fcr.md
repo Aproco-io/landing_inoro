@@ -4,7 +4,7 @@ description: "First Contact Resolution is one of the most misinterpreted call ce
 lang: "en"
 slug: "/resources/blog/how-to-measure-fcr/"
 date: 2026-06-24
-author: "InOro Team"
+author: "Adam Sipowicz"
 category: "KPIs"
 excerpt: "First Contact Resolution is one of the most misinterpreted call center KPIs. Five mistakes that make FCR say the wrong thing."
 coverGradient: "linear-gradient(135deg, #259bf7 0%, #1e3a66 100%)"

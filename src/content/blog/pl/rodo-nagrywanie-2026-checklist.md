@@ -4,7 +4,7 @@ description: "Aktualne wymogi RODO dla nagrywania rozmów z klientami. Podstawa 
 lang: "pl"
 slug: "/pl/wiedza/blog/rodo-nagrywanie-2026-checklist/"
 date: 2026-06-10
-author: "Zespół InOro"
+author: "Adam Sipowicz"
 category: "RODO"
 excerpt: "Podstawa prawna, retencja, klauzule informacyjne, prawo do usunięcia. Aktualna checklista audytowa RODO dla nagrywania rozmów w call center."
 coverGradient: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"

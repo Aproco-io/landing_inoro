@@ -4,7 +4,7 @@ description: "Why quarterly coaching sessions rarely move the needle, and how a 
 lang: "en"
 slug: "/resources/blog/agent-coaching-that-actually-works/"
 date: 2026-06-10
-author: "InOro Team"
+author: "Tomasz Kretek"
 category: "Coaching"
 excerpt: "Why quarterly coaching sessions rarely move the needle, and how a 3-30-90 rhythm with AI-scored calls changes agent performance in 3 months."
 coverGradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)"

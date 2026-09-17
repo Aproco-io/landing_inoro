@@ -4,6 +4,7 @@ import AuthorProfile from '../../../../components/AuthorProfile.astro';
 import CtaSection from '../../../../components/CtaSection.astro';
 import { authorsWithPosts, hasPostsIn } from '../../../../data/author-index.ts';
 import { authorPagePath } from '../../../../data/authors.ts';
+import { photoFor } from '../../../../data/author-photo.ts';
 import { profilePageSchema } from '../../../../data/blog-schema.ts';
 
 export async function getStaticPaths() {
@@ -39,7 +40,7 @@ const description = author.bio?.pl
   description={description}
   currentPath={path}
   altPath={altPath}
-  ogImage={author.photo}
+  ogImage={photoFor(author)}
 >
   <AuthorProfile author={author} lang="pl" posts={posts} />
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />

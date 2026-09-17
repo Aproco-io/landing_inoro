@@ -1,5 +1,6 @@
 ---
 import { resolveAuthor, initialsOf, authorHref } from '../data/authors.ts';
+import { photoFor } from '../data/author-photo.ts';
 
 interface Props {
   /** Imię i nazwisko (lub slug) prosto z front mattera wpisu. */
@@ -16,11 +17,12 @@ const a = resolveAuthor(author);
 const href = authorHref(a, lang);
 const role = a.role?.[lang];
 const initials = initialsOf(a.name);
+const photo = photoFor(a);
 ---
 <div class="byline">
   <div class="byline__avatar" aria-hidden="true">
-    {a.photo
-      ? <img src={a.photo} alt="" width="40" height="40" loading="lazy" decoding="async" />
+    {photo
+      ? <img src={photo} alt="" width="40" height="40" loading="lazy" decoding="async" />
       : <span class="byline__initials">{initials}</span>}
   </div>
 

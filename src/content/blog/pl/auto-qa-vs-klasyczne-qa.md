@@ -4,7 +4,7 @@ description: "Automatyczna kontrola jakości oceniająca 100% rozmów to nie tyl
 lang: "pl"
 slug: "/pl/wiedza/blog/auto-qa-vs-klasyczne-qa/"
 date: 2026-06-18
-author: "Zespół InOro"
+author: "Tomasz Kretek"
 category: "Kontrola jakości"
 excerpt: "Automatyczna kontrola jakości oceniająca 100% rozmów to nie tylko \"więcej danych\". To inna filozofia zarządzania jakością. Pięć kluczowych różnic."
 coverGradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)"

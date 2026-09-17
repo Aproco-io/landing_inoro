@@ -4,7 +4,7 @@ description: "AI-powered QA that scores 100% of calls isn't just \"more data\". 
 lang: "en"
 slug: "/resources/blog/auto-qa-vs-classical-qa/"
 date: 2026-06-18
-author: "InOro Team"
+author: "Adam Sipowicz"
 category: "Quality Assurance"
 excerpt: "AI-powered QA that scores 100% of calls isn't just \"more data\". It's a different operating model. Five differences to know before you switch."
 coverGradient: "linear-gradient(135deg, #10b981 0%, #059669 100%)"

@@ -1,6 +1,7 @@
 ---
 import BlogCard from './BlogCard.astro';
 import { initialsOf, socialLinks, type Author, type AuthorLang } from '../data/authors.ts';
+import { photoFor } from '../data/author-photo.ts';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -35,6 +36,7 @@ const bio = author.bio?.[lang];
 const role = author.role?.[lang];
 const socials = socialLinks(author);
 const initials = initialsOf(author.name);
+const photo = photoFor(author);
 ---
 <section class="author-hero">
   <div class="inoro-container">
@@ -48,8 +50,8 @@ const initials = initialsOf(author.name);
 
     <div class="author-card">
       <div class="author-card__avatar">
-        {author.photo
-          ? <img src={author.photo} alt={author.name} width="112" height="112" loading="eager" decoding="async" />
+        {photo
+          ? <img src={photo} alt={author.name} width="112" height="112" loading="eager" decoding="async" />
           : <span class="author-card__initials" aria-hidden="true">{initials}</span>}
       </div>
 

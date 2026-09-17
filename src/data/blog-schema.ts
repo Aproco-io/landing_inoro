@@ -6,6 +6,7 @@
  */
 import { SITE_URL } from './i18n.ts';
 import { resolveAuthor, authorPagePath, type Author, type AuthorLang } from './authors.ts';
+import { photoFor } from './author-photo.ts';
 
 const abs = (path: string) => new URL(path, SITE_URL).href;
 
@@ -36,7 +37,7 @@ export function authorNode(a: Author, lang: AuthorLang) {
     name: a.name,
     url: page,
     ...(a.role?.[lang] ? { jobTitle: a.role[lang] } : {}),
-    ...(a.photo ? { image: abs(a.photo) } : {}),
+    ...(photoFor(a) ? { image: abs(photoFor(a)!) } : {}),
     ...(a.linkedin ? { sameAs: [a.linkedin] } : {}),
   };
 }

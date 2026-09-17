@@ -4,7 +4,7 @@ description: "Jak mierzyć jakość obsługi w call center? Odsłuch 1–2% rozm
 lang: "pl"
 slug: "/pl/wiedza/blog/jak-mierzyc-jakosc-obslugi-call-center/"
 date: 2026-07-27
-author: "Adam Sipowicz"
+author: "Tomasz Kretek"
 category: "Jakość i KPI"
 excerpt: "Telefonia mówi jak szybko, ankiety — co klient deklaruje, a dopiero treść rozmów pokazuje, co się faktycznie wydarzyło. Framework 3 źródeł prawdy i dlaczego odsłuch 2% rozmów to statystyczna loteria."
 coverGradient: "linear-gradient(135deg, #1AA7E0 0%, #0b1f3d 100%)"

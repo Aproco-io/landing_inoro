@@ -4,7 +4,7 @@ description: "First Contact Resolution to jeden z najbardziej mylnie interpretow
 lang: "pl"
 slug: "/pl/wiedza/blog/jak-mierzyc-fcr-w-call-center/"
 date: 2026-06-24
-author: "Zespół InOro"
+author: "Adam Sipowicz"
 category: "KPI"
 excerpt: "First Contact Resolution to jeden z najbardziej mylnie interpretowanych wskaźników w call center. Pokazujemy pięć błędów, przez które FCR nie mówi tego, co powinien."
 coverGradient: "linear-gradient(135deg, #259bf7 0%, #1e3a66 100%)"

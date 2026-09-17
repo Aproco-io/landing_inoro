@@ -23,6 +23,10 @@ export type Author = {
    * Brak wartości = byline pokazuje awatar z inicjałami. Wrzucenie pliku
    * i wpisanie ścieżki tutaj to jedyne, czego trzeba — zero zmian w kodzie.
    */
+  /**
+   * Ręczne nadpisanie ścieżki do zdjęcia. Zwykle niepotrzebne — wystarczy
+   * wrzucić `public/authors/<slug>.jpg`, resztę robi `author-photo.ts`.
+   */
   photo?: string;
   linkedin?: string;
   /** Konto zbiorcze redakcji — w schema.org leci jako Organization, nie Person. */
@@ -34,21 +38,20 @@ export const AUTHORS: Author[] = [
     slug: 'adam-sipowicz',
     name: 'Adam Sipowicz',
     role: {
-      pl: 'Współzałożyciel, Aproco',
-      en: 'Co-founder, Aproco',
+      pl: 'Współzałożyciel Aproco',
+      en: 'Co-founder at Aproco',
     },
     bio: {
       pl: 'Strategia AI i sprzedaż enterprise w Aproco (właściciel produktu InOro). 15+ lat w call center, telco i sprzedaży B2B.',
+      // Tłumaczenie wersji polskiej — nie nowa treść.
+      en: 'AI strategy and enterprise sales at Aproco, the company behind InOro. 15+ years in call centers, telco and B2B sales.',
     },
-    // TODO: wrzucić plik do public/authors/ i odkomentować
-    // photo: '/authors/adam-sipowicz.jpg',
     linkedin: 'https://www.linkedin.com/in/adam-sipowicz-6395322/',
   },
   {
     slug: 'tomasz-kretek',
     name: 'Tomasz Kretek',
     // TODO: rola i bio do uzupełnienia — nie zmyślam ich.
-    // TODO: photo: '/authors/tomasz-kretek.jpg',
     linkedin: 'https://www.linkedin.com/in/tkretek/',
   },
   {
