@@ -13,7 +13,6 @@ coverAlt: "Wykresy analityki wydajności na ekranie laptopa — wizualizacja KPI
 readTime: 6
 tags: ["fcr", "kpi", "jakosc-obslugi"]
 updatedDate: 2026-08-12
-authorBio: "redakcja InOro (Aproco). Materiał przygotowany na podstawie danych z wdrożeń produkcyjnych oraz publicznych źródeł branżowych."
 sources:
   - title: "How many calls do you monitor per agent per month? (poll)"
     url: "https://www.callcentrehelper.com/poll-how-many-calls-do-you-monitor-per-agent-per-month-43247.htm"

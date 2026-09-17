@@ -13,7 +13,6 @@ coverAlt: "Uśmiechnięta konsultantka ze słuchawkami przy komputerze — codzi
 readTime: 8
 tags: ["qa", "auto-qa", "ai"]
 updatedDate: 2026-08-12
-authorBio: "redakcja InOro (Aproco). Materiał przygotowany na podstawie danych z wdrożeń produkcyjnych oraz publicznych źródeł branżowych."
 sources:
   - title: "COPC Global Benchmarking Series 2022 — Contact Center Quality Assurance"
     url: "https://cx.copc.com/hubfs/Global%20Benchmarking%20Series%202022_Contact%20Center%20Quality%20Assurance.pdf"

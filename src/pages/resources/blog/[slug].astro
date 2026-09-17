@@ -3,6 +3,9 @@ import { getCollection, render } from 'astro:content';
 import PageLayout from '../../../layouts/PageLayout.astro';
 import MarkdownBody from '../../../components/MarkdownBody.astro';
 import CtaSection from '../../../components/CtaSection.astro';
+import AuthorByline from '../../../components/AuthorByline.astro';
+import { blogPostingSchema } from '../../../data/blog-schema.ts';
+import { resolveAuthor } from '../../../data/authors.ts';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'en' && !p.data.draft);
@@ -21,6 +24,18 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
   month: 'long',
   year: 'numeric',
 }).format(data.date);
+const formattedUpdated = data.updatedDate
+  ? new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'long', year: 'numeric' }).format(data.updatedDate)
+  : null;
+
+// Angielskie wpisy nie miały dotąd ŻADNYCH danych strukturalnych.
+const articleSchema = blogPostingSchema(data, 'en', '/resources/blog/');
+const authorInfo = resolveAuthor(data.author);
+const bylineMeta = [
+  `<time datetime="${data.date.toISOString()}">${formattedDate}</time>`,
+  ...(formattedUpdated ? [`updated ${formattedUpdated}`] : []),
+  ...(data.readTime ? [`${data.readTime} min read`] : []),
+];
 ---
 <PageLayout
   lang="en"
@@ -41,17 +56,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
         {data.category && <span class="blog-post__cat">{data.category}</span>}
         <h1>{data.title}</h1>
         <p class="blog-post__lead">{data.excerpt ?? data.description}</p>
-        <div class="blog-post__meta">
-          <span>{data.author}</span>
-          <span class="dot">·</span>
-          <time datetime={data.date.toISOString()}>{formattedDate}</time>
-          {data.readTime && (
-            <>
-              <span class="dot">·</span>
-              <span>{data.readTime} min read</span>
-            </>
-          )}
-        </div>
+        <AuthorByline author={data.author} lang="en" meta={bylineMeta} />
       </div>
     </header>
 
@@ -74,7 +79,16 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
         </div>
       </div>
     )}
+    {authorInfo.bio?.en && (
+      <aside class="blog-post__author">
+        <div class="inoro-container">
+          <h3>About the author</h3>
+          <p><strong>{authorInfo.name}</strong> — {authorInfo.bio.en}</p>
+        </div>
+      </aside>
+    )}
   </article>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
 
   <CtaSection
     heading="See InOro in action"
@@ -146,6 +160,19 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
     border-radius: 0.85rem;
     box-shadow: 0 25px 55px -30px rgba(15, 23, 42, 0.3);
   }
+  .blog-post__author {
+    padding: 2rem 0;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+  }
+  .blog-post__author > .inoro-container { max-width: 780px; }
+  .blog-post__author h3 {
+    font-family: Sora, Inter, sans-serif;
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+  }
+  .blog-post__author p { color: #475569; margin: 0; line-height: 1.6; font-size: 0.95rem; }
   .blog-post__tags {
     padding: 0 0 3rem;
     background: #ffffff;

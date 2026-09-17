@@ -3,6 +3,9 @@ import { getCollection, render } from 'astro:content';
 import PageLayout from '../../../../layouts/PageLayout.astro';
 import MarkdownBody from '../../../../components/MarkdownBody.astro';
 import CtaSection from '../../../../components/CtaSection.astro';
+import AuthorByline from '../../../../components/AuthorByline.astro';
+import { blogPostingSchema } from '../../../../data/blog-schema.ts';
+import { resolveAuthor } from '../../../../data/authors.ts';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'pl' && !p.data.draft);
@@ -25,22 +28,15 @@ const formattedUpdated = data.updatedDate
   ? new Intl.DateTimeFormat('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' }).format(data.updatedDate)
   : null;
 
-// JSON-LD Article schema — trustworthy authorship signals for Google/AI-search
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: data.title,
-  description: data.description,
-  datePublished: data.date.toISOString(),
-  ...(data.updatedDate ? { dateModified: data.updatedDate.toISOString() } : {}),
-  author: { '@type': 'Person', name: data.author, ...(data.authorUrl ? { url: data.authorUrl } : {}) },
-  publisher: {
-    '@type': 'Organization',
-    name: 'InOro.ai',
-    logo: { '@type': 'ImageObject', url: 'https://inoro.ai/assets/logos/InOro_Logo.svg' },
-  },
-  ...(data.cover ? { image: `https://inoro.ai${data.cover}` } : {}),
-};
+// Dane strukturalne: BlogPosting (wcześniej ogólniejszy Article),
+// budowane wspólnym helperem razem z wersją angielską.
+const articleSchema = blogPostingSchema(data, 'pl', '/pl/wiedza/blog/');
+const authorInfo = resolveAuthor(data.author);
+const bylineMeta = [
+  `<time datetime="${data.date.toISOString()}">${formattedDate}</time>`,
+  ...(formattedUpdated ? [`zaktualizowano ${formattedUpdated}`] : []),
+  ...(data.readTime ? [`${data.readTime} min czytania`] : []),
+];
 ---
 <PageLayout
   lang="pl"
@@ -61,23 +57,7 @@ const articleSchema = {
         {data.category && <span class="blog-post__cat">{data.category}</span>}
         <h1>{data.title}</h1>
         <p class="blog-post__lead">{data.excerpt ?? data.description}</p>
-        <div class="blog-post__meta">
-          <span>{data.author}</span>
-          <span class="dot">·</span>
-          <time datetime={data.date.toISOString()}>{formattedDate}</time>
-          {formattedUpdated && (
-            <>
-              <span class="dot">·</span>
-              <span>zaktualizowano {formattedUpdated}</span>
-            </>
-          )}
-          {data.readTime && (
-            <>
-              <span class="dot">·</span>
-              <span>{data.readTime} min czytania</span>
-            </>
-          )}
-        </div>
+        <AuthorByline author={data.author} lang="pl" meta={bylineMeta} />
         {data.reviewedBy && (
           <p class="blog-post__reviewed"><em>Zweryfikował: {data.reviewedBy}</em></p>
         )}
@@ -96,11 +76,11 @@ const articleSchema = {
       <Content />
     </MarkdownBody>
 
-    {data.authorBio && (
+    {(authorInfo.bio?.pl ?? data.authorBio) && (
       <aside class="blog-post__author">
         <div class="inoro-container">
           <h3>O autorze</h3>
-          <p><strong>{data.author}</strong> — {data.authorBio}</p>
+          <p><strong>{authorInfo.name}</strong> — {authorInfo.bio?.pl ?? data.authorBio}</p>
         </div>
       </aside>
     )}
