@@ -5,7 +5,7 @@ import MarkdownBody from '../../../../components/MarkdownBody.astro';
 import CtaSection from '../../../../components/CtaSection.astro';
 import AuthorByline from '../../../../components/AuthorByline.astro';
 import { blogPostingSchema } from '../../../../data/blog-schema.ts';
-import { resolveAuthor } from '../../../../data/authors.ts';
+import { resolveAuthor, authorHref } from '../../../../data/authors.ts';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'pl' && !p.data.draft);
@@ -32,6 +32,7 @@ const formattedUpdated = data.updatedDate
 // budowane wspólnym helperem razem z wersją angielską.
 const articleSchema = blogPostingSchema(data, 'pl', '/pl/wiedza/blog/');
 const authorInfo = resolveAuthor(data.author);
+const authorPage = authorHref(authorInfo, 'pl');
 const bylineMeta = [
   `<time datetime="${data.date.toISOString()}">${formattedDate}</time>`,
   ...(formattedUpdated ? [`zaktualizowano ${formattedUpdated}`] : []),
@@ -81,6 +82,9 @@ const bylineMeta = [
         <div class="inoro-container">
           <h3>O autorze</h3>
           <p><strong>{authorInfo.name}</strong> — {authorInfo.bio?.pl ?? data.authorBio}</p>
+          {authorPage && (
+            <p class="blog-post__author-link"><a href={authorPage}>Wszystkie artykuły tego autora →</a></p>
+          )}
         </div>
       </aside>
     )}
@@ -200,6 +204,9 @@ const bylineMeta = [
     margin: 0 0 0.75rem;
   }
   .blog-post__author p { color: #475569; margin: 0; line-height: 1.6; font-size: 0.95rem; }
+  .blog-post__author-link { margin-top: 0.75rem !important; }
+  .blog-post__author-link a { color: #0E8AC1; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .blog-post__author-link a:hover { text-decoration: underline; }
   .blog-post__sources ol { color: #475569; font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; margin: 0; }
   .blog-post__sources a { color: #1AA7E0; word-break: break-word; }
   .blog-post__source-pub { color: #94a3b8; }

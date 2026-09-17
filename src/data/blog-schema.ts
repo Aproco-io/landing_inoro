@@ -5,7 +5,7 @@
  * (i to jako ogólniejszy Article), a angielskie wpisy nie miały żadnego.
  */
 import { SITE_URL } from './i18n.ts';
-import { resolveAuthor, authorHref, type Author } from './authors.ts';
+import { resolveAuthor, authorPagePath, type Author, type AuthorLang } from './authors.ts';
 
 const abs = (path: string) => new URL(path, SITE_URL).href;
 
@@ -19,18 +19,24 @@ const PUBLISHER = {
   },
 };
 
-function authorNode(a: Author) {
+/**
+ * Autor wpisu. Osoba dostaje `@id` równe adresowi swojej strony autorskiej —
+ * dzięki temu Google skleja w jeden byt wystąpienia z wielu wpisów i z samej
+ * strony autora. `url` wskazuje na tę stronę, a profile zewnętrzne zostają
+ * w `sameAs` (tam Google szuka potwierdzenia tożsamości).
+ */
+export function authorNode(a: Author, lang: AuthorLang) {
   if (a.isOrganization) {
     return { '@type': 'Organization', name: a.name, url: SITE_URL };
   }
-  const href = authorHref(a);
-  const onOwnDomain = !!href && href.includes('inoro.ai');
+  const page = abs(authorPagePath(a.slug, lang));
   return {
     '@type': 'Person',
+    '@id': page,
     name: a.name,
-    // `url` rezerwujemy dla własnej strony autora (gdy powstanie).
-    // Profile zewnętrzne należą do `sameAs` — tak Google łączy tożsamości.
-    ...(onOwnDomain && href ? { url: href } : {}),
+    url: page,
+    ...(a.role?.[lang] ? { jobTitle: a.role[lang] } : {}),
+    ...(a.photo ? { image: abs(a.photo) } : {}),
     ...(a.linkedin ? { sameAs: [a.linkedin] } : {}),
   };
 }
@@ -67,7 +73,7 @@ export function blogPostingSchema(
     // Bez daty aktualizacji Google przyjmuje datę publikacji — podajemy ją
     // jawnie, żeby nie zgadywał.
     dateModified: (data.updatedDate ?? data.date).toISOString(),
-    author: authorNode(a),
+    author: authorNode(a, lang),
     publisher: PUBLISHER,
     isPartOf: {
       '@type': 'Blog',
@@ -77,5 +83,48 @@ export function blogPostingSchema(
     ...(data.cover ? { image: [abs(data.cover)] } : {}),
     ...(data.category ? { articleSection: data.category } : {}),
     ...(data.tags && data.tags.length ? { keywords: data.tags.join(', ') } : {}),
+  };
+}
+
+type AuthorPost = { title: string; slug: string; date: Date };
+
+/**
+ * Dane strukturalne strony autorskiej (schema.org/ProfilePage).
+ *
+ * `mainEntity` to ta sama osoba co w `author` wpisów — z tym samym `@id`,
+ * więc Google widzi jeden byt, a nie kilku różnych ludzi o tym samym imieniu.
+ * `hasPart` wylicza dorobek, co domyka powiązanie w drugą stronę.
+ */
+export function profilePageSchema(
+  a: Author,
+  lang: AuthorLang,
+  posts: AuthorPost[],
+) {
+  const page = abs(authorPagePath(a.slug, lang));
+  const person = {
+    ...authorNode(a, lang),
+    ...(a.bio?.[lang] ? { description: a.bio[lang] } : {}),
+    worksFor: PUBLISHER,
+  };
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    url: page,
+    name: a.name,
+    inLanguage: lang === 'pl' ? 'pl-PL' : 'en-US',
+    mainEntity: person,
+    ...(posts.length
+      ? {
+          hasPart: posts.map((p) => ({
+            '@type': 'BlogPosting',
+            '@id': abs(p.slug),
+            url: abs(p.slug),
+            headline: p.title,
+            datePublished: p.date.toISOString(),
+            author: { '@id': page },
+          })),
+        }
+      : {}),
   };
 }

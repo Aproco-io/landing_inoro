@@ -11,12 +11,11 @@ interface Props {
 
 const { author, lang, meta = [] } = Astro.props;
 const a = resolveAuthor(author);
-const href = authorHref(a);
+// Strona autora na naszej domenie — zwykły link w tym samym oknie.
+// Konta redakcyjne linku nie dostają (authorHref zwraca undefined).
+const href = authorHref(a, lang);
 const role = a.role?.[lang];
 const initials = initialsOf(a.name);
-// Zewnętrzny profil otwieramy w nowej karcie; przyszła strona autora
-// na naszej domenie będzie zwykłym linkiem w tym samym oknie.
-const external = !!href && /^https?:\/\//.test(href) && !href.includes('inoro.ai');
 ---
 <div class="byline">
   <div class="byline__avatar" aria-hidden="true">
@@ -27,12 +26,7 @@ const external = !!href && /^https?:\/\//.test(href) && !href.includes('inoro.ai
 
   <div class="byline__text">
     <span class="byline__name">
-      {href
-        ? <a
-            href={href}
-            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-          >{a.name}</a>
-        : a.name}
+      {href ? <a href={href} rel="author">{a.name}</a> : a.name}
     </span>
     <span class="byline__meta">
       {role && <span class="byline__role">{role}</span>}
@@ -91,12 +85,18 @@ const external = !!href && /^https?:\/\//.test(href) && !href.includes('inoro.ai
     line-height: 1.3;
   }
   .byline__name a {
+    /* Na dotyku nie ma hovera — bez delikatnego podkreślenia nazwisko
+       wygląda jak zwykły tekst i nikt nie trafi na stronę autora. */
     color: inherit;
-    text-decoration: none;
-  }
-  .byline__name a:hover {
-    color: #1AA7E0;
     text-decoration: underline;
+    text-decoration-color: rgba(26, 167, 224, 0.45);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+  .byline__name a:hover,
+  .byline__name a:focus-visible {
+    color: #1AA7E0;
+    text-decoration-color: currentColor;
   }
   .byline__meta {
     display: flex;

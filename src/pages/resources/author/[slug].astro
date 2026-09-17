@@ -1,0 +1,51 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import AuthorProfile from '../../../components/AuthorProfile.astro';
+import CtaSection from '../../../components/CtaSection.astro';
+import { authorsWithPosts, hasPostsIn } from '../../../data/author-index.ts';
+import { authorPagePath } from '../../../data/authors.ts';
+import { profilePageSchema } from '../../../data/blog-schema.ts';
+
+export async function getStaticPaths() {
+  const entries = await authorsWithPosts('en');
+  return entries.map(({ author, posts }) => ({
+    params: { slug: author.slug },
+    props: { author, posts },
+  }));
+}
+
+const { author, posts } = Astro.props;
+const path = authorPagePath(author.slug, 'en');
+
+const altPath = (await hasPostsIn(author.slug, 'pl'))
+  ? authorPagePath(author.slug, 'pl')
+  : undefined;
+
+const schema = profilePageSchema(
+  author,
+  'en',
+  posts.map((p) => ({ title: p.data.title, slug: p.data.slug, date: p.data.date })),
+);
+
+const role = author.role?.en;
+const description = author.bio?.en
+  ?? `${author.name}${role ? ` — ${role}.` : '.'} Articles on conversation intelligence, QA and AI for contact centers.`;
+---
+<PageLayout
+  lang="en"
+  title={`${author.name} — author at InOro`}
+  description={description}
+  currentPath={path}
+  altPath={altPath}
+  ogImage={author.photo}
+>
+  <AuthorProfile author={author} lang="en" posts={posts} />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <CtaSection
+    heading="See InOro in action"
+    subheading="A 30-minute demo tailored to your contact center."
+    buttonLabel="Book a demo"
+    buttonHref="/demo/"
+  />
+</PageLayout>

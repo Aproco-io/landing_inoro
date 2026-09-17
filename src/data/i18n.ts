@@ -141,6 +141,27 @@ export function hreflangFor(
 }
 
 /**
+ * hreflang pair for routes that aren't in the static URL_ALTERNATES map —
+ * e.g. author pages, whose existence depends on the content collection.
+ * Same output shape as hreflangFor(); the caller supplies the counterpart.
+ */
+export function hreflangPair(
+  currentPath: string,
+  altPath: string,
+  currentLang: Lang,
+): Array<{ hreflang: string; href: string }> {
+  const path = normalize(currentPath);
+  const alt = normalize(altPath);
+  const en = currentLang === 'en' ? path : alt;
+  const pl = currentLang === 'pl' ? path : alt;
+  return [
+    { hreflang: 'en', href: en },
+    { hreflang: 'pl', href: pl },
+    { hreflang: 'x-default', href: en },
+  ];
+}
+
+/**
  * Target URL for a language-switcher button. Requires currentLang so it
  * knows which side of the mapping to return — asking for the same lang
  * you're already on should give you the current URL, not the alternate.

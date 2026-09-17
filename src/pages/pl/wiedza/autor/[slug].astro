@@ -1,0 +1,53 @@
+---
+import PageLayout from '../../../../layouts/PageLayout.astro';
+import AuthorProfile from '../../../../components/AuthorProfile.astro';
+import CtaSection from '../../../../components/CtaSection.astro';
+import { authorsWithPosts, hasPostsIn } from '../../../../data/author-index.ts';
+import { authorPagePath } from '../../../../data/authors.ts';
+import { profilePageSchema } from '../../../../data/blog-schema.ts';
+
+export async function getStaticPaths() {
+  const entries = await authorsWithPosts('pl');
+  return entries.map(({ author, posts }) => ({
+    params: { slug: author.slug },
+    props: { author, posts },
+  }));
+}
+
+const { author, posts } = Astro.props;
+const path = authorPagePath(author.slug, 'pl');
+
+// Strona autora powstaje tylko tam, gdzie ma dorobek — jeśli pisze też po
+// angielsku, parujemy hreflangi ręcznie (trasy dynamiczne nie ma w URL_ALTERNATES).
+const altPath = (await hasPostsIn(author.slug, 'en'))
+  ? authorPagePath(author.slug, 'en')
+  : undefined;
+
+const schema = profilePageSchema(
+  author,
+  'pl',
+  posts.map((p) => ({ title: p.data.title, slug: p.data.slug, date: p.data.date })),
+);
+
+const role = author.role?.pl;
+const description = author.bio?.pl
+  ?? `${author.name}${role ? ` — ${role}.` : '.'} Artykuły o analizie rozmów, jakości obsługi i AI w call center.`;
+---
+<PageLayout
+  lang="pl"
+  title={`${author.name} — autor w InOro`}
+  description={description}
+  currentPath={path}
+  altPath={altPath}
+  ogImage={author.photo}
+>
+  <AuthorProfile author={author} lang="pl" posts={posts} />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <CtaSection
+    heading="Zobacz InOro w akcji"
+    subheading="30-minutowe demo dopasowane do Twojego call center."
+    buttonLabel="Umów demo"
+    buttonHref="/pl/demo/"
+  />
+</PageLayout>

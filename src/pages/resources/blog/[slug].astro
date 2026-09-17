@@ -5,7 +5,7 @@ import MarkdownBody from '../../../components/MarkdownBody.astro';
 import CtaSection from '../../../components/CtaSection.astro';
 import AuthorByline from '../../../components/AuthorByline.astro';
 import { blogPostingSchema } from '../../../data/blog-schema.ts';
-import { resolveAuthor } from '../../../data/authors.ts';
+import { resolveAuthor, authorHref } from '../../../data/authors.ts';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'en' && !p.data.draft);
@@ -31,6 +31,7 @@ const formattedUpdated = data.updatedDate
 // Angielskie wpisy nie miały dotąd ŻADNYCH danych strukturalnych.
 const articleSchema = blogPostingSchema(data, 'en', '/resources/blog/');
 const authorInfo = resolveAuthor(data.author);
+const authorPage = authorHref(authorInfo, 'en');
 const bylineMeta = [
   `<time datetime="${data.date.toISOString()}">${formattedDate}</time>`,
   ...(formattedUpdated ? [`updated ${formattedUpdated}`] : []),
@@ -84,6 +85,9 @@ const bylineMeta = [
         <div class="inoro-container">
           <h3>About the author</h3>
           <p><strong>{authorInfo.name}</strong> — {authorInfo.bio.en}</p>
+          {authorPage && (
+            <p class="blog-post__author-link"><a href={authorPage}>All articles by this author →</a></p>
+          )}
         </div>
       </aside>
     )}
@@ -173,6 +177,9 @@ const bylineMeta = [
     margin: 0 0 0.75rem;
   }
   .blog-post__author p { color: #475569; margin: 0; line-height: 1.6; font-size: 0.95rem; }
+  .blog-post__author-link { margin-top: 0.75rem !important; }
+  .blog-post__author-link a { color: #0E8AC1; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .blog-post__author-link a:hover { text-decoration: underline; }
   .blog-post__tags {
     padding: 0 0 3rem;
     background: #ffffff;

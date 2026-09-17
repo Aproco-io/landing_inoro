@@ -104,12 +104,28 @@ function slugify(s: string): string {
     .replace(/^-|-$/g, '');
 }
 
+/** Adres strony autora w danym języku. */
+export function authorPagePath(slug: string, lang: AuthorLang): string {
+  return lang === 'pl' ? `/pl/wiedza/autor/${slug}/` : `/resources/author/${slug}/`;
+}
+
 /**
- * Docelowy adres pod imieniem i nazwiskiem w bylinie.
- * Dziś: profil LinkedIn (jedyny istniejący cel). Gdy powstaną strony
- * autorskie, wystarczy tutaj zwrócić `/pl/wiedza/autor/${author.slug}/`
- * — byline i schema.org podchwycą zmianę bez ruszania szablonów.
+ * Cel linku pod imieniem i nazwiskiem w bylinie.
+ *
+ * Konta redakcyjne nie dostają stron autorskich — to wydawca, nie osoba.
+ * Dla osoby zwracamy jej stronę: w kontekście wpisu blogowego autor
+ * z definicji ma co najmniej jeden opublikowany artykuł w tym języku,
+ * więc strona na pewno istnieje. Profile zewnętrzne żyją na stronie
+ * autora, nie w bylinie.
  */
-export function authorHref(author: Author): string | undefined {
-  return author.linkedin;
+export function authorHref(author: Author, lang: AuthorLang): string | undefined {
+  if (author.isOrganization) return undefined;
+  return authorPagePath(author.slug, lang);
+}
+
+/** Profile zewnętrzne autora — na stronę autorską i do schema.org `sameAs`. */
+export function socialLinks(author: Author): { label: string; url: string }[] {
+  const out: { label: string; url: string }[] = [];
+  if (author.linkedin) out.push({ label: 'LinkedIn', url: author.linkedin });
+  return out;
 }

@@ -1,7 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import { hreflangFor, SITE_URL } from '../data/i18n.ts';
+import { hreflangFor, hreflangPair, SITE_URL } from '../data/i18n.ts';
 
 interface Props {
   lang: 'pl' | 'en';
@@ -9,13 +9,18 @@ interface Props {
   description: string;
   currentPath?: string;
   ogImage?: string;
+  /** Odpowiednik w drugim języku dla tras spoza statycznej mapy URL_ALTERNATES. */
+  altPath?: string;
 }
 
-const { lang, title, description, currentPath, ogImage } = Astro.props;
+const { lang, title, description, currentPath, ogImage, altPath } = Astro.props;
 const htmlLang = lang;
 
 const canonicalUrl = `${SITE_URL}${currentPath ?? '/'}`;
-const hreflangs = hreflangFor(currentPath ?? (lang === 'pl' ? '/pl/' : '/'), lang);
+const selfPath = currentPath ?? (lang === 'pl' ? '/pl/' : '/');
+const hreflangs = altPath
+  ? hreflangPair(selfPath, altPath, lang)
+  : hreflangFor(selfPath, lang);
 const ogImageUrl = ogImage
   ? (ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`)
   : `${SITE_URL}/assets/hero-dashboard-custom.png`;
