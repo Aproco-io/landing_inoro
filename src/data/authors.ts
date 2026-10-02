@@ -25,7 +25,7 @@ export type Author = {
    */
   /**
    * Ręczne nadpisanie ścieżki do zdjęcia. Zwykle niepotrzebne — wystarczy
-   * wrzucić `public/authors/<slug>.jpg`, resztę robi `author-photo.ts`.
+   * wrzucić `src/assets/authors/<slug>.jpg`, resztę robi `author-photo.ts`.
    */
   photo?: string;
   linkedin?: string;
@@ -42,16 +42,24 @@ export const AUTHORS: Author[] = [
       en: 'Co-founder at Aproco',
     },
     bio: {
-      pl: 'Strategia AI i sprzedaż enterprise w Aproco (właściciel produktu InOro). 15+ lat w call center, telco i sprzedaży B2B.',
+      pl: 'Współzałożyciel i członek zarządu Aproco, firmy z Poznania, która tworzy Inoro.ai – platformę do analizy rozmów w call center i działach sprzedaży telefonicznej. Odpowiada za sprzedaż, rozwój produktu i współpracę z klientami. Na co dzień pracuje z firmami z branży windykacyjnej, ubezpieczeniowej, logistycznej, medycznej i edukacyjnej przy ocenie jakości rozmów, zgodności i skuteczności sprzedaży. Pisze o tym, jak z nagrań rozmów wyciągać konkretne wnioski dla biznesu.',
       // Tłumaczenie wersji polskiej — nie nowa treść.
-      en: 'AI strategy and enterprise sales at Aproco, the company behind InOro. 15+ years in call centers, telco and B2B sales.',
+      en: 'Co-founder and board member at Aproco, a Poznań-based company building Inoro.ai, a conversation analytics platform for call centers and telesales teams. Responsible for sales, product development and customer relationships. Works daily with companies in debt collection, insurance, logistics, healthcare and education on call quality, compliance and sales effectiveness. Writes about turning call recordings into concrete business insights.',
     },
     linkedin: 'https://www.linkedin.com/in/adam-sipowicz-6395322/',
   },
   {
     slug: 'tomasz-kretek',
     name: 'Tomasz Kretek',
-    // TODO: rola i bio do uzupełnienia — nie zmyślam ich.
+    role: {
+      pl: 'Współzałożyciel Aproco',
+      en: 'Co-founder at Aproco',
+    },
+    bio: {
+      pl: 'Współzałożyciel Aproco i współtwórca Inoro.ai. Od zawsze łączy dwie pasje: logistykę i technologię. Pracował przy akceleratorach Huge Thing i Microsoft Ventures Accelerator, a w Delivery Hero i Marley Spoon uczył się budować organizacje rosnące w skali międzynarodowej. Związany z TEDxPoznań. W tekstach dla Inoro pisze o technicznej stronie analizy rozmów: jak działa transkrypcja, modele AI i integracje z systemami call center.',
+      // Tłumaczenie wersji polskiej — nie nowa treść.
+      en: 'Co-founder of Aproco and co-creator of Inoro.ai. Has always combined two passions: logistics and technology. Worked with the Huge Thing and Microsoft Ventures accelerators, and at Delivery Hero and Marley Spoon learned how to build organisations scaling internationally. Involved with TEDxPoznań. Writes for Inoro about the technical side of conversation analytics: how transcription, AI models and call center integrations work.',
+    },
     linkedin: 'https://www.linkedin.com/in/tkretek/',
   },
   {
