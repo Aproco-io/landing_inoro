@@ -1,4 +1,5 @@
 ---
+import PublicPicture from '../PublicPicture.astro';
 interface Props {
   heading?: string;
   rows: {
@@ -22,7 +23,7 @@ const { heading, rows } = Astro.props;
           <p set:html={row.body} />
         </div>
         <div class="s-deepdive__visual">
-          <img src={row.imageSrc} alt={row.imageAlt} loading="lazy" />
+          <PublicPicture src={row.imageSrc} alt={row.imageAlt} loading="lazy" />
         </div>
       </div>
     ))}

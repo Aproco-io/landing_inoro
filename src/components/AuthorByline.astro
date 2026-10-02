@@ -1,6 +1,7 @@
 ---
 import { resolveAuthor, initialsOf, authorHref } from '../data/authors.ts';
 import { photoFor } from '../data/author-photo.ts';
+import { Image } from 'astro:assets';
 
 interface Props {
   /** Imię i nazwisko (lub slug) prosto z front mattera wpisu. */
@@ -21,9 +22,11 @@ const photo = photoFor(a);
 ---
 <div class="byline">
   <div class="byline__avatar" aria-hidden="true">
-    {photo
+    {typeof photo === 'string'
       ? <img src={photo} alt="" width="40" height="40" loading="lazy" decoding="async" />
-      : <span class="byline__initials">{initials}</span>}
+      : photo
+        ? <Image src={photo} alt="" width={40} height={40} densities={[2, 3]} loading="lazy" decoding="async" />
+        : <span class="byline__initials">{initials}</span>}
   </div>
 
   <div class="byline__text">

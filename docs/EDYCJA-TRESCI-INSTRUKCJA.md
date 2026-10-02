@@ -527,7 +527,7 @@ Commit → za ~60 sek pojawi się na `/pl/wiedza/blog/nazwa-artykulu/` (dla PL) 
 
 Kolejność priorytetów w renderze: jeśli jest `cover`, karta i strona pokazują obraz; jeśli nie ma — zostaje `coverGradient` jako tło. Zostawiać można oba naraz — `cover` po prostu wygra.
 
-**Krok 1 — wrzuć plik.** Wejdź w `public/blog/` na GitHubie → **Add file → Upload files** → przeciągnij `.jpg` lub `.webp` → commit. Rekomendowany rozmiar: **1600 × 900 px** (16:9), JPG, ≤ 200 KB. Nazwa bez spacji i polskich znaków, np. `moj-artykul.jpg`.
+**Krok 1 — wrzuć plik.** Wejdź w `src/assets/blog/` na GitHubie → **Add file → Upload files** → przeciągnij `.jpg` → commit. Rekomendowany rozmiar: **1600 × 900 px** (16:9), JPG, ≤ 200 KB. Nazwa bez spacji i polskich znaków, np. `moj-artykul.jpg`. Nie konwertuj ręcznie do WebP — build sam robi z JPG warianty WebP/AVIF w kilku szerokościach, a oryginalny JPG zostaje jako fallback i obraz do udostępnień w social mediach.
 
 **Krok 2 — podepnij we front matter.**
 
@@ -536,7 +536,7 @@ cover: "/blog/moj-artykul.jpg"
 coverAlt: "Krótki opis obrazu dla dostępności i SEO"
 ```
 
-`/blog/…` (nie `/public/blog/…`) — Astro serwuje wszystko z `public/` w root.
+`/blog/nazwa.jpg` to umowna ścieżka — build dopasowuje ją po nazwie pliku do `src/assets/blog/nazwa.jpg`. Jeśli pliku nie ma, karta pokaże zepsuty obrazek (build się nie wywali), więc sprawdź nazwę.
 
 **Skąd brać darmowe obrazy:**
 - [unsplash.com](https://unsplash.com) — licencja free, komercyjne OK, atrybucja niewymagana

@@ -6,6 +6,8 @@ import CtaSection from '../../../components/CtaSection.astro';
 import AuthorByline from '../../../components/AuthorByline.astro';
 import { blogPostingSchema } from '../../../data/blog-schema.ts';
 import { resolveAuthor, authorHref } from '../../../data/authors.ts';
+import { coverImage, coverUrl } from '../../../data/cover-image.ts';
+import { Picture } from 'astro:assets';
 
 export async function getStaticPaths() {
   const items = await getCollection('blog', (p) => p.data.lang === 'en' && !p.data.draft);
@@ -29,7 +31,12 @@ const formattedUpdated = data.updatedDate
   : null;
 
 // Angielskie wpisy nie miały dotąd ŻADNYCH danych strukturalnych.
-const articleSchema = blogPostingSchema(data, 'en', '/resources/blog/');
+// Okładka: front matter trzyma "/blog/nazwa.jpg", plik leży w src/assets/blog
+// i przechodzi przez astro:assets. Do schema.org i og:image idzie adres
+// oryginalnego JPG (crawlery social nie czytają WebP/AVIF).
+const coverMeta = coverImage(data.cover);
+const coverAbs = coverUrl(data.cover);
+const articleSchema = blogPostingSchema({ ...data, cover: coverAbs }, 'en', '/resources/blog/');
 const authorInfo = resolveAuthor(data.author);
 const authorPage = authorHref(authorInfo, 'en');
 const bylineMeta = [
@@ -43,6 +50,7 @@ const bylineMeta = [
   title={data.seo?.metaTitle ?? data.title}
   description={data.seo?.metaDescription ?? data.description}
   currentPath={data.slug}
+  ogImage={coverAbs}
 >
   <article class="blog-post">
     <header class="blog-post__head">
@@ -64,7 +72,20 @@ const bylineMeta = [
     {data.cover && (
       <div class="blog-post__cover">
         <div class="inoro-container">
-          <img src={data.cover} alt={data.coverAlt ?? data.title} loading="eager" />
+          {coverMeta ? (
+            <Picture
+              src={coverMeta}
+              formats={['avif', 'webp']}
+              widths={[640, 900, 1600]}
+              sizes="(max-width: 940px) calc(100vw - 2rem), 900px"
+              alt={data.coverAlt ?? data.title}
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          ) : (
+            <img src={data.cover} alt={data.coverAlt ?? data.title} loading="eager" />
+          )}
         </div>
       </div>
     )}

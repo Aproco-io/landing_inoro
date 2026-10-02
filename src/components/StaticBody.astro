@@ -28,7 +28,7 @@ const rootRelativize = (html) =>
   isGithubSubpath
     ? html
     : html
-        .replace(/(src|href)="assets\//g, '$1="/assets/')
+        .replace(/(src|href|srcset)="assets\//g, '$1="/assets/')
         .replace(/(src|href)="Polityka-Prywatnosci\.pdf"/g, '$1="/Polityka-Prywatnosci.pdf"');
 
 const useCaptured =
@@ -38,7 +38,7 @@ const useCaptured =
 const source = lang === 'pl' ? capturedPl : capturedEn;
 const html = useCaptured ? rootRelativize(formspreeReplace(source)) : '';
 const asset = (p) => (base ? `${base}/${p}`.replace(/\/\//g, '/') : `/${p}`);
-const segmentScriptSrc = asset('assets/segment-tabs-static.js') + '?v=2';
+const segmentScriptSrc = asset('assets/segment-tabs-static.js') + '?v=3';
 const fallbackScriptSrc = asset('assets/segment-tabs-fallback.js');
 const interactivityScriptSrc = asset('assets/static-page-interactivity.js') + '?v=9';
 const cookieConsentScriptSrc = asset('assets/cookie-consent.js') + '?v=3';

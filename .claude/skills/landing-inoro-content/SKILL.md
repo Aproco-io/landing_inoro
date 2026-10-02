@@ -29,6 +29,8 @@ description: >-
 | Nav scroll, FAQ accordion, mobile menu, lang toggle | `public/assets/static-page-interactivity.js` |
 | Segment-style tabs (static page) | `public/assets/segment-tabs-static.js` |
 | Logos and static assets | `public/assets/` (paths in HTML often `assets/...`) |
+| Blog covers, author photos | `src/assets/blog/`, `src/assets/authors/` — Astro `<Picture>`/`<Image>` make WebP/AVIF; front matter keeps `cover: "/blog/name.jpg"` (resolved by `src/data/cover-image.ts`) |
+| Home-page screenshots (hero, segments) | `public/assets/*.png` + sibling `*.webp`; captured HTML uses `<picture>`. Regenerate the `.webp` when replacing a PNG |
 
 ## English vs Polish
 

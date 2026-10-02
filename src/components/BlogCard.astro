@@ -1,4 +1,7 @@
 ---
+import { Picture } from 'astro:assets';
+import { coverImage } from '../data/cover-image.ts';
+
 interface Props {
   href: string;
   title: string;
@@ -46,10 +49,26 @@ const gradients = [
 const gradientChoice =
   coverGradient ??
   gradients[Math.abs(title.length + (category?.length ?? 0)) % gradients.length];
+
+// Okładka z src/assets/blog → WebP/AVIF w kilku szerokościach. Karta ma
+// maks. ~400 px szerokości (siatka minmax(320px, 1fr)), więc 800 px wystarcza
+// na ekrany 2x. Nieznana ścieżka (np. CDN) → zwykłe <img>.
+const coverMeta = coverImage(cover);
+const coverSizes = '(max-width: 640px) calc(100vw - 2rem), 400px';
 ---
 <a class="blog-card" href={href}>
   <div class="blog-card__cover">
-    {cover ? (
+    {coverMeta ? (
+      <Picture
+        src={coverMeta}
+        formats={['avif', 'webp']}
+        widths={[400, 800]}
+        sizes={coverSizes}
+        alt={coverAlt ?? title}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : cover ? (
       <img src={cover} alt={coverAlt ?? title} loading="lazy" />
     ) : (
       <div class="blog-card__gradient" style={`background: ${gradientChoice};`}>
@@ -95,6 +114,11 @@ const gradientChoice =
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #f1f5f9;
+  }
+  .blog-card__cover picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .blog-card__cover img {
     width: 100%;

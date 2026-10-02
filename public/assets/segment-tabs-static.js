@@ -102,8 +102,16 @@
     if (!img) return;
 
     function setImg(k) {
-      img.src = IMG[k] || IMG.bpo;
+      var src = IMG[k] || IMG.bpo;
+      img.src = src;
       img.alt = 'Segment ' + k;
+      // Obraz siedzi w <picture> z wariantem WebP — bez podmiany <source>
+      // przeglądarka dalej pokazywałaby poprzedni WebP, ignorując nowy src.
+      var pic = img.parentNode;
+      if (pic && pic.tagName === 'PICTURE') {
+        var source = pic.querySelector('source[type="image/webp"]');
+        if (source) source.srcset = src.replace(/\.png$/, '.webp');
+      }
     }
 
     function setContent(k) {

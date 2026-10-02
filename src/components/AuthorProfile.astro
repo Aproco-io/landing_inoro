@@ -2,6 +2,7 @@
 import BlogCard from './BlogCard.astro';
 import { initialsOf, socialLinks, type Author, type AuthorLang } from '../data/authors.ts';
 import { photoFor } from '../data/author-photo.ts';
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -50,9 +51,11 @@ const photo = photoFor(author);
 
     <div class="author-card">
       <div class="author-card__avatar">
-        {photo
+        {typeof photo === 'string'
           ? <img src={photo} alt={author.name} width="112" height="112" loading="eager" decoding="async" />
-          : <span class="author-card__initials" aria-hidden="true">{initials}</span>}
+          : photo
+            ? <Image src={photo} alt={author.name} width={112} height={112} densities={[2]} loading="eager" decoding="async" />
+            : <span class="author-card__initials" aria-hidden="true">{initials}</span>}
       </div>
 
       <div class="author-card__body">

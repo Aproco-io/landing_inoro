@@ -1,9 +1,13 @@
 # Zdjęcia autorów
 
-Wrzuć plik nazwany slugiem autora — reszta dzieje się sama, bez zmian w kodzie:
+Wrzuć do `src/assets/authors/` plik nazwany slugiem autora — reszta dzieje
+się sama, bez zmian w kodzie:
 
-    adam-sipowicz.jpg
-    tomasz-kretek.jpg
+    src/assets/authors/adam-sipowicz.jpg
+    src/assets/authors/tomasz-kretek.jpg
+
+Build generuje z niego warianty WebP w rozmiarach 2x/3x, a oryginał zostaje
+jako obraz do udostępnień (og:image) i danych strukturalnych.
 
 Slug to ten sam ciąg, który jest w adresie strony autora
 (`/pl/wiedza/autor/adam-sipowicz/`).

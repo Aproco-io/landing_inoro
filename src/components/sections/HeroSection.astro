@@ -1,4 +1,5 @@
 ---
+import PublicPicture from '../PublicPicture.astro';
 interface Props {
   heading: string;
   subheading: string;
@@ -37,7 +38,7 @@ const { heading, subheading, badge, primaryCta, secondaryCta, imageSrc, imageAlt
     </div>
     {imageSrc && (
       <div class="s-hero__visual">
-        <img src={imageSrc} alt={imageAlt ?? heading} loading="eager" />
+        <PublicPicture src={imageSrc} alt={imageAlt ?? heading} loading="eager" />
       </div>
     )}
   </div>
