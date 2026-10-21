@@ -4,7 +4,7 @@ import PageLayout from '../../../layouts/PageLayout.astro';
 import MarkdownBody from '../../../components/MarkdownBody.astro';
 import CtaSection from '../../../components/CtaSection.astro';
 import AuthorByline from '../../../components/AuthorByline.astro';
-import { blogPostingSchema } from '../../../data/blog-schema.ts';
+import { blogPostingSchema, breadcrumbSchema, faqPageSchema } from '../../../data/blog-schema.ts';
 import { resolveAuthor, authorHref } from '../../../data/authors.ts';
 import { coverImage, coverUrl } from '../../../data/cover-image.ts';
 import { Picture } from 'astro:assets';
@@ -37,6 +37,8 @@ const formattedUpdated = data.updatedDate
 const coverMeta = coverImage(data.cover);
 const coverAbs = coverUrl(data.cover);
 const articleSchema = blogPostingSchema({ ...data, cover: coverAbs }, 'en', '/resources/blog/');
+const crumbsSchema = breadcrumbSchema(data, 'en', '/resources/blog/');
+const faqSchema = faqPageSchema(entry.body);
 const authorInfo = resolveAuthor(data.author);
 const authorPage = authorHref(authorInfo, 'en');
 const bylineMeta = [
@@ -114,6 +116,8 @@ const bylineMeta = [
     )}
   </article>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(crumbsSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
   <CtaSection
     heading="See InOro in action"

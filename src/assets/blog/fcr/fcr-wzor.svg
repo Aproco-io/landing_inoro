@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 316" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <title id="t">Wzór na FCR</title>
+  <desc id="d">FCR równa się liczbie spraw rozwiązanych przy pierwszym kontakcie podzielonej przez liczbę wszystkich kontaktów, razy 100%. Przykład: 3066 podzielone przez 4200 razy 100% daje 73%.</desc>
+  <rect x="1" y="1" width="758" height="314" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <g transform="translate(0,-24)">
+  <text x="40" y="160" font-family="Sora, Inter, Arial, sans-serif" font-size="40" font-weight="700" fill="#0f172a">FCR =</text>
+  <rect x="180" y="58" width="400" height="68" rx="10" fill="#e8f6fc" stroke="#1AA7E0" stroke-width="2"/>
+  <text x="380" y="87" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Sprawy rozwiązane przy 1. kontakcie</text>
+  <text x="380" y="110" text-anchor="middle" font-size="13" fill="#475569">bez powrotu w tej samej sprawie w oknie czasowym</text>
+  <line x1="180" y1="146" x2="580" y2="146" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  <rect x="180" y="166" width="400" height="68" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="380" y="195" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Wszystkie kontakty</text>
+  <text x="380" y="218" text-anchor="middle" font-size="13" fill="#475569">lub sprawy / klienci – zależnie od jednostki liczenia</text>
+  <text x="600" y="158" font-family="Sora, Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">× 100%</text>
+  <rect x="40" y="262" width="680" height="52" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="380" y="295" text-anchor="middle" font-size="18" fill="#0f172a"><tspan font-weight="700" fill="#475569">Przykład:</tspan><tspan dx="8">(3 066 ÷ 4 200) × 100% =</tspan><tspan dx="6" font-weight="700" fill="#1AA7E0">73%</tspan></text>
+</g>
+</svg>

@@ -87,6 +87,84 @@ export function blogPostingSchema(
   };
 }
 
+/**
+ * Okruszki wpisu (schema.org/BreadcrumbList) — ta sama ścieżka, którą
+ * widać nad tytułem: strona główna → indeks bloga → wpis.
+ */
+export function breadcrumbSchema(
+  data: { title: string; slug: string },
+  lang: 'pl' | 'en',
+  blogIndexPath: string,
+) {
+  const home = lang === 'pl' ? '/pl/' : '/';
+  const crumbs = [
+    { name: lang === 'pl' ? 'Strona główna' : 'Home', path: home },
+    { name: lang === 'pl' ? 'Wiedza' : 'Resources', path: blogIndexPath },
+    { name: data.title, path: data.slug },
+  ];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: abs(c.path),
+    })),
+  };
+}
+
+// Nagłówki H2, pod którymi wpisy trzymają FAQ (różne warianty w treściach).
+const FAQ_HEADING = /^##\s+(FAQ|Najczęstsze pytania|Często zadawane pytania)\b.*$/im;
+
+/** Markdown → zwykły tekst do `acceptedAnswer` (bez linków, pogrubień, list). */
+const plainText = (md: string) =>
+  md
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/<[^>]+>/g, '')
+    .replace(/(\*\*|__|\*|_|`)/g, '')
+    .replace(/^\s*(?:[-*+]|\d+\.)\s+/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+/**
+ * FAQ wpisu (schema.org/FAQPage) wyciągnięte z treści Markdown: sekcja H2
+ * „FAQ” / „Najczęstsze pytania”, w niej pytania jako H3 i odpowiedzi pod
+ * nimi. Czytamy treść zamiast dublować FAQ we front matter — Google wymaga,
+ * żeby markup zgadzał się z tym, co widać na stronie, a tak nie rozjedzie się
+ * po edycji. Brak sekcji albo pytań → `null` (szablon nie wstawia skryptu).
+ */
+export function faqPageSchema(body: string | undefined) {
+  if (!body) return null;
+  const start = body.search(FAQ_HEADING);
+  if (start < 0) return null;
+  const afterHeading = body.slice(start).replace(FAQ_HEADING, '');
+  const nextH2 = afterHeading.search(/^##\s/m);
+  const section = nextH2 >= 0 ? afterHeading.slice(0, nextH2) : afterHeading;
+
+  const items = section
+    .split(/^###\s+/m)
+    .slice(1)
+    .map((chunk) => {
+      const [q, ...rest] = chunk.split('\n');
+      return { q: plainText(q), a: plainText(rest.join('\n').replace(/^---\s*$/gm, '')) };
+    })
+    .filter((it) => it.q && it.a);
+  if (!items.length) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.q,
+      acceptedAnswer: { '@type': 'Answer', text: it.a },
+    })),
+  };
+}
+
 type AuthorPost = { title: string; slug: string; date: Date };
 
 /**
