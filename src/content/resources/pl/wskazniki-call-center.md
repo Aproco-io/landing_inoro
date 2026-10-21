@@ -48,7 +48,7 @@ sections:
       <h2>KPI ankietowe</h2>
       <p>CSAT typowy zakres 75–85%. NPS bardzo zależy od branży. CES (Customer Effort Score) często najlepiej przewiduje utrzymanie klienta. Wszystkie trzy cierpią na bias odpowiadających.</p>
       <h2>FCR jako most</h2>
-      <p>First Contact Resolution (~70–75% typowo, cel 80%+) łączy widok operacyjny i jakościowy. Mierzony poprawnie mówi <em>dlaczego</em> klienci wracają, a nie tylko <em>że</em> wracają.</p>
+      <p>First Contact Resolution (~70–75% typowo, cel 80%+) łączy widok operacyjny i jakościowy. Mierzony poprawnie mówi <em>dlaczego</em> klienci wracają, a nie tylko <em>że</em> wracają. Wzór, metody pomiaru i sposoby poprawy: <a href="/pl/wiedza/blog/first-contact-resolution-fcr/">FCR – czym jest i jak go liczyć</a>.</p>
       <h2>KPI z treści rozmów</h2>
       <p>Ocena QA wg Twojej karty, zgodność ze skryptem, kategorie tematów, sentyment, naruszenia. Próbkowane 2% przy ręcznym QA; mierzone na 100% z auto-QA. KPI, które w końcu odpowiadają na <em>dlaczego</em>.</p>
       <h2>Jak zbudować zestaw KPI</h2>

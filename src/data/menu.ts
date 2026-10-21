@@ -33,6 +33,7 @@ export const MENU_PL: MenuItem[] = [
     children: [
       { label: 'Wskaźniki (KPI) jakości obsługi', href: '/pl/wiedza/wskazniki-call-center/' },
       { label: 'Dashboardy i raporty', href: '/pl/wiedza/dashboard-call-center/' },
+      { label: 'FCR – wzór i pomiar', href: '/pl/wiedza/blog/first-contact-resolution-fcr/' },
       { label: 'AI w call center', href: '/pl/wiedza/ai-w-call-center/' },
       { label: 'Nagrywanie rozmów a RODO', href: '/pl/wiedza/blog/nagrywanie-rozmow-telefonicznych-rodo/' },
       { label: 'Poradniki (czym jest…)', href: '/pl/wiedza/czym-jest-analiza-rozmow/' },

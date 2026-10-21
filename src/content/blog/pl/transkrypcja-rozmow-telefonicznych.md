@@ -4,6 +4,7 @@ description: "Transkrypcja rozmów telefonicznych w firmie: od nagrania do użyt
 lang: "pl"
 slug: "/pl/wiedza/blog/transkrypcja-rozmow-telefonicznych/"
 date: 2026-09-23
+updatedDate: 2026-10-21
 author: "Tomasz Kretek"
 category: "Transkrypcja"
 excerpt: "Od nagrania do użytecznego tekstu: metody, proces, ograniczenia trudnego audio i koszt transkrypcji z analizą. Przewodnik dla firm i contact center."
@@ -53,7 +54,7 @@ Automatyczna interpunkcja pomaga czytać tekst, ale nie jest częścią oryginal
 
 ### Kto wypowiedział dane zdanie?
 
-Diaryzacja mówców porządkuje wypowiedzi według osób mówiących. To odrębne zadanie od rozpoznania słów: poprawnie zapisane zdanie nadal może być źle zinterpretowane, jeśli przypiszemy je niewłaściwej osobie. Dlatego przy odbiorze transkryptu sprawdza się zarówno tekst, jak i podział konsultant-klient.
+[Diaryzacja mówców](/pl/wiedza/blog/diaryzacja-mowcow/) porządkuje wypowiedzi według osób mówiących. To odrębne zadanie od rozpoznania słów: poprawnie zapisane zdanie nadal może być źle zinterpretowane, jeśli przypiszemy je niewłaściwej osobie. Dlatego przy odbiorze transkryptu sprawdza się zarówno tekst, jak i podział konsultant-klient.
 
 ## Transkrypcja ręczna czy automatyczna?
 
@@ -184,7 +185,7 @@ Przed zamówieniem ustal sposób naliczania minut, ewentualne minima, podatki i 
 
 ## Czego transkrypcja nie rozwiąże sama?
 
-Transkrypcja nie odzyska z pewnością informacji, której nie da się rozpoznać w źródle, ani nie zastąpi sprawdzenia istotnego wniosku. Słabe audio, głosy w tle i nakładające się wypowiedzi trzeba uwzględnić przy ocenie przydatności wyniku. W tym przewodniku nie podajemy uniwersalnego procentu dokładności: znaczenie ma jakość materiału oraz rodzaj błędów ważnych dla danego zastosowania.
+Transkrypcja nie odzyska z pewnością informacji, której nie da się rozpoznać w źródle, ani nie zastąpi sprawdzenia istotnego wniosku. Słabe audio, głosy w tle i nakładające się wypowiedzi trzeba uwzględnić przy ocenie przydatności wyniku. W tym przewodniku nie podajemy uniwersalnego procentu dokładności: znaczenie ma jakość materiału oraz rodzaj błędów ważnych dla danego zastosowania. Jak mierzyć dokładność wskaźnikami WER, CER i LER i jak przetestować ją na własnych nagraniach, opisujemy w artykule [automatyczna transkrypcja rozmów – dokładność i obsługa języków](/pl/wiedza/blog/automatyczna-transkrypcja-rozmow-dokladnosc/).
 
 W opisanym procesie Inoro jakość wyniku trzeba oceniać łącznie: czy udało się oddzielić istotne wypowiedzi od tła, przypisać rozmówców i zachować sens wymiany zdań. Sam czytelny zapis pojedynczych słów nie odpowiada na wszystkie te pytania.
 

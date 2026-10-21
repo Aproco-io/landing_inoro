@@ -35,9 +35,9 @@ sections:
       <p><strong>CES</strong> — Customer Effort Score, mierzy jak łatwo było uzyskać rozwiązanie.</p>
       <p><strong>Churn (sygnał odejścia)</strong> — język lub zachowanie sugerujące, że klient odejdzie.</p>
       <h2>D</h2>
-      <p><strong>Diaryzacja</strong> — rozdzielanie audio wg mówiącego (konsultant vs klient).</p>
+      <p><strong>Diaryzacja</strong> — rozdzielanie audio wg mówiącego (konsultant vs klient). <a href="/pl/wiedza/blog/diaryzacja-mowcow/">Więcej o diaryzacji mówców</a>.</p>
       <h2>F</h2>
-      <p><strong>FCR (First Contact Resolution)</strong> — udział spraw rozwiązanych w pierwszym kontakcie.</p>
+      <p><strong>FCR (First Contact Resolution)</strong> — udział spraw rozwiązanych w pierwszym kontakcie. <a href="/pl/wiedza/blog/first-contact-resolution-fcr/">Wzór i pomiar FCR</a>.</p>
       <h2>I</h2>
       <p><strong>Interaction analytics</strong> — analityka interakcji z klientami; często używana wymiennie z analizą rozmów.</p>
       <h2>K</h2>

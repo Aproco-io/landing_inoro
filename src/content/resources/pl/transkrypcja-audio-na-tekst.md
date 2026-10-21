@@ -27,11 +27,12 @@ sections:
       <h3>Hybrydowa</h3>
       <p>AI wstępnie transkrybuje, człowiek koryguje. Kompromis: szybkość ~30% szybciej niż ręczna, dokładność bliska ręcznej.</p>
       <h2>Co decyduje o dokładności</h2>
+      <p>Jak mierzyć dokładność (WER, CER, LER) i przetestować ją na własnych nagraniach: <a href="/pl/wiedza/blog/automatyczna-transkrypcja-rozmow-dokladnosc/">automatyczna transkrypcja rozmów – dokładność i obsługa języków</a>.</p>
       <ul>
         <li><strong>Jakość audio:</strong> najważniejszy czynnik. Szum tła, dwa głosy na jednym kanale, słabe łącze GSM — spadek trafności o 10-30 pp.</li>
         <li><strong>Język:</strong> polski jest trudniejszy niż angielski (fleksja, kolejność wyrazów).</li>
         <li><strong>Słownictwo branżowe:</strong> nazwy produktów, terminy finansowe, żargon — modele ogólne mylą, dostrojone rozpoznają.</li>
-        <li><strong>Diaryzacja:</strong> rozdział kto co powiedział — kluczowa dla contact center, zależy od audio stereo/mono.</li>
+        <li><strong><a href="/pl/wiedza/blog/diaryzacja-mowcow/">Diaryzacja</a>:</strong> rozdział kto co powiedział — kluczowa dla contact center, zależy od audio stereo/mono.</li>
       </ul>
       <h2>Przegląd narzędzi</h2>
       <h3>Darmowe</h3>
