@@ -11,7 +11,7 @@ seo:
 sections:
   - type: hero
     badge: "Warstwa podstawowa"
-    heading: "Każda rozmowa w tekście — z podziałem kto co powiedział"
+    heading: "Transkrypcja rozmowy z podziałem na mówców"
     subheading: "InOro transkrybuje 100% rozmów Twojego call center z rozdzieleniem konsultant/klient i słownictwem dopasowanym do branży. A że transkrypcja to dopiero pierwsza warstwa — każdy transkrypt ma od razu streszczenie, ocenę i temat."
     primaryCta: { label: "Umów demo", href: "/pl/demo/" }
     secondaryCta: { label: "Zobacz cennik", href: "/pl/cennik/" }

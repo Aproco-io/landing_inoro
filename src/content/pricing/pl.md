@@ -25,7 +25,6 @@ sections:
         features:
           - "100% transkrypcji rozmów"
           - "Ocena konsultantów i QA"
-          - "Analiza emocji i intencji"
           - "Monitoring compliance"
           - "Wykrywanie sygnałów sprzedaży"
           - "Interfejs czatu AI"

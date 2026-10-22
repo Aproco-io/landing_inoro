@@ -25,7 +25,6 @@ sections:
         features:
           - "100% call transcription"
           - "Agent scoring & QA"
-          - "Emotion & intent analysis"
           - "Compliance monitoring"
           - "Sales signal detection"
           - "AI chat interface"

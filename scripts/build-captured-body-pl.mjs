@@ -147,7 +147,6 @@ const pairs = [
   ['FAQ', 'FAQ'],
   ['100% call transcription', '100% transkrypcji rozmów'],
   ['Agent scoring &amp; QA', 'Ocena agentów i QA'],
-  ['Emotion &amp; intent analysis', 'Analiza emocji i intencji'],
   ['Compliance monitoring', 'Monitoring compliance'],
   ['Sales signal detection', 'Wykrywanie sygnałów sprzedaży'],
   ['AI chat interface', 'Interfejs czatu AI'],
